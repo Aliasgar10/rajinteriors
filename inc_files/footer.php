@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer_bar   ">
+            <div class="footer_bar">
                 <div class="footer_bar_wrapper ">
                     <div class="menu-main-menu-container">
                         <ul id="footer_menu" class="footer_nav">
