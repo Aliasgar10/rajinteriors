@@ -6,7 +6,7 @@
     <link type="text/css" media="all" href="css/style.css" rel="stylesheet">
     <link type="text/css" media="only screen and (max-width: 768px)" href="css/responsive.css" rel="stylesheet">
 
-    <title>Architecturer | Interior Design &amp; Architecture Html Template</title>
+    <title>Contact Us</title>
 
 
     <meta charset="UTF-8">
@@ -28,7 +28,7 @@
 
 
         <div id="wrapper" >
-            <?php include("inc_files/header2.php"); ?>
+        <?php include("inc_files/header2.php"); ?>
 
 
 
