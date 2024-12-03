@@ -1,4 +1,4 @@
-<div id="footer_wrapper">
+        <div id="footer_wrapper">
             <div class="standard_wrapper">
 
                 <div class="elementor elementor-2282">
@@ -123,4 +123,4 @@
                     <br class="clear">
                 </div>
             </div>
-        </div
+    </div>
