@@ -27,7 +27,7 @@
 
 
 
-        <?php include("inc_files/header.php"); ?>
+        <?php include("inc_files/header2.php"); ?>
 
             <div id="page_content_wrapper" class="">
                 <div class="inner">
