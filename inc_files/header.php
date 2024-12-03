@@ -22,7 +22,7 @@
                                         <div id="menu_border_wrapper">
                                             <div class="menu-main-menu-container">
                                                 <ul id="main_menu" class="nav">
-                                                    <li class="#"><a href="index.html">Home</a>
+                                                    <li class="#"><a href="index.php">Home</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li class="menu-item current-menu-ancestor current-menu-parent menu-item-has-children arrow"><a href="#">Columns One</a>
                                                                 <ul class="sub-menu">
@@ -155,7 +155,7 @@
 
                                                         </ul> -->
                                                     </li>
-                                                    <li class="#"><a href="contact-1.html">Contact</a>
+                                                    <li class="#"><a href="contact-1.php">Contact</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li class="menu-item"><a href="gallery-fullscreen.html">Fullscreen</a></li>
                                                             <li class="menu-item"><a href="gallery-preview.html">Preview</a></li>
