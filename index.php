@@ -686,7 +686,8 @@
                     <br class="clear">
                 </div>
             </div>
-        </div><a id="toTop" href="javascript:;"><i class="fa fa-angle-up"></i></a>
+        </div>
+        <a id="toTop" href="javascript:;"><i class="fa fa-angle-up"></i></a>
         <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1">
         <input type="hidden" id="tg_sidebar_sticky" name="tg_sidebar_sticky" value="1">
         <input type="hidden" id="pp_topbar" name="pp_topbar" value="">
