@@ -1,5 +1,4 @@
-<div id="wrapper" class="hasbg transparent">
-            <div class="header_style_wrapper">
+<div class="header_style_wrapper">
                 <div class="top_bar hasbg">
                     <div class="standard_wrapper">
                         <div id="logo_wrapper">
