@@ -89,7 +89,7 @@
                                                 </li>
                                             </ul> -->
                                         </li>
-                                        <li class="#"><a href="gallery-masonry-with-space.html">Gallery</a>
+                                        <li class="#"><a href="gallery-masonry-with-space.php">Gallery</a>
                                             <!-- <ul class="sub-menu">
                                                 <li class="menu-item menu-item-has-children arrow"><a href="#">Columns One</a>
                                                     <ul class="sub-menu">
