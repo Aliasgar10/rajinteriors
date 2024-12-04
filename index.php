@@ -190,7 +190,7 @@
                                                 </div>
                                             </div>
                                         </section>
-                                        <section data-id="a7d0dae" class="elementor-element elementor-element-a7d0dae animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}" data-element_type="section">
+                                        <!-- <section data-id="a7d0dae" class="elementor-element elementor-element-a7d0dae animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
                                                     <div data-id="2d058b6" class="elementor-element elementor-element-2d058b6 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
@@ -199,20 +199,26 @@
                                                                 <div data-id="2def453" class="elementor-element elementor-element-2def453 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            <!-- <p>Recent</p> -->
+                                                                            <p>Recent</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div data-id="d492ea9" class="elementor-element elementor-element-d492ea9 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">Gallery</h2></div>
+                                                                        <h2 class="elementor-heading-title elementor-size-default">Gallery</h2>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
+                                        </section> -->
+                                        <div data-id="d492ea9" class="elementor-element elementor-element-d492ea9 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">Gallery</h2>
+                                            </div>
+                                        </div>
                                         <section data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
