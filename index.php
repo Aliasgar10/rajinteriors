@@ -181,15 +181,15 @@
                                                             <div data-id="4c119a6" class="elementor-element elementor-element-4c119a6 animated animated-fast elementor-widget elementor-widget-video fadeIn" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="video.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="elementor-video">
-                                                                        <iframe width="700" height="394" src="https://www.youtube.com/embed/DJRZxKr9Y-Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                                        <iframe width="700" height="394" src="https://www.youtube.com/embed/DJRZxKr9Y-Y?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                </div>
                                             </div>
-                                        </div>
                                         </section>
                                         <!-- <section data-id="a7d0dae" class="elementor-element elementor-element-a7d0dae animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
