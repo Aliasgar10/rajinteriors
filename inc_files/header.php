@@ -4,14 +4,14 @@
                         <div id="logo_wrapper">
                             <div id="logo_normal" class="logo_container">
                                 <div class="logo_align">
-                                    <a id="custom_logo" class="logo_wrapper hidden" href="index.html">
+                                    <a id="custom_logo" class="logo_wrapper hidden" href="index.php">
                                         <img src="upload/logo@2x.png" alt="" width="250" height="50">
                                     </a>
                                 </div>
                             </div>
                             <div id="logo_transparent" class="logo_container">
                                 <div class="logo_align">
-                                    <a id="custom_logo_transparent" class="logo_wrapper default" href="index.html">
+                                    <a id="custom_logo_transparent" class="logo_wrapper default" href="index.php">
                                         <img src="upload/logo@2x_white.png" alt="" width="173" height="37">
                                     </a>
                                 </div>
