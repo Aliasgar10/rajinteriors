@@ -220,7 +220,10 @@
                                                 </div>
                                             </div>
                                         </section>
-                                        <section data-id="79f616f" class="elementor-element elementor-element-79f616f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
+                                        <div class="elementor-image">
+                                            <img src="upload/workflow.jpg" class="attachment-large size-large" alt="" ></div>
+                                        </div>
+                                        <!-- <section data-id="79f616f" class="elementor-element elementor-element-79f616f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-extended">
                                                 <div class="elementor-row">
                                                     <div data-id="ddaa29d" class="elementor-element elementor-element-ddaa29d elementor-column elementor-col-33 elementor-top-column" data-element_type="column">
@@ -395,7 +398,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
+                                        </section> -->
                                         <section data-id="f6c79e8" class="elementor-element elementor-element-f6c79e8 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
