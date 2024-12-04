@@ -61,7 +61,7 @@
                                                                                                                         <div class="elementor-widget-container">
                                                                                                                             <h2 class="elementor-text-editor elementor-clearfix">The<strong><em>Vogue Studio</em></strong>
                                                                                                                                 <br> 
-                                                                                                                                <span class="typed-me" data-string0="" data-string1="versatile" data-string2="opulent" data-string3="glamour" data-string4="unique" data-string5="elegant" data-type-speed="100" data-start-delay="0" data-backspeed="40" data-back-delay="1500" data-loop="1"></span>
+                                                                                                                                <span class="typed-me" data-string0="" data-string1="Versatile" data-string2="Opulent" data-string3="Glamour" data-string4="Unique" data-string5="Elegant" data-type-speed="100" data-start-delay="0" data-backspeed="40" data-back-delay="1500" data-loop="1"></span>
                                                                                                                             </h2>
                                                                                                                         </div>
                                                                                                                     </div>
@@ -176,12 +176,12 @@
                                                         </div>
                                                     </div>
                                                     <div data-id="5b4f717" class="elementor-element elementor-element-5b4f717 elementor-column elementor-col-66 elementor-top-column" data-element_type="column">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">
-                                                                <div data-id="4c119a6" class="elementor-element elementor-element-4c119a6 animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-image" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="image.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="elementor-image">
-                                                                            <img width="1024" height="683" src="upload/home_about.jpg" class="attachment-large size-large" alt="" ></div>
+                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-widget-wrap">
+                                                            <div data-id="4c119a6" class="elementor-element elementor-element-4c119a6 animated animated-fast elementor-widget elementor-widget-video fadeIn" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="video.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-video">
+                                                                        <iframe width="700" height="394" src="https://www.youtube.com/embed/DJRZxKr9Y-Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -189,6 +189,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
                                         </section>
                                         <!-- <section data-id="a7d0dae" class="elementor-element elementor-element-a7d0dae animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
