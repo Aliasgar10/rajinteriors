@@ -220,7 +220,7 @@
                                                 </div>
                                             </div>
                                         </section>
-                                        <div class="elementor-image">
+                                        <div style="padding-bottom: 50px;" class="elementor-image">
                                             <img src="upload/workflow.jpg" class="attachment-large size-large" alt="" ></div>
                                         </div>
                                         <!-- <section data-id="79f616f" class="elementor-element elementor-element-79f616f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
