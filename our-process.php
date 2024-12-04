@@ -167,6 +167,7 @@
                                                                         <h2 class="elementor-heading-title elementor-size-default">Design is where science and art break even. <span class="verline"> </span></h2></div>
                                                                 </div>
                                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur recusandae doloremque cum iure sed molestias eveniet, excepturi corporis eum mollitia optio officiis! Repellendus quis in repellat corporis voluptatibus consequatur veritatis!</p>
+                                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quibusdam quia saepe ad, consectetur accusamus modi qui at repellat voluptate nemo quasi hic ab incidunt neque totam. Odit, nobis repellendus.</p>
                                                                 <!-- <div data-id="17a7b3e" class="elementor-element elementor-element-17a7b3e animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-accordion" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="accordion.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-accordion" role="tablist">
@@ -236,12 +237,16 @@
                                                                 </div>
                                                                 <div data-id="78c9d5c" class="elementor-element elementor-element-78c9d5c animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">Comceptual Design</h2></div>
+                                                                        <h2 class="elementor-heading-title elementor-size-default">PRE - CONTRACT</h2></div>
                                                                 </div>
                                                                 <div data-id="94216fb" class="elementor-element elementor-element-94216fb animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:600}" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            <p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi. Et leggings fanny pack.</p>
+                                                                        <ul>
+                                                                            <li>Client’s Requirement Briefing</li>
+                                                                            <li>Floor Plan & Concept</li>
+                                                                            <li>Budget Estimation</li>
+                                                                        </ul>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -254,7 +259,7 @@
                                                                 <div data-id="70a7740" class="elementor-element elementor-element-70a7740 translate_right animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-image" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="image.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
-                                                                            <img width="1024" height="683" src="upload/rawpixel-411170-unsplash-1024x683.jpg" class="attachment-large size-large" alt="" ></div>
+                                                                            <img width="1024" height="683" src="upload/workflow_1.jpg" class="attachment-large size-large" alt="" ></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
