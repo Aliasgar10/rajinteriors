@@ -111,18 +111,18 @@
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/small-home-office-with-white-interior-decoration-ideas-under-wooden-staircase-with-laminate-flooring-tile-parquet-table-kitchen-wall-cabinets-with-door-and-shelv-1.jpg" data-thumb="upload/small-home-office-with-white-interior-decoration-ideas-under-wooden-staircase-with-laminate-flooring-tile-parquet-table-kitchen-wall-cabinets-with-door-and-shelving-units-300x200.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/small-home-office-with-white-interior-decoration-ideas-under-wooden-staircase-with-laminate-flooring-tile-parquet-table-kitchen-wall-cabinets-with-door-and-shelving-units-440x293.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_9.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_9.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/pixasquare-622732-unsplash.jpg" data-thumb="upload/pixasquare-622732-unsplash-300x300.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/pixasquare-622732-unsplash-440x440.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_10.jpg" data-thumb="upload/gallery_10.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_10.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/modern-architecture-design-guidelines-on-1750x1167-architecture-amazing-modern-lake-house-with-green-environment-and.jpg" data-thumb="upload/modern-architecture-design-guidelines-on-1750x1167-architecture-amazing-modern-lake-house-with-green-environment-and-300x200.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/modern-architecture-design-guidelines-on-1750x1167-architecture-amazing-modern-lake-house-with-green-environment-and-440x293.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_11.jpg" data-thumb="upload/modern-architecture-design-guidelines-on-1750x1167-architecture-amazing-modern-lake-house-with-green-environment-and-300x200.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_11.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
