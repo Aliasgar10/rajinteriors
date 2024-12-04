@@ -91,18 +91,18 @@
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/Mid-Century-Modern-10.-Matt-Gibson.jpg" data-thumb="upload/Mid-Century-Modern-10.-Matt-Gibson-300x200.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/Mid-Century-Modern-10.-Matt-Gibson-440x293.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_5.jpg" data-thumb="upload/gallery_5.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_5.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/Sleek-and-Modern-Interior-by-Marcelo-Mota-Arquitectura-3.jpg" data-thumb="upload/Sleek-and-Modern-Interior-by-Marcelo-Mota-Arquitectura-3-300x203.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/Sleek-and-Modern-Interior-by-Marcelo-Mota-Arquitectura-3-440x297.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_6.jpg" data-thumb="upload/gallery_6.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_6.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/modern-wood-house-1.jpg" data-thumb="upload/modern-wood-house-1-300x200.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/modern-wood-house-1-440x293.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_7.jpg" data-thumb="upload/gallery_7.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_7.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
