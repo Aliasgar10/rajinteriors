@@ -78,7 +78,7 @@
                                                                 <div data-id="292d404" class="elementor-element elementor-element-292d404 animated-fast stellar animated fadeIn elementor-invisible elementor-widget elementor-widget-image" data-settings="{&quot;_animation_delay&quot;:600,&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="image.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
-                                                                            <img width="1440" height="814" src="upload/home_about.jpg" class="attachment-full size-full" alt="" ></div>
+                                                                            <img width="1440" height="814" src="upload/about_1.jpg" class="attachment-full size-full" alt="" ></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
