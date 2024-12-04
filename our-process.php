@@ -153,7 +153,7 @@
                                                                 <div data-id="d25547d" class="elementor-element elementor-element-d25547d stellar rotated left bottom animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-image" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="image.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
-                                                                            <img width="768" height="1024" src="upload/michael-shannon-567440-unsplash-768x1024.jpg" class="attachment-large size-large" alt="" ></div>
+                                                                            <img width="768" height="1024" src="upload/about_2.jpg" class="attachment-large size-large" alt="" ></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
