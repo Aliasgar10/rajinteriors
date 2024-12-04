@@ -59,9 +59,9 @@
                                                                                                                 <div class="elementor-widget-wrap">
                                                                                                                     <div data-id="07572d5" class="elementor-element elementor-element-07572d5 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-element_type="text-editor.default">
                                                                                                                         <div class="elementor-widget-container">
-                                                                                                                            <h2 class="elementor-text-editor elementor-clearfix">We are <strong><em>Architecturer</em></strong>
-                                                                                                                                <br> We create 
-                                                                                                                                <span class="typed-me" data-string0="" data-string1="architecture" data-string2="landscapes" data-string3="interiors" data-string4="product design" data-string5="graphic design" data-type-speed="100" data-start-delay="0" data-backspeed="40" data-back-delay="1500" data-loop="1"></span>
+                                                                                                                            <h2 class="elementor-text-editor elementor-clearfix">The<strong><em>Vogue Studio</em></strong>
+                                                                                                                                <br> 
+                                                                                                                                <span class="typed-me" data-string0="" data-string1="versatile" data-string2="opulent" data-string3="glamour" data-string4="unique" data-string5="elegant" data-type-speed="100" data-start-delay="0" data-backspeed="40" data-back-delay="1500" data-loop="1"></span>
                                                                                                                             </h2>
                                                                                                                         </div>
                                                                                                                     </div>
@@ -72,8 +72,8 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="text">
-                                                                                                    Great buildings that move the spirit have always been rare. In every case they are unique, poetic, products of the heart.</div>
-                                                                                                <a class="button" href="single-portfolio-5.html">View Project</a></div>
+                                                                                                From Vision to Reality — Exceptional Interiors for Every Space..</div>
+                                                                                                <a class="button" href="single-portfolio-5.html">Get a Free Quote!</a></div>
                                                                                         </div>
                                                                                         <div class="image-container">
                                                                                             <img src="upload/slider_01.jpg" alt="" class="image"></div>
