@@ -166,7 +166,8 @@
                                                                     <div class="elementor-widget-container">
                                                                         <h2 class="elementor-heading-title elementor-size-default">Design is where science and art break even. <span class="verline"> </span></h2></div>
                                                                 </div>
-                                                                <div data-id="17a7b3e" class="elementor-element elementor-element-17a7b3e animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-accordion" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="accordion.default">
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur recusandae doloremque cum iure sed molestias eveniet, excepturi corporis eum mollitia optio officiis! Repellendus quis in repellat corporis voluptatibus consequatur veritatis!</p>
+                                                                <!-- <div data-id="17a7b3e" class="elementor-element elementor-element-17a7b3e animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-accordion" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="accordion.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-accordion" role="tablist">
                                                                             <div class="elementor-accordion-item">
@@ -211,7 +212,7 @@
                                                                             <p><a href="#" data-wplink-url-error="true">View Pricing</a> <span class="verline"> </span></p>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </div> -->
                                                             </div>
                                                         </div>
                                                     </div>
