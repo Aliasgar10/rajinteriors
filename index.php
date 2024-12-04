@@ -176,18 +176,20 @@
                                                         </div>
                                                     </div>
                                                     <div data-id="5b4f717" class="elementor-element elementor-element-5b4f717 elementor-column elementor-col-66 elementor-top-column" data-element_type="column">
-                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                        <div class="elementor-widget-wrap">
-                                                            <div data-id="4c119a6" class="elementor-element elementor-element-4c119a6 animated animated-fast elementor-widget elementor-widget-video fadeIn" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="video.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-video">
-                                                                        <iframe width="700" height="394" src="https://www.youtube.com/embed/DJRZxKr9Y-Y?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div data-id="4c119a6" class="elementor-element elementor-element-4c119a6 animated animated-fast elementor-widget elementor-widget-video fadeIn" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="video.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-video">
+                                                                            <video width="700" height="394" autoplay muted loop controls>
+                                                                                <source src="upload/video.mp4" type="video/mp4">
+                                                                            </video>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
                                                 </div>
                                             </div>
                                         </section>
