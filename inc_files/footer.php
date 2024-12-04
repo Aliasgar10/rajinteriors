@@ -111,11 +111,11 @@
                 <div class="footer_bar_wrapper ">
                     <div class="menu-main-menu-container">
                         <ul id="footer_menu" class="footer_nav">
-                            <li class="menu-item"><a href="index.html.html">Home</a></li>
-                            <li class="menu-item"><a href="vertical-parallax-slider.html">TVS</a></li>
-                            <li class="menu-item"><a href="portfolio-list.html">Gallery</a></li>
-                            <li class="menu-item"><a href="about-us-1.html">Services</a></li>
-                            <li class="menu-item"><a href="gallery-fullscreen.html">Contact</a></li>
+                            <li class="menu-item"><a href="index.php">Home</a></li>
+                            <li class="menu-item"><a href="#">TVS</a></li>
+                            <li class="menu-item"><a href="gallery.php">Gallery</a></li>
+                            <li class="menu-item"><a href="our-process.php">Services</a></li>
+                            <li class="menu-item"><a href="contact-1.php">Contact</a></li>
                             <!-- <li class="menu-item"><a href="blog-grid.html">Blog</a></li> -->
                         </ul>
                     </div>
