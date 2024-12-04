@@ -277,7 +277,7 @@
                                                                 <div data-id="148060e" class="elementor-element elementor-element-148060e stellar animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-image" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="image.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
-                                                                            <img width="683" height="1024" src="upload/andrew-neel-218073-unsplash-683x1024.jpg" class="attachment-large size-large" alt="" ></div>
+                                                                            <img width="683" height="1024" src="upload/workflow_2.jpg" class="attachment-large size-large" alt="" ></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
