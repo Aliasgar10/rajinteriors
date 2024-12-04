@@ -81,9 +81,9 @@
                                                                 <div data-id="6166055" class="elementor-element elementor-element-6166055 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:800}" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            <p>123 East 26th Street,
-                                                                                <br>Fifth Floor,
-                                                                                <br>New York, NY 10011</p>
+                                                                            <p>16A East Topsia Road, 
+                                                                                <br>Ground Floor
+                                                                                </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -121,7 +121,7 @@
                                                                 <div data-id="7dc9ab2" class="elementor-element elementor-element-7dc9ab2 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            <p><a href="mailto:hello@architecture.com">hello@architecture.com</a></p>
+                                                                            <p><a href="mailto:hello@architecture.com">thevoguestudio53@gmail.com</a></p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -139,7 +139,8 @@
                                                                 <div data-id="cdec19a" class="elementor-element elementor-element-cdec19a animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            <p>(212) 563-7765</p>
+                                                                            <p>+91 9674445052, 
+                                                                            <br>+91 9836443572</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -172,13 +173,13 @@
                                                                 <div data-id="07fc180" class="elementor-element elementor-element-07fc180 animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-image" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:800}" data-element_type="image.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
-                                                                            <img width="1024" height="683" src="upload/alesia-kazantceva-283291-unsplash-1-1024x683.jpg" class="attachment-large size-large" alt="" style="max-width:100%;margin-bottom: 30px;"></div>
+                                                                            <img width="1024" height="683" src="upload/contact_1.jpg" class="attachment-large size-large" alt="" style="max-width:100%;margin-bottom: 30px;"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div data-id="ab1857f" class="elementor-element elementor-element-ab1857f animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-eb-google-map-extended" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="eb-google-map-extended.default">
 
                                                                 <div class="wpgmp_map_container wpgmp-map-1" rel=map1>
-                                                                    <iframe style="width:100%; height:480px; border:0" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d19905.696399556287!2d-0.3007084089960577!3d51.417531259591925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s2334+Peterson+Street+Kingston+UK+London+H14D!5e0!3m2!1sen!2s!4v1546697086219" width="600" height="450" ></iframe>
+                                                                    <iframe style="width:100%; height:480px; border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58945.45215249581!2d88.32217363961192!3d22.57570857089718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0276beb5926439%3A0x46f160efe2e8bdfb!2sRaj%20Interiors!5e0!3m2!1sen!2sin!4v1733306402012!5m2!1sen!2sin" width="600" height="450" ></iframe>
                                                                     <div style="position: absolute;width: 80%;bottom: 20px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;">
                                                                 </div>
 
