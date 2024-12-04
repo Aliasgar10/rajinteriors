@@ -221,7 +221,7 @@
                                             </div>
                                         </section>
                                         <section data-id="79f616f" class="elementor-element elementor-element-79f616f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
-                                            <div class="elementor-container elementor-column-gap-wider">
+                                            <div class="elementor-container elementor-column-gap-extended">
                                                 <div class="elementor-row">
                                                     <div data-id="ddaa29d" class="elementor-element elementor-element-ddaa29d elementor-column elementor-col-33 elementor-top-column" data-element_type="column">
                                                         <div class="elementor-column-wrap">
@@ -269,7 +269,7 @@
                                             </div>
                                         </section>
                                         <section data-id="d4d19de" class="elementor-element elementor-element-d4d19de elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
-                                            <div class="elementor-container elementor-column-gap-wider">
+                                            <div class="elementor-container elementor-column-gap-extended">
                                                 <div class="elementor-row">
                                                     <div data-id="e537fa7" class="elementor-element elementor-element-e537fa7 elementor-column elementor-col-50 elementor-top-column" data-element_type="column">
                                                         <div class="elementor-column-wrap elementor-element-populated">
@@ -292,12 +292,18 @@
                                                                 </div>
                                                                 <div data-id="80ed9b1" class="elementor-element elementor-element-80ed9b1 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">Developement</h2></div>
+                                                                        <h2 class="elementor-heading-title elementor-size-default">DESIGN PHASE</h2></div>
                                                                 </div>
                                                                 <div data-id="25cae8d" class="elementor-element elementor-element-25cae8d animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:400}" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            <p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi. Et leggings fanny pack.</p>
+                                                                        <ul>
+                                                                            <li>Design Development Planning</li>
+                                                                            <li>3D Design And Concept</li>
+                                                                            <li>Material Specifications</li>
+                                                                            <li>Budget Review ( if necessary )</li>
+                                                                            <li>Construction Drawings</li>
+                                                                        </ul>
                                                                         </div>
                                                                     </div>
                                                                 </div>
