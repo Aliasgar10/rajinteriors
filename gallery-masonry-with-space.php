@@ -76,18 +76,18 @@
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/michael-shannon-567440-unsplash.jpg" data-thumb="upload/michael-shannon-567440-unsplash-225x300.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/michael-shannon-567440-unsplash-440x587.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_2.jpg" data-thumb="upload/gallery_2.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_2.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/lycs-lycs-744227-unsplash.jpg" data-thumb="upload/lycs-lycs-744227-unsplash-300x211.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/lycs-lycs-744227-unsplash-440x310.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_3.jpg" data-thumb="upload/gallery_3.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_3.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/modern-riverside-home-christopher-simmonds-architect-1-backyard.jpg" data-thumb="upload/modern-riverside-home-christopher-simmonds-architect-1-backyard-300x200.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/modern-riverside-home-christopher-simmonds-architect-1-backyard-440x293.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_4.jpg" data-thumb="upload/gallery_4.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_4.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
