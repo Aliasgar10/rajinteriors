@@ -121,13 +121,13 @@
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_11.jpg" data-thumb="upload/modern-architecture-design-guidelines-on-1750x1167-architecture-amazing-modern-lake-house-with-green-environment-and-300x200.jpg" data-rel="tg_gallery305f7fd">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_11.jpg" data-thumb="upload/gallery_11.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_11.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/modern-interior-design-houses-small-cottage-plan-designs-cabin-ranch-house-interior-design-ranch-house-interior-design-boulder-co.jpg" data-thumb="upload/modern-interior-design-houses-small-cottage-plan-designs-cabin-ranch-house-interior-design-ranch-house-interior-design-boulder-co-300x199.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/modern-interior-design-houses-small-cottage-plan-designs-cabin-ranch-house-interior-design-ranch-house-interior-design-boulder-co-440x292.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_12.jpg" data-thumb="upload/gallery_12.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_12.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <br class="clear">
