@@ -71,8 +71,8 @@
                                                                     <div class="elementor-widget-container">
                                                                         <div class="gallery_grid_content_wrapper do_masonry layout_tg_three_cols has_space" data-cols="3">
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/minecraft-wood-and-stone-house-exterior-home-design-houzz-best-architecture-house-excerpt-nice-of-minecraft-wood-and-stone-house.jpg" data-thumb="upload/minecraft-wood-and-stone-house-exterior-home-design-houzz-best-architecture-house-excerpt-nice-of-minecraft-wood-and-stone-house-300x200.jpg" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/minecraft-wood-and-stone-house-exterior-home-design-houzz-best-architecture-house-excerpt-nice-of-minecraft-wood-and-stone-house-440x293.jpg" class="lazy_masonry" alt="">
+                                                                                <a class="tg_gallery_lightbox" href="upload/gallery_1.jpg" data-thumb="upload/gallery_1.jpg" data-rel="tg_gallery305f7fd">
+                                                                                    <img src="upload/gallery_1.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
