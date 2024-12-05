@@ -164,7 +164,7 @@ jQuery(document).ready(function(){
 		jQuery(window).scroll(function(){
 			if(jQuery('#pp_fixed_menu').val()==1 && jQuery('html').data('style') != 'fullscreen'  && jQuery('html').data('style') != 'fullscreen_white')
 			{
-				if(jQuery(this).scrollTop() >= 200){
+				if(jQuery(this).scrollTop() >= 50){
 					jQuery('.extend_top_contact_info').hide();
 					
 					jQuery('.header_style_wrapper').addClass('scroll');
@@ -179,7 +179,7 @@ jQuery(document).ready(function(){
 					    jQuery('#custom_logo_transparent').addClass('hidden');
 					}
 			    }
-			    else if(jQuery(this).scrollTop() < 200)
+			    else if(jQuery(this).scrollTop() < 50)
 			    {
 			    	jQuery('.extend_top_contact_info').show();
 				    
