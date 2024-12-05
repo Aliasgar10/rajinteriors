@@ -22156,7 +22156,7 @@ body.admin-bar #option_wrapper .inner {
     }
     .elementor-column.elementor-col-33,
     .elementor-column[data-col="33"] {
-        width: 33.333%
+        width: 50.333%
     }
     .elementor-column.elementor-col-40,
     .elementor-column[data-col="40"] {
@@ -22172,7 +22172,10 @@ body.admin-bar #option_wrapper .inner {
     }
     .elementor-column.elementor-col-66,
     .elementor-column[data-col="66"] {
-        width: 66.666%
+        width: 50.666%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .elementor-column.elementor-col-70,
     .elementor-column[data-col="70"] {
