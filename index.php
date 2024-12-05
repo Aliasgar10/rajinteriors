@@ -156,7 +156,7 @@
                                                                 <div data-id="8ff68a3" class="elementor-element elementor-element-8ff68a3 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:400}" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            <p>We are a team of experienced Interior Designers and skilled craftsmen dedicated to transforming your spaces into stunning realities. With over 10 years of serving satisfied customers, we have established ourselves as a trusted name in the interior design industry.<br><br>
+                                                                            <p style="text-align: justify;">We are a team of experienced Interior Designers and skilled craftsmen dedicated to transforming your spaces into stunning realities. With over 10 years of serving satisfied customers, we have established ourselves as a trusted name in the interior design industry.<br><br>
 
                                                                                 Our journey began in 2013, with a passion for creating beautiful and functional spaces. Over the years, we have honed our skills and expertise to deliver exceptional interior design solutions that exceed our clients' expectations.<br><br>
                                                                                 
