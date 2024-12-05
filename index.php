@@ -72,8 +72,8 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="text">
-                                                                                                From Vision to Reality — Exceptional Interiors for Every Space..</div>
-                                                                                                <a class="button" href="single-portfolio-5.html">Get a Free Quote!</a></div>
+                                                                                                From Vision to Reality — Exceptional Interiors for Every Space.</div>
+                                                                                                </div>
                                                                                         </div>
                                                                                         <div class="image-container">
                                                                                             <img src="upload/slider_01.jpg" alt="" class="image"></div>
