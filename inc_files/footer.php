@@ -71,7 +71,7 @@
                                                     <div data-id="b7eab1f" class="elementor-element elementor-element-b7eab1f elementor-widget elementor-widget-text-editor" data-element_type="text-editor.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                                <p><a href="#">Facebook</a>
+                                                                    <p><a href="#">Facebook</a>
                                                                     <br><a href="#">Instagram</a>
                                                                     <br><a href="#">Houzz</a>
                                                                     <br><a href="#">Pinterest</a>
@@ -118,7 +118,7 @@
                             <!-- <li class="menu-item"><a href="blog-grid.html">Blog</a></li> -->
                         </ul>
                     </div>
-                    <div id="copyright">© Copyright Raj Interiors. Powered By Dot Com Solutions.</div>
+                    <div id="copyright">© Copyright Raj Interiors. Powered By Dot Com Solutions</div>
                     <br class="clear">
                 </div>
             </div>
