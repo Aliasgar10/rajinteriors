@@ -5,7 +5,7 @@
                 <div id="logo_normal" class="logo_container">
                     <div class="logo_align">
                         <a id="custom_logo" class="logo_wrapper hidden" href="index.php">
-                            <img src="upload/logo@2x.png" alt="" width="250" height="50">
+                            <img src="upload/logo@2x.png" alt="" width="173" height="50">
                         </a>
                     </div>
                 </div>
@@ -42,3 +42,16 @@
         </div>
     </div>
 </div>
+
+<style>
+    @media screen and (max-width: 480px) {
+        #menu_border_wrapper {
+            width: 140px !important;
+        }
+        #logo_wrapper {
+            float: left !important;
+            width: 0px !important;
+        }
+    }
+
+</style>
