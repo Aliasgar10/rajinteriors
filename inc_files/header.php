@@ -17,37 +17,37 @@
                     </div>
                 </div>
                 <div id="menu_wrapper">
-                    <div id="nav_wrapper">
-                        <div class="nav_wrapper_inner">
-                            <div id="menu_border_wrapper">
-                                <div class="menu-main-menu-container">
-                                    <!-- Three Dots Icon (for mobile) -->
-                                    <div id="three-dots-menu" style="display: none;">
-                                        <span>...</span>
-                                    </div>
+    <div id="nav_wrapper">
+        <div class="nav_wrapper_inner">
+            <div id="menu_border_wrapper">
+                <div class="menu-main-menu-container">
+                    <!-- Three Dots Icon (for mobile) -->
+                    <div id="three-dots-menu" style="display: none;">
+                        <span>...</span>
+                    </div>
 
-                                    <!-- Mobile Dropdown Menu -->
-                                    <div id="mobile-menu" style="display: none;">
-                                        <ul id="main_menu" class="nav">
-                                            <li class="#"><a href="index.php">Home</a></li>
-                                            <li class="#"><a href="#">TVS</a></li>
-                                            <li class="#"><a href="gallery.php">Gallery</a></li>
-                                            <li class="#"><a href="our-process.php">Services</a></li>
-                                            <li class="#"><a href="contact-1.php">Contact</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Mobile Dropdown Menu -->
+                    <div id="mobile-menu" style="display: none;">
+                        <ul id="main_menu" class="nav">
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="#">TVS</a></li>
+                            <li><a href="gallery.php">Gallery</a></li>
+                            <li><a href="our-process.php">Services</a></li>
+                            <li><a href="contact-1.php">Contact</a></li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
             </div>
         </div>
     </div>
 </div>
-<style>
-    /* Basic Styling for Three Dots Icon */
+<style>/* Basic Styling for Three Dots Icon */
 #three-dots-menu {
     cursor: pointer;
     font-size: 30px;
@@ -90,4 +90,5 @@
     background-color: #f0f0f0;
     color: #007BFF;
 }
+
 </style>
