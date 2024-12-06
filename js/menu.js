@@ -22,7 +22,7 @@ $(document).ready(function($) {
     }
 
     /* For mobile, show mobile menu and hide regular menu */
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 520) {
         $("#menu_wrapper > #nav_wrapper").hide();  // Hide desktop menu
         $("#mobile_menu_wrapper").show();  // Show mobile menu (hamburger)
     }

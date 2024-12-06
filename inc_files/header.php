@@ -36,8 +36,8 @@
                 </div>
 
                 <!-- Mobile Menu (Hamburger Icon) -->
-                <div id="mobile_menu_wrapper" style="display: none;">
-                    <button id="hamburger_icon">&#9776; Menu</button>
+                <div id="mobile_menu_wrapper" style="display: none; color: grey;">
+                    <button id="hamburger_icon" style="color: #b8b8b8;">&#9776;</button>
                     <div id="mobile_menu" style="display: none;">
                         <ul id="mobile_menu_items">
                             <li><a href="index.php">Home</a></li>
@@ -63,7 +63,7 @@
             width: 0px !important;
         }
         #menu_wrapper {
-            margin-top: 25px !important;
+            margin-top: 12px !important;
         }
     }
 
@@ -77,7 +77,7 @@
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 520px) {
     #menu_wrapper #nav_wrapper {
         display: none; /* Hide the desktop menu */
     }
