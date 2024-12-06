@@ -88,8 +88,14 @@
 
     #mobile_menu {
         display: none;  /* Mobile menu hidden initially */
-        background-color: #ffeb3b;
+        background-color: beige;
         padding: 10px;
+        position: absolute; /* Position the menu above other content */
+        top: 60px; /* Adjust this to position the menu correctly below the hamburger */
+        left: 0;
+        width: 100%;
+        z-index: 1000;  /* Ensure the mobile menu appears above other elements */
+    
     }
 
     #mobile_menu ul {
