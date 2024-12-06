@@ -41,7 +41,7 @@ $(document).ready(function($) {
     /*-------------------------------------------------*/
     // Inline CSS for the select dropdown styling
     $("<style>").prop("type", "text/css").html(`
-        /* Style the select box */
+        /* Default Select Box Styles */
         #menu_border_wrapper select {
             font-family: Arial, sans-serif;
             font-size: 16px;
@@ -50,7 +50,7 @@ $(document).ready(function($) {
             border-radius: 5px;
             background-color: #f7f7f7;
             color: #333;
-            width: 140px;
+            width: 200px;
             transition: all 0.3s ease;
         }
 
@@ -81,5 +81,43 @@ $(document).ready(function($) {
         #menu_border_wrapper select option[value=""] {
             color: #aaa;
         }
+
+        /* ------------------------------ */
+        /* Mobile-Specific Styles */
+        /* ------------------------------ */
+        @media only screen and (max-width: 767px) {
+            #menu_border_wrapper select {
+                width: 100%; /* Make the select box full-width on mobile */
+                padding: 15px;
+                font-size: 18px;
+                border-radius: 8px;
+                background-color: #ffeb3b; /* Yellow background for mobile */
+                color: #333;
+                border: 2px solid #ff9800; /* Orange border */
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+
+            /* Custom arrow for mobile */
+            #menu_border_wrapper select {
+                background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zY2hlbWVzL3htbG5zL3N2ZyIgdmlld0JveD0iMCAwIDAgMCI+PHBhdGggZD0iTTEuMCAyLjUsMTAuMCAyTDEwLjUgM0wzIDIuMCAwIDAuNSIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==') no-repeat scroll right center transparent;
+                background-size: 12px;
+                padding-right: 40px;
+            }
+
+            /* Style options inside select for mobile */
+            #menu_border_wrapper select option {
+                padding: 10px;
+                background-color: #fff;
+                font-size: 16px;
+            }
+
+            #menu_border_wrapper select option:hover {
+                background-color: #f1f1f1; /* Hover effect for options */
+            }
+        }
+
     `).appendTo("head");
+
 });
