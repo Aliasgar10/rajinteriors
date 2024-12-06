@@ -4,15 +4,42 @@
 var $ = jQuery.noConflict();
 
 $(document).ready(function($) {
-    "use strict";
+	"use strict";
 
-    // Toggle Sidebar
-    $("#sidebar-toggle").click(function() {
-        $("#sidebar").toggle(); // Show or hide the sidebar when the button is clicked
+
+	/*-------------------------------------------------*/
+	/* =  Main Nav 
+	/*-------------------------------------------------*/
+
+
+	/*-------------------------------------------------*/
+	/* =  Mobile Menu
+	/*-------------------------------------------------*/
+	// Create the dropdown base
+    $("<select />").appendTo("#menu_border_wrapper");
+    
+    // Create default option "Go to..."
+    $("<option />", {
+		"selected": "selected",
+		"value"   : "",
+		"text"    : "Menu"
+    }).appendTo("#menu_border_wrapper select");
+    
+    // Populate dropdown with menu items
+    $(".nav a").each(function() {
+		var el = $(this);
+		$("<option />", {
+			"value"   : el.attr("href"),
+			"text"    : el.text()
+		}).appendTo("#menu_border_wrapper select");
     });
 
-    // Close Sidebar
-    $("#close-sidebar").click(function() {
-        $("#sidebar").hide(); // Hide the sidebar when the close button is clicked
+    $("#menu_border_wrapper select").change(function() {
+		window.location = $(this).find("option:selected").val();
     });
+	
+
+
+
+
 });
