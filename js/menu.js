@@ -50,7 +50,7 @@ $(document).ready(function($) {
             border-radius: 5px;
             background-color: #f7f7f7;
             color: #333;
-            width: 200px;
+            width: 140px;
             transition: all 0.3s ease;
         }
 

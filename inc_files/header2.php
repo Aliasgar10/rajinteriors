@@ -16,34 +16,33 @@
                         </a>
                     </div>
                 </div>
-                <div id="menu_wrapper">
-                    <div id="nav_wrapper">
-                        <div class="nav_wrapper_inner">
-                            <div id="menu_border_wrapper">
-                                <div class="menu-main-menu-container">
-                                    <ul id="main_menu" class="nav">
-                                        <li class="#"><a href="index.php">Home</a>
-                                            
-                                        <li class="#"><a href="#">TVS</a>
-                                            
-                                        </li>
-                                        <li class="#"><a href="gallery.php">Gallery</a>
-                                           
-                                        </li>
-                                        <li class="#"><a href="our-process.php">Services</a>
-                                            
-                                        </li>
-                                        <li class="#"><a href="contact-1.php">Contact</a>
-                                            
-                                        </li>
+            </div>
+            <div id="menu_wrapper">
+                <div id="nav_wrapper">
+                    <div class="nav_wrapper_inner">
+                        <div id="menu_border_wrapper">
+                            <div class="menu-main-menu-container">
+                                <ul id="main_menu" class="nav">
+                                    <li class="#"><a href="index.php">Home</a>
                                         
-                                    </ul>
-                                </div>
+                                    <li class="#"><a href="#">TVS</a>
+                                        
+                                    </li>
+                                    <li class="#"><a href="gallery.php">Gallery</a>
+                                        
+                                    </li>
+                                    <li class="#"><a href="our-process.php">Services</a>
+                                        
+                                    </li>
+                                    <li class="#"><a href="contact-1.php">Contact</a>
+                                        
+                                    </li>
+                                    
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
