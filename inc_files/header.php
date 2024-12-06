@@ -23,7 +23,7 @@
                     <div class="nav_wrapper_inner">
                         <div id="menu_border_wrapper">
                             <div class="menu-main-menu-container">
-                                <ul id="main_menu" class="nav">
+                                <ul id="main_menu" class="nav" style="margin-top: 13px;">
                                     <li><a href="index.php">Home</a></li>
                                     <li><a href="#">TVS</a></li>
                                     <li><a href="gallery.php">Gallery</a></li>
