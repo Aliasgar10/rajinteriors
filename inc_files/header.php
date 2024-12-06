@@ -47,48 +47,47 @@
     </div>
 </div>
 <style>
-    /* Three Dots Icon (for mobile) */
-    #three-dots-menu {
-        cursor: pointer;
-        font-size: 30px;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
-    }
+    /* Basic Styling for Three Dots Icon */
+#three-dots-menu {
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
 
-    /* Mobile Menu (Dropdown) */
-    #mobile-menu {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        position: absolute;
-        top: 60px;  /* Adjust based on your layout */
-        right: 20px;
-        width: 200px;
-        display: none;  /* Initially hidden */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
+/* Mobile Menu (Dropdown) */
+#mobile-menu {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 60px;  /* Adjust based on your layout */
+    right: 20px;
+    width: 200px;
+    display: none;  /* Initially hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
 
-    #mobile-menu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+#mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-    #mobile-menu ul li {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
+#mobile-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
 
-    #mobile-menu ul li a {
-        text-decoration: none;
-        color: #333;
-    }
+#mobile-menu ul li a {
+    text-decoration: none;
+    color: #333;
+}
 
-    #mobile-menu ul li a:hover {
-        background-color: #f0f0f0;
-        color: #007BFF;
-    }
-
+#mobile-menu ul li a:hover {
+    background-color: #f0f0f0;
+    color: #007BFF;
+}
 </style>
