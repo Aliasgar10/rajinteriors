@@ -75,7 +75,9 @@
 #mobile_menu_wrapper {
     display: none;
 }
-
+#main_menu{
+    margin-top:13px;
+}
 /* Mobile Styles */
 @media only screen and (max-width: 520px) {
     #menu_wrapper #nav_wrapper {
@@ -95,6 +97,8 @@
         left: 0;
         width: 100%;
         z-index: 1000;  /* Ensure the mobile menu appears above other elements */
+        margin: 1px 5px 0px -10px;
+        border-radius: 10px;
     
     }
 
