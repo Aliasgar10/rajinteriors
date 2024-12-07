@@ -61,7 +61,7 @@
                                                                                                                         <div class="elementor-widget-container">
                                                                                                                             <h2 class="elementor-text-editor elementor-clearfix"><strong><em></em></strong>
                                                                                                                                 <br> 
-                                                                                                                                <span class="typed-me" data-string0="" data-string1="Versatile" data-string2="Opulent" data-string3="Glamour" data-string4="Unique" data-string5="Elegant" data-type-speed="100" data-start-delay="0" data-backspeed="40" data-back-delay="1500" data-loop="1"></span>
+                                                                                                                                <span style="font-size: larger;" class="typed-me" data-string0="" data-string1="Versatile" data-string2="Opulent" data-string3="Glamour" data-string4="Unique" data-string5="Elegant" data-type-speed="100" data-start-delay="0" data-backspeed="40" data-back-delay="1500" data-loop="1"></span>
                                                                                                                             </h2>
                                                                                                                         </div>
                                                                                                                     </div>

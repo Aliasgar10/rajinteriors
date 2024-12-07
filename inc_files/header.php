@@ -12,7 +12,7 @@
                 <div id="logo_transparent" class="logo_container">
                     <div class="logo_align">
                         <a id="custom_logo_transparent" class="logo_wrapper default" href="index.php">
-                            <img src="upload/logo@2x_white.png" alt="" width="210" height="37">
+                            <img src="upload/logo@2x_white.png" alt="" width="173" height="37">
                         </a>
                     </div>
                 </div>
