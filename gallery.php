@@ -85,9 +85,7 @@
                                                                                 <source src="upload/Lights_1.mp4" type="video/mp4">
                                                                             </video>
                                                                             </div>
-
-
-                                                                            <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
+                                                                            <!-- <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_4.jpg" data-thumb="upload/gallery_4.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_4.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
@@ -96,7 +94,7 @@
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_5.jpg" data-thumb="upload/gallery_5.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_5.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
-                                                                            </div>
+                                                                            </div> -->
                                                                             <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_6.jpg" data-thumb="upload/gallery_6.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_6.jpg" class="lazy_masonry" alt="">
