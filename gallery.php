@@ -81,10 +81,11 @@
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
-                                                                                <a class="tg_gallery_lightbox" href="upload/Lights_1.mp4" data-thumb="upload/Lights_1.mp4" data-rel="tg_gallery305f7fd">
-                                                                                    <video src="upload/Lights_1.mp4" class="lazy_masonry" alt="">
-                                                                                </a>
+                                                                            <a class="tg_gallery_lightbox" href="upload/Lights_1.mp4" data-thumb="upload/Lights_1.mp4" data-rel="tg_gallery305f7fd">
+                                                                                <video src="upload/Lights_1.mp4" class="lazy_masonry responsive-video" controls></video>
+                                                                            </a>
                                                                             </div>
+
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_4.jpg" data-thumb="upload/gallery_4.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_4.jpg" class="lazy_masonry" alt="">
