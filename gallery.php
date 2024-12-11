@@ -82,7 +82,7 @@
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/Lights_1.mp4" data-thumb="upload/Lights_1.mp4" data-rel="tg_gallery305f7fd">
-                                                                                    <img src="upload/Lights_1.mp4" class="lazy_masonry" alt="">
+                                                                                    <video src="upload/Lights_1.mp4" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
