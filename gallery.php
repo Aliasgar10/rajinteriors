@@ -80,17 +80,12 @@
                                                                                     <img src="upload/gallery_2.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DBjXY_9PT1d/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                                                                            <div style="padding:16px;">
-                                                                                <a href="https://www.instagram.com/reel/DBjXY_9PT1d/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0; text-align:center; text-decoration:none; width:100%;" target="_blank">
-                                                                                    <div style="padding:19% 0;"></div>
-                                                                                    <img src="https://via.placeholder.com/1080x1080" alt="Instagram Reel Placeholder" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;">
-                                                                                </a>
+                                                                            <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
+                                                                            <video class="lazy_masonry responsive-video" controls>
+                                                                                <source src="upload/Lights_1.mp4" type="video/mp4">
+                                                                            </video>
                                                                             </div>
-                                                                        </blockquote>
-                                                                        <script async src="//www.instagram.com/embed.js"></script>
-
-                                                                            <!-- <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
+                                                                            <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_4.jpg" data-thumb="upload/gallery_4.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_4.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
@@ -99,22 +94,22 @@
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_5.jpg" data-thumb="upload/gallery_5.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_5.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
-                                                                            </div> -->
-                                                                            <!-- <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
+                                                                            </div>
+                                                                            <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_6.jpg" data-thumb="upload/gallery_6.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_6.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
-                                                                            </div> -->
+                                                                            </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_7.jpg" data-thumb="upload/gallery_7.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_7.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <!-- <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
+                                                                            <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_8.jpg" data-thumb="upload/gallery_8.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_8.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
-                                                                            </div> -->
+                                                                            </div>
                                                                             <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_9.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_9.jpg" class="lazy_masonry" alt="">
