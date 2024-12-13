@@ -12,7 +12,7 @@
                 <div id="logo_transparent" class="logo_container">
                     <div class="logo_align">
                         <a id="custom_logo_transparent" class="logo_wrapper default" href="index.php">
-                            <img src="imagg/logo@2x.png" alt="" width="250" height="37">
+                            <img src="imagg/logo@2x.png" alt="" width="250" height="50">
                         </a>
                     </div>
                 </div>
