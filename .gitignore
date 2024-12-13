@@ -1,6 +1,7 @@
 # Ignore the uploads and unused directories
 upload/
 un-UsedFile/
+upload.zip
 
 # Ignore system files
 .DS_Store
