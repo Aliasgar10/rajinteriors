@@ -70,7 +70,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
   <script src="script.js"></script>
   <script>
-    const url = 'assets/.pdf'; // Replace with your PDF file path
+    const url = 'assets/Module.pdf'; // Replace with your PDF file path
 let pdfDoc = null;
 let pageNum = 1;
 const canvasLeft = document.getElementById('leftPage');
