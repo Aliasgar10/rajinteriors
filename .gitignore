@@ -1,0 +1,41 @@
+# Ignore the uploads and unused directories
+upload/
+un-UsedFile/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore IDE/editor configurations
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore node modules (if using Node.js)
+node_modules/
+
+# Ignore Composer dependencies (if using PHP Composer)
+vendor/
+
+# Ignore build/compiled directories
+dist/
+build/
+
+# Ignore operating system generated files
+*.bak
+*.old
+
+# Ignore Git-specific files
+.gitignore~
