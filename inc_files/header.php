@@ -54,6 +54,15 @@
 </div>
 
 <style>
+    /* #logo_wrapper{
+        width: 15rem !important;
+        height: 100% !important;
+    }
+    #logo_wrapper img{
+        width: 100% !important;
+        height: 100% !important;
+    } */
+    
     @media screen and (max-width: 480px) {
         #menu_border_wrapper {
             width: 140px !important;
