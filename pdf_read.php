@@ -18,14 +18,15 @@
 
 .book-frame {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   background: #e3d7c4;
   border: 10px solid #af9d8e;
   border-radius: 10px;
   width: 900px;
-  height: 650px;
+  height: 750px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .book {
@@ -33,7 +34,7 @@
   width: 800px;
   height: 600px;
   perspective: 1500px;
-  overflow: hidden;
+  margin-top: 20px;
 }
 
 .page-wrapper {
@@ -78,10 +79,33 @@ canvas {
   transform: rotateY(180deg);
 }
 
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
 </style>
 </head>
 <body>
-  <div class="book-frame">
+<div class="book-frame">
     <div class="book">
       <div class="page-wrapper left" id="leftPage">
         <canvas></canvas>
@@ -89,6 +113,10 @@ canvas {
       <div class="page-wrapper right" id="rightPage">
         <canvas></canvas>
       </div>
+    </div>
+    <div class="controls">
+      <button id="prevPage">Previous</button>
+      <button id="nextPage">Next</button>
     </div>
   </div>
 
@@ -99,9 +127,9 @@ canvas {
   <script>
     const url = 'assets/Series-B-MR-2.pdf'; // Replace with your PDF file path
     
-
 let pdfDoc = null;
-let pageNum = 1;
+let currentPage = 1; // Track the current page number
+let totalPages = 0;
 
 // Canvas elements for rendering
 const leftPageWrapper = document.querySelector('#leftPage');
@@ -112,17 +140,22 @@ const leftCtx = leftCanvas.getContext('2d');
 const rightCtx = rightCanvas.getContext('2d');
 const scale = 1.5;
 
+// Buttons for navigation
+const prevButton = document.getElementById('prevPage');
+const nextButton = document.getElementById('nextPage');
+
 // Load PDF
 pdfjsLib.getDocument(url).promise.then((pdf) => {
   pdfDoc = pdf;
+  totalPages = pdf.numPages; // Get total pages in the PDF
   renderPages();
 });
 
 // Render pages
 function renderPages() {
-  // Left page
-  if (pageNum > 1) {
-    pdfDoc.getPage(pageNum - 1).then((page) => {
+  // Left page (previous page)
+  if (currentPage > 1) {
+    pdfDoc.getPage(currentPage - 1).then((page) => {
       const viewport = page.getViewport({ scale });
       leftCanvas.width = viewport.width;
       leftCanvas.height = viewport.height;
@@ -137,9 +170,9 @@ function renderPages() {
     leftCtx.clearRect(0, 0, leftCanvas.width, leftCanvas.height); // Clear if no previous page
   }
 
-  // Right page
-  if (pageNum <= pdfDoc.numPages) {
-    pdfDoc.getPage(pageNum).then((page) => {
+  // Right page (current page)
+  if (currentPage <= totalPages) {
+    pdfDoc.getPage(currentPage).then((page) => {
       const viewport = page.getViewport({ scale });
       rightCanvas.width = viewport.width;
       rightCanvas.height = viewport.height;
@@ -155,22 +188,35 @@ function renderPages() {
   }
 }
 
-// Page flip handling
-leftPageWrapper.addEventListener('click', () => {
-  if (pageNum > 1) {
-    leftPageWrapper.classList.toggle('flipped');
-    pageNum -= 2; // Move back two pages
+// Next page functionality
+nextButton.addEventListener('click', () => {
+  if (currentPage + 1 <= totalPages) {
+    currentPage += 2; // Move forward by two pages
     renderPages();
   }
 });
 
-rightPageWrapper.addEventListener('click', () => {
-  if (pageNum + 1 <= pdfDoc.numPages) {
-    rightPageWrapper.classList.toggle('flipped');
-    pageNum += 2; // Move forward two pages
+// Previous page functionality
+prevButton.addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage -= 2; // Move back by two pages
     renderPages();
   }
 });
+
+// Flipping animations
+leftPageWrapper.addEventListener('click', () => {
+  if (currentPage > 1) {
+    leftPageWrapper.classList.toggle('flipped');
+  }
+});
+
+rightPageWrapper.addEventListener('click', () => {
+  if (currentPage <= totalPages) {
+    rightPageWrapper.classList.toggle('flipped');
+  }
+});
+
   </script>
 </body>
 </html>
