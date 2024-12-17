@@ -1,7 +1,7 @@
 <style>
     @media screen and (max-width: 520px) {
         #fb4c59e{
-            margin-top: 20vh;
+            margin-top: 20vh !important;
         }
 
     }
