@@ -38,7 +38,7 @@
                             <div class="elementor elementor-2203">
                                 <div class="elementor-inner">
                                     <div class="elementor-section-wrap">
-                                        <section data-id="fe6bb34" class="elementor-element elementor-element-fe6bb34 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
+                                        <section data-id="fe6bb34" style="background-color:#000000f2;" class="elementor-element elementor-element-fe6bb34 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
                                                     <div data-id="c3db2fa" class="elementor-element elementor-element-c3db2fa elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
@@ -47,13 +47,13 @@
                                                                 <div data-id="2d198d3" class="elementor-element elementor-element-2d198d3 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix pl40">
-                                                                            <p>Explore</p>
+                                                                            <p style="color:#fff;">Explore</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div data-id="17fc4fd" class="elementor-element elementor-element-17fc4fd animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default pl40">Projects</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default pl40" style="color:#fff;">Projects</h2>
                                                                     </div>
                                                                 </div>
                                                                 <div data-id="814c075" class="elementor-element elementor-element-814c075 animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-architecturer-portfolio-masonry" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:400}" data-element_type="architecturer-portfolio-masonry.default">
@@ -62,7 +62,7 @@
                                                                             <div class="portfolio_masonry_content_wrapper gallery_grid_content_wrapper do_masonry portfolio_masonry layout_tg_two_cols" data-cols="2">
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-1 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/lycs-lycs-744227-unsplash-768x541.jpg" alt="">
+                                                                                        <img src="assets/category/assets/CATEGORY/TOUCH SWITCHES.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -72,7 +72,7 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>Xiami Office Building</h3>
+                                                                                            <h3>AUtOMATION</h3>
                                                                                             <div class="portfolio_masonry_subtitle">July 2018</div>
                                                                                         </div>
                                                                                     </figcaption></figure>
@@ -80,7 +80,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-2 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/pixasquare-622732-unsplash-768x768.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/PUSH TO OPEN CHANNELS.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -90,7 +90,7 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>Modern Minimalist House</h3>
+                                                                                            <h3>BLINDS AND CURTAINS</h3>
                                                                                             <div class="portfolio_masonry_subtitle">May 2018</div>
                                                                                         </div>
                                                                                     </figcaption></figure>
@@ -108,7 +108,7 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>Wooden House</h3>
+                                                                                            <h3>FLOORING</h3>
                                                                                             <div class="portfolio_masonry_subtitle">May 2018</div>
                                                                                         </div>
                                                                                     </figcaption></figure>
@@ -126,7 +126,7 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>Prototype Building</h3>
+                                                                                            <h3>GLASSES AND FLIMS</h3>
                                                                                             <div class="portfolio_masonry_subtitle">January 2018</div>
                                                                                         </div>
                                                                                     </figcaption></figure>
@@ -144,7 +144,7 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>Rustic Steel House</h3>
+                                                                                            <h3>HARDWARE</h3>
                                                                                             <div class="portfolio_masonry_subtitle">October 2017</div>
                                                                                         </div>
                                                                                     </figcaption></figure>
@@ -162,7 +162,7 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>Riverside House</h3>
+                                                                                            <h3>MODULER FURNITURE</h3>
                                                                                             <div class="portfolio_masonry_subtitle">April 2017</div>
                                                                                         </div>
                                                                                     </figcaption></figure>
@@ -180,7 +180,7 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>Modern Blocks House</h3>
+                                                                                            <h3>SOFA CURTAIN FABRICS</h3>
                                                                                             <div class="portfolio_masonry_subtitle">December 2017</div>
                                                                                         </div>
                                                                                     </figcaption></figure>
