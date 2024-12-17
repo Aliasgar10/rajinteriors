@@ -55,6 +55,7 @@
                         <ul id="mobile_menu_items">
                             <li><a href="index.php">Home</a></li>
                             <li><a href="#">TVS</a>
+                                <button class="submenu-toggle">+</button>
                                 <ul class="sub-menu">
                                     <li><a href="test1.php">ABCD</a></li>
                                     <li><a href="home-10.html">ABCD</a></li>
@@ -165,3 +166,54 @@
     }
 
 </style>
+
+<!-- Submenus style -->
+<style>
+    /* Hide submenus by default */
+    .sub-menu {
+        display: none;
+        padding-left: 15px;
+        list-style: none;
+    }
+
+    /* Submenu toggle button */
+    .menu-item-has-children {
+        position: relative;
+    }
+
+    .submenu-toggle {
+        position: absolute;
+        left: 65px;
+        top: 73px;
+        background: none;
+        border: none;
+        font-size: x-large;
+        cursor: pointer;
+        color: #333;
+    }
+
+    /* Mobile-specific styles */
+    @media screen and (max-width: 768px) {
+        #main_menu .sub-menu {
+            display: none;
+        }
+    }
+
+</style>
+<!-- submenus script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+        submenuToggles.forEach((toggle) => {
+            toggle.addEventListener("click", function () {
+                const submenu = this.nextElementSibling; // Target the submenu
+                const isVisible = submenu.style.display === "block";
+
+                submenu.style.display = isVisible ? "none" : "block";
+                this.textContent = isVisible ? "+" : "−"; // Change toggle button text
+            });
+        });
+    });
+
+</script>
