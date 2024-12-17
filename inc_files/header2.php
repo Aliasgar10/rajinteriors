@@ -29,8 +29,15 @@
                         <div id="menu_border_wrapper">
                             <div class="menu-main-menu-container">
                                 <ul id="main_menu" class="nav" style="margin-top: 13px;">
-                                    <li class="#"><a href="index.php">Home</a></li>       
-                                    <li class="#"><a href="#">TVS</a></li>
+                                    <li><a href="index.php">Home</a></li>
+                                    <li class="menu-item menu-item-has-children"><a href="#">TVS</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="test1.php"><span class="subunder">- </span>ABCD</a></li>
+                                            <li class="menu-item"><a href="home-10.html"><span class="subunder">- </span>ABCD</a></li>
+                                            <li class="menu-item"><a href="home-11.html"><span class="subunder">- </span>ABCD</a></li>
+                                            <li class="menu-item"><a href="home-12.html"><span class="subunder">- </span>ABCD &#8211; bjb </a></li>
+                                        </ul>
+                                    </li>
                                     <li class="#"><a href="gallery.php">Gallery</a></li>
                                     <li class="#"><a href="our-process.php">Services</a></li>
                                     <li class="#"><a href="contact-1.php">Contact</a></li>
@@ -45,7 +52,15 @@
                     <div id="mobile_menu" style="display: none;">
                         <ul id="mobile_menu_items">
                             <li><a href="index.php">Home</a></li>
-                            <li><a href="#">TVS</a></li>
+                            <li><a href="#">TVS</a>
+                                <button class="submenu-toggle">+</button>
+                                <ul class="sub-menu">
+                                    <li><a href="test1.php">ABCD</a></li>
+                                    <li><a href="home-10.html">ABCD</a></li>
+                                    <li><a href="home-11.html">ABCD</a></li>
+                                    <li><a href="home-12.html">ABCD &#8211; bjb</a></li>
+                                </ul>
+                            </li>
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="our-process.php">Services</a></li>
                             <li><a href="contact-1.php">Contact</a></li>
@@ -141,3 +156,54 @@
     }
 
 </style>
+
+<!-- Submenus style -->
+<style>
+    /* Hide submenus by default */
+    .sub-menu {
+        display: none;
+        padding-left: 15px;
+        list-style: none;
+    }
+
+    /* Submenu toggle button */
+    .menu-item-has-children {
+        position: relative;
+    }
+
+    .submenu-toggle {
+        position: absolute;
+        left: 65px;
+        top: 73px;
+        background: none;
+        border: none;
+        font-size: x-large;
+        cursor: pointer;
+        color: #333;
+    }
+
+    /* Mobile-specific styles */
+    @media screen and (max-width: 768px) {
+        #main_menu .sub-menu {
+            display: none;
+        }
+    }
+
+</style>
+<!-- submenus script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+        submenuToggles.forEach((toggle) => {
+            toggle.addEventListener("click", function () {
+                const submenu = this.nextElementSibling; // Target the submenu
+                const isVisible = submenu.style.display === "block";
+
+                submenu.style.display = isVisible ? "none" : "block";
+                this.textContent = isVisible ? "+" : "−"; // Change toggle button text
+            });
+        });
+    });
+
+</script>

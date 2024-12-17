@@ -30,7 +30,7 @@
                             <div class="menu-main-menu-container">
                                 <ul id="main_menu" class="nav" style="margin-top: 13px;">
                                     <li><a href="index.php">Home</a></li>
-                                    <li class="menu-item menu-item-has-children arrow"><a href="#">TVS</a>
+                                    <li class="menu-item menu-item-has-children"><a href="#">TVS</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item"><a href="test1.php"><span class="subunder">- </span>ABCD</a></li>
                                             <li class="menu-item"><a href="home-10.html"><span class="subunder">- </span>ABCD</a></li>
@@ -38,7 +38,6 @@
                                             <li class="menu-item"><a href="home-12.html"><span class="subunder">- </span>ABCD &#8211; bjb </a></li>
                                         </ul>
                                     </li>
-                                    
                                     <li><a href="gallery.php">Gallery</a></li>
                                     <li><a href="our-process.php">Services</a></li>
                                     <li><a href="contact-1.php">Contact</a></li>
