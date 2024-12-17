@@ -30,7 +30,15 @@
                             <div class="menu-main-menu-container">
                                 <ul id="main_menu" class="nav" style="margin-top: 13px;">
                                     <li><a href="index.php">Home</a></li>
-                                    <li><a href="#">TVS</a></li>
+                                    <li class="menu-item menu-item-has-children arrow"><a href="#">TVS</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="home-9.html"><span class="subunder">- </span>Home 9 &#8211; Slice Slider and Parallax Elements</a></li>
+                                            <li class="menu-item"><a href="home-10.html"><span class="subunder">- </span>Home 10 &#8211; Typing and Parallax Elements</a></li>
+                                            <li class="menu-item"><a href="home-11.html"><span class="subunder">- </span>Home 11 &#8211; Contrast Sliders</a></li>
+                                            <li class="menu-item"><a href="home-12.html"><span class="subunder">- </span>Home 12 &#8211; Portfolio Timeline</a></li>
+                                        </ul>
+                                    </li>
+                                    
                                     <li><a href="gallery.php">Gallery</a></li>
                                     <li><a href="our-process.php">Services</a></li>
                                     <li><a href="contact-1.php">Contact</a></li>
