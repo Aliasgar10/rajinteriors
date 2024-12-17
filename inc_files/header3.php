@@ -1,3 +1,11 @@
+<style>
+    #menu_wrapper div .nav li a:hover{
+        color:#fff !important;
+    }
+    #menu_wrapper div .nav li > a:before {
+        background-color: #fff !important;
+    }
+</style>
 <div class="header_style_wrapper">
     <div class="top_bar hasbg" style="background: black;">
         <div class="standard_wrapper">
