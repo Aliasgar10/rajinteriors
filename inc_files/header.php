@@ -77,7 +77,7 @@
             width: 0px !important;
         }
         #menu_wrapper {
-            margin-top: 19px !important;
+            margin-top: 21px !important;
         }
     }
 
