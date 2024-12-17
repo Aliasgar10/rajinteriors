@@ -105,7 +105,7 @@
         #mobile_menu {
             display: none;  /* Mobile menu hidden initially */
             background-color: beige;
-            /* padding: 10px; */
+            padding: 10px;
             position: absolute; /* Position the menu above other content */
             top: 85px; /* Adjust this to position the menu correctly below the hamburger */
             left: 0;
@@ -129,15 +129,15 @@
         #mobile_menu li:hover {
             background: black;
         }
-        #mobile_menu li a:hover {
-            color: white;
-        }
-
+       
         #mobile_menu a {
             text-decoration: none;
             color: #333;
             font-size: 18px;
             padding: 10px;
+        }
+        #mobile_menu a:hover {
+            color: #fff;
         }
 
         /* Optional: Styling for the hamburger icon */
