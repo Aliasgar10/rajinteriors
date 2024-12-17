@@ -28,7 +28,199 @@
 
 
         <div id="wrapper" class="pl40 pr40">
-        <?php include("inc_files/header.php"); ?>
+            <div class="header_style_wrapper">
+                <div class="top_bar hasbg">
+                    <div class="standard_wrapper">
+                        <div id="logo_wrapper">
+                            <div id="logo_normal" class="logo_container">
+                                <div class="logo_align">
+                                    <a id="custom_logo" class="logo_wrapper hidden" href="index.html">
+                                        <img src="upload/logo@2x.png" alt="" width="173" height="37">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="logo_transparent" class="logo_container">
+                                <div class="logo_align">
+                                    <a id="custom_logo_transparent" class="logo_wrapper default" href="index.html">
+                                        <img src="upload/logo@2x.png" alt="" width="173" height="37">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="menu_wrapper">
+                                <div id="nav_wrapper">
+                                    <div class="nav_wrapper_inner">
+                                        <div id="menu_border_wrapper">
+                                            <div class="menu-main-menu-container">
+                                                <ul id="main_menu" class="nav">
+                                                    <li class="megamenu col3 menu-item current-menu-item current_page_item menu-item-home current-menu-ancestor menu-item-has-children arrow"><a href="index.html">Home</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item current-menu-ancestor current-menu-parent menu-item-has-children arrow"><a href="#">Columns One</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item menu-item-home current-menu-item "><a href="index.html"><span class="subunder">- </span>Home 1 &#8211; Portfolio List</a></li>
+                                                                    <li class="menu-item"><a href="home-2.html"><span class="subunder">- </span>Home 2 &#8211; Mixed Layout Portfolio</a></li>
+                                                                    <li class="menu-item"><a href="home-3.html"><span class="subunder">- </span>Home 3 &#8211; Distortion Portfolio Grid</a></li>
+                                                                    <li class="menu-item"><a href="home-4.html"><span class="subunder">- </span>Home 4 &#8211; Portfolio and Awards</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns Two</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item"><a href="home-5.html"><span class="subunder">- </span>Home 5 &#8211; Typing Effect</a></li>
+                                                                    <li class="menu-item"><a href="home-6.html"><span class="subunder">- </span>Home 6 &#8211; 3D Room</a></li>
+                                                                    <li class="menu-item"><a href="home-7.html"><span class="subunder">- </span>Home 7 &#8211; Motion Reveal Slider</a></li>
+                                                                    <li class="menu-item"><a href="home-8.html"><span class="subunder">- </span>Home 8 &#8211; Portfolio Grid and Testimonials</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns Three</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item"><a href="home-9.html"><span class="subunder">- </span>Home 9 &#8211; Slice Slider and Parallax Elements</a></li>
+                                                                    <li class="menu-item"><a href="home-10.html"><span class="subunder">- </span>Home 10 &#8211; Typing and Parallax Elements</a></li>
+                                                                    <li class="menu-item"><a href="home-11.html"><span class="subunder">- </span>Home 11 &#8211; Contrast Sliders</a></li>
+                                                                    <li class="menu-item"><a href="home-12.html"><span class="subunder">- </span>Home 12 &#8211; Portfolio Timeline</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="megamenu col4 menu-item menu-item-has-children arrow"><a href="#">Slider</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns One</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item"><a href="vertical-parallax-slider.html"><span class="subunder">- </span>Vertical Parallax Slider</a></li>
+                                                                    <li class="menu-item"><a href="animated-frame-slider.html"><span class="subunder">- </span>Animated Frame Slider</a></li>
+                                                                    <li class="menu-item"><a href="3d-room-slider.html"><span class="subunder">- </span>span>3D Room Slider</a></li>
+                                                                    <li class="menu-item"><a href="velo-slider.html"><span class="subunder">- </span>Velo Slider</a></li>
+                                                                    <li class="menu-item"><a href="popout-slider.html"><span class="subunder">- </span>Popout Slider</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns Two</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item"><a href="clip-path-slider.html"><span class="subunder">- </span>Clip Path Slider</a></li>
+                                                                    <li class="menu-item"><a href="split-slick-slider.html"><span class="subunder">- </span>Split Slick Slider</a></li>
+                                                                    <li class="menu-item"><a href="fullscreen-transitions-slider.html"><span class="subunder">- </span>Fullscreen Transitions Slider</a></li>
+                                                                    <li class="menu-item"><a href="flip-slider.html"><span class="subunder">- </span>Flip Slider</a></li>
+                                                                    <li class="menu-item"><a href="horizontal-slider.html"><span class="subunder">- </span>Horizontal Slider</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns Three</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item"><a href="multi-layouts-slider.html"><span class="subunder">- </span>Multi Layouts Slider</a></li>
+                                                                    <li class="menu-item"><a href="split-carousel-slider.html"><span class="subunder">- </span>Split Carousel Slider</a></li>
+                                                                    <li class="menu-item"><a href="property-clip-slider.html"><span class="subunder">- </span>Property Clip Slider</a></li>
+                                                                    <li class="menu-item"><a href="slice-slider.html"><span class="subunder">- </span>Slice Slider</a></li>
+                                                                    <li class="menu-item"><a href="parallax-slider.html"><span class="subunder">- </span>Parallax Slider</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns Four</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item"><a href="animated-slider.html"><span class="subunder">- </span>Animated Slider</a></li>
+                                                                    <li class="menu-item"><a href="motion-reveal-slider.html"><span class="subunder">- </span>Motion Reveal Slider</a></li>
+                                                                    <li class="menu-item"><a href="fade-up-slider.html"><span class="subunder">- </span>Fade Up Slider</a></li>
+                                                                    <li class="menu-item"><a href="image-carousel-slider.html"><span class="subunder">- </span>Image Carousel Slider</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="megamenu col3 menu-item menu-item-has-children arrow"><a href="#">Portfolio</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns One</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item"><a href="portfolio-list.html"><span class="subunder">- </span>Portfolio List</a></li>
+                                                                    <li class="menu-item"><a href="portfolio-classic.html"><span class="subunder">- </span>Portfolio Classic</a></li>
+                                                                    <li class="menu-item"><a href="portfolio-grid.html"><span class="subunder">- </span>Portfolio Grid</a></li>
+                                                                    <li class="menu-item"><a href="portfolio-masonry.html"><span class="subunder">- </span>Portfolio Masonry</a></li>
+                                                                    <li class="menu-item"><a href="portfolio-timeline-horizontal.html"><span class="subunder">- </span>Portfolio Timeline Horizontal</a></li>
+                                                                    <li class="menu-item"><a href="portfolio-timeline-vertical.html"><span class="subunder">- </span>Portfolio Timeline Vertical</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns Two</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item"><a href="portfolio-slider.html"><span class="subunder">- </span>Portfolio Slider</a></li>
+                                                                    <li class="menu-item"><a href="portfolio-multiple-categories.html"><span class="subunder">- </span>Portfolio Multiple Categories</a></li>
+                                                                    <li class="menu-item"><a href="portfolio-slice-slider.html"><span class="subunder">- </span>Portfolio Slice Slider</a></li>
+                                                                    <li class="menu-item"><a href="portfolio-scatter.html"><span class="subunder">- </span>Portfolio Scatter</a></li>
+                                                                    <li class="menu-item"><a href="portfolio-filterable.html"><span class="subunder">- </span>Portfolio Filterable</a></li>
+                                                                    <li class="menu-item"><a href="single-portfolio-1.html"><span class="subunder">- </span>Single Portfolio 1</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns Three</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item"><a href="single-portfolio-2.html"><span class="subunder">- </span>Single Portfolio 2</a></li>
+                                                                    <li class="menu-item"><a href="single-portfolio-3.html"><span class="subunder">- </span>Single Portfolio 3</a></li>
+                                                                    <li class="menu-item"><a href="single-portfolio-4.html"><span class="subunder">- </span>Single Portfolio 4</a></li>
+                                                                    <li class="menu-item"><a href="single-portfolio-5.html"><span class="subunder">- </span>Single Portfolio 5</a></li>
+                                                                    <li class="menu-item"><a href="single-portfolio-6.html"><span class="subunder">- </span>Single Portfolio 6</a></li>
+                                                                    <li class="menu-item"><a href="single-portfolio-7.html"><span class="subunder">- </span>Single Portfolio 7</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="megamenu col4 menu-item menu-item-has-children arrow"><a href="#">Pages</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns One</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item"><a href="about-us-1.html"><span class="subunder">- </span>About Us 1</a></li>
+                                                                    <li class="menu-item menu-item-449"><a href="about-us-2.html"><span class="subunder">- </span>About Us 2</a></li>
+                                                                    <li class="menu-item menu-item-499"><a href="about-us-3.html"><span class="subunder">- </span>About Us 3</a></li>
+                                                                    <li class="menu-item menu-item-595"><a href="about-us-4.html"><span class="subunder">- </span>About Us 4</a></li>
+                                                                    <li class="menu-item menu-item-661"><a href="about-me-1.html"><span class="subunder">- </span>About Me 1</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns Two</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item menu-item-700"><a href="about-me-2.html"><span class="subunder">- </span>About Me 2</a></li>
+                                                                    <li class="menu-item menu-item-828"><a href="our-process.html"><span class="subunder">- </span>Our Process</a></li>
+                                                                    <li class="menu-item menu-item-738"><a href="pricing.html"><span class="subunder">- </span>Pricing</a></li>
+                                                                    <li class="menu-item menu-item-925"><a href="contact-1.html"><span class="subunder">- </span>Contact 1</a></li>
+                                                                    <li class="menu-item menu-item-964"><a href="contact-2.html"><span class="subunder">- </span>Contact 2</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="menu-item menu-item-has-children arrow"><a href="#">Columns Three</a>
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-item menu-item-989"><a href="contact-3.html"><span class="subunder">- </span>Contact 3</a></li>
+                                                                    <li class="menu-item"><a href="our-services.html"><span class="subunder">- </span>Our Services</a></li>
+                                                                    <li class="menu-item"><a href="exhibition.html"><span class="subunder">- </span>Exhibition</a></li>
+                                                                    <li class="menu-item"><a href="meet-the-team.html"><span class="subunder">- </span>Meet The Team</a></li>
+                                                                    <li class="menu-item"><a href="testimonials.html"><span class="subunder">- </span>Testimonials</a></li>
+                                                                </ul>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item menu-item-has-children arrow"><a href="#">Gallery</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item"><a href="gallery-fullscreen.html"><span class="subunder">- </span>Fullscreen</a></li>
+                                                            <li class="menu-item"><a href="gallery-preview.html"><span class="subunder">- </span>Preview</a></li>
+                                                            <li class="menu-item menu-item-416"><a href="gallery-horizontal.html"><span class="subunder">- </span>Horizontal</a></li>
+                                                            <li class="menu-item"><a href="gallery-grid-with-space.html"><span class="subunder">- </span>Grid With Space</a></li>
+                                                            <li class="menu-item"><a href="gallery-grid-no-space.html"><span class="subunder">- </span>Grid No Space</a></li>
+                                                            <li class="menu-item"><a href="gallery-masonry-with-space.html"><span class="subunder">- </span>Masonry With Space</a></li>
+                                                            <li class="menu-item"><a href="gallery-masonry-no-space.html"><span class="subunder">- </span>Masonry No Space</a></li>
+                                                            <li class="menu-item"><a href="gallery-justified-with-space.html"><span class="subunder">- </span>Justified With Space</a></li>
+                                                            <li class="menu-item"><a href="gallery-justified-no-space.html"><span class="subunder">- </span>Justified No Space</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item menu-item-has-children arrow"><a href="#">Blog</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item"><a href="blog-grid-no-space.html"><span class="subunder">- </span>Grid No Space</a></li>
+                                                            <li class="menu-item"><a href="blog-grid.html"><span class="subunder">- </span>Grid</a></li>
+                                                            <li class="menu-item"><a href="blog-masonry.html"><span class="subunder">- </span>Masonry</a></li>
+                                                            <li class="menu-item"><a href="blog-metro-no-space.html"><span class="subunder">- </span>Metro No Space</a></li>
+                                                            <li class="menu-item"><a href="blog-metro.html"><span class="subunder">- </span>Metro</a></li>
+                                                            <li class="menu-item"><a href="blog-classic.html"><span class="subunder">- </span>Classic</a></li>
+                                                            <li class="menu-item"><a href="blog-list.html"><span class="subunder">- </span>List</a></li>
+                                                            <li class="menu-item"><a href="blog-list-circle.html"><span class="subunder">- </span>List Circle</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <div id="page_content_wrapper">
@@ -38,6 +230,152 @@
                             <div class="elementor elementor-2203">
                                 <div class="elementor-inner">
                                     <div class="elementor-section-wrap">
+                                        <section data-id="f34bdc0" class="elementor-element elementor-element-f34bdc0 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-row">
+                                                    <div data-id="bc7d649" class="elementor-element elementor-element-bc7d649 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div data-id="22f1434" class="elementor-element elementor-element-22f1434 elementor-widget elementor-widget-architecturer-slider-image-carousel" data-element_type="architecturer-slider-image-carousel.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="tg_image_carousel_slider_wrapper carousel" style="height:620px;">
+                                                                            <div class="carousel__nav">
+                                                                                <span id="moveLeft" class="carousel__arrow">
+                                                                  <svg class="carousel__icon" width="24" height="24" viewbox="0 0 24 24">
+                                                                     <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+                                                                  </svg>
+                                                               </span>
+                                                                                <span id="moveRight" class="carousel__arrow">
+                                                                  <svg class="carousel__icon" width="24" height="24" viewbox="0 0 24 24">
+                                                                     <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                                                                  </svg>
+                                                               </span>
+                                                                            </div>
+                                                                            <div class="carousel-item carousel-item--1">
+                                                                                <div class="carousel-item__image" style="background-image:url(upload/Mid-Century-Modern-10.-Matt-Gibson.jpg);"></div>
+                                                                                <div class="carousel-item__info">
+                                                                                    <div class="carousel-item__container">
+                                                                                        <h2 class="carousel-item__subtitle">Residential</h2>
+                                                                                        <h1 class="carousel-item__title">Modern Minimalist House</h1>
+                                                                                        <div class="carousel-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus odio sed leo fermentum, sed faucibus massa eleifend. Pellentesque ut auctor tellus. Vivamus eget vestibulum urna, sit amet aliquet augue.</div>
+                                                                                        <a href="single-portfolio-6.html" class="carousel-item__btn">View Project</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="carousel-item carousel-item--2">
+                                                                                <div class="carousel-item__image" style="background-image:url(upload/A1KvjZmiERL.jpg);"></div>
+                                                                                <div class="carousel-item__info">
+                                                                                    <div class="carousel-item__container">
+                                                                                        <h2 class="carousel-item__subtitle">Residential</h2>
+                                                                                        <h1 class="carousel-item__title">Rustic Steel House</h1>
+                                                                                        <div class="carousel-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus odio sed leo fermentum, sed faucibus massa eleifend. Pellentesque ut auctor tellus. Vivamus eget vestibulum urna, sit amet aliquet augue.</div>
+                                                                                        <a href="single-portfolio-7.html" class="carousel-item__btn">View Project</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="carousel-item carousel-item--3">
+                                                                                <div class="carousel-item__image" style="background-image:url(upload/lycs-lycs-744227-unsplash.jpg);"></div>
+                                                                                <div class="carousel-item__info">
+                                                                                    <div class="carousel-item__container">
+                                                                                        <h2 class="carousel-item__subtitle">Office Building</h2>
+                                                                                        <h1 class="carousel-item__title">Xiami Office Building</h1>
+                                                                                        <div class="carousel-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus odio sed leo fermentum, sed faucibus massa eleifend. Pellentesque ut auctor tellus. Vivamus eget vestibulum urna, sit amet aliquet augue.</div>
+                                                                                        <a href="single-portfolio-2.html" class="carousel-item__btn">View Project</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="carousel-item carousel-item--4">
+                                                                                <div class="carousel-item__image" style="background-image:url(upload/marginal-street-lofts-merge-architects-hero.jpg);"></div>
+                                                                                <div class="carousel-item__info">
+                                                                                    <div class="carousel-item__container">
+                                                                                        <h2 class="carousel-item__subtitle">Residential</h2>
+                                                                                        <h1 class="carousel-item__title">Elegant Brick House</h1>
+                                                                                        <div class="carousel-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus odio sed leo fermentum, sed faucibus massa eleifend. Pellentesque ut auctor tellus. Vivamus eget vestibulum urna, sit amet aliquet augue.</div>
+                                                                                        <a href="single-portfolio-3.html" class="carousel-item__btn">View Project</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section data-id="59433b4" class="elementor-element elementor-element-59433b4 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-row">
+                                                    <div data-id="13dc2df" class="elementor-element elementor-element-13dc2df elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <section data-id="e3ca9a0" class="elementor-element elementor-element-e3ca9a0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
+                                                                    <div class="elementor-container elementor-column-gap-default">
+                                                                        <div class="elementor-row">
+                                                                            <div data-id="345331b" class="elementor-element elementor-element-345331b elementor-column elementor-col-100 elementor-inner-column" data-element_type="column">
+                                                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                                                    <div class="elementor-widget-wrap">
+                                                                                        <div data-id="3223c03" class="elementor-element elementor-element-3223c03 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-element_type="text-editor.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="elementor-text-editor elementor-clearfix pl40">
+                                                                                                    <p>Working</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div data-id="8fcb6d9" class="elementor-element elementor-element-8fcb6d9 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <h2 class="elementor-heading-title elementor-size-default pl40">Process</h2>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div data-id="b6420e9" class="elementor-element elementor-element-b6420e9 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-architecturer-slider-fadeup" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-element_type="architecturer-slider-fadeup.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="tg_fadeup_slider_wrapper cd-slider" style="height:440px;">
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <div class="image" style="background-image:url(upload/rawpixel-411170-unsplash.jpg);"></div>
+                                                                                                            <div class="content">
+                                                                                                                <h2>Project planning with client</h2>
+                                                                                                                <div class="description">A profound design process eventually makes the patron, the architect, and every occasional visitor in the building a slightly better human being.</div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="image" style="background-image:url(upload/daniel-mccullough-348488-unsplash.jpg);"></div>
+                                                                                                            <div class="content">
+                                                                                                                <h2>Working on draft plan &amp; ideas</h2>
+                                                                                                                <div class="description">People who build their own home tend to be very courageous. These people are curious about life. They&#039;re thinking about what it means to live in a house, rather than just buying a commodity and making it work.</div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="image" style="background-image:url(upload/felix-russell-saw-609919-unsplash.jpg);"></div>
+                                                                                                            <div class="content">
+                                                                                                                <h2>Transform into digital assets</h2>
+                                                                                                                <div class="description">Architecture is really about well-being. I think that people want to feel good in a space … On the one hand it&#039;s about shelter, but it&#039;s also about pleasure.</div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="image" style="background-image:url(upload/rawpixel-274860-unsplash.jpg);"></div>
+                                                                                                            <div class="content">
+                                                                                                                <h2>Finalise works with client</h2>
+                                                                                                                <div class="description">Architecture is really about well-being. I think that people want to feel good in a space … On the one hand it&#039;s about shelter, but it&#039;s also about pleasure.</div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
                                         <section data-id="fe6bb34" class="elementor-element elementor-element-fe6bb34 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
