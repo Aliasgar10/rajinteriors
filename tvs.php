@@ -6,7 +6,7 @@
     <link type="text/css" media="all" href="css/style.css" rel="stylesheet">
     <link type="text/css" media="only screen and (max-width: 768px)" href="css/responsive.css" rel="stylesheet">
 
-    <title>Architecturer | Interior Design &amp; Architecture Html Template</title>
+    <title>TVS</title>
 
 
     <meta charset="UTF-8">
@@ -72,7 +72,7 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>AUtOMATION</h3>
+                                                                                            <h3>AUTOMATION</h3>
                                                                                             <div class="portfolio_masonry_subtitle">July 2018</div>
                                                                                         </div>
                                                                                     </figcaption></figure>
@@ -134,7 +134,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-5 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/d79a08f0c0f0e26dc960695470824495-768x853.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/automation.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
