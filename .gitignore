@@ -2,6 +2,7 @@
 upload/
 un-UsedFile/
 upload.zip
+un-UsedFile
 
 # Ignore system files
 .DS_Store
