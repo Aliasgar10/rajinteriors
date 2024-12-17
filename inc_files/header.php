@@ -32,7 +32,7 @@
                                     <li><a href="index.php">Home</a></li>
                                     <li class="menu-item menu-item-has-children arrow"><a href="#">TVS</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item"><a href="home-9.html"><span class="subunder">- </span>ABCD</a></li>
+                                            <li class="menu-item"><a href="test1.php"><span class="subunder">- </span>ABCD</a></li>
                                             <li class="menu-item"><a href="home-10.html"><span class="subunder">- </span>ABCD</a></li>
                                             <li class="menu-item"><a href="home-11.html"><span class="subunder">- </span>ABCD</a></li>
                                             <li class="menu-item"><a href="home-12.html"><span class="subunder">- </span>ABCD &#8211; bjb </a></li>
@@ -54,7 +54,14 @@
                     <div id="mobile_menu" style="display: none;">
                         <ul id="mobile_menu_items">
                             <li><a href="index.php">Home</a></li>
-                            <li><a href="#">TVS</a></li>
+                            <li><a href="#">TVS</a>
+                                <ul class="sub-menu">
+                                    <li><a href="test1.php">ABCD</a></li>
+                                    <li><a href="home-10.html">ABCD</a></li>
+                                    <li><a href="home-11.html">ABCD</a></li>
+                                    <li><a href="home-12.html">ABCD &#8211; bjb</a></li>
+                                </ul>
+                            </li>
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="our-process.php">Services</a></li>
                             <li><a href="contact-1.php">Contact</a></li>
