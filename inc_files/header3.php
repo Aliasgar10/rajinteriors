@@ -16,14 +16,14 @@
                 <div id="logo_normal" class="logo_container">
                     <div class="logo_align">
                         <a id="custom_logo" class="logo_wrapper hidden" href="index.php">
-                            <img src="imagg/tv.png" alt="" width="250" height="50">
+                            <img src="imagg/tv.png" alt="" width="70" height="70">
                         </a>
                     </div>
                 </div>
                 <div id="logo_transparent" class="logo_container">
                     <div class="logo_align">
                         <a id="custom_logo_transparent" class="logo_wrapper default" href="index.php">
-                            <img src="imagg/tv.png" alt="" width="250" height="50">
+                            <img src="imagg/tv.png" alt="" width="70" height="70">
                         </a>
                     </div>
                 </div>
