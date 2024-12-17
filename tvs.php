@@ -62,7 +62,7 @@
                                                                             <div class="portfolio_masonry_content_wrapper gallery_grid_content_wrapper do_masonry portfolio_masonry layout_tg_two_cols" data-cols="2">
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-1 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/category/assets/CATEGORY/TOUCH SWITCHES.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/TOUCH SWITCHES.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -98,7 +98,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-3 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/house-paarman-1-768x460.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/RAILWAY HINGES.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
