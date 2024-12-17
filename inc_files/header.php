@@ -18,6 +18,11 @@
                 </div>
             </div>
             <div id="menu_wrapper">
+                <style>
+                    .nav li a{
+                        font-size: 18px !important;
+                    }
+                </style>
                 <!-- Desktop Menu -->
                 <div id="nav_wrapper">
                     <div class="nav_wrapper_inner">
@@ -76,64 +81,64 @@
         }
     }
 
-/* Desktop Styles */
-#menu_wrapper #nav_wrapper {
-    display: block;
-}
-
-#mobile_menu_wrapper {
-    display: none;
-}
-#main_menu{
-    margin-top:13px;
-}
-/* Mobile Styles */
-@media only screen and (max-width: 520px) {
+    /* Desktop Styles */
     #menu_wrapper #nav_wrapper {
-        display: none; /* Hide the desktop menu */
+        display: block;
     }
 
     #mobile_menu_wrapper {
-        display: block; /* Show the hamburger icon */
+        display: none;
     }
+    #main_menu{
+        margin-top:13px;
+    }
+    /* Mobile Styles */
+    @media only screen and (max-width: 520px) {
+        #menu_wrapper #nav_wrapper {
+            display: none; /* Hide the desktop menu */
+        }
 
-    #mobile_menu {
-        display: none;  /* Mobile menu hidden initially */
-        background-color: beige;
-        padding: 10px;
-        position: absolute; /* Position the menu above other content */
-        top: 60px; /* Adjust this to position the menu correctly below the hamburger */
-        left: 0;
-        width: 100%;
-        z-index: 1000;  /* Ensure the mobile menu appears above other elements */
-        margin: 1px 5px 0px -10px;
-        border-radius: 10px;
-    
-    }
+        #mobile_menu_wrapper {
+            display: block; /* Show the hamburger icon */
+        }
 
-    #mobile_menu ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
+        #mobile_menu {
+            display: none;  /* Mobile menu hidden initially */
+            background-color: beige;
+            padding: 10px;
+            position: absolute; /* Position the menu above other content */
+            top: 60px; /* Adjust this to position the menu correctly below the hamburger */
+            left: 0;
+            width: 100%;
+            z-index: 1000;  /* Ensure the mobile menu appears above other elements */
+            margin: 1px 5px 0px -10px;
+            border-radius: 10px;
+        
+        }
 
-    #mobile_menu li {
-        margin: 10px 0;
-    }
+        #mobile_menu ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-    #mobile_menu a {
-        text-decoration: none;
-        color: #333;
-        font-size: 18px;
-        padding: 10px;
-    }
+        #mobile_menu li {
+            margin: 10px 0;
+        }
 
-    /* Optional: Styling for the hamburger icon */
-    #hamburger_icon {
-        font-size: 30px;
-        background: none;
-        border: none;
-        cursor: pointer;
+        #mobile_menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        /* Optional: Styling for the hamburger icon */
+        #hamburger_icon {
+            font-size: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
     }
-}
 
 </style>

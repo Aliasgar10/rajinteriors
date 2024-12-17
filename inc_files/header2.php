@@ -18,6 +18,11 @@
                 </div>
             </div>
             <div id="menu_wrapper">
+                <style>
+                    .nav li a{
+                        font-size: 18px !important;
+                    }
+                </style>
                 <div id="nav_wrapper">
                     <div class="nav_wrapper_inner">
                         <div id="menu_border_wrapper">
