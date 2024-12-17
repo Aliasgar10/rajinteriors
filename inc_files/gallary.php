@@ -1,14 +1,22 @@
 <style>
+    #h11{
+        padding-left: 5px;
+        font-size: 'xx-large';
+        font-weight: 500;
+    }
     @media only screen and (max-width: 480px) and (orientation: portrait) {
         #abcc {
             margin-top: 30vh !important;
+        }
+        #h11{
+            margin-left: 20px;
         }
     }
 </style>
 
 <section id="abcc" data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
     <div class="elementor-widget-container">
-        <h2 class="elementor-heading-title elementor-size-default">Gallery</h2>
+        <h2 class="elementor-heading-title elementor-size-default" id="h11">Gallery</h2>
     </div>
     <div class="elementor-container elementor-column-gap-default">
         <div class="elementor-row">
