@@ -32,10 +32,10 @@
                                     <li><a href="index.php">Home</a></li>
                                     <li class="menu-item menu-item-has-children arrow"><a href="#">TVS</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item"><a href="home-9.html"><span class="subunder">- </span>Home 9 &#8211; Slice Slider and Parallax Elements</a></li>
-                                            <li class="menu-item"><a href="home-10.html"><span class="subunder">- </span>Home 10 &#8211; Typing and Parallax Elements</a></li>
-                                            <li class="menu-item"><a href="home-11.html"><span class="subunder">- </span>Home 11 &#8211; Contrast Sliders</a></li>
-                                            <li class="menu-item"><a href="home-12.html"><span class="subunder">- </span>Home 12 &#8211; Portfolio Timeline</a></li>
+                                            <li class="menu-item"><a href="home-9.html"><span class="subunder">ABCD</span></a></li>
+                                            <li class="menu-item"><a href="home-10.html"><span class="subunder">ABCD</span></a></li>
+                                            <li class="menu-item"><a href="home-11.html"><span class="subunder">ABCD</span></a></li>
+                                            <li class="menu-item"><a href="home-12.html"><span class="subunder">ABCD</span></a></li>
                                         </ul>
                                     </li>
                                     
