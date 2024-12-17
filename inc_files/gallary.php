@@ -1,12 +1,12 @@
 <style>
-    @media screen and (max-width: 480px) {
-        #fb4c59e{
+    @media only screen and (max-width: 480px) and (orientation: portrait) {
+        #abcc {
             margin-top: 30vh !important;
         }
-
     }
 </style>
-<section data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
+
+<section id="abcc" data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
     <div class="elementor-widget-container">
         <h2 class="elementor-heading-title elementor-size-default">Gallery</h2>
     </div>
