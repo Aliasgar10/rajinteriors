@@ -1,4 +1,7 @@
 <style>
+    #menu_wrapper div .nav li a{
+        color:#fff !important;
+    }
     #menu_wrapper div .nav li a:hover{
         color:#fff !important;
     }
