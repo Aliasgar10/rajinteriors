@@ -127,7 +127,7 @@
             padding: 5px;
         }
         #mobile_menu li:hover {
-            background: black;
+            background: #d3ced2;
         }
        
         #mobile_menu a {
@@ -136,9 +136,9 @@
             font-size: 18px;
             padding: 10px;
         }
-        #mobile_menu a:hover {
+        /* #mobile_menu a:hover {
             color: #fff;
-        }
+        } */
 
         /* Optional: Styling for the hamburger icon */
         #hamburger_icon {
