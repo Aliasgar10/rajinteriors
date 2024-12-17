@@ -1,8 +1,8 @@
 <style>
     @media screen and (max-width: 520px) {
-        .elementor-heading-title{
+        /* .elementor-heading-title{
             margin-top: 10vh !important;
-        }
+        } */
 
     }
 </style>
