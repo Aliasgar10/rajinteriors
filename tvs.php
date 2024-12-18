@@ -188,7 +188,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-8 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/modern-riverside-home-christopher-simmonds-architect-1-backyard-768x512.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/SOFA_CURTAIN_FABRICS.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -198,8 +198,44 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>Modern York Top</h3>
-                                                                                            <div class="portfolio_masonry_subtitle">June 2017</div>
+                                                                                            <h3>SOFA & CURTAIN FABRICS</h3>
+                                                                                            <!-- <div class="portfolio_masonry_subtitle">June 2017</div> -->
+                                                                                        </div>
+                                                                                    </figcaption></figure>
+                                                                                    <a href="single-portfolio-4.html"></a>
+                                                                                </div>
+                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-6 tile scale-anm  all no_filter">
+                                                                                    <div class="portfolio_masonry_img">
+                                                                                        <img src="assets/CATEGORY/UPVC_WINDOWS.jpg" alt="">
+                                                                                    </div>
+                                                                                    <figure><figcaption>
+                                                                                        <div class="border one">
+                                                                                            <div></div>
+                                                                                        </div>
+                                                                                        <div class="border two">
+                                                                                            <div></div>
+                                                                                        </div>
+                                                                                        <div class="portfolio_masonry_content">
+                                                                                            <h3>UPVC WINDOWS</h3>
+                                                                                            <!-- <div class="portfolio_masonry_subtitle">April 2017</div> -->
+                                                                                        </div>
+                                                                                    </figcaption></figure>
+                                                                                    <a href="single-portfolio-6.html"></a>
+                                                                                </div>
+                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-8 tile scale-anm  all no_filter">
+                                                                                    <div class="portfolio_masonry_img">
+                                                                                        <img src="assets/CATEGORY/wallpapers.jpg" alt="">
+                                                                                    </div>
+                                                                                    <figure><figcaption>
+                                                                                        <div class="border one">
+                                                                                            <div></div>
+                                                                                        </div>
+                                                                                        <div class="border two">
+                                                                                            <div></div>
+                                                                                        </div>
+                                                                                        <div class="portfolio_masonry_content">
+                                                                                            <h3>WALLPAERS</h3>
+                                                                                            <!-- <div class="portfolio_masonry_subtitle">June 2017</div> -->
                                                                                         </div>
                                                                                     </figcaption></figure>
                                                                                     <a href="single-portfolio-4.html"></a>
