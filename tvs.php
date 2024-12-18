@@ -170,7 +170,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-7 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/niv-rozenberg-356668-unsplash-768x512.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/PLY_FURNITURE FINISHES.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -180,8 +180,8 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>SOFA CURTAIN FABRICS</h3>
-                                                                                            <div class="portfolio_masonry_subtitle">December 2017</div>
+                                                                                            <h3>PLY & FURNITURE FINISHES</h3>
+                                                                                            <!-- <div class="portfolio_masonry_subtitle">December 2017</div> -->
                                                                                         </div>
                                                                                     </figcaption></figure>
                                                                                     <a href="single-portfolio-2.html"></a>
