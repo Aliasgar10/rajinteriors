@@ -77,9 +77,9 @@
                                             </div>
                                         </div> -->
 
-                                        <!-- Gallary Section -->
+                                        <!-- Gallery Section -->
                                             <?php include("inc_files/gallery.php"); ?>
-                                        <!-- end Gallary Section -->
+                                        <!-- end Gallery Section -->
 
                                         <!-- <section data-id="f8cf85f" class="elementor-element elementor-element-f8cf85f animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
