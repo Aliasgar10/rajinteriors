@@ -20,7 +20,7 @@
     <link rel="apple-touch-icon-precomposed" href="upload/TG-Thumb.png">
 <style>
     .wrapper{
-        padding-top: 0px;
+        padding-top: 0px !important;
     }
 </style>
 
