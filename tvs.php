@@ -27,8 +27,8 @@
 
 
 
-        <div id="wrapper" class="pl40 pr40">
-        <?php include("inc_files/header3.php"); ?>
+        <div id="wrapper">
+            <?php include("inc_files/header3.php"); ?>
 
 
             <div id="page_content_wrapper">
