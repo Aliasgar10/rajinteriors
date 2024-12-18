@@ -152,7 +152,18 @@
             border-radius: 10px;
         
         }
-
+        .top_bar {
+            height: 16vh !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .standard_wrapper{
+            margin-top: 0px;
+        }
+        #logo_wrapper, html[data-style=fullscreen] #logo_wrapper, .top_bar.hasbg #logo_wrapper {
+            padding:0px;
+        }
         #mobile_menu ul {
             list-style-type: none;
             padding-left: 0;

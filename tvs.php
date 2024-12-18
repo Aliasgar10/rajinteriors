@@ -18,7 +18,11 @@
     <link rel="icon" href="upload/TG-Thumb.png" sizes="32x32">
     <link rel="icon" href="upload/TG-Thumb.png" sizes="192x192">
     <link rel="apple-touch-icon-precomposed" href="upload/TG-Thumb.png">
-
+<style>
+    .wrapper{
+        padding-top: 0px;
+    }
+</style>
 
 </head>
 
