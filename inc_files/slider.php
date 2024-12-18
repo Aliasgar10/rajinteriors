@@ -18,8 +18,13 @@
                                                                     <div class="elementor-column-wrap elementor-element-populated">
                                                                         <div class="elementor-widget-wrap">
                                                                             <div data-id="07572d5" class="elementor-element elementor-element-07572d5 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-element_type="text-editor.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-text-editor elementor-clearfix"><strong><em></em></strong>
+                                                                                <div class="elementor-widget-container">                                                                                   
+                                                                                    <style>
+                                                                                        #b3f72b289{
+                                                                                            font-family:'inc_files/Operetta52-Bold.otf'
+                                                                                        }
+                                                                                    </style>                                        
+                                                                                    <h2 class="elementor-text-editor elementor-clearfix" id="b3f72b289"><strong><em></em></strong>
                                                                                         <br> 
                                                                                         <span style="font-size: larger;" class="typed-me" data-string0="" data-string1="Versatile" data-string2="Opulent" data-string3="Glamour" data-string4="Unique" data-string5="Elegant" data-type-speed="100" data-start-delay="0" data-backspeed="40" data-back-delay="1500" data-loop="1"></span>
                                                                                     </h2>
