@@ -52,10 +52,10 @@
                                                 }
 
                                                 #a{
-                                                    top:1600px !important;
+                                                    top:1580px !important;
                                                 }
                                                 #b{
-                                                    top:2112px !important;
+                                                    top:1872px !important;
                                                 }
                                                 #c{
                                                     top:2404px !important;
