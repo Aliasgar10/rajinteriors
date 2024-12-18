@@ -153,7 +153,7 @@
         
         }
         .top_bar {
-            height: 16vh !important;
+            height: 14vh !important;
             display: flex;
             align-items: center;
             justify-content: center;
