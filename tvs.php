@@ -62,7 +62,7 @@
                                                                             <div class="portfolio_masonry_content_wrapper gallery_grid_content_wrapper do_masonry portfolio_masonry layout_tg_two_cols" data-cols="2">
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-1 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/TOUCH SWITCHES.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/automation.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -116,7 +116,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-4 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/ng-55633-unsplash-768x512.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/IMG_8395.JPG" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -134,7 +134,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-5 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/automation.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/LOUVERS WINDOW.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -152,7 +152,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-6 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/suteki-home-kengo-kuma-portland_dezeen_2364_sq-1-768x768.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/GEORGIAN BAR WINDOWS.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -170,7 +170,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-7 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/niv-rozenberg-356668-unsplash-768x512.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/NECK TOWER BOLTS.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -188,7 +188,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-8 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/modern-riverside-home-christopher-simmonds-architect-1-backyard-768x512.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/d691db6a-68d9-4adf-9e1b-92ff2fbf381b.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -236,7 +236,7 @@
                                                                             </div>
                                                                             <figure class="tg_background_img hover">
                                                                                 <div class="tg_background_list_overlay"></div>
-                                                                                <img src="upload/xModern-Eco-friendly-House-2.jpg.pagespeed.ic_.el4ZtL7FI9.jpg" alt="">
+                                                                                <img src="assets/CATEGORY/SHELF VACCUUM.jpg" alt="">
                                                                             </figure>
                                                                             <div class="tg_background_list_column ">
                                                                                 <div class="tg_background_list_content">
@@ -251,7 +251,7 @@
                                                                             </div>
                                                                             <figure class="tg_background_img ">
                                                                                 <div class="tg_background_list_overlay"></div>
-                                                                                <img src="upload/modern-wood-house-1.jpg" alt="">
+                                                                                <img src="assets/CATEGORY/cd8903da-0005-4ebf-b37f-a41e1107979c.jpg" alt="">
                                                                             </figure>
                                                                             <div class="tg_background_list_column ">
                                                                                 <div class="tg_background_list_content">
@@ -266,7 +266,7 @@
                                                                             </div>
                                                                             <figure class="tg_background_img ">
                                                                                 <div class="tg_background_list_overlay"></div>
-                                                                                <img src="upload/Sleek-and-Modern-Interior-by-Marcelo-Mota-Arquitectura-3.jpg" alt="">
+                                                                                <img src="assets/CATEGORY/LAMINATES.jpg" alt="">
                                                                             </figure>
                                                                             <div class="tg_background_list_column last">
                                                                                 <div class="tg_background_list_content">
@@ -281,7 +281,7 @@
                                                                             </div>
                                                                             <figure class="tg_background_img ">
                                                                                 <div class="tg_background_list_overlay"></div>
-                                                                                <img src="upload/A1KvjZmiERL.jpg" alt="">
+                                                                                <img src="assets/CATEGORY/GLASS FITTINGS.jpg" alt="">
                                                                             </figure>
                                                                         </div>
                                                                     </div>
