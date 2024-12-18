@@ -40,40 +40,43 @@
                                     <div class="elementor-section-wrap">
                                         <style>
                                             @media only screen and (max-width: 520px) {
-                                                /* #c197fe7{
+                                                #c197fe7{
                                                     margin-top: 0px;
                                                     margin-bottom: 0px;
-                                                } */
+                                                }
                                                 /* #wrapper{
                                                     margin-bottom: 0px;
-                                                }
-                                              #a1373f09{
-                                                    margin-bottom: 0px;
                                                 } */
+                                              #a1373f09{
+                                                    margin-bottom: 520px;
+                                                }
 
-                                                /* #a{
-                                                    top:1320px !important;
+                                                #a{
+                                                    top:1340px !important;
                                                 }
                                                 #b{
-                                                    top:1415px !important;
-                                                } */
+                                                    top:1608px !important;
+                                                }
                                                 #c{
-                                                    top:1666px !important;
+                                                    top:1876px !important;
                                                 }
                                                 #d{
-                                                    top:1928px !important;
+                                                    top:2150px !important;
                                                 }
                                                 #e{
-                                                    top:2184px !important;
+                                                    top:2420px !important;
                                                 }
                                                 #f{
-                                                    top:2584px !important;
+                                                    top:2830px !important;
                                                 }
                                                 #g{
-                                                    top:2840px !important;
+                                                    top:3096px !important;
                                                 }
                                                 #h{
-                                                    top:3203px !important;
+                                                    top:3468px !important;
+                                                }
+                                                #i{
+                                                    top:3736px !important;
                                                 }
                                             }
                                         </style>
