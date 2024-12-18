@@ -73,7 +73,7 @@
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
                                                                                             <h3>AUTOMATION</h3>
-                                                                                            <div class="portfolio_masonry_subtitle">July 2018</div>
+                                                                                            <!-- <div class="portfolio_masonry_subtitle">July 2018</div> -->
                                                                                         </div>
                                                                                     </figcaption></figure>
                                                                                     <a href="single-portfolio-6.html"></a>
@@ -91,14 +91,14 @@
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
                                                                                             <h3>BLINDS AND CURTAINS</h3>
-                                                                                            <div class="portfolio_masonry_subtitle">May 2018</div>
+                                                                                            <!-- <div class="portfolio_masonry_subtitle">May 2018</div> -->
                                                                                         </div>
                                                                                     </figcaption></figure>
                                                                                     <a href="single-portfolio-3.html"></a>
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-3 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/RAILWAY HINGES.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/flooring.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -109,14 +109,14 @@
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
                                                                                             <h3>FLOORING</h3>
-                                                                                            <div class="portfolio_masonry_subtitle">May 2018</div>
+                                                                                            <!-- <div class="portfolio_masonry_subtitle">May 2018</div> -->
                                                                                         </div>
                                                                                     </figcaption></figure>
                                                                                     <a href="single-portfolio-5.html"></a>
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-4 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/ng-55633-unsplash-768x512.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/Glasses & films.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -127,14 +127,14 @@
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
                                                                                             <h3>GLASSES AND FLIMS</h3>
-                                                                                            <div class="portfolio_masonry_subtitle">January 2018</div>
+                                                                                            <!-- <div class="portfolio_masonry_subtitle">January 2018</div> -->
                                                                                         </div>
                                                                                     </figcaption></figure>
                                                                                     <a href="single-portfolio-7.html"></a>
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-5 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/automation.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/hardwares.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -145,14 +145,14 @@
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
                                                                                             <h3>HARDWARE</h3>
-                                                                                            <div class="portfolio_masonry_subtitle">October 2017</div>
+                                                                                            <!-- <div class="portfolio_masonry_subtitle">October 2017</div> -->
                                                                                         </div>
                                                                                     </figcaption></figure>
                                                                                     <a href="single-portfolio-3.html"></a>
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-6 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="upload/suteki-home-kengo-kuma-portland_dezeen_2364_sq-1-768x768.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/modular_furniture.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -163,7 +163,7 @@
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
                                                                                             <h3>MODULER FURNITURE</h3>
-                                                                                            <div class="portfolio_masonry_subtitle">April 2017</div>
+                                                                                            <!-- <div class="portfolio_masonry_subtitle">April 2017</div> -->
                                                                                         </div>
                                                                                     </figcaption></figure>
                                                                                     <a href="single-portfolio-6.html"></a>
