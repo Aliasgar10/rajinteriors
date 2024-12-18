@@ -135,6 +135,7 @@
 
         #mobile_menu_wrapper {
             display: block; /* Show the hamburger icon */
+            margin-right: 20px;
         }
 
         #mobile_menu {
@@ -142,7 +143,7 @@
             background-color: beige;
             padding: 10px;
             position: absolute; /* Position the menu above other content */
-            top: 60px; /* Adjust this to position the menu correctly below the hamburger */
+            top: 125px; /* Adjust this to position the menu correctly below the hamburger */
             left: 0;
             width: 100%;
             z-index: 1000;  /* Ensure the mobile menu appears above other elements */
