@@ -238,7 +238,7 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>WALLPAERS</h3>
+                                                                                            <h3>WALLPAPERS</h3>
                                                                                             <!-- <div class="portfolio_masonry_subtitle">June 2017</div> -->
                                                                                         </div>
                                                                                     </figcaption></figure>
