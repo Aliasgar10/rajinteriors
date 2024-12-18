@@ -36068,7 +36068,7 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
 
 .tg_testimonials_card_wrapper .active-bullet {
     background: #fff;
-    transition: background 1s ease
+    transition: background 1s ease;
 }
 
 .tg_testimonials_card_wrapper .tag {

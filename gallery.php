@@ -44,11 +44,36 @@
                                                     margin-top: 0px;
                                                     margin-bottom: 0px;
                                                 }
-                                                #wrapper{
+                                                /* #wrapper{
                                                     margin-bottom: 0px;
                                                 }
                                               #a1373f09{
                                                     margin-bottom: 0px;
+                                                } */
+
+                                                /* #a{
+                                                    top:1320px !important;
+                                                }
+                                                #b{
+                                                    top:1415px !important;
+                                                } */
+                                                #c{
+                                                    top:1666px !important;
+                                                }
+                                                #d{
+                                                    top:1928px !important;
+                                                }
+                                                #e{
+                                                    top:2184px !important;
+                                                }
+                                                #f{
+                                                    top:2584px !important;
+                                                }
+                                                #g{
+                                                    top:2840px !important;
+                                                }
+                                                #h{
+                                                    top:3203px !important;
                                                 }
                                             }
                                         </style>
@@ -101,47 +126,47 @@
                                                                                     </video>
                                                                                 </a>
                                                                             </div>
-                                                                            <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
+                                                                            <div id="a" class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_4.jpg" data-thumb="upload/gallery_4.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_4.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
+                                                                            <div id="b" class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_5.jpg" data-thumb="upload/gallery_5.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_5.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
+                                                                            <div id="c" class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_6.jpg" data-thumb="upload/gallery_6.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_6.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
+                                                                            <div id="d" class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_7.jpg" data-thumb="upload/gallery_7.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_7.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
+                                                                            <div id="e" class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_8.jpg" data-thumb="upload/gallery_8.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_8.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
+                                                                            <div id="f" class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_9.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_9.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
+                                                                            <div id="g" class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_10.jpg" data-thumb="upload/gallery_10.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_10.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
+                                                                            <div id="h" class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_11.jpg" data-thumb="upload/gallery_11.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_11.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
+                                                                            <div id="i" class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_12.jpg" data-thumb="upload/gallery_12.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_12.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
