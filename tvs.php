@@ -53,7 +53,7 @@
                                                                 </div>
                                                                 <div data-id="17fc4fd" class="elementor-element elementor-element-17fc4fd animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default pl40" style="color:#fff;">Projects</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default pl40" style="color:#fff;">Products</h2>
                                                                     </div>
                                                                 </div>
                                                                 <div data-id="814c075" class="elementor-element elementor-element-814c075 animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-architecturer-portfolio-masonry" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:400}" data-element_type="architecturer-portfolio-masonry.default">
