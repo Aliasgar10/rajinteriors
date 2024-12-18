@@ -72,14 +72,12 @@ button {
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <script src="script.js"></script>
-</body>
-</html>
 
-<script>
+    <script>
 const flipbook = document.getElementById("flipbook");
 let currentPage = 0;
 
-const url = "..assets/Module.pdf"; // Replace with your PDF URL
+const url = "assets/Module.pdf"; // Replace with your PDF URL
 const pdfjsLib = window["pdfjs-dist/build/pdf"];
 pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
 
@@ -126,3 +124,7 @@ async function renderPDFPages(pdf) {
 // Initialize the PDF Flipbook
 fetchPDF();
 </script>
+</body>
+
+</html>
+
