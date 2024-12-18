@@ -63,11 +63,9 @@
                                                 #d{
                                                     top:2474px !important;
                                                 }
-
                                                 #e{
-                                                    top:3070px !important;
+                                                    top:2772px !important;
                                                 }
-
                                                 #f{
                                                     top:3240px !important;
                                                 }
