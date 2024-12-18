@@ -1,6 +1,6 @@
 <style>
     .hasbg{
-        height: 18vh;
+        height: 19vh;
     }
     #menu_wrapper div .nav li a{
         color:#fff !important;
@@ -14,7 +14,7 @@
 </style>
 <div class="header_style_wrapper">
     <div class="top_bar hasbg" style="background: black;">
-        <div class="standard_wrapper">
+        <div class="standard_wrapper" style="margin-top: 10px;">
             <div id="logo_wrapper">
                 <div id="logo_normal" class="logo_container">
                     <div class="logo_align">
