@@ -38,7 +38,7 @@
                             <div class="elementor elementor-2203">
                                 <div class="elementor-inner">
                                     <div class="elementor-section-wrap">
-                                        <section data-id="fe6bb34" style="background-color:#000;" class="elementor-element elementor-element-fe6bb34 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
+                                        <section data-id="fe6bb34" style="background-color:#000000f2;" class="elementor-element elementor-element-fe6bb34 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
                                                     <div data-id="c3db2fa" class="elementor-element elementor-element-c3db2fa elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
@@ -116,7 +116,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-4 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/IMG_8395.JPG" alt="">
+                                                                                        <img src="upload/ng-55633-unsplash-768x512.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -134,7 +134,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-5 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/LOUVERS WINDOW.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/automation.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -152,7 +152,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-6 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/GEORGIAN BAR WINDOWS.jpg" alt="">
+                                                                                        <img src="upload/suteki-home-kengo-kuma-portland_dezeen_2364_sq-1-768x768.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -170,7 +170,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-7 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/NECK TOWER BOLTS.jpg" alt="">
+                                                                                        <img src="upload/niv-rozenberg-356668-unsplash-768x512.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -188,7 +188,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-8 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/d691db6a-68d9-4adf-9e1b-92ff2fbf381b.jpg" alt="">
+                                                                                        <img src="upload/modern-riverside-home-christopher-simmonds-architect-1-backyard-768x512.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
@@ -236,7 +236,7 @@
                                                                             </div>
                                                                             <figure class="tg_background_img hover">
                                                                                 <div class="tg_background_list_overlay"></div>
-                                                                                <img src="assets/CATEGORY/SHELF VACCUUM.jpg" alt="">
+                                                                                <img src="upload/xModern-Eco-friendly-House-2.jpg.pagespeed.ic_.el4ZtL7FI9.jpg" alt="">
                                                                             </figure>
                                                                             <div class="tg_background_list_column ">
                                                                                 <div class="tg_background_list_content">
@@ -251,7 +251,7 @@
                                                                             </div>
                                                                             <figure class="tg_background_img ">
                                                                                 <div class="tg_background_list_overlay"></div>
-                                                                                <img src="assets/CATEGORY/cd8903da-0005-4ebf-b37f-a41e1107979c.jpg" alt="">
+                                                                                <img src="upload/modern-wood-house-1.jpg" alt="">
                                                                             </figure>
                                                                             <div class="tg_background_list_column ">
                                                                                 <div class="tg_background_list_content">
@@ -266,7 +266,7 @@
                                                                             </div>
                                                                             <figure class="tg_background_img ">
                                                                                 <div class="tg_background_list_overlay"></div>
-                                                                                <img src="assets/CATEGORY/LAMINATES.jpg" alt="">
+                                                                                <img src="upload/Sleek-and-Modern-Interior-by-Marcelo-Mota-Arquitectura-3.jpg" alt="">
                                                                             </figure>
                                                                             <div class="tg_background_list_column last">
                                                                                 <div class="tg_background_list_content">
@@ -281,7 +281,7 @@
                                                                             </div>
                                                                             <figure class="tg_background_img ">
                                                                                 <div class="tg_background_list_overlay"></div>
-                                                                                <img src="assets/CATEGORY/GLASS FITTINGS.jpg" alt="">
+                                                                                <img src="upload/A1KvjZmiERL.jpg" alt="">
                                                                             </figure>
                                                                         </div>
                                                                     </div>
