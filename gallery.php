@@ -40,10 +40,10 @@
                                     <div class="elementor-section-wrap">
                                         <style>
                                             @media only screen and (max-width: 520px) {
-                                                #c197fe7{
+                                                /* #c197fe7{
                                                     margin-top: 0px;
                                                     margin-bottom: 0px;
-                                                }
+                                                } */
                                                 /* #wrapper{
                                                     margin-bottom: 0px;
                                                 }
