@@ -201,7 +201,7 @@
     }
     @media screen and (min-width: 1025px) {
         .top_bar {
-            height: 16vh !important;
+            height: 18vh !important;
             display: flex;
             align-items: center;
             justify-content: center;
