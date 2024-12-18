@@ -21,7 +21,7 @@
 </style>
 <div class="header_style_wrapper">
     <div class="top_bar hasbg" style="background: black;">
-        <div class="standard_wrapper" style="margin-top: 10px;">
+        <div class="standard_wrapper" style="margin-top: 5px;">
             <div id="logo_wrapper">
                 <div id="logo_normal" class="logo_container">
                     <div class="logo_align">
