@@ -190,7 +190,24 @@
     }
 
 </style>
-
+<style>
+    @media screen and (min-width: 1024px) {
+        .top_bar {
+            height: 14vh !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .top_bar {
+            height: 14vh !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+</style>
 <!-- Submenus style -->
 <style>
     /* Hide submenus by default */
