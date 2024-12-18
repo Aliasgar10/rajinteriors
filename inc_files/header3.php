@@ -1,9 +1,9 @@
 <style>
     .hasbg{
-        height: 17vh;
+        height: 110px;
     }
     .top_bar{
-        height: 17vh !important;
+        height: 110px !important;
     }
     #menu_wrapper div .nav li a{
         color:#fff !important;
@@ -153,7 +153,7 @@
         
         }
         .top_bar {
-            height: 14vh !important;
+            height: 115px !important;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -191,7 +191,7 @@
 
 </style>
 <style>
-    @media screen and (min-width: 1024px) {
+    /* @media screen and (min-width: 769px) and (max-width: 1024px) {
         .top_bar {
             height: 14vh !important;
             display: flex;
@@ -199,6 +199,7 @@
             justify-content: center;
         }
     }
+    
     @media screen and (min-width: 1025px) {
         .top_bar {
             height: 18vh !important;
@@ -206,15 +207,8 @@
             align-items: center;
             justify-content: center;
         }
-    }
-    @media screen and (min-width: 768px) {
-        .top_bar {
-            height: 14vh !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
+    } */
+    
 </style>
 <!-- Submenus style -->
 <style>
