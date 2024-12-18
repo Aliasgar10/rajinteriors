@@ -199,6 +199,14 @@
             justify-content: center;
         }
     }
+    @media screen and (min-width: 1025px) {
+        .top_bar {
+            height: 16vh !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
     @media screen and (min-width: 768px) {
         .top_bar {
             height: 14vh !important;
