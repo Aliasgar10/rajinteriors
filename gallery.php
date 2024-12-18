@@ -95,9 +95,11 @@
                                                                                 </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
-                                                                            <video class="lazy_masonry responsive-video" controls>
-                                                                                <source src="upload/Lights_1.mp4" type="video/mp4">
-                                                                            </video>
+                                                                                <a class="tg_gallery_lightbox" href="#" data-thumb="" data-rel="tg_gallery305f7fd">
+                                                                                    <video class="lazy_masonry responsive-video" controls>
+                                                                                        <source src="upload/Lights_1.mp4" type="video/mp4">
+                                                                                    </video>
+                                                                                </a>
                                                                             </div>
                                                                             <div class="gallery_grid_item tg_three_cols  gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_4.jpg" data-thumb="upload/gallery_4.jpg" data-rel="tg_gallery305f7fd">
