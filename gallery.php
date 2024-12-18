@@ -52,13 +52,13 @@
                                                 }
 
                                                 #a{
-                                                    top:1528px !important;
-                                                }
-                                                #b{
                                                     top:1820px !important;
                                                 }
-                                                #c{
+                                                #b{
                                                     top:2112px !important;
+                                                }
+                                                #c{
+                                                    top:2404px !important;
                                                 }
                                                 #d{
                                                     top:2150px !important;
