@@ -1,5 +1,6 @@
 # Ignore the uploads and unused directories
 upload/
+HOMEPAGE/
 un-UsedFile/
 upload.zip
 un-UsedFile
