@@ -47,9 +47,12 @@
                                                 #wrapper{
                                                     margin-bottom: 0px;
                                                 }
+                                              #a1373f09{
+                                                    margin-bottom: 0px;
+                                                }
                                             }
                                         </style>
-                                        <section data-id="c197fe7" class="elementor-element elementor-element-c197fe7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
+                                        <section id="c197fe7" data-id="c197fe7" class="elementor-element elementor-element-c197fe7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
                                                     <div data-id="7a13c81" class="elementor-element elementor-element-7a13c81 elementor-column elementor-col-50 elementor-top-column" data-element_type="column">
@@ -72,7 +75,7 @@
                                                 </div>
                                             </div>
                                         </section>
-                                        <section data-id="1373f09" class="elementor-element elementor-element-1373f09 animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" id="gallery" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}" data-element_type="section">
+                                        <section id="a1373f09" data-id="1373f09" class="elementor-element elementor-element-1373f09 animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" id="gallery" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-no">
                                                 <div class="elementor-row">
                                                     <div data-id="4eea685" class="elementor-element elementor-element-4eea685 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
