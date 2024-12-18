@@ -121,7 +121,7 @@
             background-color: beige;
             padding: 10px;
             position: absolute; /* Position the menu above other content */
-            top: 60px; /* Adjust this to position the menu correctly below the hamburger */
+            top: 85px; /* Adjust this to position the menu correctly below the hamburger */
             left: 0;
             width: 100%;
             z-index: 1000;  /* Ensure the mobile menu appears above other elements */
@@ -173,8 +173,8 @@
 
     .submenu-toggle {
         position: absolute;
-        left: 65px;
-        top: 73px;
+        left: 57px;
+        top: 59px;
         background: none;
         border: none;
         font-size: x-large;
