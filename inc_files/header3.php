@@ -2,6 +2,9 @@
     .hasbg{
         height: 19vh;
     }
+    .top_bar{
+        height: 19vh !important;
+    }
     #menu_wrapper div .nav li a{
         color:#fff !important;
     }
