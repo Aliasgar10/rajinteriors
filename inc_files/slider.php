@@ -36,7 +36,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="image-container">
-                                                    <img src="imagg/slide_01.jpg" alt="" class="image">
+                                                    <img src="upload/slider_01.jpg" alt="" class="image">
                                                 </div>
                                             </div>
                                             <!-- <div class="slide  ">
