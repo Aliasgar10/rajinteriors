@@ -29,6 +29,10 @@
                                                                                         #b3f72b289{
                                                                                             font-family: 'Operetta Bold';
                                                                                             font-weight: bold;
+                                                                                            font-size: 50px !important;
+                                                                                        }
+                                                                                        #abbc{
+                                                                                            font-size: 30px !important;
                                                                                         }
                                                                                     </style>                                        
                                                                                     <h2 class="elementor-text-editor elementor-clearfix" id="b3f72b289"><strong><em></em></strong>
@@ -42,7 +46,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="text">
+                                                        <div class="text" id="abbc">
                                                             From Vision to Reality — Exceptional Interiors for Every Space.
                                                         </div>
                                                     </div>
