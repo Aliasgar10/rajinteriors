@@ -130,7 +130,7 @@
                                                                                             <div></div>
                                                                                         </div>
                                                                                         <div class="portfolio_masonry_content">
-                                                                                            <h3>GLASSES AND FLIMS</h3>
+                                                                                            <h3>GLASSES AND FILMS</h3>
                                                                                             <!-- <div class="portfolio_masonry_subtitle">January 2018</div> -->
                                                                                         </div>
                                                                                     </figcaption></figure>
