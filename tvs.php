@@ -80,7 +80,7 @@
                                                                                 </div>
                                                                                 <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-2 tile scale-anm  all no_filter">
                                                                                     <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/PUSH TO OPEN CHANNELS.jpg" alt="">
+                                                                                        <img src="assets/CATEGORY/blinds & curtains.jpg" alt="">
                                                                                     </div>
                                                                                     <figure><figcaption>
                                                                                         <div class="border one">
