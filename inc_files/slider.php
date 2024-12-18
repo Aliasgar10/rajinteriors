@@ -20,8 +20,15 @@
                                                                             <div data-id="07572d5" class="elementor-element elementor-element-07572d5 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-element_type="text-editor.default">
                                                                                 <div class="elementor-widget-container">                                                                                   
                                                                                     <style>
+                                                                                        @font-face {
+                                                                                            font-family: 'Operetta Bold';
+                                                                                            src: url('inc_files/Operetta52-Bold.otf') format('opentype');
+                                                                                            font-weight: bold;
+                                                                                            font-style: normal;
+                                                                                        }
                                                                                         #b3f72b289{
-                                                                                            font-family:'inc_files/Operetta52-Bold.otf'
+                                                                                            font-family: 'Operetta Bold';
+                                                                                            font-weight: bold;
                                                                                         }
                                                                                     </style>                                        
                                                                                     <h2 class="elementor-text-editor elementor-clearfix" id="b3f72b289"><strong><em></em></strong>

@@ -1,7 +1,14 @@
 <style>
-    #b3f72b28{
-        font-family:'inc_files/Operetta52-Bold.otf'
-    }
+@font-face {
+    font-family: 'Operetta Bold';
+    src: url('inc_files/Operetta52-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+#b3f72b28{
+    font-family: 'Operetta Bold';
+    font-weight: bold;
+}
 </style>
 
 <section data-id="3f72b28" class="elementor-element elementor-element-3f72b28 elementor-section-height-min-height elementor-section-content-top elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
