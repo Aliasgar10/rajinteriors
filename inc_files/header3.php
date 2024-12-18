@@ -1,9 +1,9 @@
 <style>
     .hasbg{
-        height: 19vh;
+        height: 17vh;
     }
     .top_bar{
-        height: 19vh !important;
+        height: 17vh !important;
     }
     #menu_wrapper div .nav li a{
         color:#fff !important;
