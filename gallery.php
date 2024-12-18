@@ -38,6 +38,17 @@
                             <div class="elementor elementor-305">
                                 <div class="elementor-inner">
                                     <div class="elementor-section-wrap">
+                                        <style>
+                                            @media only screen and (max-width: 520px) {
+                                                #c197fe7{
+                                                    margin-top: 0px;
+                                                    margin-bottom: 0px;
+                                                }
+                                                #wrapper{
+                                                    margin-bottom: 0px;
+                                                }
+                                            }
+                                        </style>
                                         <section data-id="c197fe7" class="elementor-element elementor-element-c197fe7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
