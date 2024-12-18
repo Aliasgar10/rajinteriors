@@ -135,8 +135,8 @@
 
         #mobile_menu_wrapper {
             display: block; /* Show the hamburger icon */
-            margin-right: 30px;
-            margin-top: 15px;
+            /* margin-right: 30px; */
+            margin-top: 18px;
         }
 
         #mobile_menu {
