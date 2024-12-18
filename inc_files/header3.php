@@ -11,6 +11,10 @@
     #menu_wrapper div .nav li > a:before {
         background-color: #fff !important;
     }
+    
+    .top_bar {
+        border-bottom: 0px solid #dce0e0 !important;
+    }
 </style>
 <div class="header_style_wrapper">
     <div class="top_bar hasbg" style="background: black;">
