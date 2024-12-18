@@ -3,6 +3,7 @@
         padding-left: 5px;
         font-size: 'xx-large';
         font-weight: 500;
+        padding-top: 50px;
     }
     @media only screen and (max-width: 480px) and (orientation: portrait) {
         #abcc {
