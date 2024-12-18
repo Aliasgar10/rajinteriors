@@ -55,17 +55,18 @@
                                                     top:1580px !important;
                                                 }
                                                 #b{
-                                                    top:1882px !important;
+                                                    top:1878px !important;
                                                 }
                                                 #c{
-                                                    top:2404px !important;
+                                                    top:2176px !important;
                                                 }
                                                 #d{
-                                                    top:2150px !important;
+                                                    top:2474px !important;
                                                 }
                                                 #e{
-                                                    top:2420px !important;
+                                                    top:2772px !important;
                                                 }
+                                                
                                                 #f{
                                                     top:2830px !important;
                                                 }
