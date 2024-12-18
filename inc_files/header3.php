@@ -21,7 +21,7 @@
 </style>
 <div class="header_style_wrapper">
     <div class="top_bar hasbg" style="background: black;">
-        <div class="standard_wrapper" style="margin-top: 5px;">
+        <div class="standard_wrapper" style="margin-top: 10px;">
             <div id="logo_wrapper">
                 <div id="logo_normal" class="logo_container">
                     <div class="logo_align">
@@ -138,7 +138,9 @@
             /* margin-right: 30px; */
             margin-top: 4px;
         }
-
+        .standard_wrapper{
+            margin-top: 10px;
+        }
         #mobile_menu {
             display: none;  /* Mobile menu hidden initially */
             background-color: beige;
