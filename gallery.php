@@ -48,7 +48,7 @@
                                                     margin-bottom: 0px;
                                                 } */
                                               #a1373f09{
-                                                    margin-bottom: 520px;
+                                                    margin-bottom: 600px;
                                                 }
 
                                                 #a{
@@ -63,21 +63,22 @@
                                                 #d{
                                                     top:2474px !important;
                                                 }
+
                                                 #e{
-                                                    top:2772px !important;
+                                                    top:3070px !important;
                                                 }
-                                                
+
                                                 #f{
-                                                    top:2830px !important;
+                                                    top:3240px !important;
                                                 }
                                                 #g{
-                                                    top:3096px !important;
+                                                    top:3538px !important;
                                                 }
                                                 #h{
-                                                    top:3468px !important;
+                                                    top:3960px !important;
                                                 }
                                                 #i{
-                                                    top:3736px !important;
+                                                    top:4258px !important;
                                                 }
                                             }
                                         </style>
