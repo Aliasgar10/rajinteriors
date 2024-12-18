@@ -135,7 +135,8 @@
 
         #mobile_menu_wrapper {
             display: block; /* Show the hamburger icon */
-            margin-right: 20px;
+            margin-right: 30px;
+            margin-top: 15px;
         }
 
         #mobile_menu {
@@ -195,8 +196,8 @@
 
     .submenu-toggle {
         position: absolute;
-        left: 65px;
-        top: 73px;
+        left: 58px;
+        top: 58px;
         background: none;
         border: none;
         font-size: x-large;
