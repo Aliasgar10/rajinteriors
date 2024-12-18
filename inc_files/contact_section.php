@@ -10,9 +10,9 @@
                         </div>
                         <div data-id="47b06cc" class="elementor-element elementor-element-47b06cc elementor-widget elementor-widget-text-editor" data-element_type="text-editor.default">
                             <div class="elementor-widget-container">
-                                <!-- <div class="elementor-text-editor elementor-clearfix pl40">
-                                    <p>Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave.</p>
-                                </div> -->
+                                <div class="elementor-text-editor elementor-clearfix pl40">
+                                    <p>Are you interested in collaborating and working with us? Please don’t hesitate to contact us.</p>
+                                </div>
                             </div>
                         </div>
                         <div data-id="5428886" class="elementor-element elementor-element-5428886 black_bg elementor-widget elementor-widget-shortcode" data-element_type="shortcode.default">
