@@ -54,12 +54,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['type'])) {
     while ($row = $result->fetch_assoc()) {
         echo '<div class="file-item">';
         if ($type === "images") {
-            echo '<img src="' . $row['image_url'] . '" alt="Image">';
+            echo '<div class="img-item" style="height:50%;"><img src="' . $row['image_url'] . '" alt="Image"></div>';
         } else {
             echo '<p>' . basename($row['image_url']) . '</p>';
         }
-        echo '<button onclick="viewDetails(' . $row['id'] . ')">Details</button>';
-        echo '<button onclick="deleteFile(' . $row['id'] . ', \'' . $type . '\')">Delete</button>';
+            echo '<div class="btnn" style="height:50%; display:flex; gap:10px;">';
+            echo '<button onclick="viewDetails(' . $row['id'] . ')">Details</button>';
+            echo '<button onclick="deleteFile(' . $row['id'] . ', \'' . $type . '\')">Delete</button>';
+            echo '</div>';
         echo '</div>';
     }
     exit;

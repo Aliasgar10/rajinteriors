@@ -116,6 +116,7 @@
         }
 
         .add-file {
+            width: 150px;
             height: 150px;
             border: 2px dashed #007bff;
             display: flex;
@@ -174,50 +175,51 @@
         <div class="navbar">
             <h1>File Manager</h1>
         </div>
-    </div>
-    <div class="section">
-        <div class="file-section">
-            <h2>Images</h2>
-            <div class="file-grid" id="images-grid"></div>
-            <div class="add-file" onclick="openModal()">+ Add Image</div>
+        <div class="section">
+            <div class="file-section">
+                <h2>Images</h2>
+                <div class="file-grid" id="images-grid"></div>
+                <div class="add-file" onclick="openModal()">+ Add Image</div>
+            </div>
+
+            <div class="file-section">
+                <h2>PDFs</h2>
+                <div class="file-grid" id="pdfs-grid"></div>
+                <div class="add-file" onclick="openModal()">+ Add PDF</div>
+            </div>
         </div>
 
-        <div class="file-section">
-            <h2>PDFs</h2>
-            <div class="file-grid" id="pdfs-grid"></div>
-            <div class="add-file" onclick="openModal()">+ Add PDF</div>
+        <!-- Upload File Modal -->
+        <div id="fileModal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal()">Close</button>
+                <form action="insert_upload.php" method="post" enctype="multipart/form-data">
+                    <label for="file">Select file to upload:</label>
+                    <input type="file" name="file" id="file" required>
+
+                    <label for="file_name">File Name:</label>
+                    <input type="text" name="file_name" id="file_name" required>
+
+                    <label for="section">Section:</label>
+                    <input type="text" name="section" id="section" required>
+
+                    <label for="category">Category:</label>
+                    <input type="text" name="category" id="category" required>
+
+                    <input type="submit" value="Upload File">
+                </form>
+            </div>
+        </div>
+
+        <!-- View Details Modal -->
+        <div id="detailsModal" class="modal">
+            <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h2>File Details</h2>
+                <!-- Details will be loaded here dynamically -->
+            </div>
         </div>
     </div>
-     <!-- Upload File Modal -->
-     <div id="fileModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">Close</button>
-            <form action="upload_handler.php" method="post" enctype="multipart/form-data">
-                <label for="file">Select file to upload:</label>
-                <input type="file" name="file" id="file" required>
-
-                <label for="file_name">File Name:</label>
-                <input type="text" name="file_name" id="file_name" required>
-
-                <label for="section">Section:</label>
-                <input type="text" name="section" id="section" required>
-
-                <label for="category">Category:</label>
-                <input type="text" name="category" id="category" required>
-
-                <input type="submit" value="Upload File">
-            </form>
-        </div>
-    </div>
-
-    <!-- View Details Modal -->
-    <div id="detailsModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">Close</button>
-            <!-- Details will be loaded here dynamically -->
-        </div>
-    </div>
-
     <!-- Pop up style -->
     <style>
         /* General Modal Styles */
