@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
         }
 
         if (move_uploaded_file($_FILES['file']['tmp_name'], $target_file)) {
-            $stmt = $conn->prepare("INSERT INTO uploads (image_url, image_name, section, category) VALUES (?, ?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO uploads (file_url, file_name, section, category) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("ssss", $target_file, $file_name, $section, $category);
             $stmt->execute();
             $stmt->close();
@@ -48,15 +48,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
 // Fetch images and PDFs
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['type'])) {
     $type = $_GET['type'];
-    $query = ($type === "images") ? "image_url LIKE '../uploads/assets/images/%'" : "image_url LIKE '../uploads/assets/pdf/%'";
+    $query = ($type === "images") ? "file_url LIKE '../uploads/assets/images/%'" : "file_url LIKE '../uploads/assets/pdf/%'";
     $result = $conn->query("SELECT * FROM uploads WHERE $query");
 
     while ($row = $result->fetch_assoc()) {
         echo '<div class="file-item">';
         if ($type === "images") {
-            echo '<div class="img-item" style="width: 150px; height: 150px;"><img src="' . $row['image_url'] . '" alt="Image"></div>';
+            echo '<div class="img-item" style="width: 150px; height: 150px;"><img src="' . $row['file_url'] . '" alt="Image"></div>';
         } else {
-            echo '<p>' . basename($row['image_url']) . '</p>';
+            echo '<p>' . basename($row['file_url']) . '</p>';
         }
             echo '<div class="btnn" style="height:40px; display:flex; gap:10px;">';
             echo '<button onclick="viewDetails(' . $row['id'] . ')">Details</button>';
@@ -73,10 +73,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['details_id'])) {
     $result = $conn->query("SELECT * FROM uploads WHERE id = $id");
 
     if ($row = $result->fetch_assoc()) {
-        echo '<p><strong>File Name:</strong> ' . $row['image_name'] . '</p>';
+        echo '<p><strong>File Name:</strong> ' . $row['file_name'] . '</p>';
         echo '<p><strong>Section:</strong> ' . $row['section'] . '</p>';
         echo '<p><strong>Category:</strong> ' . $row['category'] . '</p>';
-        echo '<p><strong>File URL:</strong> <a href="' . $row['image_url'] . '" target="_blank">' . $row['image_url'] . '</a></p>';
+        echo '<p><strong>File URL:</strong> <a href="' . $row['file_url'] . '" target="_blank">' . $row['file_url'] . '</a></p>';
     } else {
         echo '<p>No details found.</p>';
     }
@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
     $result = $conn->query("SELECT * FROM uploads WHERE id = $id");
 
     if ($row = $result->fetch_assoc()) {
-        $file_path = $row['image_url'];
+        $file_path = $row['file_url'];
         if (file_exists($file_path)) {
             unlink($file_path);
         }

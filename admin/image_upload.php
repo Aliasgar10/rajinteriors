@@ -173,8 +173,8 @@
         <h2>Sidebar Menu</h2>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Upload</a></li>
-            <li><a href="#">Settings</a></li>
+            <li><a href="image_upload.php">Upload</a></li>
+            <li><a href="setting.php">Settings</a></li>
             <li><a href="#">Logout</a></li>
         </ul>
     </div>
@@ -182,6 +182,8 @@
         <div class="navbar">
             <h1>File Manager</h1>
         </div>
+
+        
         <div class="section">
             <div class="file-section">
                 <h2>Images</h2>
