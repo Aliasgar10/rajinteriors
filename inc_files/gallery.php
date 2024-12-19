@@ -35,7 +35,7 @@
 
                                         if ($result->num_rows > 0) {
                                             while ($row = $result->fetch_assoc()) {
-                                                $fileUrl = $row['file_url'].$row['file_name'];   // Path to the file                                     
+                                                $fileUrl = $row['file_url'];   // Path to the file                                     
 
                                     ?>
                                     <div class="blog-posts-grid post-134 post type-post status-publish format-standard has-post-thumbnail hentry category-architecture category-exteriors category-interiors tag-home-offices tag-kitchens tag-staircases">
