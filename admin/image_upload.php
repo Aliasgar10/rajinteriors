@@ -174,6 +174,8 @@
         <div class="navbar">
             <h1>File Manager</h1>
         </div>
+    </div>
+    <div class="section">
         <div class="file-section">
             <h2>Images</h2>
             <div class="file-grid" id="images-grid"></div>
@@ -186,7 +188,6 @@
             <div class="add-file" onclick="openModal()">+ Add PDF</div>
         </div>
     </div>
-
      <!-- Upload File Modal -->
      <div id="fileModal" class="modal">
         <div class="modal-content">
