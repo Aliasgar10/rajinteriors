@@ -34,22 +34,18 @@
                                                                                         #abbc{
                                                                                             font-size: 30px !important;
                                                                                         }
-                                                                                        #loadMoreBtn{
+                                                                                        #slideBtn{
                                                                                             height: 3em;
-                                                                                            width: 9em;
+                                                                                            width: 8em;
                                                                                             background: black;
                                                                                             color: whitesmoke;
-                                                                                            font-size: smaller;
+                                                                                            font-size: 16px;
                                                                                             cursor: pointer;
                                                                                         }
-                                                                                        #loadMoreBtn:hover {
-                                                                                            height: 3em;
-                                                                                            width: 9em;
+                                                                                        #slideBtn:hover {
                                                                                             border:2px solid black;
                                                                                             background: transparent;
-                                                                                            color: black;
-                                                                                            font-size: smaller;
-                                                                                            cursor: pointer;
+                                                                                            color: whitesmoke;
                                                                                         }
                                                                                     </style>                                        
                                                                                     <h2 class="elementor-text-editor elementor-clearfix" id="b3f72b289"><strong><em></em></strong>
@@ -66,8 +62,8 @@
                                                         <div class="text" id="abbc">
                                                             From Vision to Reality — Exceptional Interiors for Every Space.
                                                         </div>
-                                                        <div class="text2" id="abbc">
-                                                            <button id="loadMoreBtn">Load More</button>
+                                                        <div class="text2" id="abbcd">
+                                                            <button id="slideBtn">Load More</button>
                                                         </div>
                                                     </div>
                                                 </div>
