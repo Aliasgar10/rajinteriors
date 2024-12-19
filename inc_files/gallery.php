@@ -14,9 +14,7 @@
         }
     }
 </style>
-<?php 
-    include("../connection/db_connect.php");
-?>
+
 
 <section id="abcc" data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
     <div class="elementor-widget-container">

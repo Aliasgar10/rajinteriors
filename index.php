@@ -1,3 +1,6 @@
+<?php 
+    include("connection/db_connect.php");
+?>
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
 
