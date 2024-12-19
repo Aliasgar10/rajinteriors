@@ -8,6 +8,7 @@
 #b3f72b28{
     font-family: 'Operetta Bold';
     font-weight: bold;
+    font-size:40px;
 }
 </style>
 
