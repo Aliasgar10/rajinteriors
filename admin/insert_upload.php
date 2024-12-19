@@ -54,11 +54,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['type'])) {
     while ($row = $result->fetch_assoc()) {
         echo '<div class="file-item">';
         if ($type === "images") {
-            echo '<div class="img-item" style="height:75%;"><img src="' . $row['image_url'] . '" alt="Image"></div>';
+            echo '<div class="img-item" style="width: 150px; height: 150px;"><img src="' . $row['image_url'] . '" alt="Image"></div>';
         } else {
             echo '<p>' . basename($row['image_url']) . '</p>';
         }
-            echo '<div class="btnn" style="height:25%; display:flex; gap:10px;">';
+            echo '<div class="btnn" style="height:40px; display:flex; gap:10px;">';
             echo '<button onclick="viewDetails(' . $row['id'] . ')">Details</button>';
             echo '<button onclick="deleteFile(' . $row['id'] . ', \'' . $type . '\')">Delete</button>';
             echo '</div>';

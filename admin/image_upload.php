@@ -73,10 +73,11 @@
             flex-direction: column;
             overflow-y: auto;
             padding: 20px;
+            gap: 10px;
         }
 
         .file-section h2 {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .file-grid {
@@ -179,12 +180,14 @@
             <div class="file-section">
                 <h2>Images</h2>
                 <div class="file-grid" id="images-grid"></div>
+                <br>
                 <div class="add-file" onclick="openModal()">+ Add Image</div>
             </div>
 
             <div class="file-section">
                 <h2>PDFs</h2>
                 <div class="file-grid" id="pdfs-grid"></div>
+                <br>
                 <div class="add-file" onclick="openModal()">+ Add PDF</div>
             </div>
         </div>
