@@ -95,7 +95,7 @@
 
         .file-item img {
             max-width: 100%;
-            max-height: 100px;
+            height: 100%;
             margin-bottom: 10px;
         }
 
