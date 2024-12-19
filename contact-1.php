@@ -173,7 +173,7 @@
                                                                 <div data-id="07fc180" class="elementor-element elementor-element-07fc180 animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-image" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:800}" data-element_type="image.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
-                                                                            <img width="1024" height="683" src="upload/contact_1.jpg" class="attachment-large size-large" alt="" style="max-width:100%;margin-bottom: 30px;"></div>
+                                                                            <img width="1024" height="683" src="assets/contact.jpg" class="attachment-large size-large" alt="" style="max-width:100%;margin-bottom: 30px;"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div data-id="ab1857f" class="elementor-element elementor-element-ab1857f animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-eb-google-map-extended" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="eb-google-map-extended.default">
