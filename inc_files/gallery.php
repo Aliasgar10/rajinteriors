@@ -30,7 +30,7 @@
                                 <div class="blog_post_content_wrapper layout_grid">
                                     <div id="imageContainer">
                                         <?php
-                                            $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category='HomePage' LIMIT 10"; // Initial limit
+                                            $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category='HomePage' LIMIT 9"; // Initial limit
                                             $result = $conn->query($query);
 
                                             if ($result->num_rows > 0) {
@@ -58,7 +58,9 @@
 
                                 </div>
                                 <br class="clear">
-                                <button id="loadMoreBtn">Load More</button>
+                                <div class="load" style="display:flex; justify-content:center; align-items:center;">
+                                    <button id="loadMoreBtn">Load More</button>
+                                </div>
 
                                     <script>
                                         let offset = 9; // Initial offset for pagination
