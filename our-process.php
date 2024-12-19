@@ -417,7 +417,7 @@
                                                                 <div data-id="90c610b" class="elementor-element elementor-element-90c610b elementor-widget elementor-widget-text-editor" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            <p>Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave.</p>
+                                                                            <p>Are you interested in collaborating and working with us? Please don’t hesitate to contact us.</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
