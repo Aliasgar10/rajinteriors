@@ -36,8 +36,8 @@
     #loadMoreBtn:hover {
         height: 3em;
         width: 9em;
-        border:3px solid black;
-        background: whitesmoke;
+        border:2px solid black;
+        background: transparent;
         color: black;
         font-size: smaller;
         cursor: pointer;
@@ -95,7 +95,7 @@
                                     <script>
                                         let offset = 9; // Initial offset for pagination
                                         document.getElementById('loadMoreBtn').addEventListener('click', function () {
-                                            fetch(`inc_files/loadImages.php?offset=${offset}`)
+                                            fetch(`loadImages.php?offset=${offset}`)
                                                 .then(response => response.json())
                                                 .then(data => {
                                                     if (data.success) {
