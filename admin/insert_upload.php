@@ -34,21 +34,40 @@
                 // If upload is valid, proceed
                 if ($uploadOk) {
                     if (move_uploaded_file($_FILES['file']['tmp_name'], $target_file)) {
-                        // Insert file info into the database
                         $file_url = $target_file;
-
-                        $stmt = $conn->prepare("INSERT INTO images (image_url, image_name, section, category) VALUES (?, ?, ?, ?)");
+                        $stmt = $conn->prepare("INSERT INTO uploads (image_url, image_name, section, category) VALUES (?, ?, ?, ?)");
                         $stmt->bind_param("ssss", $file_url, $file_name, $section, $category);
-
                         if ($stmt->execute()) {
                             echo "The file " . htmlspecialchars(basename($_FILES['file']['name'])) . " has been uploaded and saved to the database.";
                         } else {
-                            echo "Error: " . $stmt->error;
+                            echo "Database error: " . $stmt->error;
                         }
-
                         $stmt->close();
                     } else {
-                        echo "Sorry, there was an error uploading your file.";
+                        switch ($_FILES['file']['error']) {
+                            case UPLOAD_ERR_INI_SIZE:
+                            case UPLOAD_ERR_FORM_SIZE:
+                                echo "File exceeds the maximum allowed size.";
+                                break;
+                            case UPLOAD_ERR_PARTIAL:
+                                echo "The file was only partially uploaded.";
+                                break;
+                            case UPLOAD_ERR_NO_FILE:
+                                echo "No file was uploaded.";
+                                break;
+                            case UPLOAD_ERR_NO_TMP_DIR:
+                                echo "Missing a temporary folder.";
+                                break;
+                            case UPLOAD_ERR_CANT_WRITE:
+                                echo "Failed to write file to disk.";
+                                break;
+                            case UPLOAD_ERR_EXTENSION:
+                                echo "A PHP extension stopped the file upload.";
+                                break;
+                            default:
+                                echo "Unknown upload error.";
+                                break;
+                        }
                     }
                 }
             }
