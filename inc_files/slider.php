@@ -41,6 +41,7 @@
                                                                                             color: whitesmoke;
                                                                                             font-size: 16px;
                                                                                             cursor: pointer;
+                                                                                            border-radius:40px;
                                                                                         }
                                                                                         #slideBtn:hover {
                                                                                             border:2px solid black;
@@ -62,6 +63,7 @@
                                                         <div class="text" id="abbc">
                                                             From Vision to Reality — Exceptional Interiors for Every Space.
                                                         </div>
+                                                        <br><br>
                                                         <div class="text2" id="abbcd">
                                                             <button id="slideBtn">Load More</button>
                                                         </div>
