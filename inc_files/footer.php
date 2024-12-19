@@ -16,8 +16,8 @@
                                                                 <p><a href="index.php" data-wplink-url-error="true">Home</a>
                                                                     <br><a href="tvs.php" data-wplink-url-error="true">TVS</a>
                                                                     <br><a href="gallery.php" data-wplink-url-error="true">Gallery</a>
-                                                                    <br><a href="our-process.php" data-wplink-url-error="true">Services</a></p>
-                                                                    <br><a href="contact-1.php" data-wplink-url-error="true">Contact</a></p>
+                                                                    <br><a href="our-process.php" data-wplink-url-error="true">Services</a>
+                                                                    <br><a href="contact-1.php" data-wplink-url-error="true">Contact</a>
                                                                     <br><a href="contact-3.html" data-wplink-url-error="true">Get Started</a></p>
                                                             </div>
                                                         </div>
