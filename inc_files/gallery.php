@@ -14,6 +14,9 @@
         }
     }
 </style>
+<?php 
+    include("../connection/db_connect.php");
+?>
 
 <section id="abcc" data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
     <div class="elementor-widget-container">
@@ -27,14 +30,24 @@
                         <div data-id="ef36638" class="elementor-element elementor-element-ef36638 elementor-widget elementor-widget-photographer-blog-posts" data-element_type="photographer-blog-posts.default">
                             <div class="elementor-widget-container">
                                 <div class="blog_post_content_wrapper layout_grid">
+                                    <?php
+                                        // Fetch data from uploads table
+                                        $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category='HomePage'"; // Only fetch images
+                                        $result = $conn->query($query);
+
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
+                                                $fileUrl = $row['file_url'].$row['file_name'];   // Path to the file                                     
+
+                                    ?>
                                     <div class="blog-posts-grid post-134 post type-post status-publish format-standard has-post-thumbnail hentry category-architecture category-exteriors category-interiors tag-home-offices tag-kitchens tag-staircases">
                                         <div class="post_wrapper">
-                                            <div class="post_img static">
-                                                <div class="post_img_hover ">
-                                                    <img src="upload/Gallery_Slide1.jpg" class="" alt="">
-                                                    <a href="#"></a>
-                                                </div>
+                                        <div class="post_img static">
+                                            <div class="post_img_hover">
+                                                <img src="<?php echo $fileUrl; ?>" class="" alt="<?php echo $row['file_name']; ?>">
+                                                <a href="#"></a>
                                             </div>
+                                        </div>
                                             <div class="post_content_wrapper text_">
                                                 <div class="post_header">
                                                     <div class="post_header_title">
@@ -49,7 +62,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
+                                    <?php 
+                                            }
+                                        } else {
+                                            echo "No images found in the uploads table.";
+                                        }
+                                    ?>
+
+                                    <!-- <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
                                         <div class="post_wrapper">
                                             <div class="post_img static">
                                                 <div class="post_img_hover ">
@@ -92,7 +112,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
+
                                 </div>
                                 <br class="clear">
                             </div>

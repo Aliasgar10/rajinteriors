@@ -21,53 +21,63 @@ if ($sheetResult->num_rows > 0) {
     $sheetId = $sheetRow['id'];
     $filePath = $sheetRow['path'];
 
-    // Include PHPExcel library
-    require 'vendor/autoload.php'; // Ensure PHPExcel is installed via Composer
+    // Fetch the CSV content from the Google Sheets URL
+    $csvContent = file_get_contents($filePath);
+    if ($csvContent === false) {
+        die("Failed to fetch the CSV file from URL: " . $filePath);
+    }
 
-    // Load the spreadsheet
-    $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($filePath);
-    $data = $spreadsheet->getActiveSheet()->toArray(null, true, true, true);
+    // Parse the CSV content
+    $lines = explode("\n", $csvContent);
+    $rowIndex = 0;
 
-    // Iterate through rows in the spreadsheet
-    foreach ($data as $rowIndex => $row) {
-        // Skip the header row
-        if ($rowIndex == 1) continue;
+    foreach ($lines as $line) {
+        $row = str_getcsv($line);
+        if ($rowIndex == 0) { // Skip the header row
+            $rowIndex++;
+            continue;
+        }
 
-        $category = $row['A']; // CATEGORY
-        $section = $row['B'];  // SECTION
+        if (empty($row)) {
+            continue;
+        }
+
+        $category = $row[0] ?? ''; // CATEGORY (Column A)
+        $section = $row[1] ?? '';  // SECTION (Column B)
 
         // Process Videos
-        if (!empty($row['C'])) { // VIDEOS
-            $filePath = "../uploads/assets/videos/" . $row['C'];
+        if (!empty($row[2])) { // VIDEOS (Column C)
+            $filePath = "../uploads/assets/videos/" . $row[2];
             $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section`, `category`) VALUES (?, ?, ?, ?, ?, ?)");
             $fileType = "video";
-            $extension = pathinfo($row['C'], PATHINFO_EXTENSION);
-            $stmt->bind_param("ssssss", $filePath, $row['C'], $fileType, $extension, $section, $category);
+            $extension = pathinfo($row[2], PATHINFO_EXTENSION);
+            $stmt->bind_param("ssssss", $filePath, $row[2], $fileType, $extension, $section, $category);
             $stmt->execute();
         }
 
         // Process PDFs
-        if (!empty($row['D'])) { // PDF
-            $filePath = "../uploads/assets/pdf/" . $row['D'];
+        if (!empty($row[3])) { // PDF (Column D)
+            $filePath = "../uploads/assets/pdf/" . $row[3];
             $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section`, `category`) VALUES (?, ?, ?, ?, ?, ?)");
             $fileType = "pdf";
-            $extension = pathinfo($row['D'], PATHINFO_EXTENSION);
-            $stmt->bind_param("ssssss", $filePath, $row['D'], $fileType, $extension, $section, $category);
+            $extension = pathinfo($row[3], PATHINFO_EXTENSION);
+            $stmt->bind_param("ssssss", $filePath, $row[3], $fileType, $extension, $section, $category);
             $stmt->execute();
         }
 
         // Process Images
-        for ($i = 1; $i <= 31; $i++) {
-            $imageColumn = chr(69 + $i - 1); // Dynamically calculate column letters starting from 'E'
-            if (!empty($row[$imageColumn])) {
-                $filePath = "../uploads/assets/images/" . $row[$imageColumn];
+        for ($i = 4; $i < count($row); $i++) {
+            if (!empty($row[$i])) {
+                $filePath = "../uploads/assets/images/" . $row[$i];
                 $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section`, `category`) VALUES (?, ?, ?, ?, ?, ?)");
                 $fileType = "image";
-                $extension = pathinfo($row[$imageColumn], PATHINFO_EXTENSION);
-                $stmt->bind_param("ssssss", $filePath, $row[$imageColumn], $fileType, $extension, $section, $category);
+                $extension = pathinfo($row[$i], PATHINFO_EXTENSION);
+                $stmt->bind_param("ssssss", $filePath, $row[$i], $fileType, $extension, $section, $category);
                 $stmt->execute();
             }
         }
+
+        $rowIndex++;
     }
 
     // After processing, update the status of the row in google_sheet table
@@ -75,12 +85,10 @@ if ($sheetResult->num_rows > 0) {
     $updateStmt = $conn->prepare($updateQuery);
     $updateStmt->bind_param("i", $sheetId);
     $updateStmt->execute();
-
 } else {
     echo "No sheets with status 0 found.";
 }
 
 // Close the database connection
 $conn->close();
-
 ?>
