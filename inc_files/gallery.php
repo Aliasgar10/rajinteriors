@@ -54,50 +54,7 @@
                                             }
                                         ?>
                                     </div>
-                                    <!-- <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                        <div class="post_wrapper">
-                                            <div class="post_img static">
-                                                <div class="post_img_hover ">
-                                                    <img src="upload/Gallery_Slide2.jpg" class="" alt="">
-                                                    <a href="#"></a>
-                                                </div>
-                                            </div>
-                                            <div class="post_content_wrapper text_">
-                                                <div class="post_header">
-                                                    <div class="post_header_title">
-                                                        <h5><a href="#" title="Capturing the Essence of Home in Ultra-Modern Living">Capturing the Essence of Home in Ultra-Modern Living</a></h5></div>
-                                                </div>
-                                                <div class="post_header_wrapper">
-                                                    <div class="post_button_wrapper">
-                                                        <div class="post_attribute">
-                                                            <a href="#" title="Capturing the Essence of Home in Ultra-Modern Living">August 2, 2018</a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="blog-posts-grid post-124 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                        <div class="post_wrapper">
-                                            <div class="post_img static">
-                                                <div class="post_img_hover ">
-                                                    <img src="upload/Gallery_Slide3.jpg" class="" alt="">
-                                                    <a href="#"></a>
-                                                </div>
-                                            </div>
-                                            <div class="post_content_wrapper text_">
-                                                <div class="post_header">
-                                                    <div class="post_header_title">
-                                                        <h5><a href="#" title="Reinventing Reclaimed Wood for the Modern Hipster Home">Reinventing Reclaimed Wood for the Modern Hipster Home</a></h5></div>
-                                                </div>
-                                                <div class="post_header_wrapper">
-                                                    <div class="post_button_wrapper">
-                                                        <div class="post_attribute">
-                                                            <a href="#" title="Reinventing Reclaimed Wood for the Modern Hipster Home">August 2, 2018</a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
+                                    
 
                                 </div>
                                 <br class="clear">
@@ -106,7 +63,7 @@
                                     <script>
                                         let offset = 10; // Offset for pagination
                                         document.getElementById('loadMoreBtn').addEventListener('click', function() {
-                                            fetch(`loadImages.php?offset=${offset}`)
+                                            fetch(`inc_files/loadImages.php?offset=${offset}`)
                                                 .then(response => response.text())
                                                 .then(data => {
                                                     document.getElementById('imageContainer').innerHTML += data;

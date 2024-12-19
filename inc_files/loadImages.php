@@ -1,5 +1,5 @@
 <?php
-    include("../connection/db_connect.php");
+    
 
 // Set default response
 $response = [
