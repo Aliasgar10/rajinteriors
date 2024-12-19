@@ -91,6 +91,7 @@
                                 <div class="load" style="display:flex; justify-content:center; align-items:center;">
                                     <button id="loadMoreBtn">Load More</button>
                                 </div>
+                                <br>
 
                                     <script>
                                         let offset = 9; // Initial offset for pagination

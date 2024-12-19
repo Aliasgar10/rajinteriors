@@ -2,6 +2,7 @@
 error_reporting(E_ALL); // Report all errors
 ini_set('display_errors', 1); // Display errors on the screen
 ini_set('log_errors', 1); // Enable error logging
+
      // Database configuration
      $host = "localhost";
      $username = "rajinteriors";
@@ -16,41 +17,46 @@ ini_set('log_errors', 1); // Enable error logging
          die("Connection failed: " . $conn->connect_error);
      }
 
+// Set headers for JSON response
+header('Content-Type: application/json');
+
 // Set default response
 $response = [
     'success' => false,
-    'images' => [],
-    'message' => 'No images found.',
+    'html' => '',
+    'message' => 'No images found.'
 ];
 
-// Parameters for pagination
+$offset = isset($_GET['offset']) ? intval($_GET['offset']) : 0;
 $images_per_page = 9;
-$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-$offset = ($page - 1) * $images_per_page;
 
 // Fetch images from the database
 $query = "SELECT file_url, file_name FROM uploads WHERE file_type = 'image' AND category='HomePage' LIMIT $images_per_page OFFSET $offset";
 $result = $conn->query($query);
 
 if ($result && $result->num_rows > 0) {
+    $html = '';
     while ($row = $result->fetch_assoc()) {
-        echo '<div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">';
-        echo '    <div class="post_wrapper">';
-        echo '        <div class="post_img static">';
-        echo '            <div class="post_img_hover">';
-        echo '                <img src="' . htmlspecialchars($row['file_url']) . '" alt="' . htmlspecialchars($row['file_name']) . '" loading="lazy">';
-        echo '                <a href="#"></a>';
-        echo '            </div>';
-        echo '        </div>';
-        echo '    </div>';
-        echo '</div>';
+        $html .= '<div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">';
+        $html .= '    <div class="post_wrapper">';
+        $html .= '        <div class="post_img static">';
+        $html .= '            <div class="post_img_hover">';
+        $html .= '                <img src="' . htmlspecialchars($row['file_url']) . '" alt="' . htmlspecialchars($row['file_name']) . '" loading="lazy">';
+        $html .= '                <a href="#"></a>';
+        $html .= '            </div>';
+        $html .= '        </div>';
+        $html .= '    </div>';
+        $html .= '</div>';
     }
-} else {
-    echo "<p>No more images to load.</p>";
+
+    // Update the response
+    $response['success'] = true;
+    $response['html'] = $html;
+    $response['message'] = 'Images loaded successfully.';
 }
 
-// Output JSON response
-header('Content-Type: application/json');
+// Clear any output buffer and output the JSON response
+ob_clean();
 echo json_encode($response);
 
 // Close the connection
