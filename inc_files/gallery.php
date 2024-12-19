@@ -54,22 +54,7 @@
                                             }
                                         ?>
                                     </div>
-
-                                    <button id="loadMoreBtn">Load More</button>
-
-                                    <script>
-                                        let offset = 10; // Offset for pagination
-                                        document.getElementById('loadMoreBtn').addEventListener('click', function() {
-                                            fetch(`loadImages.php?offset=${offset}`)
-                                                .then(response => response.text())
-                                                .then(data => {
-                                                    document.getElementById('imageContainer').innerHTML += data;
-                                                    offset += 10; // Increment offset
-                                                });
-                                        });
-                                    </script>
-
-                                    <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
+                                    <!-- <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
                                         <div class="post_wrapper">
                                             <div class="post_img static">
                                                 <div class="post_img_hover ">
@@ -112,10 +97,23 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                                 <br class="clear">
+                                <button id="loadMoreBtn">Load More</button>
+
+                                    <script>
+                                        let offset = 10; // Offset for pagination
+                                        document.getElementById('loadMoreBtn').addEventListener('click', function() {
+                                            fetch(`loadImages.php?offset=${offset}`)
+                                                .then(response => response.text())
+                                                .then(data => {
+                                                    document.getElementById('imageContainer').innerHTML += data;
+                                                    offset += 10; // Increment offset
+                                                });
+                                        });
+                                    </script>
                             </div>
                         </div>
                     </div>
