@@ -21,7 +21,9 @@
             padding: 20px;
             box-sizing: border-box;
         }
-
+        .section{
+            display: flex;
+        }
         .sidebar h2 {
             text-align: center;
             margin-bottom: 20px;
