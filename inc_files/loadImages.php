@@ -1,5 +1,20 @@
 <?php
-    
+error_reporting(E_ALL); // Report all errors
+ini_set('display_errors', 1); // Display errors on the screen
+ini_set('log_errors', 1); // Enable error logging
+     // Database configuration
+     $host = "localhost";
+     $username = "rajinteriors";
+     $password = "7ku~3AksgI75Edzrp";
+     $database = "rajinteriors";
+ 
+     // Create a database connection
+     $conn = new mysqli($host, $username, $password, $database);
+ 
+     // Check the connection
+     if ($conn->connect_error) {
+         die("Connection failed: " . $conn->connect_error);
+     }
 
 // Set default response
 $response = [
@@ -18,21 +33,20 @@ $query = "SELECT file_url, file_name FROM uploads WHERE file_type = 'image' AND 
 $result = $conn->query($query);
 
 if ($result && $result->num_rows > 0) {
-    $images = [];
-
     while ($row = $result->fetch_assoc()) {
-        $images[] = [
-            'file_url' => $row['file_url'],
-            'file_name' => $row['file_name'],
-        ];
+        echo '<div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">';
+        echo '    <div class="post_wrapper">';
+        echo '        <div class="post_img static">';
+        echo '            <div class="post_img_hover">';
+        echo '                <img src="' . htmlspecialchars($row['file_url']) . '" alt="' . htmlspecialchars($row['file_name']) . '" loading="lazy">';
+        echo '                <a href="#"></a>';
+        echo '            </div>';
+        echo '        </div>';
+        echo '    </div>';
+        echo '</div>';
     }
-
-    // Update the response
-    $response['success'] = true;
-    $response['images'] = $images;
-    $response['message'] = 'Images fetched successfully.';
 } else {
-    $response['message'] = 'No images available for the requested page.';
+    echo "<p>No more images to load.</p>";
 }
 
 // Output JSON response
