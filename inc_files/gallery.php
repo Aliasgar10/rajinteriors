@@ -95,7 +95,7 @@
                                     <script>
                                         let offset = 9; // Initial offset for pagination
                                         document.getElementById('loadMoreBtn').addEventListener('click', function () {
-                                            fetch(`loadImages.php?offset=${offset}`)
+                                            fetch(`inc_files/loadImages.php?offset=${offset}`)
                                                 .then(response => response.json())
                                                 .then(data => {
                                                     if (data.success) {
