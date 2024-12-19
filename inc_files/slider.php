@@ -36,18 +36,27 @@
                                                                                         }
                                                                                         #slideBtn{
                                                                                             height: 3em;
-                                                                                            width: 8em;
+                                                                                            width: 10em;
                                                                                             background: black;
                                                                                             color: whitesmoke;
                                                                                             font-size: 16px;
                                                                                             cursor: pointer;
-                                                                                            border-radius:40px;
+                                                                                            border-radius: 40px;    
+                                                                                            border: 0px;
                                                                                         }
                                                                                         #slideBtn:hover {
                                                                                             border:2px solid black;
                                                                                             background: transparent;
                                                                                             color: whitesmoke;
                                                                                         }
+                                                                                        @media (max-width: 520px) {
+                                                                                                #b3f72b289 {
+                                                                                                    font-size: 35px !important;
+                                                                                                }
+                                                                                                #abbc {
+                                                                                                    font-size: 25px !important;
+                                                                                                }
+                                                                                            }
                                                                                     </style>                                        
                                                                                     <h2 class="elementor-text-editor elementor-clearfix" id="b3f72b289"><strong><em></em></strong>
                                                                                         <br> 
@@ -63,9 +72,9 @@
                                                         <div class="text" id="abbc">
                                                             From Vision to Reality — Exceptional Interiors for Every Space.
                                                         </div>
-                                                        <br><br>
+                                                        <br>
                                                         <div class="text2" id="abbcd">
-                                                            <button id="slideBtn">Load More</button>
+                                                            <button id="slideBtn">Get Free Quote</button>
                                                         </div>
                                                     </div>
                                                 </div>
