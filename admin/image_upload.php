@@ -208,12 +208,123 @@
         </div>
     </div>
 
-    
+    <!-- Pop up style -->
+    <style>
+        /* General Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            max-width: 90%; /* Adjust for smaller screens */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /* Modal Close Button */
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .modal-close:hover {
+            background-color: #c82333;
+        }
+
+        /* Modal Headings */
+        .modal-content h2 {
+            margin-top: 0;
+            color: #343a40;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* Modal Body Text */
+        .modal-content p {
+            color: #495057;
+            font-size: 16px;
+            margin: 10px 0;
+            word-wrap: break-word;
+        }
+
+        /* Modal Links */
+        .modal-content a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .modal-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Modal Buttons */
+        .modal-content button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-content button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 90%;
+            }
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function loadFiles(type) {
             $.ajax({
-                url: 'insert_upload.php',
+                url: 'upload_handler.php',
                 type: 'GET',
                 data: { type: type },
                 success: function(data) {
@@ -225,19 +336,51 @@
             });
         }
 
-        // Load files on page load
-        $(document).ready(function() {
-            loadFiles('images');
-            loadFiles('pdfs');
-        });
-
         function openModal() {
             $('#fileModal').css('display', 'flex');
         }
 
         function closeModal() {
-            $('#fileModal').css('display', 'none');
+            $('#fileModal, #detailsModal').css('display', 'none');
         }
+
+        function viewDetails(id) {
+            $.ajax({
+                url: 'insert_upload.php',
+                type: 'GET',
+                data: { details_id: id },
+                success: function(data) {
+                    $('#detailsModal .modal-content').html(data);
+                    $('#detailsModal').css('display', 'flex');
+                },
+                error: function() {
+                    alert('Error fetching details.');
+                }
+            });
+        }
+
+        function deleteFile(id, type) {
+            if (confirm('Are you sure you want to delete this file?')) {
+                $.ajax({
+                    url: 'insert_upload.php',
+                    type: 'POST',
+                    data: { delete_id: id },
+                    success: function(response) {
+                        alert(response);
+                        loadFiles(type); // Refresh the file list
+                    },
+                    error: function() {
+                        alert('Error deleting file.');
+                    }
+                });
+            }
+        }
+
+        // Load files on page load
+        $(document).ready(function() {
+            loadFiles('images');
+            loadFiles('pdfs');
+        });
     </script>
 </body>
 </html>
