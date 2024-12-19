@@ -25,6 +25,23 @@
         font-size:40px;
         text-align: center;
     }
+    #loadMoreBtn{
+        height: 3em;
+        width: 9em;
+        background: black;
+        color: whitesmoke;
+        font-size: smaller;
+        cursor: pointer;
+    }
+    #loadMoreBtn:hover {
+        height: 3em;
+        width: 9em;
+        border:3px solid black;
+        background: whitesmoke;
+        color: black;
+        font-size: smaller;
+        cursor: pointer;
+    }
 </style>
 
 
