@@ -1,116 +1,70 @@
-<?php
-    // Database configuration
-    $host = "localhost";
-    $username = "rajinteriors";
-    $password = "7ku~3AksgI75Edzrp";
-    $database = "rajinteriors";
-
-    // Create a database connection
-    $conn = new mysqli($host, $username, $password, $database);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Check if the form was submitted and file uploaded
-        if (isset($_FILES['file']) && isset($_POST['file_name']) && isset($_POST['section']) && isset($_POST['category'])) {
-            $file_name = $_POST['file_name'];
-            $section = $_POST['section'];
-            $category = $_POST['category'];
-
-            // File upload configuration
-            $fileType = strtolower(pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION));
-            $uploadOk = 1;
-            
-            // Determine target directory based on file type
-            if ($fileType == "jpg" || $fileType == "jpeg" || $fileType == "png" || $fileType == "gif") {
-                $target_dir = "../uploads/assets/images/";
-            } elseif ($fileType == "pdf") {
-                $target_dir = "../uploads/assets/pdf/";
-            } else {
-                echo "Unsupported file type.";
-                $uploadOk = 0;
-            }
-
-            if ($uploadOk) {
-                $target_file = $target_dir . basename($_FILES['file']['name']);
-
-                // Check file size (limit to 5MB)
-                if ($_FILES['file']['size'] > 5000000) {
-                    echo "Sorry, your file is too large.";
-                    $uploadOk = 0;
-                }
-
-                // If upload is valid, proceed
-                if ($uploadOk) {
-                    if (move_uploaded_file($_FILES['file']['tmp_name'], $target_file)) {
-                        $file_url = $target_file;
-                        $stmt = $conn->prepare("INSERT INTO uploads (image_url, image_name, section, category) VALUES (?, ?, ?, ?)");
-                        $stmt->bind_param("ssss", $file_url, $file_name, $section, $category);
-                        if ($stmt->execute()) {
-                            echo "The file " . htmlspecialchars(basename($_FILES['file']['name'])) . " has been uploaded and saved to the database.";
-                        } else {
-                            echo "Database error: " . $stmt->error;
-                        }
-                        $stmt->close();
-                    } else {
-                        switch ($_FILES['file']['error']) {
-                            case UPLOAD_ERR_INI_SIZE:
-                            case UPLOAD_ERR_FORM_SIZE:
-                                echo "File exceeds the maximum allowed size.";
-                                break;
-                            case UPLOAD_ERR_PARTIAL:
-                                echo "The file was only partially uploaded.";
-                                break;
-                            case UPLOAD_ERR_NO_FILE:
-                                echo "No file was uploaded.";
-                                break;
-                            case UPLOAD_ERR_NO_TMP_DIR:
-                                echo "Missing a temporary folder.";
-                                break;
-                            case UPLOAD_ERR_CANT_WRITE:
-                                echo "Failed to write file to disk.";
-                                break;
-                            case UPLOAD_ERR_EXTENSION:
-                                echo "A PHP extension stopped the file upload.";
-                                break;
-                            default:
-                                echo "Unknown upload error.";
-                                break;
-                        }
-                    }
-                }
-            }
-        } else {
-            echo "All fields are required.";
-        }
-    }
-
-    // Fetch images and PDFs
-    $images = $conn->query("SELECT * FROM uploads WHERE image_url LIKE '../uploads/assets/images/%'");
-    $pdfs = $conn->query("SELECT * FROM uploads WHERE image_url LIKE '../uploads/assets/pdf/%'");
-
-    $conn->close();
-?>
-
-<?php include("layout_open.php"); ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
             display: flex;
-            flex-direction: column;
             height: 100vh;
         }
 
+        .sidebar {
+            width: 250px;
+            background-color: #343a40;
+            color: white;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #495057;
+        }
+
         .container {
+            flex: 1;
             display: flex;
-            flex-grow: 1;
-            overflow: hidden;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            margin: 0;
         }
 
         .file-section {
@@ -119,7 +73,6 @@
             flex-direction: column;
             overflow-y: auto;
             padding: 20px;
-            box-sizing: border-box;
         }
 
         .file-section h2 {
@@ -206,69 +159,85 @@
             padding: 5px 10px;
         }
     </style>
-
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Sidebar Menu</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Upload</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
     <div class="container">
+        <div class="navbar">
+            <h1>File Manager</h1>
+        </div>
         <div class="file-section">
             <h2>Images</h2>
-            <div class="file-grid">
-                <?php while ($row = $images->fetch_assoc()): ?>
-                    <div class="file-item">
-                        <img src="<?php echo $row['image_url']; ?>" alt="File">
-                        <button>Details</button>
-                        <button>Delete</button>
-                    </div>
-                <?php endwhile; ?>
-                <div class="add-file" onclick="openModal()">+ Add Image</div>
-            </div>
+            <div class="file-grid" id="images-grid"></div>
+            <div class="add-file" onclick="openModal()">+ Add Image</div>
         </div>
 
         <div class="file-section">
             <h2>PDFs</h2>
-            <div class="file-grid">
-                <?php while ($row = $pdfs->fetch_assoc()): ?>
-                    <div class="file-item">
-                        <p><?php echo basename($row['image_url']); ?></p>
-                        <button>Details</button>
-                        <button>Delete</button>
-                    </div>
-                <?php endwhile; ?>
-                <div class="add-file" onclick="openModal()">+ Add PDF</div>
-            </div>
+            <div class="file-grid" id="pdfs-grid"></div>
+            <div class="add-file" onclick="openModal()">+ Add PDF</div>
         </div>
     </div>
 
     <div id="fileModal" class="modal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">Close</button>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="insert_upload.php" method="post" enctype="multipart/form-data">
                 <label for="file">Select file to upload:</label>
                 <input type="file" name="file" id="file" required>
 
                 <label for="file_name">File Name:</label>
-                <input type="text" name="file_name" id="file_name" placeholder="Enter file name" required>
+                <input type="text" name="file_name" id="file_name" required>
 
                 <label for="section">Section:</label>
-                <input type="text" name="section" id="section" placeholder="Enter section name" required>
+                <input type="text" name="section" id="section" required>
 
                 <label for="category">Category:</label>
-                <input type="text" name="category" id="category" placeholder="Enter category name" required>
+                <input type="text" name="category" id="category" required>
 
                 <input type="submit" value="Upload File">
             </form>
         </div>
     </div>
 
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        function loadFiles(type) {
+            $.ajax({
+                url: 'insert_upload.php',
+                type: 'GET',
+                data: { type: type },
+                success: function(data) {
+                    $('#' + type + '-grid').html(data);
+                },
+                error: function() {
+                    $('#' + type + '-grid').html('<p>Error loading data.</p>');
+                }
+            });
+        }
+
+        // Load files on page load
+        $(document).ready(function() {
+            loadFiles('images');
+            loadFiles('pdfs');
+        });
+
         function openModal() {
-            document.getElementById('fileModal').style.display = 'flex';
+            $('#fileModal').css('display', 'flex');
         }
 
         function closeModal() {
-            document.getElementById('fileModal').style.display = 'none';
+            $('#fileModal').css('display', 'none');
         }
     </script>
-
-<?php include("layout_close.php"); ?>
-
-
-
+</body>
+</html>
