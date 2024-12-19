@@ -24,7 +24,7 @@ $response = [
 ];
 
 // Parameters for pagination
-$images_per_page = 10;
+$images_per_page = 9;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $offset = ($page - 1) * $images_per_page;
 
