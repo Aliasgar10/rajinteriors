@@ -51,7 +51,7 @@
                             <div class="menu-main-menu-container">
                                 <ul id="main_menu" class="nav" style="margin-top: 23px;">
                                     <li><a href="index.php">Home</a></li>
-                                    <li class="menu-item menu-item-has-children"><a href="tvs.php">TVS</a>
+                                    <li class="menu-item menu-item-has-children"><a href="tvs.php">The Vogue Studio</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item"><a href="test1.php"><span class="subunder">- </span>ABCD</a></li>
                                             <li class="menu-item"><a href="home-10.html"><span class="subunder">- </span>ABCD</a></li>
