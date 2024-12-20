@@ -42,12 +42,12 @@
                                                                                             font-size: 16px;
                                                                                             cursor: pointer;
                                                                                             border-radius: 40px;    
-                                                                                            border: 0px;
                                                                                         }
                                                                                         #slideBtn:hover {
-                                                                                            border:2px solid black;
+                                                                                            border:3px solid white;
                                                                                             background: transparent;
                                                                                             color: whitesmoke;
+                                                                                            border: 2px solid whitesmoke;
                                                                                         }
                                                                                         @media (max-width: 520px) {
                                                                                                 #b3f72b289 {
