@@ -61,6 +61,7 @@
                                             }
                                             .sec{
                                                 background:#000 !important;
+                                                border-radius:10px;
                                             }
                                             @media only screen and (max-width: 520px) {
                                                 #c197fe7{
