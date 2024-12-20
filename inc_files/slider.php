@@ -41,7 +41,8 @@
                                                                                             color: whitesmoke;
                                                                                             font-size: 16px;
                                                                                             cursor: pointer;
-                                                                                            border-radius: 40px;    
+                                                                                            border-radius: 40px;
+                                                                                            border:0px;    
                                                                                         }
                                                                                         #slideBtn:hover {
                                                                                             border:3px solid white;
