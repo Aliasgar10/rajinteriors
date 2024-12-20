@@ -54,8 +54,7 @@
                                                     <div data-id="95727a1" class="elementor-element elementor-element-95727a1 elementor-widget elementor-widget-text-editor" data-element_type="text-editor.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                                <p>Monday - Friday: 10am – 4pm
-                                                                    <br>Saturday — Closed
+                                                                <p>Monday - Saturday: 10am – 7pm
                                                                     <br>Sunday — Closed</p>
                                                             </div>
                                                         </div>

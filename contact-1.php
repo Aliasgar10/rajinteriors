@@ -101,8 +101,7 @@
                                                                 <div data-id="3328d16" class="elementor-element elementor-element-3328d16 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:1200}" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            <p>Monday — Friday 9am – 5pm
-                                                                                <br>Saturday — 11am – 4pm
+                                                                            <p>Monday — Saturday 10am – 7pm
                                                                                 <br>Sunday — Closed</p>
                                                                         </div>
                                                                     </div>
