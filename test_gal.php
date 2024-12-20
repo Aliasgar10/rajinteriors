@@ -140,7 +140,8 @@
                                                                                     <img src="upload/gallery_5.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
                                                                             </div>
-                                                                            <div id="c" class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
+
+                                                                            <!-- <div id="c" class="gallery_grid_item tg_three_cols last gallery-grid-tilt">
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_6.jpg" data-thumb="upload/gallery_6.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_6.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
@@ -174,7 +175,7 @@
                                                                                 <a class="tg_gallery_lightbox" href="upload/gallery_12.jpg" data-thumb="upload/gallery_12.jpg" data-rel="tg_gallery305f7fd">
                                                                                     <img src="upload/gallery_12.jpg" class="lazy_masonry" alt="">
                                                                                 </a>
-                                                                            </div>
+                                                                            </div> -->
                                                                             <br class="clear">
                                                                         </div>
                                                                     </div>
