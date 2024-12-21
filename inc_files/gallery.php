@@ -1,3 +1,11 @@
+<?php 
+error_reporting(E_ALL);
+// Display errors on the screen
+ini_set('display_errors', 1);
+// Log errors to a file (optional)
+ini_set('log_errors', 1);
+
+?>
 <style>
     #h11{
         padding-left: 5px;
@@ -44,8 +52,6 @@
     }
 </style>
 
-
-
 <section id="abcc" data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
     <div class="elementor-widget-container">
         <h2 class="elementor-heading-title elementor-size-default" id="h11">Gallery</h2>
@@ -60,7 +66,7 @@
                                 <div class="blog_post_content_wrapper layout_grid">
                                     <div id="imageContainer">
                                         <?php
-                                            $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category='HomePage' LIMIT 9"; // Initial limit
+                                            $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category_id=1 LIMIT 9"; // Initial limit
                                             $result = $conn->query($query);
 
                                             if ($result->num_rows > 0) {

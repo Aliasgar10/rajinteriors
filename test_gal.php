@@ -1,4 +1,11 @@
 <?php
+
+error_reporting(E_ALL);
+// Display errors on the screen
+ini_set('display_errors', 1);
+// Log errors to a file (optional)
+ini_set('log_errors', 1);
+
     // Database configuration
     $host = "localhost";
     $username = "rajinteriors";
@@ -54,11 +61,11 @@
                                 <div class="elementor-inner">
                                     <div class="elementor-section-wrap">
                                         <style>
-                                            .videos .gallery-item video iframe[allow] {
+                                            /* .videos .gallery-item video iframe[allow] {
                                                 autoplay: true;
                                                 muted: true;
                                                 loop: true;
-                                            }
+                                            } */
                                             .sec{
                                                 background:#000 !important;
                                                 border-radius:10px;
@@ -104,45 +111,30 @@
                                                 }
                                             }
                                         </style>
-                                        <div class="sec">
-                                            <section id="c197fe7" data-id="c197fe7" class="elementor-element elementor-element-c197fe7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-row">
-                                                        <style>
-                                                            #c197fe7{
-                                                                margin-top: 40px;
-                                                                margin-bottom: 60px;
-                                                            }
-
-                                                            @font-face {
-                                                                font-family: 'Operetta Bold';
-                                                                src: url('inc_files/Operetta52-Bold.otf') format('opentype');
-                                                                font-weight: bold;
-                                                                font-style: normal;
-                                                                }
-                                                                .section-name h2{
-                                                                    font-family: 'Operetta Bold';
-                                                                    font-weight: bold;
-                                                                    font-size:40px;
-                                                                    text-align: center;
-                                                                    color:#fff;
-                                                                    margin-top: 20px;
-                                                                }
-                                                                .section-name{
-                                                                    display: flex;
-                                                                    justify-content: center;
-                                                                    align-items: center;
-                                                                    width: 100%;
-                                                                }
-                                                        </style>
-                                                        <div class="section-name">
-                                                            <h2>living room 1</h2>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            
-                                            <section id="a009">
+                                        
+                                                <style>
+                                                    
+                                                    @font-face {
+                                                        font-family: 'Operetta Bold';
+                                                        src: url('inc_files/Operetta52-Bold.otf') format('opentype');
+                                                        font-weight: bold;
+                                                        font-style: normal;
+                                                        }
+                                                        .section-name h2{
+                                                            font-family: 'Operetta Bold';
+                                                            font-weight: bold;
+                                                            font-size:40px;
+                                                            text-align: center;
+                                                            color:#fff;
+                                                            margin-top: 20px;
+                                                        }
+                                                        .section-name{
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            width: 100%;
+                                                        }
+                                                </style>
                                                 <style>
                                                     .gallery{
                                                         display:flex;
@@ -201,333 +193,90 @@
                                                         .gallery {
                                                             column-count: 1; /* Single column on very small screens */
                                                         }
-                                                    }
+                                                    }   
                                                 </style>
-                                                <div class="gallery">
-                                                    <!-- Image Items -->
-                                                    <div class="images">
-                                                        <?php
-                                                            $query = "SELECT file_url, section, category, file_name FROM uploads WHERE file_type = 'image' AND category='living room 1'"; // Initial limit
-                                                            $result = $conn->query($query);
+                                        <?php
+                                            // Fetch all categories except IDs 1 and 11
+                                            $categoryQuery = "SELECT id, category_name FROM categories WHERE id NOT IN (1, 11) ORDER BY category_name ASC";
+                                            $categoryResult = $conn->query($categoryQuery);
+
+                                            if ($categoryResult->num_rows > 0) {
+                                                while ($categoryRow = $categoryResult->fetch_assoc()) {
+                                                    $categoryId = $categoryRow['id'];
+                                                    $categoryName = ucwords($categoryRow['category_name']);
+                                        ?>
+                                        <br><br>
+                                            <div class="sec">
+                                                <section id="category_<?php echo $categoryId; ?>">
+                                                    <div class="section-name">
+                                                        <h2><?php echo htmlspecialchars($categoryName); ?></h2>
+                                                    </div>
+
+                                                    <div class="gallery">
+                                                        <div class="images">
+                                                            <?php
+                                                            // Fetch files for the current category
+                                                            $query = "SELECT u.file_url, u.file_name, u.file_type, s.section_name 
+                                                                    FROM uploads u 
+                                                                    INNER JOIN sections s ON u.section_id = s.id 
+                                                                    WHERE u.category_id = ? 
+                                                                    ORDER BY s.section_name ASC";
+                                                            $stmt = $conn->prepare($query);
+                                                            $stmt->bind_param("i", $categoryId);
+                                                            $stmt->execute();
+                                                            $result = $stmt->get_result();
 
                                                             if ($result->num_rows > 0) {
                                                                 while ($row = $result->fetch_assoc()) {
+                                                                    $fileType = $row['file_type'];
                                                                     $fileUrl = $row['file_url'];
-                                                        ?>
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="uploads/assets/images/<?php echo $row['file_name']; ?>" alt="Gallery Image 5">
-                                                        </div>
-                                                        <?php 
+                                                                    $fileName = $row['file_name'];
+
+                                                                    if ($fileType === 'image') {
+                                                                        echo "<div class='gallery-item gallery-grid-tilt'>";
+                                                                        echo "<img src='uploads/assets/images/" . htmlspecialchars($fileName) . "' alt='Gallery Image'>";
+                                                                        echo "</div>";
+                                                                    }
                                                                 }
                                                             } else {
-                                                                echo "No Contents found.";
+                                                                echo "<p>No Contents found.</p>";
                                                             }
-                                                        ?> 
-                                                        <!-- <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="upload/gallery_6.jpg" alt="Gallery Image 5">
+                                                            $stmt->close();
+                                                            ?>
                                                         </div>
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="upload/gallery_7.jpg" alt="Gallery Image 4">
-                                                        </div>
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="upload/gallery_8.jpg" alt="Gallery Image 5">
-                                                        </div> -->
-                                                    </div>
-                                                    <div class="videos">
-                                                        <div class="gallery-item gallery-grid-tilt">                                                            
-                                                            <iframe src="https://www.youtube.com/embed/frGAZ34UEc4?autoplay=1&mute=1&loop=1&playlist=frGAZ34UEc4" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                                        </div>
-                                                    </div>                                                    
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div class="rr" style="width:100%; height:15px; background:white;"></div>   
-
-                                        <!-- Sec 2 -->
-                                        <div class="sec">
-                                            <section id="c197fe7" style="margin-bottom: 10px;" data-id="c197fe7" class="elementor-element elementor-element-c197fe7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-row">
-                                                        <style>
-                                                            #c197fe7{
-                                                                margin-top: 40px;
-                                                                margin-bottom: 60px;
-                                                            }
-
-                                                            @font-face {
-                                                                font-family: 'Operetta Bold';
-                                                                src: url('inc_files/Operetta52-Bold.otf') format('opentype');
-                                                                font-weight: bold;
-                                                                font-style: normal;
-                                                                }
-                                                                .section-name h2{
-                                                                    font-family: 'Operetta Bold';
-                                                                    font-weight: bold;
-                                                                    font-size:40px;
-                                                                    text-align: center;
-                                                                    color:#fff;
-                                                                }
-                                                                .section-name{
-                                                                    display: flex;
-                                                                    justify-content: center;
-                                                                    align-items: center;
-                                                                    width: 100%;
-                                                                }
-                                                        </style>
-                                                        <div class="section-name">
-                                                            <h2>kitchen 1</h2>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <section id="a009">
-                                                <style>
-                                                    .gallery{
-                                                        display:flex;
-                                                        column-gap: 10px; /* Space between columns */
-                                                        padding: 10px;
-                                                        width: 100%;
-                                                        max-width: 1200px;
-                                                        margin: auto;
-                                                    }
-                                                    .images {
-                                                        column-count: 2; /* Number of columns */
-                                                        column-gap: 20px; /* Space between columns */
-                                                        padding: 20px;
-                                                        width: 65%;
-                                                        max-width: 800px;
-                                                        margin: auto;
-                                                    }
-                                                    .videos {
-                                                        column-count: 1; /* Number of columns */
-                                                        column-gap: 20px; /* Space between columns */
-                                                        padding: 20px;
-                                                        width: 30%;
-                                                        max-width: 400px;
-                                                        margin: auto;
-                                                    }
-
-                                                    .gallery-item {
-                                                        display: inline-block; /* Ensure items align correctly in columns */
-                                                        margin-bottom: 20px; /* Space between items */
-                                                        background: #fff;
-                                                        border-radius: 10px;
-                                                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                                        overflow: hidden;
-                                                        width: 100%; /* Ensure item width is adjusted for the column */
-                                                    }
-
-                                                    .gallery-item img,
-                                                    .gallery-item video {
-                                                        width: 100%;
-                                                        height: auto; /* Preserve aspect ratio */
-                                                        display: block;
-                                                    }
-
-                                                    .gallery-item video {
-                                                        border-radius: 10px;
-                                                    }
-
-                                                    /* Responsive Design */
-                                                    @media (max-width: 768px) {
-                                                        .gallery {
-                                                            column-count: 2; /* Reduce columns on smaller screens */
-                                                        }
-                                                    }
-
-                                                    @media (max-width: 480px) {
-                                                        .gallery {
-                                                            column-count: 1; /* Single column on very small screens */
-                                                        }
-                                                    }
-                                                </style>
-                                                <div class="gallery">
-                                                    <!-- Image Items -->
-                                                    <div class="images">
-                                                        <?php
-                                                            $query = "SELECT file_url, section, category, file_name FROM uploads WHERE file_type = 'image' AND category='kitchen 1'"; // Initial limit
-                                                            $result = $conn->query($query);
+                                                        <div class="videos">
+                                                            <?php
+                                                            // Reset the query for videos
+                                                            $stmt = $conn->prepare($query);
+                                                            $stmt->bind_param("i", $categoryId);
+                                                            $stmt->execute();
+                                                            $result = $stmt->get_result();
 
                                                             if ($result->num_rows > 0) {
                                                                 while ($row = $result->fetch_assoc()) {
+                                                                    $fileType = $row['file_type'];
                                                                     $fileUrl = $row['file_url'];
-                                                        ?>
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="uploads/assets/images/<?php echo $row['file_name']; ?>" alt="Gallery Image 5">
-                                                        </div>
-                                                        <?php 
+
+                                                                    if ($fileType === 'video') {
+                                                                        echo "<div class='gallery-item gallery-grid-tilt'>";
+                                                                        echo "<iframe src='" . htmlspecialchars($fileUrl) . "' allow='autoplay; encrypted-media' allowfullscreen></iframe>";
+                                                                        echo "</div>";
+                                                                    }
                                                                 }
-                                                            } else {
-                                                                echo "No Contents found.";
                                                             }
-                                                        ?> 
-                                                        <!-- <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="upload/gallery_6.jpg" alt="Gallery Image 5">
-                                                        </div>
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="upload/gallery_7.jpg" alt="Gallery Image 4">
-                                                        </div>
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="upload/gallery_8.jpg" alt="Gallery Image 5">
-                                                        </div> -->
-                                                    </div>                                                    
-                                                    <div class="videos">
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <iframe src="https://www.youtube.com/embed/wbWItCkHYnc?autoplay=1&mute=1&loop=1&playlist=wbWItCkHYnc" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                            $stmt->close();
+                                                            ?>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </section>
-                                        </div> 
-                                        <div class="rr" style="width:100%; height:15px; background:white;"></div>  
-
-                                        <!-- Sec 3 -->
-                                        <div class="sec">
-                                            <section id="c197fe7" data-id="c197fe7" class="elementor-element elementor-element-c197fe7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-row">
-                                                        <style>
-                                                            #c197fe7{
-                                                                margin-top: 40px;
-                                                                margin-bottom: 60px;
-                                                            }
-
-                                                            @font-face {
-                                                                font-family: 'Operetta Bold';
-                                                                src: url('inc_files/Operetta52-Bold.otf') format('opentype');
-                                                                font-weight: bold;
-                                                                font-style: normal;
-                                                                }
-                                                                .section-name h2{
-                                                                    font-family: 'Operetta Bold';
-                                                                    font-weight: bold;
-                                                                    font-size:40px;
-                                                                    text-align: center;
-                                                                    color:#fff;
-                                                                }
-                                                                .section-name{
-                                                                    display: flex;
-                                                                    justify-content: center;
-                                                                    align-items: center;
-                                                                    width: 100%;
-                                                                }
-                                                        </style>
-                                                        <div class="section-name">
-                                                            <h2>living room 3</h2>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <section id="a009">
-                                                <style>
-                                                    .gallery{
-                                                        display:flex;
-                                                        column-gap: 10px; /* Space between columns */
-                                                        padding: 10px;
-                                                        width: 100%;
-                                                        max-width: 1200px;
-                                                        margin: auto;
-                                                    }
-                                                    .images {
-                                                        column-count: 2; /* Number of columns */
-                                                        column-gap: 20px; /* Space between columns */
-                                                        padding: 20px;
-                                                        width: 65%;
-                                                        max-width: 800px;
-                                                        margin: auto;
-                                                    }
-                                                    .videos {
-                                                        column-count: 1; /* Number of columns */
-                                                        column-gap: 20px; /* Space between columns */
-                                                        padding: 20px;
-                                                        width: 30%;
-                                                        max-width: 400px;
-                                                        margin: auto;
-                                                    }
-
-                                                    .gallery-item {
-                                                        display: inline-block; /* Ensure items align correctly in columns */
-                                                        margin-bottom: 20px; /* Space between items */
-                                                        background: #fff;
-                                                        border-radius: 10px;
-                                                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                                        overflow: hidden;
-                                                        width: 100%; /* Ensure item width is adjusted for the column */
-                                                    }
-
-                                                    .gallery-item img,
-                                                    .gallery-item video {
-                                                        width: 100%;
-                                                        height: auto; /* Preserve aspect ratio */
-                                                        display: block;
-                                                    }
-
-                                                    .gallery-item video {
-                                                        border-radius: 10px;
-                                                    }
-
-                                                    /* Responsive Design */
-                                                    @media (max-width: 768px) {
-                                                        .gallery {
-                                                            column-count: 2; /* Reduce columns on smaller screens */
-                                                        }
-                                                    }
-
-                                                    @media (max-width: 480px) {
-                                                        .gallery {
-                                                            column-count: 1; /* Single column on very small screens */
-                                                        }
-                                                    }
-                                                </style>
-                                                <div class="gallery">
-                                                    
-                                                    <!-- Image Items -->
-                                                    <div class="images">
-                                                    <?php
-                                                        $query = "SELECT file_url, section, category, file_name FROM uploads WHERE file_type = 'image' AND category='living room 3'"; // Initial limit
-                                                        $result = $conn->query($query);
-
-                                                        if ($result->num_rows > 0) {
-                                                            while ($row = $result->fetch_assoc()) {
-                                                                $fileUrl = $row['file_url'];
-                                                    ?>
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="uploads/assets/images/<?php echo $row['file_name']; ?>" alt="Gallery Image 5">
-                                                        </div>
-                                                        <?php 
-                                                                }
-                                                            } else {
-                                                                echo "No Contents found.";
-                                                            }
-                                                        ?> 
-                                                        <!-- <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="upload/gallery_6.jpg" alt="Gallery Image 5">
-                                                        </div>
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="upload/gallery_7.jpg" alt="Gallery Image 4">
-                                                        </div>
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <img src="upload/gallery_8.jpg" alt="Gallery Image 5">
-                                                        </div> -->
-                                                    </div>
-                                                    
-                                                    <div class="videos">
-                                                        <div class="gallery-item gallery-grid-tilt">
-                                                            <video controls>
-                                                                <source src="upload/Lights_1.mp4" type="video/mp4">
-                                                                Your browser does not support the video tag.
-                                                            </video>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                            <!-- Video Item -->
-                                                    
-                                                    <!-- More Image Items -->
-                                                    
-                                                </div>
-                                            </section>
-                                        </div> 
-                                        <div class="rr" style="width:100%; height:15px; background:white;"></div>                          
+                                                </section>
+                                            </div>
+                                            <div class="rr" style="width:100%; height:15px; background:white;"></div>
+                                        <?php
+                                                }
+                                            } else {
+                                                echo "<p>No categories found.</p>";
+                                            }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
