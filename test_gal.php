@@ -145,20 +145,32 @@ ini_set('log_errors', 1);
                                                         margin: auto;
                                                     }
                                                     .images {
-                                                        column-count: 2; /* Number of columns */
-                                                        column-gap: 20px; /* Space between columns */
+                                                        /* with video */
+                                                        /* column-count: 2; 
+                                                        column-gap: 20px; 
                                                         padding: 20px;
                                                         width: 65%;
                                                         max-width: 800px;
+                                                        margin: auto; */
+
+                                                        /* without video */
+                                                        
+                                                        column-count: 3;
+                                                        column-gap: 20px; 
+                                                        padding: 20px;
+                                                        justify-content: center;
+                                                        flex-direction: column;
+                                                        width: 100%;
                                                         margin: auto;
                                                     }
                                                     .videos {
-                                                        column-count: 1; /* Number of columns */
-                                                        column-gap: 20px; /* Space between columns */
+                                                        /* with video */
+                                                        /* column-count: 1; 
+                                                        column-gap: 20px; 
                                                         padding: 20px;
                                                         width: 30%;
                                                         max-width: 400px;
-                                                        margin: auto;
+                                                        margin: auto; */
                                                     }
 
                                                     .gallery-item {
@@ -192,12 +204,81 @@ ini_set('log_errors', 1);
                                                     @media (max-width: 480px) {
                                                         .gallery {
                                                             column-count: 1; /* Single column on very small screens */
+                                                            display: flex;
+                                                            flex-direction: column;
                                                         }
-                                                    }   
+                                                        .images{
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            flex-direction: column;
+                                                            width: 100%;
+                                                        }
+                                                    } 
+                                                    
+                                                    /* Modal Styles */
+                                                    .modal {
+                                                        display: none; /* Hidden by default */
+                                                        position: fixed;
+                                                        z-index: 1000;
+                                                        left: 0;
+                                                        top: 0;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        overflow: auto;
+                                                        background-color: rgba(0,0,0,0.8); /* Black with transparency */
+                                                    }
+
+                                                    .modal-content {
+                                                        margin: auto;
+                                                        display: block;
+                                                        width: 80%;
+                                                        max-width: 700px;
+                                                        position: relative;
+                                                        top: 20%;
+                                                    }
+
+                                                    .modal-close {
+                                                        position: absolute;
+                                                        top: 10px;
+                                                        right: 25px;
+                                                        color: white;
+                                                        font-size: 35px;
+                                                        font-weight: bold;
+                                                        cursor: pointer;
+                                                    }
                                                 </style>
+                                                <div id="imageModal" class="modal">
+                                                    <span class="modal-close">&times;</span>
+                                                    <img class="modal-content" id="modalImage">
+                                                </div>
+
+                                                <script>
+                                                    document.addEventListener('DOMContentLoaded', function () {
+                                                        const modal = document.getElementById('imageModal');
+                                                        const modalImg = document.getElementById('modalImage');
+                                                        const modalClose = document.querySelector('.modal-close');
+
+                                                        document.querySelectorAll('.gallery-item img').forEach(img => {
+                                                            img.addEventListener('click', function () {
+                                                                modal.style.display = 'block';
+                                                                modalImg.src = this.src;
+                                                            });
+                                                        });
+
+                                                        modalClose.addEventListener('click', function () {
+                                                            modal.style.display = 'none';
+                                                        });
+
+                                                        modal.addEventListener('click', function (e) {
+                                                            if (e.target === modal) {
+                                                                modal.style.display = 'none';
+                                                            }
+                                                        });
+                                                    });
+                                                </script>
                                         <?php
                                             // Fetch all categories except IDs 1 and 11
-                                            $categoryQuery = "SELECT id, category_name FROM categories WHERE id NOT IN (1, 11) ORDER BY category_name ASC";
+                                            $categoryQuery = "SELECT id, category_name FROM categories WHERE id NOT IN (1, 12) ORDER BY id ASC";
                                             $categoryResult = $conn->query($categoryQuery);
 
                                             if ($categoryResult->num_rows > 0) {
@@ -244,7 +325,7 @@ ini_set('log_errors', 1);
                                                             $stmt->close();
                                                             ?>
                                                         </div>
-                                                        <div class="videos">
+                                                        <!-- <div class="videos">
                                                             <?php
                                                             // Reset the query for videos
                                                             $stmt = $conn->prepare($query);
@@ -265,8 +346,9 @@ ini_set('log_errors', 1);
                                                                 }
                                                             }
                                                             $stmt->close();
-                                                            ?>
-                                                        </div>
+                                                            ?> -->
+                                                            <!-- echo "<iframe src='https://youtube.com/shorts/dHVefo9LmA8?si=PdKDnCWfMLKkKqxW' allow='autoplay; encrypted-media' allowfullscreen></iframe>"; -->
+                                                        <!-- </div> -->
                                                     </div>
                                                 </section>
                                             </div>
