@@ -48,8 +48,28 @@
                                                         <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class="elementor-widget-wrap">
                                                                 <section data-id="92f8316" class="elementor-element elementor-element-92f8316 elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
+                                                                    <style>
+                                                                        .boxx{
+                                                                            column-count: 3;
+                                                                            column-gap: 20px;
+                                                                            padding: 20px;
+                                                                            justify-content: center;
+                                                                            flex-direction: column;
+                                                                            width: 100%;
+                                                                            margin: auto;
+                                                                        }
+                                                                    </style>
                                                                     <div class="elementor-container elementor-column-gap-wider">
-                                                                        
+                                                                        <div class="cont">
+                                                                            <div class="boxx">
+                                                                                <div class="imgg">
+                                                                                    <img src="" alt="">
+                                                                                </div>
+                                                                                <div class="textt">
+                                                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
+                                                                                </div>
+                                                                            </div>                                                                            
+                                                                        </div>
                                                                     </div>
                                                                 </section>
                                                             </div>
