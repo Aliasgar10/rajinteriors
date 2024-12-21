@@ -99,36 +99,36 @@ ini_set('log_errors', 1);
                                 </div>
                                 <br>
 
-                                    <script>
-                                        let offset = 9; // Initial offset for pagination
-                                        document.getElementById('loadMoreBtn').addEventListener('click', function () {
-                                            fetch(`inc_files/loadImages.php?offset=${offset}`)
-                                                .then(response => response.json())
-                                                .then(data => {
-                                                    if (data.success) {
-                                                        // Append the new HTML to the container
-                                                        document.getElementById('imageContainer').innerHTML += data.html;
-                                                        offset += 9; // Increment offset for the next fetch
-                                                    } else {
-                                                        // Hide the Load More button
-                                                        document.getElementById('loadMoreBtn').style.display = 'none';
-                                                        
-                                                        // Show a temporary message
-                                                        const messageDiv = document.createElement('div');
-                                                        messageDiv.id = 'noMoreImagesMessage';
-                                                        messageDiv.innerText = data.message;
-                                                        document.querySelector('.blog_post_content_wrapper').appendChild(messageDiv);
+                                <script>
+                                    let offset = 9; // Initial offset for pagination
+                                    document.getElementById('loadMoreBtn').addEventListener('click', function () {
+                                        fetch(`inc_files/loadImages.php?offset=${offset}`)
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                if (data.success) {
+                                                    // Append the new HTML to the container
+                                                    document.getElementById('imageContainer').innerHTML += data.html;
+                                                    offset += 9; // Increment offset for the next fetch
+                                                } else {
+                                                    // Hide the Load More button
+                                                    document.getElementById('loadMoreBtn').style.display = 'none';
+                                                    
+                                                    // Show a temporary message
+                                                    const messageDiv = document.createElement('div');
+                                                    messageDiv.id = 'noMoreImagesMessage';
+                                                    messageDiv.innerText = data.message;
+                                                    document.querySelector('.blog_post_content_wrapper').appendChild(messageDiv);
 
-                                                        // Remove the message after 10 seconds
-                                                        setTimeout(() => {
-                                                            messageDiv.remove();
-                                                        }, 10000);
-                                                    }
-                                                })
-                                                .catch(error => console.error('Error fetching images:', error));
-                                        });
+                                                    // Remove the message after 10 seconds
+                                                    setTimeout(() => {
+                                                        messageDiv.remove();
+                                                    }, 10000);
+                                                }
+                                            })
+                                            .catch(error => console.error('Error fetching images:', error));
+                                    });
 
-                                    </script>
+                                </script>
                             </div>
                         </div>
                     </div>
