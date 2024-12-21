@@ -49,26 +49,144 @@
                                                             <div class="elementor-widget-wrap">
                                                                 <section data-id="92f8316" class="elementor-element elementor-element-92f8316 elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
                                                                     <style>
-                                                                        .boxx{
-                                                                            column-count: 3;
-                                                                            column-gap: 20px;
+                                                                        /* Import Google Font for Autograph Style */
+                                                                            /* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap'); */
+                                                                            @font-face {
+                                                                                src: url('inc_files/Autography.otf') format('opentype');
+                                                                                font-weight: bold;
+                                                                                font-style: normal;
+                                                                                font-family: 'Autography';
+                                                                            }
+                                                                            .head {
+                                                                                text-align: center;
+                                                                                display: flex;
+                                                                                margin: 20px 0;
+                                                                                align-items: center;
+                                                                            }
+
+                                                                            .head h2 {
+                                                                                font-size: 24px;
+                                                                                /* font-family: 'Arial', sans-serif; Default font for other text */
+                                                                                color: #333;
+                                                                                margin: 0;
+                                                                                position: relative;
+                                                                            }
+
+                                                                            .ser {
+                                                                                font-family: 'Dancing Script', cursive; /* Autograph-like font */
+                                                                                font-size: 32px; /* Slightly larger font for emphasis */
+                                                                                color: #ff6f61; /* Accent color */
+                                                                                display: inline-block;
+                                                                                position: relative;
+                                                                            }
+
+                                                                            .hr, .hr2 {
+                                                                                display: block;
+                                                                                width: 37%;
+                                                                                height: 3px;
+                                                                                background: #ff6f61;
+                                                                                margin: 10px auto;
+                                                                            }
+
+                                                                            /* .hr2 {
+                                                                                width: 80px; /* Longer line for the second span */
+                                                                            } */
+
+                                                                    </style>
+                                                                    <div class="head">
+                                                                        <span class="hr"></span>    
+                                                                        <h2>
+                                                                            Our <span class="ser"> Services</span>
+                                                                        </h2>
+                                                                        <span class="hr2"></span>
+                                                                    </div>
+
+                                                                    <style>
+                                                                        .grid-container {
+                                                                            display: grid;
+                                                                            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                                                                            gap: 20px; /* Space between rows and columns */
                                                                             padding: 20px;
-                                                                            justify-content: center;
-                                                                            flex-direction: column;
                                                                             width: 100%;
                                                                             margin: auto;
                                                                         }
+
+                                                                        .grid-item {
+                                                                            display: flex;
+                                                                            flex-direction: column;
+                                                                            align-items: center;
+                                                                            justify-content: flex-start;
+                                                                            width: 100%;
+                                                                        }
+
+                                                                        .grid-item .imgg {
+                                                                            width: 100%;
+                                                                            height: auto;
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            align-items: center;
+                                                                            margin-bottom: 10px;
+                                                                        }
+
+                                                                        .grid-item .imgg img {
+                                                                            width: 100%;
+                                                                            height: auto;
+                                                                            object-fit: cover;
+                                                                        }
+
+                                                                        .grid-item .textt {
+                                                                            width: 100%;
+                                                                            text-align: center;
+                                                                        }
+
+                                                                        @media (max-width: 768px) {
+                                                                            .grid-container {
+                                                                                grid-template-columns: 1fr; /* Single column for smaller screens */
+                                                                            }
+                                                                        }
                                                                     </style>
                                                                     <div class="elementor-container elementor-column-gap-wider">
-                                                                        <div class="cont">
-                                                                            <div class="boxx">
+                                                                        <div class="grid-container">
+                                                                            <div class="grid-item">
                                                                                 <div class="imgg">
-                                                                                    <img src="" alt="">
+                                                                                    <img src="upload/1.jpg" alt="">
                                                                                 </div>
                                                                                 <div class="textt">
                                                                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
                                                                                 </div>
-                                                                            </div>                                                                            
+                                                                            </div>
+                                                                            <div class="grid-item">
+                                                                                <div class="imgg">
+                                                                                    <img src="upload/1.jpg" alt="">
+                                                                                </div>
+                                                                                <div class="textt">
+                                                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="grid-item">
+                                                                                <div class="imgg">
+                                                                                    <img src="upload/1.jpg" alt="">
+                                                                                </div>
+                                                                                <div class="textt">
+                                                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="grid-item">
+                                                                                <div class="imgg">
+                                                                                    <img src="upload/1.jpg" alt="">
+                                                                                </div>
+                                                                                <div class="textt">
+                                                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="grid-item">
+                                                                                <div class="imgg">
+                                                                                    <img src="upload/1.jpg" alt="">
+                                                                                </div>
+                                                                                <div class="textt">
+                                                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </section>
