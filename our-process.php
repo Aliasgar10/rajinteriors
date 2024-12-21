@@ -92,7 +92,7 @@
                                                                                 align-items: center;
                                                                             }
 
-                                                                            .head h2 {
+                                                                            .head2 h2 {
                                                                                 font-size: 40px;
                                                                                 font-family: 'Arial', sans-serif; 
                                                                                 color: #fff;
@@ -121,7 +121,7 @@
                                                                                 width: 80px; 
                                                                             } */
                                                                     </style>
-                                                                    <div class="head">
+                                                                    <div class="head2">
                                                                         <span class="hr"></span>    
                                                                         <h2>
                                                                             Our <span class="ser"> Services</span>
