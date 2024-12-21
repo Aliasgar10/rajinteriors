@@ -12,6 +12,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Truncate all tables before processing
+$conn->query("TRUNCATE TABLE categories");
+$conn->query("TRUNCATE TABLE sections");
+$conn->query("TRUNCATE TABLE uploads");
+
 // Fetch the sheet data from google_sheet table where status == 0
 $sheetQuery = "SELECT id, path FROM google_sheet WHERE status = 0 LIMIT 1";
 $sheetResult = $conn->query($sheetQuery);
@@ -31,6 +36,11 @@ if ($sheetResult->num_rows > 0) {
     $lines = explode("\n", $csvContent);
     $rowIndex = 0;
 
+    $categoriesAdded = 0;
+    $sectionsAdded = 0;
+    $filesAdded = 0;
+    $failedFiles = [];
+
     foreach ($lines as $line) {
         $row = str_getcsv($line);
         if ($rowIndex == 0) { // Skip the header row
@@ -42,38 +52,91 @@ if ($sheetResult->num_rows > 0) {
             continue;
         }
 
-        $category = $row[0] ?? ''; // CATEGORY (Column A)
-        $section = $row[1] ?? '';  // SECTION (Column B)
+        $categoryName = $row[0] ?? ''; // CATEGORY (Column A)
+        $sectionName = $row[1] ?? '';  // SECTION (Column B)
+
+        // Insert category into categories table if not exists
+        $categoryId = null;
+        if (!empty($categoryName)) {
+            $categoryQuery = "SELECT id FROM categories WHERE category_name = ? LIMIT 1";
+            $categoryStmt = $conn->prepare($categoryQuery);
+            $categoryStmt->bind_param("s", $categoryName);
+            $categoryStmt->execute();
+            $categoryStmt->bind_result($categoryId);
+            $categoryStmt->fetch();
+            $categoryStmt->close();
+
+            if (!$categoryId) {
+                $insertCategoryQuery = "INSERT INTO categories (category_name) VALUES (?)";
+                $insertCategoryStmt = $conn->prepare($insertCategoryQuery);
+                $insertCategoryStmt->bind_param("s", $categoryName);
+                $insertCategoryStmt->execute();
+                $categoryId = $insertCategoryStmt->insert_id;
+                $insertCategoryStmt->close();
+                $categoriesAdded++;
+            }
+        }
+
+        // Insert section into sections table if not exists
+        $sectionId = null;
+        if (!empty($sectionName)) {
+            $sectionQuery = "SELECT id FROM sections WHERE section_name = ? LIMIT 1";
+            $sectionStmt = $conn->prepare($sectionQuery);
+            $sectionStmt->bind_param("s", $sectionName);
+            $sectionStmt->execute();
+            $sectionStmt->bind_result($sectionId);
+            $sectionStmt->fetch();
+            $sectionStmt->close();
+
+            if (!$sectionId) {
+                $insertSectionQuery = "INSERT INTO sections (section_name) VALUES (?)";
+                $insertSectionStmt = $conn->prepare($insertSectionQuery);
+                $insertSectionStmt->bind_param("s", $sectionName);
+                $insertSectionStmt->execute();
+                $sectionId = $insertSectionStmt->insert_id;
+                $insertSectionStmt->close();
+                $sectionsAdded++;
+            }
+        }
 
         // Process Videos
         if (!empty($row[2])) { // VIDEOS (Column C)
             $filePath = "../uploads/assets/videos/" . $row[2];
-            $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section`, `category`) VALUES (?, ?, ?, ?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section_id`, `category_id`) VALUES (?, ?, ?, ?, ?, ?)");
             $fileType = "video";
             $extension = pathinfo($row[2], PATHINFO_EXTENSION);
-            $stmt->bind_param("ssssss", $filePath, $row[2], $fileType, $extension, $section, $category);
-            $stmt->execute();
+            if (!$stmt->bind_param("ssssii", $filePath, $row[2], $fileType, $extension, $sectionId, $categoryId) || !$stmt->execute()) {
+                $failedFiles[] = $row[2];
+            } else {
+                $filesAdded++;
+            }
         }
 
         // Process PDFs
         if (!empty($row[3])) { // PDF (Column D)
             $filePath = "../uploads/assets/pdf/" . $row[3];
-            $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section`, `category`) VALUES (?, ?, ?, ?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section_id`, `category_id`) VALUES (?, ?, ?, ?, ?, ?)");
             $fileType = "pdf";
             $extension = pathinfo($row[3], PATHINFO_EXTENSION);
-            $stmt->bind_param("ssssss", $filePath, $row[3], $fileType, $extension, $section, $category);
-            $stmt->execute();
+            if (!$stmt->bind_param("ssssii", $filePath, $row[3], $fileType, $extension, $sectionId, $categoryId) || !$stmt->execute()) {
+                $failedFiles[] = $row[3];
+            } else {
+                $filesAdded++;
+            }
         }
 
         // Process Images
         for ($i = 4; $i < count($row); $i++) {
             if (!empty($row[$i])) {
                 $filePath = "../uploads/assets/images/" . $row[$i];
-                $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section`, `category`) VALUES (?, ?, ?, ?, ?, ?)");
+                $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section_id`, `category_id`) VALUES (?, ?, ?, ?, ?, ?)");
                 $fileType = "image";
                 $extension = pathinfo($row[$i], PATHINFO_EXTENSION);
-                $stmt->bind_param("ssssss", $filePath, $row[$i], $fileType, $extension, $section, $category);
-                $stmt->execute();
+                if (!$stmt->bind_param("ssssii", $filePath, $row[$i], $fileType, $extension, $sectionId, $categoryId) || !$stmt->execute()) {
+                    $failedFiles[] = $row[$i];
+                } else {
+                    $filesAdded++;
+                }
             }
         }
 
@@ -85,6 +148,16 @@ if ($sheetResult->num_rows > 0) {
     $updateStmt = $conn->prepare($updateQuery);
     $updateStmt->bind_param("i", $sheetId);
     $updateStmt->execute();
+
+    // Display summary
+    echo "Processing Complete:\n";
+    echo "$sectionsAdded sections added.\n";
+    echo "$categoriesAdded categories added.\n";
+    echo "$filesAdded files added.\n";
+    if (!empty($failedFiles)) {
+        echo "Failed to insert files: " . implode(", ", $failedFiles) . "\n";
+    }
+    echo "Sheet ID: $sheetId has been updated to status 1.\n";
 } else {
     echo "No sheets with status 0 found.";
 }
