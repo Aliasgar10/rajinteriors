@@ -1,3 +1,23 @@
+<?php 
+    // Database configuration
+    $host = "localhost";
+    $username = "rajinteriors";
+    $password = "7ku~3AksgI75Edzrp";
+    $database = "rajinteriors";
+
+    // Create a database connection
+    $conn = new mysqli($host, $username, $password, $database);
+
+    // Check the connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    error_reporting(E_ALL);
+    // Display errors on the screen
+    ini_set('display_errors', 1);
+    // Log errors to a file (optional)
+    ini_set('log_errors', 1);
+?>
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
 
@@ -41,7 +61,15 @@
                                     <div class="elementor-section-wrap">
                                         <?php include("inc_files/who_are_we.php"); ?>
                                         
-                                        <section data-id="8b065a5" class="elementor-element elementor-element-8b065a5 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
+                                        <style>
+                                            #a8b065a5{
+                                                background:#000;
+                                            }
+                                            .elementor-826 .elementor-element.elementor-element-92f8316 {
+                                                padding: 0px 90px 90px 90px !important;
+                                            }
+                                        </style>
+                                        <section id="a8b065a5" data-id="8b065a5" class="elementor-element elementor-element-8b065a5 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-no">
                                                 <div class="elementor-row">
                                                     <div data-id="a523397" class="elementor-element elementor-element-a523397 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
@@ -65,33 +93,33 @@
                                                                             }
 
                                                                             .head h2 {
-                                                                                font-size: 24px;
-                                                                                /* font-family: 'Arial', sans-serif; Default font for other text */
-                                                                                color: #333;
+                                                                                font-size: 40px;
+                                                                                font-family: 'Arial', sans-serif; 
+                                                                                color: #fff;
                                                                                 margin: 0;
                                                                                 position: relative;
                                                                             }
 
                                                                             .ser {
-                                                                                font-family: 'Dancing Script', cursive; /* Autograph-like font */
-                                                                                font-size: 32px; /* Slightly larger font for emphasis */
-                                                                                color: #ff6f61; /* Accent color */
+                                                                                font-family: 'Autography';
+                                                                                font-size: 90px;
+                                                                                color: #ebeb59;
                                                                                 display: inline-block;
                                                                                 position: relative;
+                                                                                font-weight: bolder;
                                                                             }
 
                                                                             .hr, .hr2 {
                                                                                 display: block;
-                                                                                width: 37%;
+                                                                                width: 47%;
                                                                                 height: 3px;
-                                                                                background: #ff6f61;
+                                                                                background: #fff;
                                                                                 margin: 10px auto;
                                                                             }
 
                                                                             /* .hr2 {
-                                                                                width: 80px; /* Longer line for the second span */
+                                                                                width: 80px; 
                                                                             } */
-
                                                                     </style>
                                                                     <div class="head">
                                                                         <span class="hr"></span>    
@@ -137,6 +165,7 @@
                                                                         .grid-item .textt {
                                                                             width: 100%;
                                                                             text-align: center;
+                                                                            color: #fff;
                                                                         }
 
                                                                         @media (max-width: 768px) {
@@ -145,50 +174,42 @@
                                                                             }
                                                                         }
                                                                     </style>
+
                                                                     <div class="elementor-container elementor-column-gap-wider">
                                                                         <div class="grid-container">
-                                                                            <div class="grid-item">
-                                                                                <div class="imgg">
-                                                                                    <img src="upload/1.jpg" alt="">
-                                                                                </div>
-                                                                                <div class="textt">
-                                                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="grid-item">
-                                                                                <div class="imgg">
-                                                                                    <img src="upload/1.jpg" alt="">
-                                                                                </div>
-                                                                                <div class="textt">
-                                                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="grid-item">
-                                                                                <div class="imgg">
-                                                                                    <img src="upload/1.jpg" alt="">
-                                                                                </div>
-                                                                                <div class="textt">
-                                                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="grid-item">
-                                                                                <div class="imgg">
-                                                                                    <img src="upload/1.jpg" alt="">
-                                                                                </div>
-                                                                                <div class="textt">
-                                                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="grid-item">
-                                                                                <div class="imgg">
-                                                                                    <img src="upload/1.jpg" alt="">
-                                                                                </div>
-                                                                                <div class="textt">
-                                                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam. Corrupti incidunt, architecto, animi libero quod enim eaque, praesentium magni ratione est iste deleniti reprehenderit.
-                                                                                </div>
-                                                                            </div>
+                                                                        <?php
+                                                                            // Fetch images where category_id = 8
+                                                                            $query = "SELECT file_name FROM uploads WHERE category_id = 8 AND file_type = 'image'";
+                                                                            $result = $conn->query($query);
+
+                                                                            // Array of additional data
+                                                                            $data = ["2D Plan & Elevation", "3D Desigining", "Virtual 3D Designing", "Masonary Works", "False Ceiling Contracts", "Electrical Works", "Carpentary Works", "Plumbing Works", "Paint & Polishing Works"];
+                                                                            $index = 0;
+
+                                                                            if ($result->num_rows > 0) {
+                                                                                while ($row = $result->fetch_assoc()) {
+                                                                                    $fileName = $row['file_name'];
+                                                                                    $currentData = isset($data[$index]) ? $data[$index] : "Additional Info";
+
+                                                                                    echo "<div class='grid-item'>";
+                                                                                    echo "    <div class='imgg'>";
+                                                                                    echo "        <img src='uploads/assets/images/" . htmlspecialchars($fileName) . "' alt='Image'>";
+                                                                                    echo "    </div>";
+                                                                                    echo "    <div class='textt'>";
+                                                                                    echo "        " . htmlspecialchars($currentData);
+                                                                                    echo "    </div>";
+                                                                                    echo "</div>";
+                                                                                    $index++;
+                                                                                }
+                                                                            } else {
+                                                                                echo "<p>No images found for this category.</p>";
+                                                                            }
+                                                                        ?>
+                                                                            
+                                                                            
                                                                         </div>
                                                                     </div>
+
                                                                 </section>
                                                             </div>
                                                         </div>
