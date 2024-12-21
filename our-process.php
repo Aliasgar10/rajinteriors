@@ -39,132 +39,8 @@
                             <div class="elementor elementor-826">
                                 <div class="elementor-inner">
                                     <div class="elementor-section-wrap">
-                                        <section id='r689e7ec' data-id="689e7ec" class="elementor-element elementor-element-689e7ec elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
-                                            <div class="elementor-container elementor-column-gap-no">
-                                                <div class="elementor-row">
-                                                    <div data-id="82cbd0a" class="elementor-element elementor-element-82cbd0a elementor-column elementor-col-50 elementor-top-column" data-element_type="column">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">
-                                                                <div data-id="959c3b2" class="elementor-element elementor-element-959c3b2 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-text-editor" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="text-editor.default">
-                                                                <style>
-                                                                    @font-face {
-                                                                        font-family: 'Operetta Bold';
-                                                                        src: url('inc_files/Operetta52-Bold.otf') format('opentype');
-                                                                        font-weight: bold;
-                                                                        font-style: normal;
-                                                                        }
-                                                                        .typed-me{
-                                                                            font-family: 'Operetta Bold';
-                                                                            font-weight: bold;
-                                                                            font-size:40px;
-                                                                            text-align: center;
-                                                                            color:#fff;
-                                                                            margin-top: 20px;
-                                                                        }
-                                                                </style>   
-                                                                <div class="elementor-widget-container">
-                                                                        <div class="elementor-text-editor elementor-clearfix">
-                                                                            <br> <span class="typed-me" data-string0="WHO ARE WE" data-string1="WHO ARE WE" data-string2="WHO ARE WE" data-string3="WHO ARE WE" data-type-speed="100" data-start-delay="0" data-backspeed="40" data-back-delay="1500" data-loop="1"></span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- <div data-id="6fa04cc" class="elementor-element elementor-element-6fa04cc elementor-column elementor-col-50 elementor-top-column" data-element_type="column">
-                                                        <div class="elementor-column-wrap">
-                                                            <div class="elementor-widget-wrap"></div>
-                                                        </div>
-                                                    </div> -->
-                                                </div>
-                                            </div>
-                                            <style>
-                                                #r689e7ec{
-                                                    background: black;
-                                                    
-                                                }
-                                    
-                                                .are_we {
-                                                    width: 100%;
-                                                    display: flex;
-                                                    min-height: 350px;
-                                                    /* max-width: 800px; */
-                                                    margin: 0 auto;
-                                                    flex-direction: column;
-                                                    /* justify-content: center; */
-                                                    align-items: center;
-                                                }
-                                                
-                                                .points {
-                                                    width: 90%;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    margin-bottom: 20px;
-                                                    background-color: #ffffff;
-                                                    padding: 15px;
-                                                    border-radius: 8px;
-                                                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                                                    transition: transform 0.3s, box-shadow 0.3s;
-                                                    margin: 10px;
-                                                    gap: 10px;
-                                                }
-                                                
-                                                .points:hover {
-                                                    transform: translateY(-5px);
-                                                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-                                                }
-                                                
-                                                .point {
-                                                    width: 12px;
-                                                    height: 12px;
-                                                    background-color: #ffd700; /* Gold color for the point */
-                                                    border-radius: 50%;
-                                                    margin-right: 15px;
-                                                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                                                }
-                                                
-                                                .abt h3 {
-                                                    font-size: 16px;
-                                                    color: #333;
-                                                    margin: 0;
-                                                    font-weight: normal;
-                                                    line-height: 1.5;
-                                                }
-                                                
-                                                @media (max-width: 600px) {
-                                                    .points {
-                                                        flex-direction: column;
-                                                        align-items: flex-start;
-                                                    }
-                                                
-                                                    .point {
-                                                        margin-bottom: 10px;
-                                                    }
-                                                }
-
-                                            </style>
-                                            <div class="are_we">
-                                                <div class="points">
-                                                    <div class="point"></div>
-                                                    <div class="abt">
-                                                        <h3>At Raj Interiors, We're Passionate about transforming spaces into breathtaking realities.</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="points">
-                                                    <div class="point"></div>
-                                                    <div class="abt">
-                                                        <h3>At Raj Interiors, We're Passionate about transforming spaces into breathtaking realities.</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="points">
-                                                    <div class="point"></div>
-                                                    <div class="abt">
-                                                        <h3>At Raj Interiors, We're Passionate about transforming spaces into breathtaking realities.</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <!-- <section data-id="fe410f7" class="elementor-element elementor-element-fe410f7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
+                                        <?php include("inc_files/who_are_we.php"); ?>
+                                        <section data-id="fe410f7" class="elementor-element elementor-element-fe410f7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
                                                     <div data-id="4ffa15c" class="elementor-element elementor-element-4ffa15c elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
@@ -181,7 +57,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section> -->
+                                        </section>
                                         <section data-id="8b065a5" class="elementor-element elementor-element-8b065a5 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-no">
                                                 <div class="elementor-row">
