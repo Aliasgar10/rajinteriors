@@ -17,7 +17,7 @@
             <style>
                 @font-face {
                     font-family: 'Operetta Bold';
-                    src: url('inc_files/Operetta52-Bold.otf') format('opentype');
+                    src: url('Operetta52-Bold.otf') format('opentype');
                     font-weight: bold;
                     font-style: normal;
                     }
