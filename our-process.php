@@ -40,24 +40,7 @@
                                 <div class="elementor-inner">
                                     <div class="elementor-section-wrap">
                                         <?php include("inc_files/who_are_we.php"); ?>
-                                        <section data-id="fe410f7" class="elementor-element elementor-element-fe410f7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
-                                            <div class="elementor-container elementor-column-gap-default">
-                                                <div class="elementor-row">
-                                                    <div data-id="4ffa15c" class="elementor-element elementor-element-4ffa15c elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">
-                                                                <div data-id="292d404" class="elementor-element elementor-element-292d404 animated-fast stellar animated fadeIn elementor-invisible elementor-widget elementor-widget-image" data-settings="{&quot;_animation_delay&quot;:600,&quot;_animation&quot;:&quot;fadeIn&quot;}" data-element_type="image.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="elementor-image">
-                                                                            <img width="1440" height="814" src="upload/about_1.jpg" class="attachment-full size-full" alt="" ></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
+                                        
                                         <section data-id="8b065a5" class="elementor-element elementor-element-8b065a5 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-no">
                                                 <div class="elementor-row">
@@ -66,23 +49,7 @@
                                                             <div class="elementor-widget-wrap">
                                                                 <section data-id="92f8316" class="elementor-element elementor-element-92f8316 elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
                                                                     <div class="elementor-container elementor-column-gap-wider">
-                                                                        <div class="elementor-row">
-                                                                            <div data-id="13b7b5d" class="elementor-element elementor-element-13b7b5d elementor-column elementor-col-66 elementor-inner-column" data-element_type="column">
-                                                                                <div class="elementor-column-wrap elementor-element-populated">
-                                                                                    <div class="elementor-widget-wrap">
-                                                                                        <div data-id="bbe2ff8" class="elementor-element elementor-element-bbe2ff8 animated fadeInRight animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-element_type="heading.default">
-                                                                                            <div class="elementor-widget-container">
-                                                                                                <h2 class="elementor-heading-title elementor-size-default">Architecture is like a mythical fantastic. It has to be experienced. It can't be described. We can draw it up and we can make models of it, but it can only be experienced as a complete whole.</h2></div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div data-id="b95e93d" class="elementor-element elementor-element-b95e93d elementor-column elementor-col-33 elementor-inner-column" data-element_type="column">
-                                                                                <div class="elementor-column-wrap">
-                                                                                    <div class="elementor-widget-wrap"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                 </section>
                                                             </div>
@@ -91,7 +58,7 @@
                                                 </div>
                                             </div>
                                         </section>
-                                        <section data-id="ae114b8" class="elementor-element elementor-element-ae114b8 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
+                                        <!-- <section data-id="ae114b8" class="elementor-element elementor-element-ae114b8 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
                                                     <div data-id="146a6ec" class="elementor-element elementor-element-146a6ec elementor-column elementor-col-50 elementor-top-column" data-element_type="column">
@@ -114,7 +81,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
+                                        </section> -->
+
+
                                         <section data-id="ab532fa" class="elementor-element elementor-element-ab532fa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-wider">
                                                 <div class="elementor-row">
