@@ -32,9 +32,9 @@
                     }
             </style> 
             <div class="head">
-                <h1>
+                <h2>
                     WHO ARE WE
-                </h1>
+                </h2>
             </div>
             <!-- <div data-id="6fa04cc" class="elementor-element elementor-element-6fa04cc elementor-column elementor-col-50 elementor-top-column" data-element_type="column">
                 <div class="elementor-column-wrap">

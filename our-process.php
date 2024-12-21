@@ -85,7 +85,7 @@
                                                                                 font-style: normal;
                                                                                 font-family: 'Autography';
                                                                             }
-                                                                            .head {
+                                                                            .head2 {
                                                                                 text-align: center;
                                                                                 display: flex;
                                                                                 margin: 20px 0;
