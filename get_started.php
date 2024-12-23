@@ -403,3 +403,37 @@
     </section>
 </body>
 </html>
+
+<script>
+    function submitForm() {
+    const form = document.getElementById('userForm');
+    const formData = new FormData(form);
+    const formEntries = Object.fromEntries(formData.entries());
+
+    // Add selections to form data
+    formEntries.selections = JSON.stringify(userSelections);
+
+    // Send data to PHP
+    fetch('save_quote.php', {
+        method: 'POST',
+        body: new URLSearchParams(formEntries),
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                alert(data.message);
+                console.log('Data saved successfully:', data);
+            } else {
+                alert('Failed to save data.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred.');
+        });
+}
+
+</script>
