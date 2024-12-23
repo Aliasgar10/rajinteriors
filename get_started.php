@@ -197,24 +197,25 @@
         }
 
         function submitForm() {
-            const form = document.getElementById('userForm');
-            const formData = new FormData(form);
+            const formData = new FormData(document.getElementById('userForm'));
             formData.append('selections', JSON.stringify(userSelections));
 
-            fetch('save_quote.php', {
-            method: 'POST',
-            body: formData,
-            redirect: 'follow', // Ensures redirects are followed
-        })
+            fetch('https://rajinteriors.in/save_quote.php', {
+                method: 'POST', // Ensure the method is POST
+                headers: {
+                    'Accept': 'application/json',
+                },
+                body: formData, // Attach the FormData object
+            })
                 .then(response => {
-                    console.log('HTTP status:', response.status);
+                    console.log('HTTP Status:', response.status); // Log HTTP status
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
                     return response.json();
                 })
                 .then(data => {
-                    console.log('Response data:', data);
+                    console.log('Response data:', data); // Log response data
                     if (data.status === 'success') {
                         alert('Data submitted successfully!');
                     } else {
@@ -222,9 +223,10 @@
                     }
                 })
                 .catch(error => {
-                    console.error('Error during submission:', error);
+                    console.error('Error during submission:', error); // Log any errors
                     alert('An error occurred while submitting the form.');
                 });
+
 
         }
     </script>
