@@ -199,7 +199,7 @@
                                                                         <div class="grid-container">
                                                                         <?php
                                                                             // Fetch images where category_id = 8
-                                                                            $query = "SELECT file_name FROM uploads WHERE category_id = 8 AND file_type = 'image'";
+                                                                            $query = "SELECT file_name FROM uploads WHERE category_id = 12 AND file_type = 'image'";
                                                                             $result = $conn->query($query);
 
                                                                             // Array of additional data

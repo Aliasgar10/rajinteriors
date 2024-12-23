@@ -12,10 +12,24 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+error_reporting(E_ALL);
+// Display errors on the screen
+ini_set('display_errors', 1);
+// Log errors to a file (optional)
+ini_set('log_errors', 1);
+
 // Truncate all tables before processing
 $conn->query("TRUNCATE TABLE categories");
 $conn->query("TRUNCATE TABLE sections");
 $conn->query("TRUNCATE TABLE uploads");
+
+// Utility function to extract YouTube video ID
+if (!function_exists('getYouTubeID')) {
+    function getYouTubeID($url) {
+        preg_match('/(?:youtube\\.com.*(?:\\/|v=|u\\/\\w\\/|embed\\/|shorts\\/)|youtu\\.be\\/)([^#&?\\n\\r]*)/', $url, $matches);
+        return $matches[1] ?? null;
+    }
+}
 
 // Fetch the sheet data from google_sheet table where status == 0
 $sheetQuery = "SELECT id, path FROM google_sheet WHERE status = 0 LIMIT 1";
@@ -100,15 +114,47 @@ if ($sheetResult->num_rows > 0) {
         }
 
         // Process Videos
+        // if (!empty($row[2])) { // VIDEOS (Column C)
+
+        //     $extension = pathinfo($row[2], PATHINFO_EXTENSION); // for get path type mean mp4 or other 
+
+            
+        //     $filePath = $row[2];
+        //     $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section_id`, `category_id`) VALUES (?, ?, ?, ?, ?, ?)");
+        //     $fileType = "video";
+        //     $extension ="potriat";
+           
+        //     if (!$stmt->bind_param("ssssii", $filePath, $row[2], $fileType, $extension, $sectionId, $categoryId) || !$stmt->execute()) {
+        //         $failedFiles[] = $row[2];
+        //     } else {
+        //         $filesAdded++;
+        //     }
+        // }
+
+        // Process Videos
         if (!empty($row[2])) { // VIDEOS (Column C)
-            $filePath = "https://www.youtube.com/embed/" . $row[2] . "?autoplay=1&loop=1&mute=1&playlist=" . $row[2];
-            $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section_id`, `category_id`) VALUES (?, ?, ?, ?, ?, ?)");
-            $fileType = "video";
-            $extension = pathinfo($row[2], PATHINFO_EXTENSION);
-            if (!$stmt->bind_param("ssssii", $filePath, $row[2], $fileType, $extension, $sectionId, $categoryId) || !$stmt->execute()) {
-                $failedFiles[] = $row[2];
+            $filePath = $row[2];
+
+            // Extract the video ID
+            $videoID = getYouTubeID($filePath);
+            if ($videoID) {
+                // Prepare the statement for inserting video data
+                $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section_id`, `category_id`) VALUES (?, ?, ?, ?, ?, ?)");
+                // Determine file type and extension dynamically
+                $fileType = "video";
+                $isShort = strpos($filePath, 'shorts') !== false;
+                $extension = $isShort ? "portrait" : "landscape";
+                // Create the embeddable URL
+                $embedUrl = "https://www.youtube.com/embed/" . $videoID;
+
+                // Bind parameters and execute the statement
+                if (!$stmt->bind_param("ssssii", $embedUrl, $videoID, $fileType, $extension, $sectionId, $categoryId) || !$stmt->execute()) {
+                    $failedFiles[] = $row[2];
+                } else {
+                    $filesAdded++;
+                }
             } else {
-                $filesAdded++;
+                $failedFiles[] = $filePath; // Add to failed if ID cannot be extracted
             }
         }
 

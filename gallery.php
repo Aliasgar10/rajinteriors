@@ -143,35 +143,15 @@ ini_set('log_errors', 1);
                                                         max-width: 1200px;
                                                         margin: auto;
                                                     }
-                                                    .images {
-                                                        /* with video */
-                                                        /* column-count: 2; 
-                                                        column-gap: 20px; 
-                                                        padding: 20px;
-                                                        width: 65%;
-                                                        max-width: 800px;
-                                                        margin: auto; */
-
-                                                        /* without video */
-                                                        
-                                                        column-count: 3;
+                                                    .images {                                                                                                               
+                                                        column-count: 2;
                                                         column-gap: 20px; 
                                                         padding: 20px;
                                                         justify-content: center;
                                                         flex-direction: column;
-                                                        width: 100%;
+                                                        width: 70vw;
                                                         margin: auto;
                                                     }
-                                                    .videos {
-                                                        /* with video */
-                                                        /* column-count: 1; 
-                                                        column-gap: 20px; 
-                                                        padding: 20px;
-                                                        width: 30%;
-                                                        max-width: 400px;
-                                                        margin: auto; */
-                                                    }
-
                                                     .gallery-item {
                                                         display: inline-block; /* Ensure items align correctly in columns */
                                                         margin-bottom: 20px; /* Space between items */
@@ -212,6 +192,14 @@ ini_set('log_errors', 1);
                                                             flex-direction: column;
                                                             width: 100%;
                                                         }
+                                                        .videos{
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items:center;
+                                                            flex-direction: column;
+                                                            width: 100% !important;
+                                                            height:100% !important;
+                                                        }
                                                     } 
                                                     
                                                     /* Modal Styles */
@@ -230,7 +218,7 @@ ini_set('log_errors', 1);
                                                     .modal-content {
                                                         margin: auto;
                                                         display: block;
-                                                        width: 80%;
+                                                        width: 65%;
                                                         max-width: 700px;
                                                         position: relative;
                                                         top: 8%;
@@ -278,7 +266,7 @@ ini_set('log_errors', 1);
                                                 </script>
                                         <?php
                                             // Fetch all categories except IDs 1 and 11
-                                            $categoryQuery = "SELECT id, category_name FROM categories WHERE id NOT IN (1, 12) ORDER BY id ASC";
+                                            $categoryQuery = "SELECT id, category_name FROM categories WHERE id NOT IN (1, 12, 25) ORDER BY id ASC";
                                             $categoryResult = $conn->query($categoryQuery);
 
                                             if ($categoryResult->num_rows > 0) {
@@ -292,55 +280,61 @@ ini_set('log_errors', 1);
                                                     <div class="section-name">
                                                         <h2><?php echo htmlspecialchars($categoryName); ?></h2>
                                                     </div>
-                                                    <style>
-                                                        iframe {
-                                                            width: 360px !important; /* Set according to video aspect ratio */
-                                                            height: 640px !important; /* Set according to video aspect ratio */
-                                                            border: none;
-                                                        }
-                                                    </style>
+                                                    
                                                     <div class="gallery">
                                                         <div class="images">
                                                             <?php
-                                                            // Fetch files for the current category
-                                                            $query = "SELECT u.file_url, u.file_name, u.file_type, s.section_name 
-                                                                    FROM uploads u 
-                                                                    INNER JOIN sections s ON u.section_id = s.id 
-                                                                    WHERE u.category_id = ? 
-                                                                    ORDER BY s.section_name ASC";
-                                                            $stmt = $conn->prepare($query);
-                                                            $stmt->bind_param("i", $categoryId);
-                                                            $stmt->execute();
-                                                            $result = $stmt->get_result();
+                                                                // Fetch files for the current category
+                                                                $query = "SELECT u.file_url, u.file_name, u.file_type,u.extension, s.section_name 
+                                                                        FROM uploads u 
+                                                                        INNER JOIN sections s ON u.section_id = s.id 
+                                                                        WHERE u.category_id = ? 
+                                                                        ORDER BY s.section_name ASC";
+                                                                $stmt = $conn->prepare($query);
+                                                                $stmt->bind_param("i", $categoryId);
+                                                                $stmt->execute();
+                                                                $result = $stmt->get_result();
 
-                                                            // Array of YouTube Shorts video IDs
-                                                            // $videoIDs = [
-                                                            //     "1tbp15M3oYc",
-                                                            //     "Okkgc4Fjdck",
-                                                            //     "SdpfZFauv_4",
-                                                            //     "_KZ4VNSEc1s",
-                                                            //     "vGABtGdF548"
-                                                            // ];
-                                                            // $index = 0;
+                                                                if ($result->num_rows > 0) {
+                                                                    while ($row = $result->fetch_assoc()) {
+                                                                        $fileType = $row['file_type'];
+                                                                        $fileUrl = $row['file_url'];
+                                                                        $fileName = $row['file_name'];
 
-                                                            if ($result->num_rows > 0) {
-                                                                while ($row = $result->fetch_assoc()) {
-                                                                    $fileType = $row['file_type'];
-                                                                    $fileUrl = $row['file_url'];
-                                                                    $fileName = $row['file_name'];
-
-                                                                    if ($fileType === 'image') {
-                                                                        echo "<div class='gallery-item gallery-grid-tilt'>";
-                                                                        echo "<img src='uploads/assets/images/" . htmlspecialchars($fileName) . "' alt='Gallery Image'>";
-                                                                        echo "</div>";                                                                
+                                                                        if ($fileType === 'image') {
+                                                                            echo "<div class='gallery-item gallery-grid-tilt'>";
+                                                                            echo "<img src='uploads/assets/images/" . htmlspecialchars($fileName) . "' alt='Gallery Image'>";
+                                                                            echo "</div>";                                                                
+                                                                        }
                                                                     }
+                                                                } else {
+                                                                    echo "<p>No Contents found.</p>";
                                                                 }
-                                                            } else {
-                                                                echo "<p>No Contents found.</p>";
-                                                            }
                                                             $stmt->close();
                                                             ?>
                                                         </div>
+                                                        <style>
+                                                            .videos{
+                                                                width: 35vw;
+                                                                column-count: 1;
+                                                                margin-top: 10px;
+                                                                padding-top: 10px;
+                                                            }
+                                                            iframe.landscape {
+                                                                width: 100% !important; /* Set according to video aspect ratio */
+                                                                max-width: 480px !important; /* Adjust the maximum width for videos */
+                                                                aspect-ratio: 16 / 9; /* Ensure proper aspect ratio */
+                                                                border-radius: 10px;
+                                                                border:none;
+                                                            }
+                                                            iframe.portrait {
+                                                                width: 360px; /* Set according to video aspect ratio */
+                                                                height: 640px; /* Set according to video aspect ratio */
+                                                                aspect-ratio: 9 / 16; /* For portrait orientation */
+                                                                border-radius: 10px;
+                                                                border:none;
+                                                            }                                                            
+                                                        </style>
                                                         <div class="videos">
                                                             <?php
                                                             // Reset the query for videos
@@ -354,10 +348,12 @@ ini_set('log_errors', 1);
                                                                 while ($row = $result->fetch_assoc()) {
                                                                     $fileType = $row['file_type'];
                                                                     $filename = $row['file_name'];
-                                                                    
+                                                                    $extension = $row['extension']; // 'landscape' or 'portrait'
+
                                                                     if ($fileType === 'video') {
                                                             ?>
                                                                         <iframe 
+                                                                            class="<?php echo $extension; ?>" 
                                                                             src="https://www.youtube.com/embed/<?php echo $filename; ?>?autoplay=1&loop=1&mute=1&playlist=<?php echo $filename; ?>" 
                                                                             allow="autoplay; encrypted-media" 
                                                                             allowfullscreen>
