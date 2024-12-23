@@ -14,9 +14,11 @@
         body, html {
             height: 100%;
             font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
         section {
+            position: relative;
             width: 100vw;
             height: 100vh;
             display: flex;
@@ -28,16 +30,31 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
-    </style>
-</head>
-<body>
-    <!-- First Section -->
-    <style>
-        .first {
-            flex-direction: column;
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
         }
 
-        .first .button {
+        .hidden {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .active {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        .button, .option {
+            position: relative;
+            z-index: 2;
             padding: 15px 30px;
             font-size: 18px;
             color: white;
@@ -49,391 +66,158 @@
             transition: all 0.3s ease;
         }
 
-        .first .button:hover {
+        .button:hover, .option:hover {
             background-color: rgba(255, 255, 255, 0.3);
             color: black;
         }
-    </style>
-    <section class="first">
-        <button class="button">Get Started</button>
-    </section>
 
-    <!-- Second Section -->
-    <style>
-        .second {
-            flex-direction: column;
-            background: rgba(244, 244, 244, 0.8);
+        form input, form button {
+            position: relative;
+            z-index: 2;
+            padding: 10px;
+            margin: 10px 0;
+            width: calc(100% - 20px);
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
         }
 
-        .second .header {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #333;
+        form input {
+            background-color: rgba(255, 255, 255, 0.8);
         }
 
-        .second .container {
+        form button {
+            background-color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        form button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        form {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .second .action {
-            flex: 1;
-            text-align: center;
-        }
-
-        .second .action button {
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: 2px solid white;
-            border-radius: 25px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-
-        .second .action button:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            color: black;
-        }
-
-        .second .image-container {
-            flex: 2;
-            text-align: center;
-        }
-
-        .second .image-container img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        .second .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 18px;
-            color: #555;
-        }
-    </style>
-    <section class="second">
-        <div class="header">Help us know your design style better</div>
-
-        <div class="container">
-            <div class="action">
-                <button>Dislike 👎</button>
-            </div>
-
-            <div class="image-container">
-                <img src="https://picsum.photos/2000/1200" alt="Design Style">
-            </div>
-
-            <div class="action">
-                <button>Like 👍</button>
-            </div>
-        </div>
-
-        <div class="footer">2 of 12</div>
-    </section>
-
-    <!-- Third Section -->
-    <style>
-        .third {
             flex-direction: column;
-        }
-
-        .third .question {
-            text-align: center;
-            font-size: 24px;
-            color: white;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .third .options {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .third .option {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: 2px solid white;
-            border-radius: 25px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-
-        .third .option:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            color: black;
-        }
-    </style>
-    <section class="third">
-        <div class="question">I am looking for an</div>
-        <div class="options">
-            <div class="option">Interior Designer</div>
-            <div class="option">Architect</div>
-        </div>
-    </section>
-
-    <!-- Fourth Section -->
-    <style>
-        .forth {
-            flex-direction: column;
-        }
-
-        .forth .question {
-            text-align: center;
-            font-size: 24px;
-            color: white;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .forth .options {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            justify-items: center;
-        }
-
-        .forth .option {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: 2px solid white;
-            border-radius: 25px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .forth .option:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            color: black;
-        }
-    </style>
-    <section class="forth">
-        <div class="question">The designer would work on my</div>
-        <div class="options">
-            <div class="option">Home</div>
-            <div class="option">Office</div>
-            <div class="option">Hotel</div>
-            <div class="option">Showroom</div>
-            <div class="option">Restaurant</div>
-            <div class="option">Shop</div>
-        </div>
-    </section>
-
-    <!-- Fifth Section -->
-    <style>
-        .fifth {
-            flex-direction: column;
-        }
-
-        .fifth .question {
-            text-align: center;
-            font-size: 24px;
-            color: white;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .fifth .options {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            justify-items: center;
-        }
-
-        .fifth .option {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: 2px solid white;
-            border-radius: 25px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .fifth .option:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            color: black;
-        }
-    </style>
-    <section class="fifth">
-        <div class="question">My project area is</div>
-        <div class="options">
-            <div class="option">500 - 1000 Sqft</div>
-            <div class="option">1000 - 1500 Sqft</div>
-            <div class="option">1500 - 2000 Sqft</div>
-            <div class="option">More than 2000 Sqft</div>
-        </div>
-    </section>
-
-    <!-- Sixth Section -->
-    <style>
-        .sixth {
-            flex-direction: column;
-        }
-
-        .sixth .question {
-            text-align: center;
-            font-size: 24px;
-            color: white;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .sixth .options {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            justify-items: center;
-        }
-
-        .sixth .option {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: 2px solid white;
-            border-radius: 25px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .sixth .option:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            color: black;
-        }
-    </style>
-    <section class="sixth">
-        <div class="question">I am willing to spend</div>
-        <div class="options">
-            <div class="option">Upto Rs 15 lakhs</div>
-            <div class="option">15 lakhs - 30 lakhs</div>
-            <div class="option">30 lakhs - 50 lakhs</div>
-            <div class="option">More than 50 lakhs</div>
-        </div>
-    </section>
-
-    <!-- Seventh Section -->
-    <style>
-        .seventh {
-            flex-direction: column;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 20px;
-        }
-
-        .seventh .form-container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            width: 90%;
+            width: 80%;
             max-width: 500px;
         }
 
-        .seventh .form-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .seventh .form-container form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .seventh .form-container input {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .seventh .form-container button {
-            padding: 10px;
-            background-color: white;
-            color: black;
+        hr {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 2px;
+            background-color: black;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .seventh .form-container button:hover {
-            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 2;
         }
     </style>
-    <section class="seventh">
-        <div class="form-container">
-            <h2>Contact me at</h2>
-            <form>
-                <input type="text" name="name" placeholder="NAME" required>
-                <input type="text" name="mobile" placeholder="MOBILE" required>
-                <input type="email" name="email" placeholder="EMAIL-ID" required>
-                <input type="text" name="city" placeholder="CITY" required>
-                <input type="text" name="pincode" placeholder="PINCODE" required>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+</head>
+<body>
+    <section id="section-1" class="active">
+        <button class="button" onclick="nextSection(1)">Get Started</button>
+        <hr>
     </section>
+    <section id="section-2" class="hidden">
+        <div>
+            <button class="button" onclick="nextSection(2, 'Dislike')">Dislike 👎</button>
+            <button class="button" onclick="nextSection(2, 'Like')">Like 👍</button>
+        </div>
+        <hr>
+    </section>
+    <section id="section-3" class="hidden">
+        <div>
+            <button class="button" onclick="nextSection(3, 'Interior Designer')">Interior Designer</button>
+            <button class="button" onclick="nextSection(3, 'Architect')">Architect</button>
+        </div>
+        <hr>
+    </section>
+    <section id="section-4" class="hidden">
+        <div>
+            <button class="option" onclick="nextSection(4, 'Home')">Home</button>
+            <button class="option" onclick="nextSection(4, 'Office')">Office</button>
+            <button class="option" onclick="nextSection(4, 'Hotel')">Hotel</button>
+            <button class="option" onclick="nextSection(4, 'Showroom')">Showroom</button>
+            <button class="option" onclick="nextSection(4, 'Restaurant')">Restaurant</button>
+            <button class="option" onclick="nextSection(4, 'Shop')">Shop</button>
+        </div>
+        <hr>
+    </section>
+    <section id="section-5" class="hidden">
+        <div>
+            <button class="option" onclick="nextSection(5, '500 - 1000 Sqft')">500 - 1000 Sqft</button>
+            <button class="option" onclick="nextSection(5, '1000 - 1500 Sqft')">1000 - 1500 Sqft</button>
+            <button class="option" onclick="nextSection(5, '1500 - 2000 Sqft')">1500 - 2000 Sqft</button>
+            <button class="option" onclick="nextSection(5, 'More than 2000 Sqft')">More than 2000 Sqft</button>
+        </div>
+        <hr>
+    </section>
+    <section id="section-6" class="hidden">
+        <div>
+            <button class="option" onclick="nextSection(6, 'Upto Rs 15 lakhs')">Upto Rs 15 lakhs</button>
+            <button class="option" onclick="nextSection(6, '15 lakhs - 30 lakhs')">15 lakhs - 30 lakhs</button>
+            <button class="option" onclick="nextSection(6, '30 lakhs - 50 lakhs')">30 lakhs - 50 lakhs</button>
+            <button class="option" onclick="nextSection(6, 'More than 50 lakhs')">More than 50 lakhs</button>
+        </div>
+        <hr>
+    </section>
+    <section id="section-7" class="hidden">
+        <form id="userForm">
+            <h2 style="color: white; text-align: center; margin-bottom: 10px; position: relative; z-index: 2;">Contact me at</h2>
+            <input type="text" name="name" placeholder="NAME" required>
+            <input type="text" name="mobile" placeholder="MOBILE" required>
+            <input type="email" name="email" placeholder="EMAIL-ID" required>
+            <input type="text" name="city" placeholder="CITY" required>
+            <input type="text" name="pincode" placeholder="PINCODE" required>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        const userSelections = {};
+
+        function nextSection(section, choice = null) {
+            if (choice) userSelections[`section_${section}`] = choice;
+
+            const current = document.querySelector(`#section-${section}`);
+            const next = document.querySelector(`#section-${section + 1}`);
+
+            if (next) {
+                current.classList.remove('active');
+                current.classList.add('hidden');
+
+                next.classList.add('active');
+                next.classList.remove('hidden');
+
+                next.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function submitForm() {
+            const form = document.getElementById('userForm');
+            const formData = new FormData(form);
+            formData.append('selections', JSON.stringify(userSelections));
+
+            fetch('save_quote.php', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert('Data submitted successfully!');
+                } else {
+                    alert('Submission failed. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while submitting the form.');
+            });
+        }
+    </script>
 </body>
 </html>
-
-<script>
-    function submitForm() {
-    const form = document.getElementById('userForm');
-    const formData = new FormData(form);
-    const formEntries = Object.fromEntries(formData.entries());
-
-    // Add selections to form data
-    formEntries.selections = JSON.stringify(userSelections);
-
-    // Send data to PHP
-    fetch('save_quote.php', {
-        method: 'POST',
-        body: new URLSearchParams(formEntries),
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === 'success') {
-                alert(data.message);
-                console.log('Data saved successfully:', data);
-            } else {
-                alert('Failed to save data.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred.');
-        });
-}
-
-</script>

@@ -277,9 +277,11 @@ ini_set('log_errors', 1);
                                         <br><br>
                                             <div class="sec">
                                                 <section id="category_<?php echo $categoryId; ?>">
-                                                    <div class="section-name">
+                                                <div class="section-name">
+                                                    <?php if (!is_numeric($categoryName)) : ?>
                                                         <h2><?php echo htmlspecialchars($categoryName); ?></h2>
-                                                    </div>
+                                                    <?php endif; ?>
+                                                </div>
                                                     
                                                     <div class="gallery">
                                                         <div class="images">
