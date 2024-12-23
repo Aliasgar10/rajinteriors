@@ -278,8 +278,13 @@ ini_set('log_errors', 1);
                                             <div class="sec">
                                                 <section id="category_<?php echo $categoryId; ?>">
                                                 <div class="section-name">
-                                                    <?php if (!is_numeric($categoryName)) : ?>
-                                                        <h2><?php echo htmlspecialchars($categoryName); ?></h2>
+                                                    <?php
+                                                    // Remove trailing numbers from the category name dynamically
+                                                    $cleanedCategoryName = preg_replace('/\s*\d+$/', '', $categoryName);
+
+                                                    // Check if the cleaned name is not numeric before displaying
+                                                    if (!is_numeric($cleanedCategoryName)) : ?>
+                                                        <h2><?php echo htmlspecialchars($cleanedCategoryName); ?></h2>
                                                     <?php endif; ?>
                                                 </div>
                                                     
