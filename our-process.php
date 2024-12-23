@@ -68,6 +68,32 @@
                                             .elementor-826 .elementor-element.elementor-element-92f8316 {
                                                 padding: 0px 90px 90px 90px !important;
                                             }
+
+                                            @media only screen and (max-width: 520px) {
+                                                
+                                                .ser{
+                                                    font-size: 50px;
+                                                }
+                                                .elementor-826 .elementor-element.elementor-element-92f8316 {
+                                                    padding: 130px 0px 90px 0px !important;
+                                                }
+                                                .head2 h2 {
+                                                    width: 185px;
+                                                }
+                                                .grid-container {
+                                                    display: grid;
+                                                    grid-template-columns: repeat(2, 1fr);
+                                                    gap: 20px;
+                                                    padding: 20px;
+                                                    width: 100%;
+                                                    margin: 5px;
+                                                    height: 100%;
+                                                }
+                                              #a8b065a5{
+                                                    background:#000;
+                                                    height: 150vh;
+                                                }
+                                            }
                                         </style>
                                         <section id="a8b065a5" data-id="8b065a5" class="elementor-element elementor-element-8b065a5 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-no">
@@ -167,12 +193,6 @@
                                                                             text-align: center;
                                                                             color: #fff;
                                                                         }
-
-                                                                        @media (max-width: 768px) {
-                                                                            .grid-container {
-                                                                                grid-template-columns: 1fr; /* Single column for smaller screens */
-                                                                            }
-                                                                        }
                                                                     </style>
 
                                                                     <div class="elementor-container elementor-column-gap-wider">
@@ -243,6 +263,11 @@
                                         </section> -->
 
 
+                                        <style>
+                                            .elementor-826 .elementor-element.elementor-element-ab532fa {
+                                                margin-top: 200px;
+                                            }
+                                        </style>
                                         <section data-id="ab532fa" class="elementor-element elementor-element-ab532fa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-wider">
                                                 <div class="elementor-row">

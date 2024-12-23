@@ -292,7 +292,13 @@ ini_set('log_errors', 1);
                                                     <div class="section-name">
                                                         <h2><?php echo htmlspecialchars($categoryName); ?></h2>
                                                     </div>
-
+                                                    <style>
+                                                        iframe {
+                                                            width: 360px !important; /* Set according to video aspect ratio */
+                                                            height: 640px !important; /* Set according to video aspect ratio */
+                                                            border: none;
+                                                        }
+                                                    </style>
                                                     <div class="gallery">
                                                         <div class="images">
                                                             <?php
@@ -307,6 +313,16 @@ ini_set('log_errors', 1);
                                                             $stmt->execute();
                                                             $result = $stmt->get_result();
 
+                                                            // Array of YouTube Shorts video IDs
+                                                            // $videoIDs = [
+                                                            //     "1tbp15M3oYc",
+                                                            //     "Okkgc4Fjdck",
+                                                            //     "SdpfZFauv_4",
+                                                            //     "_KZ4VNSEc1s",
+                                                            //     "vGABtGdF548"
+                                                            // ];
+                                                            // $index = 0;
+
                                                             if ($result->num_rows > 0) {
                                                                 while ($row = $result->fetch_assoc()) {
                                                                     $fileType = $row['file_type'];
@@ -316,7 +332,7 @@ ini_set('log_errors', 1);
                                                                     if ($fileType === 'image') {
                                                                         echo "<div class='gallery-item gallery-grid-tilt'>";
                                                                         echo "<img src='uploads/assets/images/" . htmlspecialchars($fileName) . "' alt='Gallery Image'>";
-                                                                        echo "</div>";
+                                                                        echo "</div>";                                                                
                                                                     }
                                                                 }
                                                             } else {
@@ -325,7 +341,7 @@ ini_set('log_errors', 1);
                                                             $stmt->close();
                                                             ?>
                                                         </div>
-                                                        <!-- <div class="videos">
+                                                        <div class="videos">
                                                             <?php
                                                             // Reset the query for videos
                                                             $stmt = $conn->prepare($query);
@@ -333,22 +349,27 @@ ini_set('log_errors', 1);
                                                             $stmt->execute();
                                                             $result = $stmt->get_result();
 
+                                                            
                                                             if ($result->num_rows > 0) {
                                                                 while ($row = $result->fetch_assoc()) {
                                                                     $fileType = $row['file_type'];
-                                                                    $fileUrl = $row['file_url'];
-
+                                                                    $filename = $row['file_name'];
+                                                                    
                                                                     if ($fileType === 'video') {
-                                                                        echo "<div class='gallery-item gallery-grid-tilt'>";
-                                                                        echo "<iframe src='" . htmlspecialchars($fileUrl) . "' allow='autoplay; encrypted-media' allowfullscreen></iframe>";
-                                                                        echo "</div>";
+                                                            ?>
+                                                                        <iframe 
+                                                                            src="https://www.youtube.com/embed/<?php echo $filename; ?>?autoplay=1&loop=1&mute=1&playlist=<?php echo $filename; ?>" 
+                                                                            allow="autoplay; encrypted-media" 
+                                                                            allowfullscreen>
+                                                                        </iframe>      
+                                                            <?php
                                                                     }
                                                                 }
                                                             }
                                                             $stmt->close();
-                                                            ?> -->
+                                                            ?>
                                                             <!-- echo "<iframe src='https://youtube.com/shorts/dHVefo9LmA8?si=PdKDnCWfMLKkKqxW' allow='autoplay; encrypted-media' allowfullscreen></iframe>"; -->
-                                                        <!-- </div> -->
+                                                        </div>
                                                     </div>
                                                 </section>
                                             </div>
@@ -367,15 +388,12 @@ ini_set('log_errors', 1);
                 </div>
                 <br class="clear">
             </div>
-            
-
-
         </div>
-        <?php include("inc_files/footer.php"); ?>
-        <a id="toTop" href="javascript:;"><i class="fa fa-angle-up"></i></a>
-        <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1">
-        <input type="hidden" id="tg_sidebar_sticky" name="tg_sidebar_sticky" value="1">
-        <input type="hidden" id="pp_topbar" name="pp_topbar" value="">
+            <?php include("inc_files/footer.php"); ?>
+            <a id="toTop" href="javascript:;"><i class="fa fa-angle-up"></i></a>
+            <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1">
+            <input type="hidden" id="tg_sidebar_sticky" name="tg_sidebar_sticky" value="1">
+            <input type="hidden" id="pp_topbar" name="pp_topbar" value="">
     </div>
 
 

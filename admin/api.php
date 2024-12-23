@@ -101,7 +101,7 @@ if ($sheetResult->num_rows > 0) {
 
         // Process Videos
         if (!empty($row[2])) { // VIDEOS (Column C)
-            $filePath = "../uploads/assets/videos/" . $row[2];
+            $filePath = "https://www.youtube.com/embed/" . $row[2] . "?autoplay=1&loop=1&mute=1&playlist=" . $row[2];
             $stmt = $conn->prepare("INSERT INTO `uploads`(`file_url`, `file_name`, `file_type`, `extension`, `section_id`, `category_id`) VALUES (?, ?, ?, ?, ?, ?)");
             $fileType = "video";
             $extension = pathinfo($row[2], PATHINFO_EXTENSION);
