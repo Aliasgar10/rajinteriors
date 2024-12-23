@@ -202,21 +202,30 @@
             formData.append('selections', JSON.stringify(userSelections));
 
             fetch('save_quote.php', {
-                method: 'POST',
-                body: formData,
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    alert('Data submitted successfully!');
-                } else {
-                    alert('Submission failed. Please try again.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('An error occurred while submitting the form.');
-            });
+            method: 'POST',
+            body: formData,
+            redirect: 'follow', // Ensures redirects are followed
+        })
+                .then(response => {
+                    console.log('HTTP status:', response.status);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Response data:', data);
+                    if (data.status === 'success') {
+                        alert('Data submitted successfully!');
+                    } else {
+                        alert('Submission failed: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error during submission:', error);
+                    alert('An error occurred while submitting the form.');
+                });
+
         }
     </script>
 </body>

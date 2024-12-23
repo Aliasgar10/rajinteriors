@@ -75,7 +75,9 @@
                                                         </div>
                                                         <br>
                                                         <div class="text2" id="abbcd">
-                                                            <button id="slideBtn">Get Free Quote</button>
+                                                            <button id="slideBtn" onclick="location.href='get_started.php';">
+                                                                    Get Free Quote
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
