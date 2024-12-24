@@ -1,3 +1,15 @@
+<?php 
+    error_reporting(E_ALL);
+    // Display errors on the screen
+    ini_set('display_errors', 1);
+    // Log errors to a file (optional)
+    ini_set('log_errors', 1);
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
 
@@ -64,186 +76,151 @@
                                                                     <div class="elementor-widget-container">
                                                                         <div class="portfolio_masonry_container">
                                                                             <div class="portfolio_masonry_content_wrapper gallery_grid_content_wrapper do_masonry portfolio_masonry layout_tg_two_cols" data-cols="2">
-                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-1 tile scale-anm  all no_filter">
-                                                                                    <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/automation.jpg" alt="">
-                                                                                    </div>
-                                                                                    <figure><figcaption>
-                                                                                        <div class="border one">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="border two">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="portfolio_masonry_content">
-                                                                                            <h3>AUTOMATION</h3>
-                                                                                            <!-- <div class="portfolio_masonry_subtitle">July 2018</div> -->
-                                                                                        </div>
-                                                                                    </figcaption></figure>
-                                                                                    <a href="single-portfolio-6.html"></a>
-                                                                                </div>
-                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-2 tile scale-anm  all no_filter">
-                                                                                    <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/blinds & curtains.jpg" alt="">
-                                                                                    </div>
-                                                                                    <figure><figcaption>
-                                                                                        <div class="border one">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="border two">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="portfolio_masonry_content">
-                                                                                            <h3>BLINDS AND CURTAINS</h3>
-                                                                                            <!-- <div class="portfolio_masonry_subtitle">May 2018</div> -->
-                                                                                        </div>
-                                                                                    </figcaption></figure>
-                                                                                    <a href="single-portfolio-3.html"></a>
-                                                                                </div>
-                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-3 tile scale-anm  all no_filter">
-                                                                                    <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/flooring.jpg" alt="">
-                                                                                    </div>
-                                                                                    <figure><figcaption>
-                                                                                        <div class="border one">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="border two">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="portfolio_masonry_content">
-                                                                                            <h3>FLOORING</h3>
-                                                                                            <!-- <div class="portfolio_masonry_subtitle">May 2018</div> -->
-                                                                                        </div>
-                                                                                    </figcaption></figure>
-                                                                                    <a href="single-portfolio-5.html"></a>
-                                                                                </div>
-                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-4 tile scale-anm  all no_filter">
-                                                                                    <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/Glasses & films.jpg" alt="">
-                                                                                    </div>
-                                                                                    <figure><figcaption>
-                                                                                        <div class="border one">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="border two">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="portfolio_masonry_content">
-                                                                                            <h3>GLASSES AND FILMS</h3>
-                                                                                            <!-- <div class="portfolio_masonry_subtitle">January 2018</div> -->
-                                                                                        </div>
-                                                                                    </figcaption></figure>
-                                                                                    <a href="single-portfolio-7.html"></a>
-                                                                                </div>
-                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-5 tile scale-anm  all no_filter">
-                                                                                    <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/hardwares.jpg" alt="">
-                                                                                    </div>
-                                                                                    <figure><figcaption>
-                                                                                        <div class="border one">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="border two">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="portfolio_masonry_content">
-                                                                                            <h3>HARDWARE</h3>
-                                                                                            <!-- <div class="portfolio_masonry_subtitle">October 2017</div> -->
-                                                                                        </div>
-                                                                                    </figcaption></figure>
-                                                                                    <a href="single-portfolio-3.html"></a>
-                                                                                </div>
-                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-6 tile scale-anm  all no_filter">
-                                                                                    <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/modular_furniture.jpg" alt="">
-                                                                                    </div>
-                                                                                    <figure><figcaption>
-                                                                                        <div class="border one">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="border two">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="portfolio_masonry_content">
-                                                                                            <h3>MODULER FURNITURE</h3>
-                                                                                            <!-- <div class="portfolio_masonry_subtitle">April 2017</div> -->
-                                                                                        </div>
-                                                                                    </figcaption></figure>
-                                                                                    <a href="single-portfolio-6.html"></a>
-                                                                                </div>
-                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols   portfolio-7 tile scale-anm  all no_filter">
-                                                                                    <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/PLY_FURNITURE FINISHES.jpg" alt="">
-                                                                                    </div>
-                                                                                    <figure><figcaption>
-                                                                                        <div class="border one">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="border two">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="portfolio_masonry_content">
-                                                                                            <h3>PLY & FURNITURE FINISHES</h3>
-                                                                                            <!-- <div class="portfolio_masonry_subtitle">December 2017</div> -->
-                                                                                        </div>
-                                                                                    </figcaption></figure>
-                                                                                    <a href="single-portfolio-2.html"></a>
-                                                                                </div>
-                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-8 tile scale-anm  all no_filter">
-                                                                                    <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/SOFA_CURTAIN_FABRICS.jpg" alt="">
-                                                                                    </div>
-                                                                                    <figure><figcaption>
-                                                                                        <div class="border one">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="border two">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="portfolio_masonry_content">
-                                                                                            <h3>SOFA & CURTAIN FABRICS</h3>
-                                                                                            <!-- <div class="portfolio_masonry_subtitle">June 2017</div> -->
-                                                                                        </div>
-                                                                                    </figcaption></figure>
-                                                                                    <a href="single-portfolio-4.html"></a>
-                                                                                </div>
-                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-6 tile scale-anm  all no_filter">
-                                                                                    <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/UPVC_WINDOWS.jpg" alt="">
-                                                                                    </div>
-                                                                                    <figure><figcaption>
-                                                                                        <div class="border one">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="border two">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="portfolio_masonry_content">
-                                                                                            <h3>UPVC WINDOWS</h3>
-                                                                                            <!-- <div class="portfolio_masonry_subtitle">April 2017</div> -->
-                                                                                        </div>
-                                                                                    </figcaption></figure>
-                                                                                    <a href="single-portfolio-6.html"></a>
-                                                                                </div>
-                                                                                <div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols last  portfolio-8 tile scale-anm  all no_filter">
-                                                                                    <div class="portfolio_masonry_img">
-                                                                                        <img src="assets/CATEGORY/wallpapers.jpg" alt="">
-                                                                                    </div>
-                                                                                    <figure><figcaption>
-                                                                                        <div class="border one">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="border two">
-                                                                                            <div></div>
-                                                                                        </div>
-                                                                                        <div class="portfolio_masonry_content">
-                                                                                            <h3>WALLPAPERS</h3>
-                                                                                            <!-- <div class="portfolio_masonry_subtitle">June 2017</div> -->
-                                                                                        </div>
-                                                                                    </figcaption></figure>
-                                                                                    <a href="single-portfolio-4.html"></a>
-                                                                                </div>
+                                                                                
+                                                                            <?php
+                                                                            
+                                                                                // Database connection
+                                                                                $host = "localhost";
+                                                                                $username = "rajinteriors";
+                                                                                $password = "7ku~3AksgI75Edzrp";
+                                                                                $database = "rajinteriors";
+                                                                                
+                                                                                $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+                                                                                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                                                                                
+                                                                                // Fetch parent categories
+                                                                                $stmt = $pdo->prepare("SELECT id, category_name, thumbnail FROM category_table WHERE parent_id = 0");
+                                                                                $stmt->execute();
+                                                                                $parentCategories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                                                                
+                                                                                // Output parent categories as HTML
+                                                                                foreach ($parentCategories as $category) {
+                                                                                    // Check if the category has child categories
+                                                                                    $childStmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = :parent_id");
+                                                                                    $childStmt->bindParam(':parent_id', $category['id'], PDO::PARAM_INT);
+                                                                                    $childStmt->execute();
+                                                                                    $childCategories = $childStmt->fetchAll(PDO::FETCH_ASSOC);
+                                                                                
+                                                                                    echo '<div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols portfolio-1 tile scale-anm all no_filter">';
+                                                                                    echo '  <div class="portfolio_masonry_img">';
+                                                                                    echo '      <img src="assets/CATEGORY/' . htmlspecialchars($category['thumbnail']) . '" alt="">';
+                                                                                    echo '  </div>';
+                                                                                    echo '  <figure><figcaption>';
+                                                                                    echo '      <div class="border one"><div></div></div>';
+                                                                                    echo '      <div class="border two"><div></div></div>';
+                                                                                    echo '      <div class="portfolio_masonry_content">';
+                                                                                    echo '          <h3>' . htmlspecialchars($category['category_name']) . '</h3>';
+                                                                                    echo '      </div>';
+                                                                                    echo '  </figcaption></figure>';
+                                                                                
+                                                                                    // Add a button to open popup if child categories exist
+                                                                                    if (!empty($childCategories)) {
+                                                                                        echo '  <button class="open-popup-btn" data-category="' . $category['id'] . '">View Categories</button>';
+                                                                                        echo '  <div class="popup-overlay" id="popup-' . $category['id'] . '">';
+                                                                                        echo '      <div class="popup-content">';
+                                                                                        echo '          <h2>' . htmlspecialchars($category['category_name']) . '</h2>';
+                                                                                        foreach ($childCategories as $child) {
+                                                                                            echo '<a href="categories.php?id=' . $child['id'] . '" class="child-category-link">' . htmlspecialchars($child['category_name']) . '</a>';
+                                                                                        }
+                                                                                        echo '          <button class="close-popup-btn">Close</button>';
+                                                                                        echo '      </div>';
+                                                                                        echo '  </div>';
+                                                                                    } else {
+                                                                                        echo '  <a href="categories.php?id=' . $category['id'] . '" class="parent-category-link"></a>';
+                                                                                    }
+                                                                                
+                                                                                    echo '</div>';
+                                                                                }
+                                                                            
+                                                                                
+                                                                            ?>
+<style>
+
+    .child-category-link{
+        bottom: 0;
+        position: relative !important;
+    }
+    /* Style for the popup overlay */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+/* Popup content styling */
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #222; /* Dark background for popup content */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Close button styling */
+.close-popup-btn {
+    margin-top: 20px;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-popup-btn:hover {
+    background: #cc0000;
+}
+
+/* Child category links */
+.child-category-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.child-category-link:hover {
+    text-decoration: underline;
+}
+
+                                                                            </style>
+                                                                            <script>
+                                                                                // Open popup
+document.querySelectorAll('.open-popup-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        const popupId = `popup-${this.getAttribute('data-category')}`;
+        document.getElementById(popupId).style.display = 'block';
+    });
+});
+
+// Close popup
+document.querySelectorAll('.close-popup-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        this.closest('.popup-overlay').style.display = 'none';
+    });
+});
+
+// Close popup when clicking outside the content
+document.querySelectorAll('.popup-overlay').forEach(overlay => {
+    overlay.addEventListener('click', function (e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    });
+});
+
+                                                                            </script>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -348,7 +325,6 @@
         <input type="hidden" id="tg_sidebar_sticky" name="tg_sidebar_sticky" value="1">
         <input type="hidden" id="pp_topbar" name="pp_topbar" value="">
     </div>
-
 
 
     <script src="js/plugins/jquery.js" defer="defer" type="text/javascript"></script>
