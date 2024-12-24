@@ -85,7 +85,7 @@
                                                     margin-top: 100px;
                                                 }
                                                 .head2 h2 {
-                                                    width: 185px;
+                                                    width: 225px;
                                                 }                                                
                                               #a8b065a5{
                                                     background:#000;
