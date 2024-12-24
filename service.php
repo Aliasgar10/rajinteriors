@@ -223,7 +223,7 @@
                                                                             }
                                                                             .grid-item .imgg img {
                                                                                 width: 100% !important;
-                                                                                height: 100% !important;
+                                                                                /* height: 100% !important; */
                                                                                 object-fit: cover !important;
                                                                             }
                                                                         }
