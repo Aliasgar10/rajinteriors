@@ -69,13 +69,20 @@
                                                 padding: 0px 90px 90px 90px !important;
                                             }
 
-                                            @media only screen and (max-width: 520px) {
+                                            @media only screen and (max-width: 480px) {
                                                 
                                                 .ser{
                                                     font-size: 50px;
                                                 }
                                                 .elementor-826 .elementor-element.elementor-element-92f8316 {
                                                     padding: 130px 0px 90px 0px !important;
+                                                }
+                                                .head2{
+                                                    text-align: center;
+                                                    display: flex;
+                                                    margin: 20px 0;
+                                                    align-items: center;
+                                                    margin-top: 100px;
                                                 }
                                                 .head2 h2 {
                                                     width: 185px;
@@ -194,6 +201,30 @@
                                                                                 width: 100%;
                                                                                 margin: 5px;
                                                                                 height: 100%;
+                                                                            }
+                                                                            .grid-item{
+                                                                                display: flex;
+                                                                                flex-direction: column;
+                                                                                align-items: center;
+                                                                                justify-content: flex-start;
+                                                                                width: 100%;
+                                                                                /* height: 250px; */
+                                                                                margin-bottom: 10px;
+                                                                            }
+                                                                            .grid-item .imgg {
+                                                                                width: 100%;
+                                                                                height: 100px;
+                                                                                display: flex;
+                                                                                justify-content: center;
+                                                                                align-items: center;
+                                                                                margin-bottom: 10px;
+                                                                                background: blue;
+                                                                                object-fit: contain;
+                                                                            }
+                                                                            .grid-item .imgg img{
+                                                                                width: 100%;
+                                                                                height: 100%;
+                                                                                object-fit: contain;
                                                                             }
                                                                         }
                                                                     </style>
