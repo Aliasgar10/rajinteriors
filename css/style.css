@@ -38251,7 +38251,7 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
         margin-top: 0;
         padding-bottom: 0;
         float: none;
-        border: 0 !important
+        border: 0 !important;
     }
     #page_content_wrapper .inner .sidebar_content.portfolio,
     #page_content_wrapper .inner .sidebar_content.portfolio #portfolio_filter_wrapper {
@@ -38273,33 +38273,33 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
         margin-left: 0;
         margin-bottom: 0;
         margin-top: 25px;
-        padding-top: 0
+        padding-top: 0;
     }
     #page_content_wrapper .inner .sidebar_wrapper .sidebar .content {
-        margin: 0
+        margin: 0;
     }
     #page_content_wrapper .inner .sidebar_content.full_width#blog_grid_wrapper,
     #page_content_wrapper .inner .sidebar_content.full_width#galleries_grid_wrapper {
-        width: 100%
+        width: 100%;
     }
     .portfolio_header h6 {
         width: 31%;
-        font-size: 12px
+        font-size: 12px;
     }
     #page_content_wrapper .inner .sidebar_content img {
         max-width: 100%;
-        height: auto
+        height: auto;
     }
     .fullwidth_comment_wrapper .comment .right {
         width: 66%;
-        margin-left: 15px
+        margin-left: 15px;
     }
     .fullwidth_comment_wrapper ul.children div.comment .right {
         width: 64%;
-        padding: 0
+        padding: 0;
     }
     ul.children div.comment ul.children div.comment .right {
-        width: 50%
+        width: 50%;
     }
     #content_wrapper ul.children ul.children {
         width: 100%
