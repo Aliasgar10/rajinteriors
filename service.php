@@ -379,7 +379,7 @@
                                                 </div>
                                             </div>
                                         </section> -->
-                                        <div style="padding-bottom: 150px; justify-content: center; display:flex;" class="elementor-image">
+                                        <div style="padding-bottom: 100px;    padding-top: 100px; justify-content: center; display:flex;" class="elementor-image">
                                             <img src="upload/workflow.jpg" class="attachment-large size-large" alt="" ></div>
                                         </div>
                                         <!-- <section data-id="79f616f" class="elementor-element elementor-element-79f616f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
