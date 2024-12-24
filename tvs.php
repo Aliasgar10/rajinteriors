@@ -115,7 +115,7 @@
                                                                                 
                                                                                     // Add a button to open popup if child categories exist
                                                                                     if (!empty($childCategories)) {
-                                                                                        echo '  <button class="open-popup-btn" data-category="' . $category['id'] . '">View Categories</button>';
+                                                                                        echo '  <a class="open-popup-btn" data-category="' . $category['id'] . '"></a>';
                                                                                         echo '  <div class="popup-overlay" id="popup-' . $category['id'] . '">';
                                                                                         echo '      <div class="popup-content">';
                                                                                         echo '          <h2>' . htmlspecialchars($category['category_name']) . '</h2>';
@@ -134,91 +134,91 @@
                                                                             
                                                                                 
                                                                             ?>
-<style>
+                                                                            <style>
 
-    .child-category-link{
-        bottom: 0;
-        position: relative !important;
-    }
-    /* Style for the popup overlay */
-.popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw !important;
-    height: 100vh !important;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-}
+                                                                                .child-category-link{
+                                                                                    bottom: 0;
+                                                                                    position: relative !important;
+                                                                                }
+                                                                                /* Style for the popup overlay */
+                                                                                .popup-overlay {
+                                                                                    display: none;
+                                                                                    position: fixed;
+                                                                                    top: 0;
+                                                                                    left: 0;
+                                                                                    width: 100vw !important;
+                                                                                    height: 100vh !important;
+                                                                                    background: rgba(0, 0, 0, 0.8);
+                                                                                    z-index: 1000;
+                                                                                }
 
-/* Popup content styling */
-.popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #222; /* Dark background for popup content */
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    color: #fff;
-    width: 80%;
-    max-width: 500px;
-}
+                                                                                /* Popup content styling */
+                                                                                .popup-content {
+                                                                                    position: absolute;
+                                                                                    top: 50%;
+                                                                                    /* left: 50%; */
+                                                                                    transform: translate(-50%, -50%);
+                                                                                    background: #222; /* Dark background for popup content */
+                                                                                    padding: 20px;
+                                                                                    border-radius: 8px;
+                                                                                    text-align: center;
+                                                                                    color: #fff;
+                                                                                    width: 80%;
+                                                                                    max-width: 500px;
+                                                                                }
 
-/* Close button styling */
-.close-popup-btn {
-    margin-top: 20px;
-    background: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+                                                                                /* Close button styling */
+                                                                                .close-popup-btn {
+                                                                                    margin-top: 20px;
+                                                                                    background: #ff0000;
+                                                                                    color: #fff;
+                                                                                    border: none;
+                                                                                    padding: 10px 20px;
+                                                                                    cursor: pointer;
+                                                                                    border-radius: 5px;
+                                                                                }
 
-.close-popup-btn:hover {
-    background: #cc0000;
-}
+                                                                                .close-popup-btn:hover {
+                                                                                    background: #cc0000;
+                                                                                }
 
-/* Child category links */
-.child-category-link {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    margin: 10px 0;
-}
+                                                                                /* Child category links */
+                                                                                .child-category-link {
+                                                                                    display: block;
+                                                                                    color: #fff;
+                                                                                    text-decoration: none;
+                                                                                    margin: 10px 0;
+                                                                                }
 
-.child-category-link:hover {
-    text-decoration: underline;
-}
+                                                                                .child-category-link:hover {
+                                                                                    text-decoration: underline;
+                                                                                }
 
                                                                             </style>
                                                                             <script>
                                                                                 // Open popup
-document.querySelectorAll('.open-popup-btn').forEach(button => {
-    button.addEventListener('click', function () {
-        const popupId = `popup-${this.getAttribute('data-category')}`;
-        document.getElementById(popupId).style.display = 'block';
-    });
-});
+                                                                                document.querySelectorAll('.open-popup-btn').forEach(button => {
+                                                                                    button.addEventListener('click', function () {
+                                                                                        const popupId = `popup-${this.getAttribute('data-category')}`;
+                                                                                        document.getElementById(popupId).style.display = 'block';
+                                                                                    });
+                                                                                });
 
-// Close popup
-document.querySelectorAll('.close-popup-btn').forEach(button => {
-    button.addEventListener('click', function () {
-        this.closest('.popup-overlay').style.display = 'none';
-    });
-});
+                                                                                // Close popup
+                                                                                document.querySelectorAll('.close-popup-btn').forEach(button => {
+                                                                                    button.addEventListener('click', function () {
+                                                                                        this.closest('.popup-overlay').style.display = 'none';
+                                                                                    });
+                                                                                });
 
-// Close popup when clicking outside the content
-document.querySelectorAll('.popup-overlay').forEach(overlay => {
-    overlay.addEventListener('click', function (e) {
-        if (e.target === this) {
-            this.style.display = 'none';
-        }
-    });
-});
+                                                                                // Close popup when clicking outside the content
+                                                                                document.querySelectorAll('.popup-overlay').forEach(overlay => {
+                                                                                    overlay.addEventListener('click', function (e) {
+                                                                                        if (e.target === this) {
+                                                                                            this.style.display = 'none';
+                                                                                        }
+                                                                                    });
+                                                                                });
 
                                                                             </script>
                                                                             </div>
