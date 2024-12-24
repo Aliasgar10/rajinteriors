@@ -21,7 +21,7 @@ ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 
 // Truncate all tables before processing
-$conn->query("TRUNCATE TABLE categories");
+// $conn->query("TRUNCATE TABLE categories");
 $conn->query("TRUNCATE TABLE sections");
 $conn->query("TRUNCATE TABLE uploads");
 
