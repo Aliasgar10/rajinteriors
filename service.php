@@ -195,7 +195,7 @@
                                                                         @media only screen and (max-width: 520px) {
                                                                             .grid-container {
                                                                                 display: grid;
-                                                                                grid-template-columns: repeat(1, 1fr);
+                                                                                grid-template-columns: repeat(2, 1fr);
                                                                                 gap: 20px;
                                                                                 padding: 20px;
                                                                                 width: 100%;
@@ -222,9 +222,9 @@
                                                                                 object-fit: contain;
                                                                             }
                                                                             .grid-item .imgg img{
-                                                                                width: 100%;
-                                                                                height: 100%;
-                                                                                object-fit: contain;
+                                                                                width: 100% !important;
+                                                                                height: 100% !important;
+                                                                                object-fit: cover;
                                                                             }
                                                                         }
                                                                     </style>
