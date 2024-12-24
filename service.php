@@ -192,7 +192,7 @@
                                                                             text-align: center;
                                                                             color: #fff;
                                                                         }
-                                                                        @media only screen and (max-width: 520px) {
+                                                                        @media only screen and (max-width: 480px) {
                                                                             .grid-container {
                                                                                 display: grid;
                                                                                 grid-template-columns: repeat(2, 1fr);
@@ -221,7 +221,7 @@
                                                                                 /* background: blue; */
                                                                                 object-fit: contain;
                                                                             }
-                                                                            .grid-item .imgg img{
+                                                                            .grid-item .imgg img {
                                                                                 width: 100% !important;
                                                                                 height: 100% !important;
                                                                                 object-fit: cover !important;
