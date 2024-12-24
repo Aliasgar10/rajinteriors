@@ -1,3 +1,5 @@
+<!-- use for categories page -->
+ 
 <?php
 // Database configuration
 $host = "localhost";
