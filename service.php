@@ -183,7 +183,7 @@
 
                                                                         .grid-item .imgg img {
                                                                             width: 100%;
-                                                                            height: 100%;
+                                                                            height: 100% !important;
                                                                             object-fit: cover;
                                                                         }
 
