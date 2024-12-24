@@ -208,7 +208,7 @@
                                                                                 align-items: center;
                                                                                 justify-content: flex-start;
                                                                                 width: 100%;
-                                                                                /* height: 250px; */
+                                                                                height: 160px;
                                                                                 margin-bottom: 10px;
                                                                             }
                                                                             .grid-item .imgg {
