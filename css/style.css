@@ -38266,7 +38266,7 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
     }
     #page_content_wrapper .inner .sidebar_content.full_width img {
         max-width: 100%;
-        height: auto !important;
+        height: auto;
     }
     #page_content_wrapper .inner .sidebar_wrapper {
         width: 100%;
