@@ -213,13 +213,13 @@
                                                                             }
                                                                             .grid-item .imgg {
                                                                                 width: 100%;
-                                                                                height: 100px;
+                                                                                height: 120px;
                                                                                 display: flex;
                                                                                 justify-content: center;
                                                                                 align-items: center;
                                                                                 margin-bottom: 10px;
                                                                                 /* background: blue; */
-                                                                                object-fit: contain;
+                                                                                /* object-fit: contain; */
                                                                             }
                                                                             .grid-item .imgg img {
                                                                                 width: 100% !important;
