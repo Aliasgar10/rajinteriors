@@ -69,7 +69,7 @@
                                                 padding: 0px 90px 90px 90px !important;
                                             }
 
-                                            @media only screen and (max-width: 480px) {
+                                            @media only screen and (max-width: 520px) {
                                                 
                                                 .ser{
                                                     font-size: 50px;
@@ -192,7 +192,7 @@
                                                                             text-align: center;
                                                                             color: #fff;
                                                                         }
-                                                                        @media only screen and (max-width: 480px) {
+                                                                        @media only screen and (max-width: 520px) {
                                                                             .grid-container {
                                                                                 display: grid;
                                                                                 grid-template-columns: repeat(2, 1fr);
