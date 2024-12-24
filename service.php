@@ -79,16 +79,7 @@
                                                 }
                                                 .head2 h2 {
                                                     width: 185px;
-                                                }
-                                                .grid-container {
-                                                    display: grid;
-                                                    grid-template-columns: repeat(2, 1fr);
-                                                    gap: 20px;
-                                                    padding: 20px;
-                                                    width: 100%;
-                                                    margin: 5px;
-                                                    height: 100%;
-                                                }
+                                                }                                                
                                               #a8b065a5{
                                                     background:#000;
                                                     height: 150vh;
@@ -194,6 +185,17 @@
                                                                             text-align: center;
                                                                             color: #fff;
                                                                         }
+                                                                        @media only screen and (max-width: 520px) {
+                                                                            .grid-container {
+                                                                                display: grid;
+                                                                                grid-template-columns: repeat(1, 1fr);
+                                                                                gap: 20px;
+                                                                                padding: 20px;
+                                                                                width: 100%;
+                                                                                margin: 5px;
+                                                                                height: 100%;
+                                                                            }
+                                                                        }
                                                                     </style>
 
                                                                     <div class="elementor-container elementor-column-gap-wider">
@@ -269,7 +271,7 @@
                                                 margin-top: 200px;
                                             }
                                         </style>
-                                        <section data-id="ab532fa" class="elementor-element elementor-element-ab532fa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
+                                        <!-- <section data-id="ab532fa" class="elementor-element elementor-element-ab532fa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-wider">
                                                 <div class="elementor-row">
                                                     <div data-id="55f9359" class="elementor-element elementor-element-55f9359 elementor-column elementor-col-50 elementor-top-column" data-element_type="column">
@@ -293,7 +295,7 @@
                                                                 </div>
                                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur recusandae doloremque cum iure sed molestias eveniet, excepturi corporis eum mollitia optio officiis! Repellendus quis in repellat corporis voluptatibus consequatur veritatis!</p>
                                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quibusdam quia saepe ad, consectetur accusamus modi qui at repellat voluptate nemo quasi hic ab incidunt neque totam. Odit, nobis repellendus.</p>
-                                                                <!-- <div data-id="17a7b3e" class="elementor-element elementor-element-17a7b3e animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-accordion" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="accordion.default">
+                                                                <div data-id="17a7b3e" class="elementor-element elementor-element-17a7b3e animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-accordion" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="accordion.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-accordion" role="tablist">
                                                                             <div class="elementor-accordion-item">
@@ -338,13 +340,13 @@
                                                                             <p><a href="#" data-wplink-url-error="true">View Pricing</a> <span class="verline"> </span></p>
                                                                         </div>
                                                                     </div>
-                                                                </div> -->
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
+                                        </section> -->
                                         <div style="padding-bottom: 150px; justify-content: center; display:flex;" class="elementor-image">
                                             <img src="upload/workflow.jpg" class="attachment-large size-large" alt="" ></div>
                                         </div>
