@@ -218,13 +218,13 @@
                                                                                 justify-content: center;
                                                                                 align-items: center;
                                                                                 margin-bottom: 10px;
-                                                                                background: blue;
+                                                                                /* background: blue; */
                                                                                 object-fit: contain;
                                                                             }
                                                                             .grid-item .imgg img{
                                                                                 width: 100% !important;
                                                                                 height: 100% !important;
-                                                                                object-fit: cover;
+                                                                                object-fit: cover !important;
                                                                             }
                                                                         }
                                                                     </style>
