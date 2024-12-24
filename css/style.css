@@ -36229,7 +36229,7 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
     cursor: pointer;
     display: inline-block;
     padding: 11px 15px;
-    position: relative
+    position: relative;
 }
 
 .tg_image_carousel_slider_wrapper.carousel .carousel__nav .carousel__arrow:nth-child(1):after {
@@ -36240,7 +36240,7 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
     background-color: #b0b0b0;
     height: 14px;
     top: 50%;
-    margin-top: -7px
+    margin-top: -7px;
 }
 
 .tg_image_carousel_slider_wrapper.carousel .carousel-item.active {
@@ -37090,33 +37090,33 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
     .tg_motion_reveal_slider_wrapper.slideshow .slide__title {
         font-size: 30px !important;
         box-sizing: border-box;
-        padding: 0 40px
+        padding: 0 40px;
     }
     .tg_motion_reveal_slider_wrapper.slideshow .preview__content {
-        width: 100%
+        width: 100%;
     }
     .tg_motion_reveal_slider_wrapper.slideshow .preview {
         display: block
     }
     #page_content_wrapper .inner .sidebar_content.full_width .tg_background_list_wrapper .tg_background_img img {
-        height: 100% !important
+        height: 100% !important;
     }
     .tg_background_list_wrapper {
-        overflow: auto
+        overflow: auto;
     }
     .tg_background_list_wrapper.four_cols .tg_background_list_column {
         flex: 0 0 50%;
         max-width: 50%
     }
     .tg_background_list_wrapper .tg_background_list_column div.tg_background_list_content h3 {
-        font-size: 18px !important
+        font-size: 18px !important;
     }
     .tg_background_list_wrapper .tg_background_list_column .tg_background_list_content {
         padding: 20px
     }
     .tg_background_list_column {
         min-height: 50vh !important;
-        max-height: 50vh !important
+        max-height: 50vh !important;
     }
     .tg_background_list_wrapper .tg_background_img {
         width: 200% !important

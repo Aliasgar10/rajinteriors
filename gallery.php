@@ -144,12 +144,12 @@ ini_set('log_errors', 1);
                                                         margin: auto;
                                                     }
                                                     .images {                                                                                                               
-                                                        column-count: 2;
+                                                        column-count: 3;
                                                         column-gap: 20px; 
                                                         padding: 20px;
                                                         justify-content: center;
                                                         flex-direction: column;
-                                                        width: 70vw;
+                                                        width: 100%;
                                                         margin: auto;
                                                     }
                                                     .gallery-item {
@@ -287,12 +287,34 @@ ini_set('log_errors', 1);
                                                         <h2><?php echo htmlspecialchars($cleanedCategoryName); ?></h2>
                                                     <?php endif; ?>
                                                 </div>
-                                                    
-                                                    <div class="gallery">
-                                                        <div class="images">
-                                                            <?php
+                                                        <!-- <style>
+                                                                .videos{
+                                                                    width: 100%;
+                                                                    margin-top: 10px;
+                                                                    padding-top: 10px;
+                                                                }
+                                                                iframe.landscape {
+                                                                    width: 100% !important; /* Set according to video aspect ratio */
+                                                                    max-width: 480px !important; /* Adjust the maximum width for videos */
+                                                                    aspect-ratio: 16 / 9; /* Ensure proper aspect ratio */
+                                                                    border-radius: 10px;
+                                                                    border:none;
+                                                                }
+                                                            </style> -->
+                                                            <style>
+                                                                iframe.portrait {
+                                                                    width: 360px; /* Set according to video aspect ratio */
+                                                                    height: 640px; /* Set according to video aspect ratio */
+                                                                    aspect-ratio: 9 / 16; /* For portrait orientation */
+                                                                    border-radius: 10px;
+                                                                    border:none;
+                                                                }                                                            
+                                                        </style>
+                                                        <div class="gallery">
+                                                            <div class="images">
+                                                                <?php
                                                                 // Fetch files for the current category
-                                                                $query = "SELECT u.file_url, u.file_name, u.file_type,u.extension, s.section_name 
+                                                                $query = "SELECT u.file_url, u.file_name, u.file_type, u.extension, s.section_name 
                                                                         FROM uploads u 
                                                                         INNER JOIN sections s ON u.section_id = s.id 
                                                                         WHERE u.category_id = ? 
@@ -305,75 +327,35 @@ ini_set('log_errors', 1);
                                                                 if ($result->num_rows > 0) {
                                                                     while ($row = $result->fetch_assoc()) {
                                                                         $fileType = $row['file_type'];
-                                                                        $fileUrl = $row['file_url'];
-                                                                        $fileName = $row['file_name'];
+                                                                        $fileUrl = htmlspecialchars($row['file_url']);
+                                                                        $fileName = htmlspecialchars($row['file_name']);
+                                                                        $extension = htmlspecialchars($row['extension']); // 'landscape' or 'portrait'
 
                                                                         if ($fileType === 'image') {
                                                                             echo "<div class='gallery-item gallery-grid-tilt'>";
-                                                                            echo "<img src='uploads/assets/images/" . htmlspecialchars($fileName) . "' alt='Gallery Image'>";
-                                                                            echo "</div>";                                                                
+                                                                            echo "<img src='$fileUrl' alt='$fileName'>";
+                                                                            echo "</div>";
+                                                                        } elseif ($fileType === 'video') {
+                                                                            ?>
+                                                                            <div class="video-container">
+                                                                                <iframe 
+                                                                                    class="<?php echo $extension; ?>" 
+                                                                                    src="https://www.youtube.com/embed/<?php echo $fileName; ?>?autoplay=1&loop=1&mute=1&playlist=<?php echo $fileName; ?>" 
+                                                                                    allow="autoplay; encrypted-media" 
+                                                                                    allowfullscreen>
+                                                                                </iframe>
+                                                                            </div>
+                                                                            <?php
                                                                         }
                                                                     }
                                                                 } else {
                                                                     echo "<p>No Contents found.</p>";
                                                                 }
-                                                            $stmt->close();
-                                                            ?>
+                                                                $stmt->close();
+                                                                ?>
+                                                            </div>
                                                         </div>
-                                                        <style>
-                                                            .videos{
-                                                                width: 35vw;
-                                                                column-count: 1;
-                                                                margin-top: 10px;
-                                                                padding-top: 10px;
-                                                            }
-                                                            iframe.landscape {
-                                                                width: 100% !important; /* Set according to video aspect ratio */
-                                                                max-width: 480px !important; /* Adjust the maximum width for videos */
-                                                                aspect-ratio: 16 / 9; /* Ensure proper aspect ratio */
-                                                                border-radius: 10px;
-                                                                border:none;
-                                                            }
-                                                            iframe.portrait {
-                                                                width: 360px; /* Set according to video aspect ratio */
-                                                                height: 640px; /* Set according to video aspect ratio */
-                                                                aspect-ratio: 9 / 16; /* For portrait orientation */
-                                                                border-radius: 10px;
-                                                                border:none;
-                                                            }                                                            
-                                                        </style>
-                                                        <div class="videos">
-                                                            <?php
-                                                            // Reset the query for videos
-                                                            $stmt = $conn->prepare($query);
-                                                            $stmt->bind_param("i", $categoryId);
-                                                            $stmt->execute();
-                                                            $result = $stmt->get_result();
 
-                                                            
-                                                            if ($result->num_rows > 0) {
-                                                                while ($row = $result->fetch_assoc()) {
-                                                                    $fileType = $row['file_type'];
-                                                                    $filename = $row['file_name'];
-                                                                    $extension = $row['extension']; // 'landscape' or 'portrait'
-
-                                                                    if ($fileType === 'video') {
-                                                            ?>
-                                                                        <iframe 
-                                                                            class="<?php echo $extension; ?>" 
-                                                                            src="https://www.youtube.com/embed/<?php echo $filename; ?>?autoplay=1&loop=1&mute=1&playlist=<?php echo $filename; ?>" 
-                                                                            allow="autoplay; encrypted-media" 
-                                                                            allowfullscreen>
-                                                                        </iframe>      
-                                                            <?php
-                                                                    }
-                                                                }
-                                                            }
-                                                            $stmt->close();
-                                                            ?>
-                                                            <!-- echo "<iframe src='https://youtube.com/shorts/dHVefo9LmA8?si=PdKDnCWfMLKkKqxW' allow='autoplay; encrypted-media' allowfullscreen></iframe>"; -->
-                                                        </div>
-                                                    </div>
                                                 </section>
                                             </div>
                                             <div class="rr" style="width:100%; height:15px; background:white;"></div>
