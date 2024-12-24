@@ -203,7 +203,7 @@
                                                                             $result = $conn->query($query);
 
                                                                             // Array of additional data
-                                                                            $data = ["2D Plan & Elevation", "3D Desigining", "Virtual 3D Designing", "Masonary Works", "False Ceiling Contracts", "Electrical Works", "Carpentary Works", "Plumbing Works", "Paint & Polishing Works"];
+                                                                            $data = ["2D Plan & Elevation", "Virtual 3D Desigining", "False Ceiling Contracts", "Carpentary Works", "Paint & Polishing Works","3D Desigining","Masonary Works","Electrical Works","Plumbing Works","Soft Furnising"];
                                                                             $index = 0;
 
                                                                             if ($result->num_rows > 0) {
