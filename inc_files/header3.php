@@ -60,7 +60,7 @@
                                         </ul>
                                     </li>
                                     <li class="#"><a href="gallery.php">Gallery</a></li>
-                                    <li class="#"><a href="our-process.php">Services</a></li>
+                                    <li><a href="service.php">Services</a></li>
                                     <li class="#"><a href="contact-1.php">Contact</a></li>
                                 </ul>
                             </div>
@@ -83,7 +83,7 @@
                                 </ul>
                             </li>
                             <li><a href="gallery.php">Gallery</a></li>
-                            <li><a href="our-process.php">Services</a></li>
+                            <li><a href="service.php">Services</a></li>
                             <li><a href="contact-1.php">Contact</a></li>
                         </ul>
                     </div>
