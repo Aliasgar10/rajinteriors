@@ -170,12 +170,13 @@
                                                                             flex-direction: column;
                                                                             align-items: center;
                                                                             justify-content: flex-start;
-                                                                            width: 100%;
+                                                                            width: 420px;
+                                                                            height: 350px;
                                                                         }
 
                                                                         .grid-item .imgg {
-                                                                            width: 100%;
-                                                                            height: auto;
+                                                                            width: 380px;
+                                                                            height: 280px;
                                                                             display: flex;
                                                                             justify-content: center;
                                                                             align-items: center;
@@ -184,7 +185,7 @@
 
                                                                         .grid-item .imgg img {
                                                                             width: 100%;
-                                                                            height: auto;
+                                                                            height: 100%;
                                                                             object-fit: cover;
                                                                         }
 
