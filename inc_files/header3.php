@@ -51,7 +51,7 @@
                             <div class="menu-main-menu-container">
                                 <ul id="main_menu" class="nav" style="margin-top: 23px;">
                                     <li><a href="index.php">Home</a></li>
-                                    <li class="menu-item menu-item-has-children"><a href="under-construction.php">The Vogue Studio</a>
+                                    <li class="menu-item menu-item-has-children"><a href="tvs.php">The Vogue Studio</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item"><a href="test1.php"><span class="subunder">- </span>ABCD</a></li>
                                             <li class="menu-item"><a href="home-10.html"><span class="subunder">- </span>ABCD</a></li>
@@ -73,7 +73,7 @@
                     <div id="mobile_menu" style="display: none;">
                         <ul id="mobile_menu_items">
                             <li><a href="index.php">Home</a></li>
-                            <li><a href="under-construction.php">TVS</a>
+                            <li><a href="tvs.php">TVS</a>
                                 <button class="submenu-toggle">+</button>
                                 <ul class="sub-menu">
                                     <li><a href="test1.php">ABCD</a></li>

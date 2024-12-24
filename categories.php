@@ -22,7 +22,13 @@
     <link rel="icon" href="upload/TG-Thumb.png">
     <!-- <link rel="apple-touch-icon-precomposed" href="upload/TG-Thumb.png"> -->
 
-
+<style>
+    #page_content_wrapper:not(.wide), .page_content_wrapper:not(.wide) {
+        width: 100vw !important;
+        /* margin: 5px !important; */
+        background:#000;
+    }
+</style>
 </head>
 
 <body data-rsssl="1" class="home page-template-default page page-id-1824 woocommerce-no-js tg_menu_transparent tg_lightbox_black leftalign tg_footer_reveal elementor-default elementor-page elementor-page-1824">
@@ -80,19 +86,28 @@
                                                 #loadMoreBtn{
                                                     height: 3em;
                                                     width: 9em;
-                                                    background: black;
-                                                    color: whitesmoke;
+                                                    background: white;
+                                                    color: #000;
                                                     font-size: smaller;
                                                     cursor: pointer;
                                                 }
                                                 #loadMoreBtn:hover {
                                                     height: 3em;
                                                     width: 9em;
-                                                    border:2px solid black;
+                                                    border:2px solid white;
                                                     background: transparent;
-                                                    color: black;
+                                                    color: white;
                                                     font-size: smaller;
                                                     cursor: pointer;
+                                                }
+                                                #post{
+                                                    margin: 5px;
+                                                    border: 6px solid wheat;
+                                                    padding: 5px
+                                                }
+                                                .text{
+                                                    text-align: center;
+                                                    color:#fff;
                                                 }
                                             </style>
 
@@ -118,12 +133,15 @@
                                                                                                 $fileUrl = $row['file_url'];
                                                                                     ?>
                                                                                         <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                                                            <div class="post_wrapper">
+                                                                                            <div class="post_wrapper" id="post">
                                                                                                 <div class="post_img static">
                                                                                                     <div class="post_img_hover">
                                                                                                         <img src="<?php echo $fileUrl; ?>" alt="<?php echo $row['file_name']; ?>" loading="lazy">
                                                                                                         <a href="#"></a>
                                                                                                     </div>
+                                                                                                </div>
+                                                                                                <div class="text">
+                                                                                                    <?php echo $row['file_name']; ?>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
