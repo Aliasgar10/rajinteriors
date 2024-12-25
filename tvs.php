@@ -75,32 +75,30 @@
                                                                 <div data-id="814c075" class="elementor-element elementor-element-814c075 animated fadeIn animated-fast elementor-invisible elementor-widget elementor-widget-architecturer-portfolio-masonry" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:400}" data-element_type="architecturer-portfolio-masonry.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="portfolio_masonry_container">
-                                                                            <div class="portfolio_masonry_content_wrapper gallery_grid_content_wrapper do_masonry portfolio_masonry layout_tg_two_cols" data-cols="2">
-                                                                                
+                                                                        <div class="portfolio_masonry_content_wrapper gallery_grid_content_wrapper do_masonry portfolio_masonry layout_tg_two_cols" data-cols="2">
                                                                             <?php
-                                                                            
                                                                                 // Database connection
                                                                                 $host = "localhost";
                                                                                 $username = "rajinteriors";
                                                                                 $password = "7ku~3AksgI75Edzrp";
                                                                                 $database = "rajinteriors";
-                                                                                
+
                                                                                 $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
                                                                                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                                                                                
+
                                                                                 // Fetch parent categories
                                                                                 $stmt = $pdo->prepare("SELECT id, category_name, thumbnail FROM category_table WHERE parent_id = 0");
                                                                                 $stmt->execute();
                                                                                 $parentCategories = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                                                                                
+
                                                                                 // Output parent categories as HTML
                                                                                 foreach ($parentCategories as $category) {
                                                                                     // Check if the category has child categories
-                                                                                    $childStmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = :parent_id");
+                                                                                    $childStmt = $pdo->prepare("SELECT id, category_name, thumbnail FROM category_table WHERE parent_id = :parent_id");
                                                                                     $childStmt->bindParam(':parent_id', $category['id'], PDO::PARAM_INT);
                                                                                     $childStmt->execute();
                                                                                     $childCategories = $childStmt->fetchAll(PDO::FETCH_ASSOC);
-                                                                                
+
                                                                                     echo '<div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols portfolio-1 tile scale-anm all no_filter">';
                                                                                     echo '  <div class="portfolio_masonry_img">';
                                                                                     echo '      <img src="assets/CATEGORY/' . htmlspecialchars($category['thumbnail']) . '" alt="">';
@@ -112,115 +110,164 @@
                                                                                     echo '          <h3>' . htmlspecialchars($category['category_name']) . '</h3>';
                                                                                     echo '      </div>';
                                                                                     echo '  </figcaption></figure>';
-                                                                                
+
                                                                                     // Add a button to open popup if child categories exist
                                                                                     if (!empty($childCategories)) {
                                                                                         echo '  <a class="open-popup-btn" data-category="' . $category['id'] . '"></a>';
                                                                                         echo '  <div class="popup-overlay" id="popup-' . $category['id'] . '">';
                                                                                         echo '      <div class="popup-content">';
                                                                                         echo '          <h2>' . htmlspecialchars($category['category_name']) . '</h2>';
+                                                                                        echo '          <div class="child-category-grid">';
                                                                                         foreach ($childCategories as $child) {
-                                                                                            echo '<a href="categories.php?id=' . $child['id'] . '" class="child-category-link">' . htmlspecialchars($child['category_name']) . '</a>';
+                                                                                            echo '          <div class="child-category-item">';
+                                                                                            echo '              <a href="categories.php?id=' . $child['id'] . '" class="child-category-link">';
+                                                                                            echo '              <div class="child-category-img">';
+                                                                                            echo '                  <img src="uploads/assets/categories/' . htmlspecialchars($child['thumbnail']) . '" alt="">';
+                                                                                            echo '              </div>';
+                                                                                            echo '              ' . htmlspecialchars($child['category_name']) . '</a>';
+                                                                                            echo '          </div>';
                                                                                         }
+                                                                                        echo '          </div>';
                                                                                         echo '          <button class="close-popup-btn">Close</button>';
                                                                                         echo '      </div>';
                                                                                         echo '  </div>';
                                                                                     } else {
                                                                                         echo '  <a href="categories.php?id=' . $category['id'] . '" class="parent-category-link"></a>';
                                                                                     }
-                                                                                
+
                                                                                     echo '</div>';
                                                                                 }
-                                                                            
-                                                                                
                                                                             ?>
-                                                                            <style>
-
-                                                                                .child-category-link{
-                                                                                    bottom: 0;
-                                                                                    position: relative !important;
-                                                                                }
-                                                                                /* Style for the popup overlay */
-                                                                                .popup-overlay {
-                                                                                    display: none;
-                                                                                    position: fixed;
-                                                                                    top: 0;
-                                                                                    left: 0;
-                                                                                    width: 100vw !important;
-                                                                                    height: 100vh !important;
-                                                                                    background: rgba(0, 0, 0, 0.8);
-                                                                                    z-index: 1000;
-                                                                                }
-
-                                                                                /* Popup content styling */
-                                                                                .popup-content {
-                                                                                    position: absolute;
-                                                                                    top: 50%;
-                                                                                    /* left: 50%; */
-                                                                                    transform: translate(-50%, -50%);
-                                                                                    background: #222; /* Dark background for popup content */
-                                                                                    padding: 20px;
-                                                                                    border-radius: 8px;
-                                                                                    text-align: center;
-                                                                                    color: #fff;
-                                                                                    width: 80%;
-                                                                                    max-width: 500px;
-                                                                                }
-
-                                                                                /* Close button styling */
-                                                                                .close-popup-btn {
-                                                                                    margin-top: 20px;
-                                                                                    background: #ff0000;
-                                                                                    color: #fff;
-                                                                                    border: none;
-                                                                                    padding: 10px 20px;
-                                                                                    cursor: pointer;
-                                                                                    border-radius: 5px;
-                                                                                }
-
-                                                                                .close-popup-btn:hover {
-                                                                                    background: #cc0000;
-                                                                                }
-
-                                                                                /* Child category links */
-                                                                                .child-category-link {
-                                                                                    display: block;
-                                                                                    color: #fff;
-                                                                                    text-decoration: none;
-                                                                                    margin: 10px 0;
-                                                                                }
-
-                                                                                .child-category-link:hover {
-                                                                                    text-decoration: underline;
-                                                                                }
-
-                                                                            </style>
-                                                                            <script>
-                                                                                // Open popup
-                                                                                document.querySelectorAll('.open-popup-btn').forEach(button => {
-                                                                                    button.addEventListener('click', function () {
-                                                                                        const popupId = `popup-${this.getAttribute('data-category')}`;
-                                                                                        document.getElementById(popupId).style.display = 'block';
-                                                                                    });
-                                                                                });
-
-                                                                                // Close popup
-                                                                                document.querySelectorAll('.close-popup-btn').forEach(button => {
-                                                                                    button.addEventListener('click', function () {
-                                                                                        this.closest('.popup-overlay').style.display = 'none';
-                                                                                    });
-                                                                                });
-
-                                                                                // Close popup when clicking outside the content
-                                                                                document.querySelectorAll('.popup-overlay').forEach(overlay => {
-                                                                                    overlay.addEventListener('click', function (e) {
-                                                                                        if (e.target === this) {
-                                                                                            this.style.display = 'none';
+                                                                                <style>
+                                                                                    @media only screen and (max-width: 480px){
+                                                                                        .child-category-grid {
+                                                                                            grid-template-columns: repeat(2, 1fr) !important;
+                                                                                            gap: 10px !important;
                                                                                         }
-                                                                                    });
-                                                                                });
+                                                                                        .popup-content {
+                                                                                            position: absolute;
+                                                                                            top: 63% !important;
+                                                                                            height: 713px !important;
+                                                                                        }
+                                                                                        .child-category-link {
+                                                                                            border: none !important;
+                                                                                        }
 
-                                                                            </script>
+                                                                                    }
+                                                                                    .popup-content h2{
+                                                                                        color: #fff !important;
+                                                                                    }
+                                                                                    .child-category-grid {
+                                                                                        display: grid;
+                                                                                        grid-template-columns: repeat(3, 1fr);
+                                                                                        gap: 20px;
+                                                                                        margin-top: 20px;
+                                                                                    }
+
+                                                                                    .child-category-item {
+                                                                                        text-align: center;
+                                                                                    }
+
+                                                                                    .child-category-img {
+                                                                                        height: 120px;
+                                                                                        width: 120px;
+                                                                                        margin: 0 auto 10px auto;
+                                                                                        display: flex;
+                                                                                        justify-content: center;
+                                                                                        align-items: center;
+                                                                                        overflow: hidden;
+                                                                                    }
+
+                                                                                    .child-category-img img {
+                                                                                        max-width: 100%;
+                                                                                        max-height: 100%;
+                                                                                        object-fit: contain;
+                                                                                        border-radius: 8px;
+                                                                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                                                                                    }
+
+                                                                                    .child-category-link {
+                                                                                        display: block;
+                                                                                        color: orange;
+                                                                                        text-decoration: none;
+                                                                                        border: 2px solid white;
+                                                                                        padding: 5px;
+                                                                                        border-radius: 5px;
+                                                                                        transition: background-color 0.3s, color 0.3s;
+                                                                                        position: relative !important;
+                                                                                        color: #fff;
+                                                                                        text-decoration: none;
+                                                                                        margin: 10px 0;
+                                                                                    }
+
+                                                                                    .child-category-link:hover {
+                                                                                        background-color: orange;
+                                                                                        color: white;
+                                                                                    }
+
+                                                                                    .popup-overlay {
+                                                                                        display: none;
+                                                                                        position: fixed;
+                                                                                        top: 0;
+                                                                                        left: 0;
+                                                                                        width: 100%;
+                                                                                        height: 100%;
+                                                                                        background: rgba(0, 0, 0, 0.8);
+                                                                                        z-index: 10000;
+                                                                                    }
+
+                                                                                    .popup-content {
+                                                                                        position: absolute;
+                                                                                        top: 53%;
+                                                                                        left: 50%;
+                                                                                        transform: translate(-50%, -50%);
+                                                                                        background: #222;
+                                                                                        padding: 20px;
+                                                                                        border-radius: 8px;
+                                                                                        text-align: center;
+                                                                                        color: #fff;
+                                                                                        width: 100%;
+                                                                                        max-width: 600px;
+                                                                                        height: 690px;
+                                                                                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+                                                                                    }
+
+                                                                                    .close-popup-btn {
+                                                                                        margin-top: 20px;
+                                                                                        background: #ff0000;
+                                                                                        color: #fff;
+                                                                                        border: none;
+                                                                                        padding: 10px 20px;
+                                                                                        cursor: pointer;
+                                                                                        border-radius: 5px;
+                                                                                    }
+
+                                                                                    .close-popup-btn:hover {
+                                                                                        background: #cc0000;
+                                                                                    }
+                                                                                </style>                                                                                
+                                                                                <script>
+                                                                                    document.querySelectorAll('.open-popup-btn').forEach(button => {
+                                                                                        button.addEventListener('click', function () {
+                                                                                            const popupId = `popup-${this.getAttribute('data-category')}`;
+                                                                                            document.getElementById(popupId).style.display = 'block';
+                                                                                        });
+                                                                                    });
+
+                                                                                    document.querySelectorAll('.close-popup-btn').forEach(button => {
+                                                                                        button.addEventListener('click', function () {
+                                                                                            this.closest('.popup-overlay').style.display = 'none';
+                                                                                        });
+                                                                                    });
+
+                                                                                    document.querySelectorAll('.popup-overlay').forEach(overlay => {
+                                                                                        overlay.addEventListener('click', function (e) {
+                                                                                            if (e.target === this) {
+                                                                                                this.style.display = 'none';
+                                                                                            }
+                                                                                        });
+                                                                                    });
+                                                                                </script>
                                                                             </div>
                                                                         </div>
                                                                     </div>
