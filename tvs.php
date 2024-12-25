@@ -87,7 +87,7 @@
                                                                                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                                                                                 // Fetch parent categories
-                                                                                $stmt = $pdo->prepare("SELECT id, category_name, thumbnail FROM category_table WHERE parent_id = 0");
+                                                                                $stmt = $pdo->prepare("SELECT id, category_name, thumbnail FROM category_table WHERE parent_id = 0 ORDER BY sort_order ASC");
                                                                                 $stmt->execute();
                                                                                 $parentCategories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

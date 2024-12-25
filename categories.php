@@ -160,51 +160,51 @@
                                                                         </style>
                                                                         <!-- For popup -->
                                                                         <style>
-        /* Style for the popup overlay */
-        .popup-overlay-12345 {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
+                                                                            /* Style for the popup overlay */
+                                                                            .popup-overlay-12345 {
+                                                                                position: fixed;
+                                                                                top: 0;
+                                                                                left: 0;
+                                                                                width: 100%;
+                                                                                height: 100%;
+                                                                                background: rgba(0, 0, 0, 0.8);
+                                                                                display: none;
+                                                                                justify-content: center;
+                                                                                align-items: center;
+                                                                                z-index: 1000;
+                                                                            }
 
-        /* Style for the popup image */
-        .popup-image-12345 {
-            max-width: 70%; /* Reduced size to fit better with sticky headers */
-            max-height: 70%;
-            border: 3px solid white;
-            border-radius: 8px;
-        }
+                                                                            /* Style for the popup image */
+                                                                            .popup-image-12345 {
+                                                                                max-width: 70%; /* Reduced size to fit better with sticky headers */
+                                                                                max-height: 70%;
+                                                                                border: 3px solid white;
+                                                                                border-radius: 8px;
+                                                                            }
 
-        /* Style for close button */
-        .close-btn-12345 {
-            position: absolute;
-            top: 10px; /* Adjusted for sticky header */
-            right: 10px;
-            color: white;
-            font-size: 24px; /* Slightly smaller icon */
-            cursor: pointer;
-            font-weight: bold;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+                                                                            /* Style for close button */
+                                                                            .close-btn-12345 {
+                                                                                position: absolute;
+                                                                                top: 10px; /* Adjusted for sticky header */
+                                                                                right: 10px;
+                                                                                color: white;
+                                                                                font-size: 24px; /* Slightly smaller icon */
+                                                                                cursor: pointer;
+                                                                                font-weight: bold;
+                                                                                background: rgba(0, 0, 0, 0.5);
+                                                                                border-radius: 50%;
+                                                                                width: 36px;
+                                                                                height: 36px;
+                                                                                display: flex;
+                                                                                justify-content: center;
+                                                                                align-items: center;
+                                                                            }
 
-        /* Ensure body does not scroll when popup is open */
-        body.popup-active {
-            overflow: hidden;
-        }
-    </style>
+                                                                            /* Ensure body does not scroll when popup is open */
+                                                                            body.popup-active {
+                                                                                overflow: hidden;
+                                                                            }
+                                                                        </style>
                                                                         <div class="elementor-container elementor-column-gap-default">
                                                                             <div class="elementor-row">
                                                                                 <div data-id="27d6030" class="elementor-element elementor-element-27d6030 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
@@ -215,61 +215,57 @@
                                                                                                     <div class="blog_post_content_wrapper layout_grid">
 
                                                                                                     <div id="imageContainer">
-    <?php foreach ($products as $product) { ?>
-        <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-            <div class="post_wrapper" id="post">
-                <div class="post_img static">
-                    <div class="post_imgg_hover">
-                        <img src="uploads/assets/categories/<?php echo htmlspecialchars($product['images']); ?>" 
-                             alt="<?php echo htmlspecialchars($product['images']); ?>" 
-                             loading="lazy" 
-                             class="clickable-image-12345">
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="text">
-                    <?php echo htmlspecialchars($product['name']); ?>
-                </div>
-            </div>
-        </div>
-    <?php } ?>
-</div>
+                                                                                                        <?php foreach ($products as $product) { ?>
+                                                                                                            <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
+                                                                                                                <div class="post_wrapper" id="post">
+                                                                                                                    <div class="post_img static">
+                                                                                                                        <div class="post_imgg_hover">
+                                                                                                                            <img src="uploads/assets/categories/<?php echo htmlspecialchars($product['images']); ?>" 
+                                                                                                                                alt="<?php echo htmlspecialchars($product['images']); ?>" 
+                                                                                                                                loading="lazy" 
+                                                                                                                                class="clickable-image-12345">
+                                                                                                                            <a href="#"></a>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class="text">
+                                                                                                                        <?php echo htmlspecialchars($product['name']); ?>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        <?php } ?>
+                                                                                                    </div>
+                                                                                                    <!-- Popup Overlay -->
+                                                                                                    <div class="popup-overlay-12345" id="popupOverlay">
+                                                                                                        <span class="close-btn-12345" id="closeBtn">&times;</span>
+                                                                                                        <img src="" alt="Popup Image" class="popup-image-12345" id="popupImage">
+                                                                                                    </div>
 
-<!-- Popup Overlay -->
-<div class="popup-overlay-12345" id="popupOverlay">
-    <span class="close-btn-12345" id="closeBtn">&times;</span>
-    <img src="" alt="Popup Image" class="popup-image-12345" id="popupImage">
-</div>
+                                                                                                    <script>
+                                                                                                        // Get the popup elements
+                                                                                                        const popupOverlay = document.getElementById('popupOverlay');
+                                                                                                        const popupImage = document.getElementById('popupImage');
+                                                                                                        const closeBtn = document.getElementById('closeBtn');
 
-<script>
-    // Get the popup elements
-    const popupOverlay = document.getElementById('popupOverlay');
-    const popupImage = document.getElementById('popupImage');
-    const closeBtn = document.getElementById('closeBtn');
+                                                                                                        // Add click event listener to all images
+                                                                                                        document.querySelectorAll('.clickable-image-12345').forEach(image => {
+                                                                                                            image.addEventListener('click', (e) => {
+                                                                                                                popupImage.src = e.target.src; // Set the popup image source
+                                                                                                                popupOverlay.style.display = 'flex'; // Show the popup
+                                                                                                            });
+                                                                                                        });
 
-    // Add click event listener to all images
-    document.querySelectorAll('.clickable-image-12345').forEach(image => {
-        image.addEventListener('click', (e) => {
-            popupImage.src = e.target.src; // Set the popup image source
-            popupOverlay.style.display = 'flex'; // Show the popup
-        });
-    });
+                                                                                                        // Close the popup when the close button is clicked
+                                                                                                        closeBtn.addEventListener('click', () => {
+                                                                                                            popupOverlay.style.display = 'none';
+                                                                                                        });
 
-    // Close the popup when the close button is clicked
-    closeBtn.addEventListener('click', () => {
-        popupOverlay.style.display = 'none';
-    });
-
-    // Close the popup when clicking outside the image
-    popupOverlay.addEventListener('click', (e) => {
-        if (e.target === popupOverlay) {
-            popupOverlay.style.display = 'none';
-        }
-    });
-</script>
-
-
-
+                                                                                                        // Close the popup when clicking outside the image
+                                                                                                        popupOverlay.addEventListener('click', (e) => {
+                                                                                                            if (e.target === popupOverlay) {
+                                                                                                                popupOverlay.style.display = 'none';
+                                                                                                            }
+                                                                                                        });
+                                                                                                    </script>
                                                                                                     
                                                                                                     </div>                                                                                                                                                                                
                                                                                                 </div>

@@ -19,6 +19,22 @@
         border-bottom: 0px solid #dce0e0 !important;
     }
 </style>
+<?php
+        error_reporting(E_ALL);
+        // Display errors on the screen
+        ini_set('display_errors', 1);
+        // Log errors to a file (optional)
+        ini_set('log_errors', 1);
+        
+        // Database connection
+        $host = "localhost";
+        $username = "rajinteriors";
+        $password = "7ku~3AksgI75Edzrp";
+        $database = "rajinteriors";
+        
+        $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
 <div class="header_style_wrapper">
     <div class="top_bar hasbg" style="background: black;">
         <div class="standard_wrapper" style="margin-top: 10px;">
@@ -52,12 +68,47 @@
                                 <ul id="main_menu" class="nav" style="margin-top: 23px;">
                                     <li><a href="index.php">Home</a></li>
                                     <li class="menu-item menu-item-has-children"><a href="under-construction.php">The Vogue Studio</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="test1.php"><span class="subunder">- </span>ABCD</a></li>
-                                            <li class="menu-item"><a href="home-10.html"><span class="subunder">- </span>ABCD</a></li>
-                                            <li class="menu-item"><a href="home-11.html"><span class="subunder">- </span>ABCD</a></li>
-                                            <li class="menu-item"><a href="home-12.html"><span class="subunder">- </span>ABCD &#8211; bjb </a></li>
-                                        </ul>
+                                        <?php
+                                            // Fetch parent categories
+                                            $stmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = 0 ORDER BY sort_order");
+                                            $stmt->execute();
+                                            $parentCategories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                            // Fetch child categories for each parent
+                                            $categories = [];
+                                            foreach ($parentCategories as $parent) {
+                                                $stmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = ? ORDER BY sort_order");
+                                                $stmt->execute([$parent['id']]);
+                                                $children = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                                $categories[] = [
+                                                    'id' => $parent['id'],
+                                                    'name' => $parent['category_name'],
+                                                    'children' => $children
+                                                ];
+                                            }
+                                        ?>
+                                        <?php
+                                            // Generate the HTML menu
+                                            echo '<ul class="menu">';
+                                            foreach ($categories as $category) {
+                                                echo '<li class="menu-item menu-item-has-children">';
+                                                // Check if the parent category has children
+                                                if (!empty($category['children'])) {
+                                                    echo '<a href="#">' . htmlspecialchars($category['name']) . '</a>'; // Blank link for parent with children
+                                                    echo '<ul class="sub-menu">';
+                                                    foreach ($category['children'] as $child) {
+                                                        echo '<li class="menu-item">';
+                                                        echo '<a href="categories.php?id=' . $child['id'] . '"><span class="subunder">- </span>' . htmlspecialchars($child['category_name']) . '</a>';
+                                                        echo '</li>';
+                                                    }
+                                                    echo '</ul>';
+                                                } else {
+                                                    echo '<a href="categories.php?id=' . $category['id'] . '">' . htmlspecialchars($category['name']) . '</a>'; // Valid link for parent without children
+                                                }
+                                                echo '</li>';
+                                            }
+                                            echo '</ul>';
+                                        ?>
                                     </li>
                                     <li class="#"><a href="gallery.php">Gallery</a></li>
                                     <li><a href="service.php">Services</a></li>
@@ -74,13 +125,29 @@
                         <ul id="mobile_menu_items">
                             <li><a href="index.php">Home</a></li>
                             <li><a href="under-construction.php">TVS</a>
-                                <button class="submenu-toggle">+</button>
-                                <ul class="sub-menu">
-                                    <li><a href="test1.php">ABCD</a></li>
-                                    <li><a href="home-10.html">ABCD</a></li>
-                                    <li><a href="home-11.html">ABCD</a></li>
-                                    <li><a href="home-12.html">ABCD &#8211; bjb</a></li>
-                                </ul>
+                                <!-- <button class="submenu-toggle">+</button> -->
+                                    <!-- <?php
+                                        // Generate the HTML menu
+                                        echo '<ul class="menu">';
+                                        foreach ($categories as $category) {
+                                            echo '<li class="menu-item menu-item-has-children">';
+                                            // Check if the parent category has children
+                                            if (!empty($category['children'])) {
+                                                echo '<a href="#">' . htmlspecialchars($category['name']) . '</a>'; // Blank link for parent with children
+                                                echo '<ul class="sub-menu">';
+                                                foreach ($category['children'] as $child) {
+                                                    echo '<li class="menu-item">';
+                                                    echo '<a href="categories.php?id=' . $child['id'] . '"><span class="subunder">- </span>' . htmlspecialchars($child['category_name']) . '</a>';
+                                                    echo '</li>';
+                                                }
+                                                echo '</ul>';
+                                            } else {
+                                                echo '<a href="categories.php?id=' . $category['id'] . '">' . htmlspecialchars($category['name']) . '</a>'; // Valid link for parent without children
+                                            }
+                                            echo '</li>';
+                                        }
+                                        echo '</ul>';
+                                    ?> -->
                             </li>
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="service.php">Services</a></li>
@@ -212,6 +279,7 @@
     } */
     
 </style>
+
 <!-- Submenus style -->
 <style>
     /* Hide submenus by default */
