@@ -1,6 +1,31 @@
 <?php 
-    include("connection/db_connect.php");
+    error_reporting(E_ALL);
+    // Display errors on the screen
+    ini_set('display_errors', 1);
+    // Log errors to a file (optional)
+    ini_set('log_errors', 1);
 ?>
+
+<?php
+    // Database connection
+    $host = "localhost";
+    $username = "rajinteriors";
+    $password = "7ku~3AksgI75Edzrp";
+    $database = "rajinteriors";
+
+    // Database connection
+    $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $categoryId = $_GET['id'];
+
+    // Display products for the category
+    $stmt = $pdo->prepare("SELECT name, images FROM products WHERE category_id = ?");
+    $stmt->execute([$categoryId]);
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
 
@@ -28,6 +53,11 @@
         /* margin: 5px !important; */
         background:#000;
     }
+    body.tg_footer_reveal #footer_wrapper {
+        position: relative !important;
+        bottom: 0;
+        top: 100vh !important;
+    }
 </style>
 </head>
 
@@ -48,14 +78,6 @@
                                 <div class="elementor-inner">
                                     <div class="elementor-section-wrap">                                                                       
                                        <!-- Gallery Section -->
-                                       <?php 
-                                            error_reporting(E_ALL);
-                                            // Display errors on the screen
-                                            ini_set('display_errors', 1);
-                                            // Log errors to a file (optional)
-                                            ini_set('log_errors', 1);
-
-                                            ?>
                                             <style>
                                                 #h11{
                                                     padding-left: 5px;
@@ -124,32 +146,25 @@
                                                                         <div class="elementor-widget-container">
                                                                             <div class="blog_post_content_wrapper layout_grid">
                                                                                 <div id="imageContainer">
-                                                                                    <?php
-                                                                                        $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category_id=1 LIMIT 9"; // Initial limit
-                                                                                        $result = $conn->query($query);
-
-                                                                                        if ($result->num_rows > 0) {
-                                                                                            while ($row = $result->fetch_assoc()) {
-                                                                                                $fileUrl = $row['file_url'];
+                                                                                    <?php                                                                                        
+                                                                                        foreach ($products as $product) {                                                                    
                                                                                     ?>
                                                                                         <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
                                                                                             <div class="post_wrapper" id="post">
                                                                                                 <div class="post_img static">
                                                                                                     <div class="post_img_hover">
-                                                                                                        <img src="<?php echo $fileUrl; ?>" alt="<?php echo $row['file_name']; ?>" loading="lazy">
+                                                                                                    <img src="uploads/assets/categories/<?php echo htmlspecialchars($product['images']); ?>" alt="<?php echo $product['images']; ?>" loading="lazy">
                                                                                                         <a href="#"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="text">
-                                                                                                    <?php echo $row['file_name']; ?>
+                                                                                                    <?php echo htmlspecialchars($product['name']); ?>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     <?php 
                                                                                             }
-                                                                                        } else {
-                                                                                            echo "No images found.";
-                                                                                        }
+                                                                                        
                                                                                     ?>
                                                                                 </div>
                                                                                 

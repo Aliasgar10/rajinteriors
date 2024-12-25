@@ -190,7 +190,7 @@
                                                                                         display: block;
                                                                                         color: orange;
                                                                                         text-decoration: none;
-                                                                                        border: 2px solid white;
+                                                                                        /* border: 2px solid white; */
                                                                                         padding: 5px;
                                                                                         border-radius: 5px;
                                                                                         transition: background-color 0.3s, color 0.3s;
