@@ -147,7 +147,8 @@
                                                                                         .popup-content {
                                                                                             position: absolute;
                                                                                             top: 0% !important;
-                                                                                            height: 713px !important;
+                                                                                            min-height: 600px;
+                                                                                            /* height: 713px !important; */
                                                                                         }
                                                                                         .child-category-link {
                                                                                             border: none !important;
