@@ -146,7 +146,7 @@
                                                                                         }
                                                                                         .popup-content {
                                                                                             position: absolute;
-                                                                                            top: 63% !important;
+                                                                                            /* top: 63% !important; */
                                                                                             height: 713px !important;
                                                                                         }
                                                                                         .child-category-link {
