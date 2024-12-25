@@ -101,7 +101,7 @@
 
                                                                                     echo '<div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols portfolio-1 tile scale-anm all no_filter">';
                                                                                     echo '  <div class="portfolio_masonry_img">';
-                                                                                    echo '      <img src="assets/CATEGORY/' . htmlspecialchars($category['thumbnail']) . '" alt="">';
+                                                                                    echo '      <img src="uploads/assets/images/' . htmlspecialchars($category['thumbnail']) . '" alt="">';
                                                                                     echo '  </div>';
                                                                                     echo '  <figure><figcaption>';
                                                                                     echo '      <div class="border one"><div></div></div>';
