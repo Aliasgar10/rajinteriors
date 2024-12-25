@@ -45,6 +45,9 @@ $categoriesCache = [];
 $categoriesAdded = 0;
 $productsAdded = 0;
 
+// Temporary storage for parent category thumbnails
+$parentThumbnails = [];
+
 foreach ($rows as $row) {
     if (count($row) < count($header)) {
         continue; // Skip incomplete rows
@@ -60,11 +63,16 @@ foreach ($rows as $row) {
 
     // Insert or get parent category ID
     if (!isset($categoriesCache[$categoryName])) {
-        $stmt = $pdo->prepare("INSERT INTO category_table (category_name, parent_id, thumbnail, sort_order) VALUES (?, ?, ?, ?)");
-        $stmt->execute([$categoryName, 0, $childCategoryName ? null : $thumbnail, $parentOrder]); // Save thumbnail only if no child category and add sort_order
+        $stmt = $pdo->prepare("INSERT INTO category_table (category_name, parent_id, thumbnail, sort_order) VALUES (?, ?, NULL, ?)");
+        $stmt->execute([$categoryName, 0, $parentOrder]); // Initialize thumbnail as NULL
         $parentId = $pdo->lastInsertId();
         $categoriesCache[$categoryName] = $parentId;
         $categoriesAdded++;
+
+        // Store the first image as a potential thumbnail for the parent category
+        if (!isset($parentThumbnails[$categoryName])) {
+            $parentThumbnails[$categoryName] = $thumbnail;
+        }
     } else {
         $parentId = $categoriesCache[$categoryName];
     }
@@ -75,12 +83,17 @@ foreach ($rows as $row) {
         $childKey = $categoryName . '>' . $childCategoryName;
         if (!isset($categoriesCache[$childKey])) {
             $stmt = $pdo->prepare("INSERT INTO category_table (category_name, parent_id, thumbnail, sort_order) VALUES (?, ?, ?, NULL)");
-            $stmt->execute([$childCategoryName, $parentId, $thumbnail]); // Save thumbnail for child category and set sort_order as NULL
+            $stmt->execute([$childCategoryName, $parentId, $thumbnail]); // Save thumbnail for child category
             $categoryId = $pdo->lastInsertId();
             $categoriesCache[$childKey] = $categoryId;
             $categoriesAdded++;
         } else {
             $categoryId = $categoriesCache[$childKey];
+        }
+
+        // Update parent thumbnail if not already set
+        if ($parentThumbnails[$categoryName] === null) {
+            $parentThumbnails[$categoryName] = $thumbnail;
         }
     }
 
@@ -88,6 +101,14 @@ foreach ($rows as $row) {
     $stmt = $pdo->prepare("INSERT INTO products (name, category_id, images) VALUES (?, ?, ?)");
     $stmt->execute([$productName, $categoryId, $image1]);
     $productsAdded++;
+}
+
+// Update parent categories with their thumbnails
+foreach ($parentThumbnails as $categoryName => $thumbnail) {
+    if ($thumbnail) {
+        $stmt = $pdo->prepare("UPDATE category_table SET thumbnail = ? WHERE category_name = ? AND parent_id = 0");
+        $stmt->execute([$thumbnail, $categoryName]);
+    }
 }
 
 // Update the status of the processed file

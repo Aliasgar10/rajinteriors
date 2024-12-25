@@ -278,7 +278,7 @@
                                                 </div>
                                             </div>
                                         </section>
-                                        <section data-id="9573317" class="elementor-element elementor-element-9573317 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
+                                        <!-- <section data-id="9573317" class="elementor-element elementor-element-9573317 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
                                                     <div data-id="c750648" class="elementor-element elementor-element-c750648 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
@@ -355,7 +355,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
+                                        </section> -->
                                     </div>
                                 </div>
                             </div>
