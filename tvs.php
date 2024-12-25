@@ -227,8 +227,9 @@
                                                                                         text-align: center;
                                                                                         color: #fff;
                                                                                         width: 100%;
-                                                                                        max-width: 600px;
-                                                                                        height: 690px;
+                                                                                        max-width: 100%;
+                                                                                        min-height: 400px;
+                                                                                        height: fit-content;
                                                                                         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
                                                                                     }
 
