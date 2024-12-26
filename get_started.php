@@ -44,7 +44,7 @@
 
         .hidden {
             pointer-events: none;
-            opacity: 0.5;
+            /* opacity: 0.5; */
         }
 
         .active {
@@ -114,26 +114,92 @@
             border: none;
             z-index: 2;
         }
+		.popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+            font-size: 18px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
+	<?php
+        $message = ""; // Message for popup
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            include 'connection/db_connect.php';
+
+            // Form data
+            $name = $_POST['name'] ?? '';
+            $mobile = $_POST['mobile'] ?? '';
+            $email = $_POST['email'] ?? '';
+            $city = $_POST['city'] ?? '';
+            $pincode = $_POST['pincode'] ?? '';
+            $selections = $_POST['selections'] ?? '{}';
+            $selections = json_decode($selections, true); // Decode JSON data
+
+            try {
+                // Start transaction
+                $conn->begin_transaction();
+
+                // Insert into users table
+                $userQuery = "INSERT INTO users (name, mobile, email, city, pincode) VALUES (?, ?, ?, ?, ?)";
+                $userStmt = $conn->prepare($userQuery);
+                $userStmt->bind_param("sssss", $name, $mobile, $email, $city, $pincode);
+                $userStmt->execute();
+                $userId = $conn->insert_id; // Get last inserted user ID
+
+                // Insert into quotes table
+                $quoteQuery = "INSERT INTO quotes (user_id, section_data) VALUES (?, ?)";
+                $quoteStmt = $conn->prepare($quoteQuery);
+                $quoteStmt->bind_param("is", $userId, json_encode($selections));
+                $quoteStmt->execute();
+
+                // Commit transaction
+                $conn->commit();
+                $message = "Data submitted successfully!";
+				
+				header("Location:index.php");
+            } catch (Exception $e) {
+                $conn->rollback(); // Rollback transaction on failure
+                $message = "Error: " . $e->getMessage();
+            }
+
+            // Close connections
+            $userStmt->close();
+            $quoteStmt->close();
+            $conn->close();
+        }
+    ?>
+
+    <!-- Popup Message -->
+    <div id="popup" class="popup"><?= htmlspecialchars($message) ?></div>
+
     <section id="section-1" class="active">
         <button class="button" onclick="nextSection(1)">Get Started</button>
-        <hr>
+        
     </section>
     <section id="section-2" class="hidden">
         <div>
             <button class="button" onclick="nextSection(2, 'Dislike')">Dislike 👎</button>
             <button class="button" onclick="nextSection(2, 'Like')">Like 👍</button>
         </div>
-        <hr>
+        
     </section>
     <section id="section-3" class="hidden">
         <div>
             <button class="button" onclick="nextSection(3, 'Interior Designer')">Interior Designer</button>
             <button class="button" onclick="nextSection(3, 'Architect')">Architect</button>
         </div>
-        <hr>
+        
     </section>
     <section id="section-4" class="hidden">
         <div>
@@ -144,7 +210,7 @@
             <button class="option" onclick="nextSection(4, 'Restaurant')">Restaurant</button>
             <button class="option" onclick="nextSection(4, 'Shop')">Shop</button>
         </div>
-        <hr>
+        
     </section>
     <section id="section-5" class="hidden">
         <div>
@@ -153,7 +219,7 @@
             <button class="option" onclick="nextSection(5, '1500 - 2000 Sqft')">1500 - 2000 Sqft</button>
             <button class="option" onclick="nextSection(5, 'More than 2000 Sqft')">More than 2000 Sqft</button>
         </div>
-        <hr>
+        
     </section>
     <section id="section-6" class="hidden">
         <div>
@@ -162,100 +228,58 @@
             <button class="option" onclick="nextSection(6, '30 lakhs - 50 lakhs')">30 lakhs - 50 lakhs</button>
             <button class="option" onclick="nextSection(6, 'More than 50 lakhs')">More than 50 lakhs</button>
         </div>
-        <hr>
+        
     </section>
     <section id="section-7" class="hidden">
-        <form id="userForm">
+    	<form method="POST" action="">
             <h2 style="color: white; text-align: center; margin-bottom: 10px; position: relative; z-index: 2;">Contact me at</h2>
-            <input type="text" name="name" placeholder="NAME" required>
-            <input type="text" name="mobile" placeholder="MOBILE" required>
-            <input type="email" name="email" placeholder="EMAIL-ID" required>
-            <input type="text" name="city" placeholder="CITY" required>
-            <input type="text" name="pincode" placeholder="PINCODE" required>
-            <button type="button" onclick="submitForm()">Submit</button>
+            <input type="text" id="name" name="name" placeholder="NAME" required>
+            <input type="text" id="mobile" name="mobile" placeholder="MOBILE" required>
+            <input type="email" id="email" name="email" placeholder="EMAIL-ID" required>
+            <input type="text" id="city" name="city" placeholder="CITY" required>
+            <input type="text" id="pincode" name="pincode" placeholder="PINCODE" required>
+            <input type="hidden" id="selections" name="selections">
+            <button type="submit">Submit</button>
         </form>
     </section>
 
+
+
     <script>
-        const userSelections = {}; // To store user selections from all sections
+        let userSelections = {};
 
-function nextSection(section, choice = null) {
-    // Store user choice for the current section
-    if (choice) userSelections[`section_${section}`] = choice;
+        // Function to navigate sections and store selections
+        function nextSection(section, choice = null) {
+            if (choice) userSelections[`section_${section}`] = choice;
 
-    // Get current and next sections
-    const current = document.querySelector(`#section-${section}`);
-    const next = document.querySelector(`#section-${section + 1}`);
+            const current = document.querySelector(`#section-${section}`);
+            const next = document.querySelector(`#section-${section + 1}`);
 
-    if (next) {
-        // Hide current section and show next section
-        current.classList.remove('active');
-        current.classList.add('hidden');
-        next.classList.add('active');
-        next.classList.remove('hidden');
-
-        // Scroll to the next section
-        next.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-function submitForm() {
-    const form = document.getElementById('userForm');
-    const formData = new FormData(form);
-
-    // Debugging: Log form inputs before appending
-    console.log('Form inputs:');
-    for (let [key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`);
-    }
-
-    // Append userSelections (sections 2 to 6 data)
-    formData.append('selections', JSON.stringify(userSelections));
-
-    // Debugging: Log selections to be sent
-    console.log('User Selections:', userSelections);
-
-    // Submit data to the server
-    fetch('https://rajinteriors.in/save_quote.php', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-        },
-        body: formData,
-    })
-    .then(response => {
-        console.log('HTTP Status:', response.status);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        // Try to parse JSON; handle errors if the response isn't JSON
-        return response.text().then(text => {
-            try {
-                return JSON.parse(text);
-            } catch (error) {
-                console.error('Response is not valid JSON:', text);
-                throw new Error('Invalid JSON response from server');
+            if (next) {
+                current.classList.remove('active');
+                current.classList.add('hidden');
+                next.classList.remove('hidden');
+                next.classList.add('active');
+                next.scrollIntoView({ behavior: 'smooth' });
             }
-        });
-    })
-    .then(data => {
-        console.log('Response data:', data);
-        if (data.status === 'success') {
-            alert('Data submitted successfully!');
-            // Redirect to another page after success
-            window.location.href = 'thank_you.html'; // Change to your target page
-        } else {
-            alert('Submission failed: ' + data.message);
+
+            // Update the hidden field with selections as JSON
+            document.getElementById('selections').value = JSON.stringify(userSelections);
         }
-    })
-    .catch(error => {
-        console.error('Error during submission:', error);
-        alert('An error occurred while submitting the form.');
-    });
 
-}
+        // Function to display the popup message for 3 seconds
+        function showPopup() {
+            const popup = document.getElementById('popup');
+            if (popup.innerText.trim() !== "") {
+                popup.style.display = 'block';
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                }, 3000);
+            }
+        }
 
-
+        // Show popup after page loads
+        window.onload = showPopup;
     </script>
 </body>
 </html>

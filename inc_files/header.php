@@ -46,7 +46,7 @@
                             <div class="menu-main-menu-container">
                                 <ul id="main_menu" class="nav" style="margin-top: 13px;">
                                     <li><a href="index.php">Home</a></li>
-                                    <li class="menu-item menu-item-has-children"><a href="under-construction.php">The Vogue Studio</a>
+                                    <li class="menu-item menu-item-has-children"><a href="tvs.php">The Vogue Studio</a>
                                         <?php
                                             // Fetch parent categories
                                             $stmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = 0 ORDER BY sort_order");
@@ -104,7 +104,7 @@
                     <div id="mobile_menu" style="display: none;">
                         <ul id="mobile_menu_items">
                             <li><a href="index.php">Home</a></li>
-                            <li><a href="under-construction.php">TVS</a>
+                            <li><a href="tvs.php">TVS</a>
                                 <!-- <button class="submenu-toggle">+</button>
                                 <ul class="sub-menu">
                                     <li><a href="test1.php">ABCD</a></li>
