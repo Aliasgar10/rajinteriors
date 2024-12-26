@@ -177,58 +177,85 @@
     </section>
 
     <script>
-        const userSelections = {};
+        const userSelections = {}; // To store user selections from all sections
 
-        function nextSection(section, choice = null) {
-            if (choice) userSelections[`section_${section}`] = choice;
+function nextSection(section, choice = null) {
+    // Store user choice for the current section
+    if (choice) userSelections[`section_${section}`] = choice;
 
-            const current = document.querySelector(`#section-${section}`);
-            const next = document.querySelector(`#section-${section + 1}`);
+    // Get current and next sections
+    const current = document.querySelector(`#section-${section}`);
+    const next = document.querySelector(`#section-${section + 1}`);
 
-            if (next) {
-                current.classList.remove('active');
-                current.classList.add('hidden');
+    if (next) {
+        // Hide current section and show next section
+        current.classList.remove('active');
+        current.classList.add('hidden');
+        next.classList.add('active');
+        next.classList.remove('hidden');
 
-                next.classList.add('active');
-                next.classList.remove('hidden');
+        // Scroll to the next section
+        next.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
-                next.scrollIntoView({ behavior: 'smooth' });
+function submitForm() {
+    const form = document.getElementById('userForm');
+    const formData = new FormData(form);
+
+    // Debugging: Log form inputs before appending
+    console.log('Form inputs:');
+    for (let [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`);
+    }
+
+    // Append userSelections (sections 2 to 6 data)
+    formData.append('selections', JSON.stringify(userSelections));
+
+    // Debugging: Log selections to be sent
+    console.log('User Selections:', userSelections);
+
+    // Submit data to the server
+    fetch('https://rajinteriors.in/save_quote.php', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+        },
+        body: formData,
+    })
+    .then(response => {
+        console.log('HTTP Status:', response.status);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        // Try to parse JSON; handle errors if the response isn't JSON
+        return response.text().then(text => {
+            try {
+                return JSON.parse(text);
+            } catch (error) {
+                console.error('Response is not valid JSON:', text);
+                throw new Error('Invalid JSON response from server');
             }
+        });
+    })
+    .then(data => {
+        console.log('Response data:', data);
+        if (data.status === 'success') {
+            alert('Data submitted successfully!');
+            // Redirect to another page after success
+            window.location.href = 'thank_you.html'; // Change to your target page
+        } else {
+            alert('Submission failed: ' + data.message);
         }
+    })
+    .catch(error => {
+        console.error('Error during submission:', error);
+        alert('An error occurred while submitting the form.');
+    });
 
-        function submitForm() {
-            const formData = new FormData(document.getElementById('userForm'));
-            formData.append('selections', JSON.stringify(userSelections));
-
-            fetch('https://rajinteriors.in/save_quote.php', {
-                method: 'POST', // Ensure the method is POST
-                headers: {
-                    'Accept': 'application/json',
-                },
-                body: formData, // Attach the FormData object
-            })
-                .then(response => {
-                    console.log('HTTP Status:', response.status); // Log HTTP status
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Response data:', data); // Log response data
-                    if (data.status === 'success') {
-                        alert('Data submitted successfully!');
-                    } else {
-                        alert('Submission failed: ' + data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error during submission:', error); // Log any errors
-                    alert('An error occurred while submitting the form.');
-                });
+}
 
 
-        }
     </script>
 </body>
 </html>
