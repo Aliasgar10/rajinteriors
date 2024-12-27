@@ -460,7 +460,7 @@ let currentIndex = 0; // Current image index
 // Function to fetch images from the server
 async function fetchImages() {
     try {
-        const response = await fetch('/get-images'); // Adjust this endpoint as needed
+        const response = await fetch('/get_images.php'); // Adjust this endpoint as needed
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         
