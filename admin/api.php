@@ -22,8 +22,8 @@ ini_set('log_errors', 1);
 
 // Truncate all tables before processing
 // $conn->query("TRUNCATE TABLE categories");
-$conn->query("TRUNCATE TABLE sections");
-$conn->query("TRUNCATE TABLE uploads");
+// $conn->query("TRUNCATE TABLE sections");
+// $conn->query("TRUNCATE TABLE uploads");
 
 // Utility function to extract YouTube video ID
 if (!function_exists('getYouTubeID')) {

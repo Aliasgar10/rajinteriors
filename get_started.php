@@ -24,7 +24,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('https://picsum.photos/2000/1200');
+            background-image: url('upload/slider_01.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -64,11 +64,13 @@
             cursor: pointer;
             text-transform: uppercase;
             transition: all 0.3s ease;
+            width: 270px;
+            margin: 5px;
         }
 
         .button:hover, .option:hover {
             background-color: rgba(255, 255, 255, 0.3);
-            color: black;
+            color: white;
         }
 
         form input, form button {
@@ -128,6 +130,96 @@
             font-size: 18px;
             text-align: center;
         }
+        section{
+            display:flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        @font-face {
+            font-family: 'Operetta Bold';
+            src: url('inc_files/Operetta52-Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        section .h2{
+            color:white;
+            margin-bottom: 30px;
+            z-index: 2;
+            font-family: 'Operetta Bold';
+            font-weight: bold;
+            font-size: 50px !important;
+        }
+        .opt-6, .opt-5{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .opt-4{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .box{
+            width: 60vw;
+            /* background: azure; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+            /* width: 100vw; */
+            flex-direction: column;
+        }
+        .imgg img{
+            object-fit: contain;
+            width: 100%;
+            z-index: 3;
+            position: relative;
+            border: 10px solid white;
+        }
+        .imgg{
+            width: 50vw;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .opt{
+            width: 95vw;
+            display: flex;
+            justify-content: space-between;
+            height: 60vh;
+            align-items: center;
+        }
+        #section-2{
+            background: radial-gradient(#05a0a3, #4caf500d);
+        }
+    </style>
+    <style>
+        /* Status Bar Styles */
+        #status-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 8px;
+            background: lightgray;
+            z-index: 999;
+            display: flex;
+        }
+
+        .status-segment {
+    flex-grow: 1;
+    background: transparent;
+    /* transform: scaleX(0);  */
+    transform-origin: left; /* Animate from left to right */
+    transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+.status-segment.active {
+    background: repeating-radial-gradient(#05a0a3, #05a0a3 100px);;
+    transform: scaleX(1); /* Animate to full scale */
+}
+
+
     </style>
 </head>
 <body>
@@ -176,63 +268,107 @@
             // Close connections
             $userStmt->close();
             $quoteStmt->close();
-            $conn->close();
+            // $conn->close();
         }
     ?>
+<?php
+include 'connection/db_connect.php';
+// Fetch images from the uploads table
+$sql = "SELECT file_name FROM uploads WHERE category_id=28";
+$result = $conn->query($sql);
 
+$images = [];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $images[] = $row;
+    }
+}
+
+// Return images as JSON
+echo json_encode($images);
+
+// $conn->close();
+?>
     <!-- Popup Message -->
     <div id="popup" class="popup"><?= htmlspecialchars($message) ?></div>
 
+    <div id="status-bar">
+        <div class="status-segment" id="status-1"></div>
+        <div class="status-segment" id="status-2"></div>
+        <div class="status-segment" id="status-3"></div>
+        <div class="status-segment" id="status-4"></div>
+        <div class="status-segment" id="status-5"></div>
+        <div class="status-segment" id="status-6"></div>
+        <div class="status-segment" id="status-7"></div>
+    </div>
+
     <section id="section-1" class="active">
+        <h2 class="h2">Let's make something great together</h2>
         <button class="button" onclick="nextSection(1)">Get Started</button>
-        
     </section>
+
+
     <section id="section-2" class="hidden">
-        <div>
-            <button class="button" onclick="nextSection(2, 'Dislike')">Dislike 👎</button>
-            <button class="button" onclick="nextSection(2, 'Like')">Like 👍</button>
-        </div>
-        
-    </section>
+		<h2 class="h2">Help us know your design style better</h2>
+		<div class="opt">
+			<button class="button" onclick="nextSection('Dislike')" data-action="Dislike">Dislike 👎</button>
+			<div class="imgg">
+				<img id="dynamicImage" src="" alt="Decors">
+			</div>
+			<button class="button" onclick="nextSection('Like')" data-action="Dislike">Like 👍</button>
+		</div>
+	</section>
+
+
     <section id="section-3" class="hidden">
-        <div>
+        <h2 class="h2">I am looking for an</h2>
+        <div class="">
             <button class="button" onclick="nextSection(3, 'Interior Designer')">Interior Designer</button>
             <button class="button" onclick="nextSection(3, 'Architect')">Architect</button>
         </div>
-        
     </section>
+
     <section id="section-4" class="hidden">
-        <div>
-            <button class="option" onclick="nextSection(4, 'Home')">Home</button>
-            <button class="option" onclick="nextSection(4, 'Office')">Office</button>
-            <button class="option" onclick="nextSection(4, 'Hotel')">Hotel</button>
-            <button class="option" onclick="nextSection(4, 'Showroom')">Showroom</button>
-            <button class="option" onclick="nextSection(4, 'Restaurant')">Restaurant</button>
-            <button class="option" onclick="nextSection(4, 'Shop')">Shop</button>
+        <div class="box">
+            <h2 class="h2">The designer would work on my</h2>
+            <div class="opt-4">
+                <button class="option" onclick="nextSection(4, 'Home')">Home</button>
+                <button class="option" onclick="nextSection(4, 'Office')">Office</button>
+                <button class="option" onclick="nextSection(4, 'Hotel')">Hotel</button>
+                <button class="option" onclick="nextSection(4, 'Showroom')">Showroom</button>
+                <button class="option" onclick="nextSection(4, 'Restaurant')">Restaurant</button>
+                <button class="option" onclick="nextSection(4, 'Shop')">Shop</button>
+            </div>
         </div>
-        
     </section>
+
     <section id="section-5" class="hidden">
-        <div>
-            <button class="option" onclick="nextSection(5, '500 - 1000 Sqft')">500 - 1000 Sqft</button>
-            <button class="option" onclick="nextSection(5, '1000 - 1500 Sqft')">1000 - 1500 Sqft</button>
-            <button class="option" onclick="nextSection(5, '1500 - 2000 Sqft')">1500 - 2000 Sqft</button>
-            <button class="option" onclick="nextSection(5, 'More than 2000 Sqft')">More than 2000 Sqft</button>
+        <div class="box">
+            <h2 class="h2">My project area is</h2>        
+            <div class="opt-5">
+                <button class="option" onclick="nextSection(5, '500 - 1000 Sqft')">500 - 1000 Sqft</button>
+                <button class="option" onclick="nextSection(5, '1000 - 1500 Sqft')">1000 - 1500 Sqft</button>
+                <button class="option" onclick="nextSection(5, '1500 - 2000 Sqft')">1500 - 2000 Sqft</button>
+                <button class="option" onclick="nextSection(5, 'More than 2000 Sqft')">More than 2000 Sqft</button>
+            </div>
         </div>
-        
     </section>
+
     <section id="section-6" class="hidden">
-        <div>
-            <button class="option" onclick="nextSection(6, 'Upto Rs 15 lakhs')">Upto Rs 15 lakhs</button>
-            <button class="option" onclick="nextSection(6, '15 lakhs - 30 lakhs')">15 lakhs - 30 lakhs</button>
-            <button class="option" onclick="nextSection(6, '30 lakhs - 50 lakhs')">30 lakhs - 50 lakhs</button>
-            <button class="option" onclick="nextSection(6, 'More than 50 lakhs')">More than 50 lakhs</button>
+        <div class="box">
+            <h2 class="h2">I am willing to spend</h2>
+            <div class="opt-6">
+                <button class="option" onclick="nextSection(6, 'Upto Rs 15 lakhs')">Upto Rs 15 lakhs</button>
+                <button class="option" onclick="nextSection(6, '15 lakhs - 30 lakhs')">15 lakhs - 30 lakhs</button>
+                <button class="option" onclick="nextSection(6, '30 lakhs - 50 lakhs')">30 lakhs - 50 lakhs</button>
+                <button class="option" onclick="nextSection(6, 'More than 50 lakhs')">More than 50 lakhs</button>
+            </div>
         </div>
-        
     </section>
+
     <section id="section-7" class="hidden">
-    	<form method="POST" action="">
-            <h2 style="color: white; text-align: center; margin-bottom: 10px; position: relative; z-index: 2;">Contact me at</h2>
+        <h2 class="h2" style="color: white; text-align: center; margin-bottom: 10px; position: relative; z-index: 2;">Contact me at</h2>
+    	<form method="POST" action="">            
             <input type="text" id="name" name="name" placeholder="NAME" required>
             <input type="text" id="mobile" name="mobile" placeholder="MOBILE" required>
             <input type="email" id="email" name="email" placeholder="EMAIL-ID" required>
@@ -244,28 +380,64 @@
     </section>
 
 
+	
 
     <script>
         let userSelections = {};
 
         // Function to navigate sections and store selections
-        function nextSection(section, choice = null) {
-            if (choice) userSelections[`section_${section}`] = choice;
+        // function nextSection(section, choice = null) {
+        //     if (choice) userSelections[`section_${section}`] = choice;
 
-            const current = document.querySelector(`#section-${section}`);
-            const next = document.querySelector(`#section-${section + 1}`);
+        //     const current = document.querySelector(`#section-${section}`);
+        //     const next = document.querySelector(`#section-${section + 1}`);
 
-            if (next) {
-                current.classList.remove('active');
-                current.classList.add('hidden');
-                next.classList.remove('hidden');
-                next.classList.add('active');
-                next.scrollIntoView({ behavior: 'smooth' });
-            }
+        //     if (next) {
+        //         current.classList.remove('active');
+        //         current.classList.add('hidden');
+        //         next.classList.remove('hidden');
+        //         next.classList.add('active');
+        //         next.scrollIntoView({ behavior: 'smooth' });
+        //     }
 
-            // Update the hidden field with selections as JSON
-            document.getElementById('selections').value = JSON.stringify(userSelections);
+        //     // Update the hidden field with selections as JSON
+        //     document.getElementById('selections').value = JSON.stringify(userSelections);
+        // }
+
+        // Function to update the status bar
+        function updateStatusBar(activeSection) {
+            const segments = document.querySelectorAll('.status-segment');
+            segments.forEach((segment, index) => {
+                if (index < activeSection) {
+                    segment.classList.add('active');
+                } else {
+                    segment.classList.remove('active');
+                }
+            });
         }
+
+        function nextSection(section, choice = null) {
+        if (choice) userSelections[`section_${section}`] = choice;
+
+        const current = document.querySelector(`#section-${section}`);
+        const next = document.querySelector(`#section-${section + 1}`);
+
+        if (next) {
+            current.classList.remove('active');
+            current.classList.add('hidden');
+            next.classList.remove('hidden');
+            next.classList.add('active');
+            next.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Update the status bar
+        updateStatusBar(section + 1);
+
+        // Update the hidden field with selections as JSON
+        document.getElementById('selections').value = JSON.stringify(userSelections);
+    }
+
+
 
         // Function to display the popup message for 3 seconds
         function showPopup() {
@@ -281,5 +453,62 @@
         // Show popup after page loads
         window.onload = showPopup;
     </script>
+    <script>
+	let images = []; // Array to store image objects
+let currentIndex = 0; // Current image index
+
+// Function to fetch images from the server
+async function fetchImages() {
+    try {
+        const response = await fetch('/get-images'); // Adjust this endpoint as needed
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        
+        // Construct full image URLs
+        images = data.map(image => ({
+            url: `uploads/assets/images/${image.file_name}`,
+            name: image.file_name
+        }));
+
+        if (images.length > 0) {
+            displayImage(currentIndex); // Display the first image
+        } else {
+            alert('No images available');
+        }
+    } catch (error) {
+        console.error('Error fetching images:', error);
+        alert('Failed to load images. Please try again later.');
+    }
+}
+
+// Function to display the current image
+function displayImage(index) {
+    const imgElement = document.getElementById('dynamicImage');
+    if (index < images.length) {
+        imgElement.src = images[index].url;
+        imgElement.alt = images[index].name;
+    } else {
+        imgElement.src = '';
+        imgElement.alt = 'No more images';
+        alert('You have reached the end!');
+    }
+}
+
+// Function to handle Like/Dislike button clicks
+function nextSection(action) {
+    console.log(`User clicked: ${action}`);
+    currentIndex++;
+    if (currentIndex < images.length) {
+        displayImage(currentIndex);
+    } else {
+        alert('Thank you for your feedback!');
+    }
+}
+
+// Call fetchImages on page load
+document.addEventListener('DOMContentLoaded', fetchImages);
+
+
+	</script>
 </body>
 </html>

@@ -266,7 +266,7 @@ ini_set('log_errors', 1);
                                                 </script>
                                         <?php
                                             // Fetch all categories except IDs 1 and 11
-                                            $categoryQuery = "SELECT id, category_name FROM categories WHERE id NOT IN (1, 12, 25) ORDER BY id ASC";
+                                            $categoryQuery = "SELECT id, category_name FROM categories WHERE id NOT IN (1, 12, 25,26,27,28) ORDER BY id ASC";
                                             $categoryResult = $conn->query($categoryQuery);
 
                                             if ($categoryResult->num_rows > 0) {
