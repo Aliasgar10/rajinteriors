@@ -252,6 +252,9 @@
         padding-left: 15px;
         list-style: none;
     }
+    #get{
+        display:none;
+    }
 
     /* Submenu toggle button */
     .menu-item-has-children {
@@ -273,6 +276,9 @@
     @media screen and (max-width: 768px) {
         #main_menu .sub-menu {
             display: none;
+        }
+        #get{
+            display:block;
         }
     }
 

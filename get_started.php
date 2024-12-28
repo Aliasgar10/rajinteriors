@@ -268,7 +268,7 @@
                 #x1{
                     z-index: 4;
                     bottom: -150px;
-                    left: 10px;
+                    left: 20px;
                     border: none;
                     background-color: rgb(0 0 0 / 23%);
                 }
@@ -293,7 +293,7 @@
                     position: relative;
                     border: 10px solid white;
                     top: -80px;
-                    left: -50px;
+                    left: -53px;
 
                 }
                 .opt-3{

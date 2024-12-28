@@ -312,7 +312,9 @@
         padding-left: 15px;
         list-style: none;
     }
-
+    #get{
+        display:block;
+    }
     /* Submenu toggle button */
     .menu-item-has-children {
         position: relative;
