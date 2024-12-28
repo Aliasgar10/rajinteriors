@@ -279,9 +279,9 @@
                         foreach ($data['section_2'] ?? [] as $image) {
                             foreach ($image as $fileName => $feedback) {
                                 if (strtolower($feedback) === 'like') {
-                                    $likedImages[] = $fileName;
+                                    $likedImages[] = "https://rajinteriors.in/uploads/assets/get_a_quote/".$fileName;
                                 } else {
-                                    $unlikedImages[] = $fileName;
+                                    $unlikedImages[] = "https://rajinteriors.in/uploads/assets/get_a_quote/".$fileName;
                                 }
                             }
                         }
@@ -299,7 +299,26 @@
                             ':format_res' => $formattedResponseJSON,
                         ]);
 
-                        echo "<script>alert('Data saved successfully!');</script>";
+                        // Post the formatted response JSON to the Google Apps Script endpoint
+                        $googleScriptURL = "https://script.google.com/macros/s/AKfycbzT3PI2mWfXDVkIFjpekvI9UQ_5c1nLOzOfUj4xsjy5zC2wzEWGOhaKj71D-QTtUaha/exec";
+
+                        $ch = curl_init($googleScriptURL);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        curl_setopt($ch, CURLOPT_POST, true);
+                        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                            'Content-Type: application/json',
+                        ]);
+                        curl_setopt($ch, CURLOPT_POSTFIELDS, $formattedResponseJSON);
+
+                        $googleResponse = curl_exec($ch);
+                        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                        curl_close($ch);
+
+                        // if ($httpCode === 200) {
+                        //     echo "<script>alert('Data saved and sent to Google Apps Script successfully!');</script>";
+                        // } else {
+                        //     echo "<script>alert('Data saved but failed to send to Google Apps Script. Please check the script URL or network connectivity.');</script>";
+                        // }
                     }
                 } catch (PDOException $e) {
                     echo "<script>alert('Database error: " . addslashes($e->getMessage()) . "');</script>";
