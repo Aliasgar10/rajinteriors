@@ -153,7 +153,7 @@
             }
             section .h2{
                 color:white;
-                margin-bottom: 30px;
+                margin-bottom: 60px;
                 z-index: 2;
                 font-family: 'Operetta Bold';
                 font-weight: bold;
@@ -231,6 +231,83 @@
             }
 
 
+        </style>
+        <!-- mobile responsive -->
+        <style>
+            @media only screen and (max-width: 520px) {
+                body, html {
+                    height: 100%;
+                    width: 100%;
+                    font-family: Arial, sans-serif;
+                    scroll-behavior: smooth;
+                }
+                section .h2 {
+                    color: white;
+                    margin-bottom: 30px;
+                    z-index: 2;
+                    font-family: 'Operetta Bold';
+                    font-weight: bold;
+                    font-size: 30px !important;
+                    text-align: center;
+                }
+                button, .option {
+                    position: relative;
+                    z-index: 2;
+                    padding: 15px 0;
+                    font-size: 13px;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border: 2px solid white;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease;
+                    width: 150px;
+                    margin: 1px;
+                }
+                #x1{
+                    z-index: 4;
+                    bottom: -150px;
+                    left: 10px;
+                    border: none;
+                    background-color: rgb(0 0 0 / 23%);
+                }
+                #x2{
+                    bottom: -150px;
+                    right: 100px;
+                    border: none;
+                    background-color: rgb(0 0 0 / 23%);
+                }
+                .imgg {
+                    width: 50vw;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .imgg img {
+                    object-fit: contain;
+                    /* width: 100%; */
+                    height: 38vh;
+                    z-index: 3;
+                    position: relative;
+                    border: 10px solid white;
+                    top: -80px;
+                    left: -50px;
+
+                }
+                .opt-3{
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 10px;
+                }
+                .opt-4 {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 10px
+                }
+
+            }
         </style>
     </head>
     <body>
@@ -344,17 +421,17 @@
         <section id="section-2" class="hidden">
             <h2 class="h2">Help us know your design style better</h2>
             <div class="opt">
-                <button class="button" onclick="handleImageFeedback('Dislike')" data-action="Dislike">Dislike 👎</button>
+                <button class="button" onclick="handleImageFeedback('Dislike')" data-action="Dislike" id="x1">Dislike 👎</button>
                 <div class="imgg">
                     <img id="dynamicImage" src="" alt="Decors">
                 </div>
-                <button class="button" onclick="handleImageFeedback('Like')" data-action="Dislike">Like 👍</button>
+                <button class="button" onclick="handleImageFeedback('Like')" data-action="Dislike" id="x2">Like 👍</button>
             </div>
         </section>
 
         <section id="section-3" class="hidden">
             <h2 class="h2">I am looking for an</h2>
-            <div>
+            <div class="opt-3">
                 <button class="button" data-section="3" data-key="looking_for" data-value="Interior Designer">Interior Designer</button>
                 <button class="button" data-section="3" data-key="looking_for" data-value="Architect">Architect</button>
             </div>
