@@ -66,7 +66,7 @@ ini_set('log_errors', 1);
                                 <div class="blog_post_content_wrapper layout_grid">
                                     <div id="imageContainer">
                                         <?php
-                                            $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category_id=1 LIMIT 9"; // Initial limit
+                                            $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category_id=2 LIMIT 9"; // Initial limit
                                             $result = $conn->query($query);
 
                                             if ($result->num_rows > 0) {
