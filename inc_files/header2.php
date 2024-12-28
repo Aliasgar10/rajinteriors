@@ -119,6 +119,30 @@
                     </div>
                 </div>
             </div>
+            <div id="get">
+                <a href="get_started.php" class="geta">Get Started</a>
+            </div>
+            <style>
+                #get{
+                    /* border-radius: 0px; */
+                    /* padding: 10px 20px; */
+                    /* width: fit-content; */
+                    position: absolute;
+                    right: 0;
+                    margin-top: 26px;
+                    margin-right: 20px;
+                }
+                .geta{
+                    padding: 10px 20px;
+                    background-color: #333;
+                    color:white;
+                }  
+                #get a:hover{
+                    /* background:transparent; */
+                    color:white;
+                    border:2px solid #fff;
+                }
+            </style>
         </div>
     </div>
 </div>

@@ -17,6 +17,7 @@
 <div class="header_style_wrapper">
     <div class="top_bar hasbg">
         <div class="standard_wrapper">
+            <!-- Logo container -->
             <div id="logo_wrapper">
                 <div id="logo_normal" class="logo_container">
                     <div class="logo_align">
@@ -33,6 +34,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Menu Container -->
             <div id="menu_wrapper">
                 <style>
                     .nav li a{
@@ -91,13 +93,13 @@
                                     </li>
                                     <li><a href="gallery.php">Gallery</a></li>
                                     <li><a href="service.php">Services</a></li>
-                                    <li><a href="contact-1.php">Contact</a></li>
+                                    <li><a href="contact-1.php">Contact</a></li>                                    
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Mobile Menu (Hamburger Icon) -->
                 <div id="mobile_menu_wrapper" style="display: none; color: grey;">
                     <button id="hamburger_icon" style="color: #b8b8b8;">&#9776;</button>
@@ -120,6 +122,31 @@
                     </div>
                 </div>
             </div>
+            <div id="get">
+                <a href="get_started.php" class="geta">Get Started</a>
+            </div>
+            <style>
+                #get{
+                    /* border-radius: 0px; */
+                    /* padding: 10px 20px; */
+                    /* width: fit-content; */
+                    position: absolute;
+                    right: 0;
+                    margin-top: 26px;
+                    margin-right: 20px;
+                }
+                .geta{
+                    padding: 10px 20px;
+                    background-color: #333;
+                    color:white;
+                }  
+                #get a:hover{
+                    /* background:transparent; */
+                    color:white;
+                    border:2px solid #fff;
+                }
+            </style>
+
         </div>
     </div>
 </div>
