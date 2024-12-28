@@ -8,12 +8,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TVS - Get Started Page</title>
+        <title>Get Started</title>
         <!-- Favicon -->
         <!-- <link rel="icon" type="imagg/tvs_fav.png" href="favicon.png"> -->
-        <link rel="icon" href="imagg/tvs_fav.png" sizes="32x32">
-        <link rel="icon" href="imagg/tvs_fav.png" sizes="192x192">
-        <link rel="apple-touch-icon-precomposed" href="imagg/tvs_fav.png">
+        <link rel="icon" href="upload/TG-Thumb.png">
+        <link rel="icon" href="upload/TG-Thumb.png">
+        <link rel="apple-touch-icon-precomposed" href="upload/TG-Thumb.png">
         <style>
             * {
                 margin: 0;
@@ -182,6 +182,7 @@
             .imgg img{
                 object-fit: contain;
                 /* width: 100%; */
+                height: 70vh;
                 z-index: 3;
                 position: relative;
                 border: 10px solid white;

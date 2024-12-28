@@ -20,7 +20,7 @@
 
     <link rel="icon" href="upload/TG-Thumb.png">
     <link rel="icon" href="upload/TG-Thumb.png">
-    <!-- <link rel="apple-touch-icon-precomposed" href="upload/TG-Thumb.png"> -->
+    <link rel="apple-touch-icon-precomposed" href="upload/TG-Thumb.png">
 
 
 </head>
