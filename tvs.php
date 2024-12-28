@@ -27,9 +27,9 @@
 
 
 
-    <link rel="icon" href="upload/TG-Thumb.png" sizes="32x32">
-    <link rel="icon" href="upload/TG-Thumb.png" sizes="192x192">
-    <link rel="apple-touch-icon-precomposed" href="upload/TG-Thumb.png">
+    <link rel="icon" href="imagg/tvs_fav.png" sizes="32x32">
+    <link rel="icon" href="imagg/tvs_fav.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="imagg/tvs_fav.png">
 <style>
     .wrapper{
         padding-top: 0px !important;
