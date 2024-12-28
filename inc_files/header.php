@@ -253,7 +253,7 @@
         list-style: none;
     }
     #get{
-        display:none;
+        display:block;
     }
 
     /* Submenu toggle button */
@@ -278,7 +278,7 @@
             display: none;
         }
         #get{
-            display:block;
+            display:none;
         }
     }
 
