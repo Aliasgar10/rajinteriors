@@ -31,7 +31,7 @@ $offset = isset($_GET['offset']) ? intval($_GET['offset']) : 0;
 $images_per_page = 9;
 
 // Fetch images from the database
-$query = "SELECT file_url, file_name FROM uploads WHERE file_type = 'image' AND category_id='1' LIMIT $images_per_page OFFSET $offset";
+$query = "SELECT file_url, file_name FROM uploads WHERE file_type = 'image' AND category_id='2' LIMIT $images_per_page OFFSET $offset";
 $result = $conn->query($query);
 
 if ($result && $result->num_rows > 0) {
