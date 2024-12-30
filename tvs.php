@@ -142,8 +142,10 @@
                                                                                         }
                                                                                         .popup-content {
                                                                                             position: absolute;
-                                                                                            top: 25% !important;
-                                                                                            min-height: 600px;
+                                                                                            top: 56% !important;
+                                                                                            max-height: 480px;
+                                                                                            overflow-y: scroll;
+                                                                                            height: fit-content
                                                                                             /* height: 713px !important; */
                                                                                         }
                                                                                         .child-category-link {
