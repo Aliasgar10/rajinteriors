@@ -197,7 +197,7 @@
             background-color: beige;
             padding: 10px;
             position: absolute; /* Position the menu above other content */
-            top: 85px; /* Adjust this to position the menu correctly below the hamburger */
+            top: 88px; /* Adjust this to position the menu correctly below the hamburger */
             left: 0;
             width: 100%;
             z-index: 1000;  /* Ensure the mobile menu appears above other elements */
@@ -213,6 +213,11 @@
 
         #mobile_menu li {
             margin: 10px 0;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        #mobile_menu li:hover {
+            background: #d3ced2;
         }
 
         #mobile_menu a {
