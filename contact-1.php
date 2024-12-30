@@ -277,7 +277,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                                     <?php if (!empty($message) && $message !== "success"): ?>
                                                                                         <div class="error-message"><?= htmlspecialchars($message); ?></div>
                                                                                     <?php endif; ?>                                                                        
-                                                                                <form id="testForm" class="quform" action="javascript:void(0);" method="POST" enctype="multipart/form-data">
+                                                                                <form id="testForm" class="quform" action="" method="POST" enctype="multipart/form-data">
                                                                                     <div class="quform-elements">
                                                                                         <div class="quform-element">
                                                                                             <br>
