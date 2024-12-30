@@ -18,6 +18,45 @@
     // Log errors to a file (optional)
     ini_set('log_errors', 1);
 ?>
+<?php
+
+$message = ""; // To display success or error message
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Collect data from POST
+    $user_name = $_POST['user_name'] ?? '';
+    $user_email = $_POST['user_email'] ?? '';
+    $messages = $_POST['messages'] ?? '';
+
+    // Validate input
+    if (empty($user_name) || empty($user_email) || empty($messages)) {
+        $message = "All fields are required.";
+    } else {
+            
+        // Prepare SQL query
+        $stmt = $conn->prepare("INSERT INTO user_messages (user_name, user_email, messages) VALUES (?, ?, ?)");
+        if (!$stmt) {
+            $message = "SQL Prepare Failed: " . $conn->error;
+        } else {
+            $stmt->bind_param("sss", $user_name, $user_email, $messages);
+
+            if ($stmt->execute()) {
+                $message = "success"; // Mark success
+            } else {
+                $message = "SQL Execution Failed: " . $stmt->error;
+            }
+
+            $stmt->close();
+        }
+        // $conn->close();
+    }
+    // If success, refresh the page
+    if ($message === "success") {
+        header("Location: service.php");
+        exit;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
 
@@ -585,22 +624,31 @@
                                                                         <div class="elementor-shortcode">
                                                                             <div role="form" class="wpcf7" id="wpcf7-f5-p826-o1" lang="en-US" dir="ltr">
                                                                                 <div class="screen-reader-response"></div>
-                                                                                <form action="#" method="post" class="wpcf7-form" novalidate="novalidate">
+                                                                                <form action="" method="post" class="wpcf7-form" novalidate="novalidate">
 
                                                                                     <p>
                                                                                         <label> Your Name (required)
                                                                                             <br>
-                                                                                            <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> </label>
+                                                                                            <span class="wpcf7-form-control-wrap your-name">
+                                                                                                <input type="text" name="user_name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                                                                                            </span> 
+                                                                                        </label>
                                                                                     </p>
                                                                                     <p>
                                                                                         <label> Your Email (required)
                                                                                             <br>
-                                                                                            <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false"></span> </label>
+                                                                                            <span class="wpcf7-form-control-wrap your-email">
+                                                                                                <input type="email" name="user_email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false">
+                                                                                            </span> 
+                                                                                        </label>
                                                                                     </p>
                                                                                     <p>
                                                                                         <label> Your Message
                                                                                             <br>
-                                                                                            <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="3" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </label>
+                                                                                            <span class="wpcf7-form-control-wrap your-message">
+                                                                                                <textarea name="messages" cols="40" rows="3" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
+                                                                                            </span> 
+                                                                                        </label>
                                                                                     </p>
                                                                                     <p>
                                                                                         <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit">
