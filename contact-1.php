@@ -1,3 +1,52 @@
+<?php
+// Enable error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+
+$message = ""; // To display success or error message
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Collect data from POST
+    $user_name = $_POST['user_name'] ?? '';
+    $user_email = $_POST['user_email'] ?? '';
+    $messages = $_POST['messages'] ?? '';
+
+    // Validate input
+    if (empty($user_name) || empty($user_email) || empty($messages)) {
+        $message = "All fields are required.";
+    } else {
+        // Database connection
+        $conn = new mysqli('localhost', 'rajinteriors', '7ku~3AksgI75Edzrp', 'rajinteriors');
+        if ($conn->connect_error) {
+            echo "Database Connection Failed: " . $conn->connect_error;
+            exit;
+        } else {
+            // Prepare SQL query
+            $stmt = $conn->prepare("INSERT INTO user_messages (user_name, user_email, messages) VALUES (?, ?, ?)");
+            if (!$stmt) {
+                $message = "SQL Prepare Failed: " . $conn->error;
+            } else {
+                $stmt->bind_param("sss", $user_name, $user_email, $messages);
+
+                if ($stmt->execute()) {
+                    $message = "success"; // Mark success
+                } else {
+                    $message = "SQL Execution Failed: " . $stmt->error;
+                }
+
+                $stmt->close();
+            }
+            $conn->close();
+        }
+    }
+
+    // If success, refresh the page
+    if ($message === "success") {
+        header("Location: contact-1.php");
+        exit;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
 
@@ -208,86 +257,59 @@
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-shortcode">
                                                                             <div role="form" class="wpcf7" id="wpcf7-f5-p922-o1" lang="en-US" dir="ltr">
-                                                                                <div class="screen-reader-response"></div>
+                                                                                <div class="screen-reader-response"></div>   
                                                                                 <style>
-        .flash-message {
-            display: none;
-            padding: 10px;
-            margin-top: 10px;
-            color: #fff;
-            background-color: #28a745;
-            border-radius: 5px;
-        }
-    </style>
+                                                                                    .flash-message {
+                                                                                        padding: 10px;
+                                                                                        margin-top: 10px;
+                                                                                        color: #fff;
+                                                                                        background-color: #28a745;
+                                                                                        border-radius: 5px;
+                                                                                    }
+                                                                                    .error-message {
+                                                                                        padding: 10px;
+                                                                                        margin-top: 10px;
+                                                                                        color: #fff;
+                                                                                        background-color: #dc3545;
+                                                                                        border-radius: 5px;
+                                                                                    }
+                                                                                </style>     
+                                                                                    <?php if (!empty($message) && $message !== "success"): ?>
+                                                                                        <div class="error-message"><?= htmlspecialchars($message); ?></div>
+                                                                                    <?php endif; ?>                                                                        
                                                                                 <form id="testForm" class="quform" action="javascript:void(0);" method="POST" enctype="multipart/form-data">
-        <div class="quform-elements">
-            <div class="quform-element">
-                <br>
-                <span class="wpcf7-form-control-wrap your-name">
-                    <input id="name" type="text" name="user_name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*" required>
-                </span>
-            </div>
-            <div class="quform-element">
-                <br>
-                <span class="wpcf7-form-control-wrap your-email">
-                    <input id="email" type="email" name="user_email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*" required>
-                </span>
-            </div>
-            <div class="quform-element">
-                <br>
-                <span class="wpcf7-form-control-wrap your-message">
-                    <textarea id="message" name="messages" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*" required></textarea>
-                </span>
-            </div>
+                                                                                    <div class="quform-elements">
+                                                                                        <div class="quform-element">
+                                                                                            <br>
+                                                                                            <span class="wpcf7-form-control-wrap your-name">
+                                                                                                <input id="name" type="text" name="user_name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*" required>
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="quform-element">
+                                                                                            <br>
+                                                                                            <span class="wpcf7-form-control-wrap your-email">
+                                                                                                <input id="email" type="email" name="user_email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*" required>
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="quform-element">
+                                                                                            <br>
+                                                                                            <span class="wpcf7-form-control-wrap your-message">
+                                                                                                <textarea id="message" name="messages" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*" required></textarea>
+                                                                                            </span>
+                                                                                        </div>
 
-            <!-- Submit Button -->
-            <div class="quform-submit">
-                <div class="quform-submit-inner">
-                    <button type="submit" name="submitt" class="submit-button"><span>Send</span></button>
-                </div>
-                <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
-            </div>
-        </div>
-    </form>
-
-    <div class="flash-message" id="flashMessage">Data submitted successfully!</div>
-
-    <script>
-        $(document).ready(function () {
-            $('#testForm').on('submit', function (e) {
-                e.preventDefault(); // Prevent default form submission
-
-                // Collect form data
-                const formData = {
-                    user_name: $('#name').val(),
-                    user_email: $('#email').val(),
-                    messages: $('#message').val()
-                };
-
-                // AJAX request
-                $.ajax({
-                    url: 'insert_user.php',
-                    type: 'POST',
-                    data: formData,
-                    success: function (response) {
-                        console.log("Response:", response); // Log the response
-                        if (response.trim() === 'success') {
-                            $('#flashMessage').fadeIn().delay(3000).fadeOut();
-                            $('#testForm')[0].reset();
-                        } else {
-                            alert('Server Error: ' + response); // Display error message from server
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        console.error("AJAX Error:", error);
-                        console.error("Response Text:", xhr.responseText);
-                        alert('An Ajax error occurred.');
-                    }
-                });
-
-            });
-        });
-    </script>
+                                                                                        <!-- Submit Button -->
+                                                                                        <div class="quform-submit">
+                                                                                            <div class="quform-submit-inner">
+                                                                                                <button type="submit" name="submitt" class="submit-button"><span>Send</span></button>
+                                                                                            </div>
+                                                                                            <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                                <?php if ($message === "success"): ?>
+                                                                                    <div class="flash-message">Data submitted successfully!</div>
+                                                                                <?php endif; ?>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -326,7 +348,60 @@
 
 
 
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Enable error reporting
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
 
+        // Collect data from POST
+        $user_name = $_POST['user_name'] ?? '';
+        $user_email = $_POST['user_email'] ?? '';
+        $messages = $_POST['messages'] ?? '';
+
+        // Validate input
+        if (empty($user_name) || empty($user_email) || empty($messages)) {
+            echo "All fields are required.";
+            exit;
+        }
+
+        // Database configuration
+        $host = "localhost";
+        $username = "rajinteriors";
+        $password = "7ku~3AksgI75Edzrp";
+        $database = "rajinteriors";
+
+        // Create connection
+        $conn = new mysqli($host, $username, $password, $database);
+
+        // Check connection
+        if ($conn->connect_error) {
+            echo "Database connection failed: " . $conn->connect_error;
+            exit;
+        }
+
+        // Prepare SQL query
+        $stmt = $conn->prepare("INSERT INTO user_messages (user_name, user_email, messages) VALUES (?, ?, ?)");
+        if (!$stmt) {
+            echo "SQL Prepare Failed: " . $conn->error;
+            exit;
+        }
+
+        $stmt->bind_param("sss", $user_name, $user_email, $messages);
+
+        // Execute the query
+        if ($stmt->execute()) {
+            echo "success"; // Respond with success
+        } else {
+            echo "SQL Execution Failed: " . $stmt->error;
+        }
+
+        // Close connections
+        $stmt->close();
+        $conn->close();
+        exit;
+    }
+    ?>
     <script src="js/plugins/jquery.js" defer="defer" type="text/javascript"></script>
     <script src="js/plugins/jquery-migrate.min.js" defer="defer" type="text/javascript"></script>
     <script src="js/plugins/core.min.js" defer="defer" type="text/javascript"></script>
