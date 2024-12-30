@@ -1,5 +1,5 @@
 <?php
-
+echo "hello";
 // Database configuration
 $host = "localhost";
 $username = "rajinteriors";
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_name = $_POST['user_name'];
     $user_email = $_POST['user_email'];
     $message = $_POST['messages'];
-    
+
 echo $user_name;
 echo $user_email;
 echo $message;
