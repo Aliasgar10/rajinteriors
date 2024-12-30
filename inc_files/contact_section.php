@@ -1,3 +1,52 @@
+<?php
+    // Enable error reporting
+    error_reporting(E_ALL);
+    ini_set('display_errors', 0);
+
+    $message = ""; // To display success or error message
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Collect data from POST
+        $user_name = $_POST['user_name'] ?? '';
+        $user_email = $_POST['user_email'] ?? '';
+        $messages = $_POST['messages'] ?? '';
+
+        // Validate input
+        if (empty($user_name) || empty($user_email) || empty($messages)) {
+            $message = "All fields are required.";
+        } else {
+            // Database connection
+            $conn = new mysqli('localhost', 'rajinteriors', '7ku~3AksgI75Edzrp', 'rajinteriors');
+            if ($conn->connect_error) {
+                echo "Database Connection Failed: " . $conn->connect_error;
+                exit;
+            } else {
+                // Prepare SQL query
+                $stmt = $conn->prepare("INSERT INTO user_messages (user_name, user_email, messages) VALUES (?, ?, ?)");
+                if (!$stmt) {
+                    $message = "SQL Prepare Failed: " . $conn->error;
+                } else {
+                    $stmt->bind_param("sss", $user_name, $user_email, $messages);
+
+                    if ($stmt->execute()) {
+                        $message = "success"; // Mark success
+                    } else {
+                        $message = "SQL Execution Failed: " . $stmt->error;
+                    }
+
+                    $stmt->close();
+                }
+                
+            }
+        }
+
+        // If success, refresh the page
+        if ($message === "success") {
+            header("Location: contact-1.php");
+            exit;
+        }
+    }
+?>
 <section data-id="f99cfe0" class="elementor-element elementor-element-f99cfe0 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
     <div class="elementor-container elementor-column-gap-default">
         <div class="elementor-row">
@@ -20,7 +69,7 @@
                                 <div class="elementor-shortcode">
                                     <div role="form" class="wpcf7" id="wpcf7-f5-p1877-o1" lang="en-US" dir="ltr">
                                         <div class="screen-reader-response"></div>
-                                            <form class="quform" action="../insert_user.php" method="post" enctype="multipart/form-data" onclick="">
+                                            <form class="quform" action="" method="post" enctype="multipart/form-data" onclick="">
 
                                                 <div class="quform-elements">
                                                     <div class="quform-element">
@@ -73,3 +122,6 @@
         </div>
     </div>
 </section>
+<?php
+    $conn->close();
+?>
