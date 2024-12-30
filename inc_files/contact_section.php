@@ -20,7 +20,7 @@
                                 <div class="elementor-shortcode">
                                     <div role="form" class="wpcf7" id="wpcf7-f5-p1877-o1" lang="en-US" dir="ltr">
                                         <div class="screen-reader-response"></div>
-                                            <form class="quform" action="js/plugins/quform/process.php" method="post" enctype="multipart/form-data" onclick="">
+                                            <form class="quform" action="insert_user.php" method="post" enctype="multipart/form-data" onclick="">
 
                                                 <div class="quform-elements">
                                                     <div class="quform-element">
