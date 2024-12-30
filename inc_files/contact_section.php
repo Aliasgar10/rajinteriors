@@ -27,7 +27,7 @@
                                                         
                                                             <br>
                                                             <span class="wpcf7-form-control-wrap your-name">
-                                                                <input id="name" type="text" name="name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*">
+                                                                <input id="name" type="text" name="eser_name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*">
                                                             </span> 
                                                         
                                                     </div>
@@ -35,7 +35,7 @@
                                                         
                                                             <br>
                                                             <span class="wpcf7-form-control-wrap your-email">
-                                                                <input id="email" type="text" name="email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*">
+                                                                <input id="email" type="text" name="user_email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*">
                                                             </span> 
                                                         
                                                     </div>
@@ -43,7 +43,7 @@
                                                         
                                                             <br>
                                                             <span class="wpcf7-form-control-wrap your-message">
-                                                                <textarea  id="message" name="message" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*"></textarea>
+                                                                <textarea  id="message" name="messages" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*"></textarea>
                                                             </span>
                                                         
                                                     </div>
