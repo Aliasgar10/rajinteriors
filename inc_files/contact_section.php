@@ -42,7 +42,7 @@
 
         // If success, refresh the page
         if ($message === "success") {
-            header("Location: contact-1.php");
+            header("Location: index.php");
             exit;
         }
     }
