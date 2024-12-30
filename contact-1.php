@@ -209,7 +209,7 @@
                                                                         <div class="elementor-shortcode">
                                                                             <div role="form" class="wpcf7" id="wpcf7-f5-p922-o1" lang="en-US" dir="ltr">
                                                                                 <div class="screen-reader-response"></div>
-                                                                                    <form class="quform" action="insert_user.php" method="post" enctype="multipart/form-data" onclick="">
+                                                                                    <form id="testForm" class="quform" action="insert_user.php" method="POST" enctype="multipart/form-data" onclick="">
 
                                                                                         <div class="quform-elements">
                                                                                             <div class="quform-element">
@@ -247,6 +247,17 @@
                                                                                             
                                                                                         </div>
                                                                                     </form>
+                                                                                    <script>
+                                                                                    document.getElementById("testForm").addEventListener("submit", function (e) {
+                                                                                        e.preventDefault(); // Prevent actual submission for debugging
+                                                                                        const formData = new FormData(this);
+                                                                                        console.log("Form Data:");
+                                                                                        for (let [key, value] of formData.entries()) {
+                                                                                            console.log(key, value);
+                                                                                        }
+                                                                                        this.submit(); // Uncomment this line to allow actual submission
+                                                                                    });
+                                                                                </script>
                                                                             </div>
                                                                         </div>
                                                                     </div>

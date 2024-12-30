@@ -1,5 +1,9 @@
 <?php
-echo "hello";
+echo "hello<br>";
+
+// Enable error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // Database configuration
 $host = "localhost";
@@ -9,23 +13,22 @@ $database = "rajinteriors";
 
 // Database connection
 $conn = new mysqli($host, $username, $password, $database);
-
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-error_reporting(E_ALL);
-// Display errors on the screen
-ini_set('display_errors', 1);
-// Log errors to a file (optional)
-ini_set('log_errors', 1);
+// Debug: Check if POST data is received
+if (empty($_POST)) {
+    echo "No POST data received. Check the form and ensure method='POST'.";
+    exit;
+}
 
-// Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Check for POST request
+// Check for POST request
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Get form data
-    $user_name = $_POST['user_name'] ?? 'name';
-    $user_email = $_POST['user_email'] ?? 'email';
-    $message = $_POST['messages'] ?? 'messege';
+    $user_name = $_POST['user_name'] ?? 'default_name';
+    $user_email = $_POST['user_email'] ?? 'default_email';
+    $message = $_POST['messages'] ?? 'default_message';
 
     // Debugging: Display received data
     echo "Received Data: <br>";
