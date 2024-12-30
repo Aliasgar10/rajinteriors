@@ -4,10 +4,6 @@
     ini_set('display_errors', 1);
     // Log errors to a file (optional)
     ini_set('log_errors', 1);
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -146,7 +142,7 @@
                                                                                         }
                                                                                         .popup-content {
                                                                                             position: absolute;
-                                                                                            top: 0% !important;
+                                                                                            top: 25% !important;
                                                                                             min-height: 600px;
                                                                                             /* height: 713px !important; */
                                                                                         }
