@@ -20,14 +20,14 @@
                                 <div class="elementor-shortcode">
                                     <div role="form" class="wpcf7" id="wpcf7-f5-p1877-o1" lang="en-US" dir="ltr">
                                         <div class="screen-reader-response"></div>
-                                            <form class="quform" action="insert_user.php" method="post" enctype="multipart/form-data" onclick="">
+                                            <form class="quform" action="../insert_user.php" method="post" enctype="multipart/form-data" onclick="">
 
                                                 <div class="quform-elements">
                                                     <div class="quform-element">
                                                         
                                                             <br>
                                                             <span class="wpcf7-form-control-wrap your-name">
-                                                                <input id="name" type="text" name="eser_name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*">
+                                                                <input id="name" type="text" name="user_name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*">
                                                             </span> 
                                                         
                                                     </div>
@@ -35,7 +35,7 @@
                                                         
                                                             <br>
                                                             <span class="wpcf7-form-control-wrap your-email">
-                                                                <input id="email" type="text" name="user_email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*">
+                                                                <input id="email" type="email" name="user_email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*">
                                                             </span> 
                                                         
                                                     </div>

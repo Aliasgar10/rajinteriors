@@ -4,7 +4,7 @@
     ini_set('display_errors', 1);
     // Log errors to a file (optional)
     ini_set('log_errors', 1);
-
+// echo "hello";
 // Database configuration
 $host = 'localhost';
 $db_name = 'rajinteriors';
@@ -25,7 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_name = $_POST['user_name'];
     $user_email = $_POST['user_email'];
     $message = $_POST['messages'];
-
+echo $user_name;
+echo $user_email;
+echo $message;
+die;
     // Prepare SQL statement
     $stmt = $conn->prepare("INSERT INTO user_messages (user_name, user_email, messages) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $user_name, $user_email, $message);
