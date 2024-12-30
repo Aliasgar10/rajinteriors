@@ -240,7 +240,7 @@
                                                                                             <!-- Begin Submit button -->
                                                                                             <div class="quform-submit">
                                                                                                 <div class="quform-submit-inner">
-                                                                                                    <button type="submit" class="submit-button"><span>Send</span></button>
+                                                                                                    <button type="submit" name="submitt" class="submit-button"><span>Send</span></button>
                                                                                                 </div>
                                                                                                 <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
                                                                                             </div>

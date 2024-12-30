@@ -1,5 +1,6 @@
 <?php
 echo "hello";
+
 // Database configuration
 $host = "localhost";
 $username = "rajinteriors";
@@ -20,25 +21,31 @@ ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 
 // Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Check for POST request
     // Get form data
-    $user_name = $_POST['user_name'];
-    $user_email = $_POST['user_email'];
-    $message = $_POST['messages'];
+    $user_name = $_POST['user_name'] ?? 'name';
+    $user_email = $_POST['user_email'] ?? 'email';
+    $message = $_POST['messages'] ?? 'messege';
 
-echo $user_name;
-echo $user_email;
-echo $message;
+    // Debugging: Display received data
+    echo "Received Data: <br>";
+    echo "Name: $user_name <br>";
+    echo "Email: $user_email <br>";
+    echo "Message: $message <br>";
 
     // Prepare SQL statement
     $stmt = $conn->prepare("INSERT INTO user_messages (user_name, user_email, messages) VALUES (?, ?, ?)");
+    if (!$stmt) {
+        die("SQL Prepare Failed: " . $conn->error);
+    }
+
     $stmt->bind_param("sss", $user_name, $user_email, $message);
 
     // Execute the statement
     if ($stmt->execute()) {
         echo "Data inserted successfully!";
     } else {
-        echo "Error: " . $stmt->error;
+        echo "SQL Execution Error: " . $stmt->error;
     }
 
     // Close the statement
