@@ -115,6 +115,7 @@
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="service.php">Services</a></li>
                             <li><a href="contact-1.php">Contact</a></li>
+                            <li style="background:#000;"><a href="get_started.php" style="color:#fff;">Get Started</a></li>
                         </ul>
                     </div>
                 </div>
