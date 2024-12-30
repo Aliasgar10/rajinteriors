@@ -209,55 +209,85 @@
                                                                         <div class="elementor-shortcode">
                                                                             <div role="form" class="wpcf7" id="wpcf7-f5-p922-o1" lang="en-US" dir="ltr">
                                                                                 <div class="screen-reader-response"></div>
-                                                                                    <form id="testForm" class="quform" action="insert_user.php" method="POST" enctype="multipart/form-data" onclick="">
+                                                                                <style>
+        .flash-message {
+            display: none;
+            padding: 10px;
+            margin-top: 10px;
+            color: #fff;
+            background-color: #28a745;
+            border-radius: 5px;
+        }
+    </style>
+                                                                                <form id="testForm" class="quform" action="javascript:void(0);" method="POST" enctype="multipart/form-data">
+        <div class="quform-elements">
+            <div class="quform-element">
+                <br>
+                <span class="wpcf7-form-control-wrap your-name">
+                    <input id="name" type="text" name="user_name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*" required>
+                </span>
+            </div>
+            <div class="quform-element">
+                <br>
+                <span class="wpcf7-form-control-wrap your-email">
+                    <input id="email" type="email" name="user_email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*" required>
+                </span>
+            </div>
+            <div class="quform-element">
+                <br>
+                <span class="wpcf7-form-control-wrap your-message">
+                    <textarea id="message" name="messages" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*" required></textarea>
+                </span>
+            </div>
 
-                                                                                        <div class="quform-elements">
-                                                                                            <div class="quform-element">
-                                                                                                
-                                                                                                    <br>
-                                                                                                    <span class="wpcf7-form-control-wrap your-name">
-                                                                                                        <input id="name" type="text" name="user_name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*">
-                                                                                                    </span> 
-                                                                                                
-                                                                                            </div>
-                                                                                            <div class="quform-element">
-                                                                                                
-                                                                                                    <br>
-                                                                                                    <span class="wpcf7-form-control-wrap your-email">
-                                                                                                        <input id="email" type="email" name="user_email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*">
-                                                                                                    </span> 
-                                                                                                
-                                                                                            </div>
-                                                                                            <div class="quform-element">
-                                                                                                
-                                                                                                    <br>
-                                                                                                    <span class="wpcf7-form-control-wrap your-message">
-                                                                                                        <textarea  id="message" name="messages" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*"></textarea>
-                                                                                                    </span>
-                                                                                                
-                                                                                            </div>
-                                                                                            
-                                                                                            <!-- Begin Submit button -->
-                                                                                            <div class="quform-submit">
-                                                                                                <div class="quform-submit-inner">
-                                                                                                    <button type="submit" name="submitt" class="submit-button"><span>Send</span></button>
-                                                                                                </div>
-                                                                                                <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
-                                                                                            </div>
-                                                                                            
-                                                                                        </div>
-                                                                                    </form>
-                                                                                    <script>
-                                                                                    document.getElementById("testForm").addEventListener("submit", function (e) {
-                                                                                        e.preventDefault(); // Prevent actual submission for debugging
-                                                                                        const formData = new FormData(this);
-                                                                                        console.log("Form Data:");
-                                                                                        for (let [key, value] of formData.entries()) {
-                                                                                            console.log(key, value);
-                                                                                        }
-                                                                                        this.submit(); // Uncomment this line to allow actual submission
-                                                                                    });
-                                                                                </script>
+            <!-- Submit Button -->
+            <div class="quform-submit">
+                <div class="quform-submit-inner">
+                    <button type="submit" name="submitt" class="submit-button"><span>Send</span></button>
+                </div>
+                <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+            </div>
+        </div>
+    </form>
+
+    <div class="flash-message" id="flashMessage">Data submitted successfully!</div>
+
+    <script>
+        $(document).ready(function () {
+            $('#testForm').on('submit', function (e) {
+                e.preventDefault(); // Prevent default form submission
+
+                // Collect form data
+                const formData = {
+                    user_name: $('#name').val(),
+                    user_email: $('#email').val(),
+                    messages: $('#message').val()
+                };
+
+                // AJAX request
+                $.ajax({
+                    url: 'insert_user.php',
+                    type: 'POST',
+                    data: formData,
+                    success: function (response) {
+                        console.log("Response:", response); // Log the response
+                        if (response.trim() === 'success') {
+                            $('#flashMessage').fadeIn().delay(3000).fadeOut();
+                            $('#testForm')[0].reset();
+                        } else {
+                            alert('Server Error: ' + response); // Display error message from server
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("AJAX Error:", error);
+                        console.error("Response Text:", xhr.responseText);
+                        alert('An Ajax error occurred.');
+                    }
+                });
+
+            });
+        });
+    </script>
                                                                             </div>
                                                                         </div>
                                                                     </div>
