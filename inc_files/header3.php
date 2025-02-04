@@ -94,7 +94,7 @@
                                                 echo '<li class="menu-item menu-item-has-children">';
                                                 // Check if the parent category has children
                                                 if (!empty($category['children'])) {
-                                                    echo '<a href="#">' . htmlspecialchars($category['name']) . '</a>'; // Blank link for parent with children
+                                                    echo '<a href="category.php?id='.htmlspecialchars($category['id']).'">' . htmlspecialchars($category['name']) . '</a>'; // Blank link for parent with children
                                                     echo '<ul class="sub-menu">';
                                                     foreach ($category['children'] as $child) {
                                                         echo '<li class="menu-item">';
@@ -186,14 +186,6 @@
 </div>
 
 <style>
-    /* #logo_wrapper{
-        width: 15rem !important;
-        height: 100% !important;
-    }
-    #logo_wrapper img{
-        width: 100% !important;
-        height: 100% !important;
-    } */
     
     @media screen and (max-width: 480px) {
         #menu_border_wrapper {
