@@ -312,100 +312,100 @@
     </head>
     <body>
     <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1); // Set to 0 in production
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1); // Set to 0 in production
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $host = "localhost";
-    $user = "rajinteriors";
-    $pass = "7ku~3AksgI75Edzrp";
-    $db = "rajinteriors";
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $host = "localhost";
+            $user = "rajinteriors";
+            $pass = "7ku~3AksgI75Edzrp";
+            $db = "rajinteriors";
 
-    try {
-        $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            try {
+                $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Get data from POST
-        $selections = $_POST['selections'] ?? null;
-        $data = json_decode($selections, true);
+                // Get data from POST
+                $selections = $_POST['selections'] ?? null;
+                $data = json_decode($selections, true);
 
-        if (!$selections || !is_array($data)) {
-            echo "<script>alert('Invalid data received. Please try again.');</script>";
-            exit;
-        }
+                if (!$selections || !is_array($data)) {
+                    echo "<script>alert('Invalid data received. Please try again.');</script>";
+                    exit;
+                }
 
-        // Extract user info
-        $userName = $data['section_7']['name'] ?? 'Anonymous';
-        $quote = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+                // Extract user info
+                $userName = $data['section_7']['name'] ?? 'Anonymous';
+                $quote = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
-        // Extract formatted response
-        $formattedResponse = [
-            'name' => $data['section_7']['name'] ?? '',
-            'mobile' => $data['section_7']['mobile'] ?? '',
-            'email' => $data['section_7']['email'] ?? '',
-            'city' => $data['section_7']['city'] ?? '',
-            'pincode' => $data['section_7']['pincode'] ?? '',
-            'liked_images' => '',
-            'unliked_images' => '',
-            'looking_for' => $data['section_3']['looking_for'] ?? '',  // Fixed indexing issue
-            'work_from' => $data['section_4']['designer_work_on'] ?? '',
-            'project_area' => $data['section_5']['project_area'] ?? '',
-            'willing_to_spend' => $data['section_6']['budget'] ?? '',
-        ];
+                // Extract formatted response
+                $formattedResponse = [
+                    'name' => $data['section_7']['name'] ?? '',
+                    'mobile' => $data['section_7']['mobile'] ?? '',
+                    'email' => $data['section_7']['email'] ?? '',
+                    'city' => $data['section_7']['city'] ?? '',
+                    'pincode' => $data['section_7']['pincode'] ?? '',
+                    'liked_images' => '',
+                    'unliked_images' => '',
+                    'looking_for' => $data['section_3']['looking_for'] ?? '',  // Fixed indexing issue
+                    'work_from' => $data['section_4']['designer_work_on'] ?? '',
+                    'project_area' => $data['section_5']['project_area'] ?? '',
+                    'willing_to_spend' => $data['section_6']['budget'] ?? '',
+                ];
 
-        // Extract liked and unliked images
-        $likedImages = [];
-        $unlikedImages = [];
-        if (isset($data['section_2'])) {
-            foreach ($data['section_2'] as $image) {
-                foreach ($image as $fileName => $feedback) {
-                    $imageUrl = "https://rajinteriors.in/uploads/assets/get_a_quote/".$fileName;
-                    if (strtolower($feedback) === 'like') {
-                        $likedImages[] = $imageUrl;
-                    } else {
-                        $unlikedImages[] = $imageUrl;
+                // Extract liked and unliked images
+                $likedImages = [];
+                $unlikedImages = [];
+                if (isset($data['section_2'])) {
+                    foreach ($data['section_2'] as $image) {
+                        foreach ($image as $fileName => $feedback) {
+                            $imageUrl = "https://rajinteriors.in/uploads/assets/get_a_quote/".$fileName;
+                            if (strtolower($feedback) === 'like') {
+                                $likedImages[] = $imageUrl;
+                            } else {
+                                $unlikedImages[] = $imageUrl;
+                            }
+                        }
                     }
                 }
+                $formattedResponse['liked_images'] = implode(', ', $likedImages);
+                $formattedResponse['unliked_images'] = implode(', ', $unlikedImages);
+
+                // Encode formatted response for database storage
+                $formattedResponseJSON = json_encode($formattedResponse, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+                // Insert data into the database
+                $stmt = $pdo->prepare("INSERT INTO userrr (user_name, quote, format_res) VALUES (:user_name, :quote, :format_res)");
+                $stmt->execute([
+                    ':user_name' => $userName,
+                    ':quote' => $quote,
+                    ':format_res' => $formattedResponseJSON,
+                ]);
+
+                // Send formatted response to Google Apps Script
+                $googleScriptURL = "https://script.google.com/macros/s/AKfycbzT3PI2mWfXDVkIFjpekvI9UQ_5c1nLOzOfUj4xsjy5zC2wzEWGOhaKj71D-QTtUaha/exec";
+
+                $ch = curl_init($googleScriptURL);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_POST, true);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $formattedResponseJSON);
+
+                $googleResponse = curl_exec($ch);
+                $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                curl_close($ch);
+
+                // if ($httpCode === 200) {
+                //     echo "<script>alert('Data saved and sent to Google Apps Script successfully!');</script>";
+                // } else {
+                //     echo "<script>alert('Data saved but failed to send to Google Apps Script.');</script>";
+                // }
+
+            } catch (PDOException $e) {
+                echo "<script>alert('Database error: " . addslashes($e->getMessage()) . "');</script>";
             }
         }
-        $formattedResponse['liked_images'] = implode(', ', $likedImages);
-        $formattedResponse['unliked_images'] = implode(', ', $unlikedImages);
-
-        // Encode formatted response for database storage
-        $formattedResponseJSON = json_encode($formattedResponse, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-
-        // Insert data into the database
-        $stmt = $pdo->prepare("INSERT INTO userrr (user_name, quote, format_res) VALUES (:user_name, :quote, :format_res)");
-        $stmt->execute([
-            ':user_name' => $userName,
-            ':quote' => $quote,
-            ':format_res' => $formattedResponseJSON,
-        ]);
-
-        // Send formatted response to Google Apps Script
-        $googleScriptURL = "https://script.google.com/macros/s/AKfycbzT3PI2mWfXDVkIFjpekvI9UQ_5c1nLOzOfUj4xsjy5zC2wzEWGOhaKj71D-QTtUaha/exec";
-
-        $ch = curl_init($googleScriptURL);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $formattedResponseJSON);
-
-        $googleResponse = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        if ($httpCode === 200) {
-            echo "<script>alert('Data saved and sent to Google Apps Script successfully!');</script>";
-        } else {
-            echo "<script>alert('Data saved but failed to send to Google Apps Script.');</script>";
-        }
-
-    } catch (PDOException $e) {
-        echo "<script>alert('Database error: " . addslashes($e->getMessage()) . "');</script>";
-    }
-}
-?>
+    ?>
 
 
         <div id="status-bar">
