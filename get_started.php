@@ -430,10 +430,10 @@
         </section>
 
         <section id="section-3" class="hidden">
-            <h2 class="h2">I am looking for an</h2>
+            <h2 class="h2">I am looking for</h2>
             <div class="opt-3">
-                <button class="button" data-section="3" data-key="looking_for" data-value="Interior Designer">Interior Designer</button>
-                <button class="button" data-section="3" data-key="looking_for" data-value="Architect">Architect</button>
+                <button class="button" data-section="3" data-key="looking_for" data-value="Interior Designing">Interior Designing</button>
+                <button class="button" data-section="3" data-key="looking_for" data-value="Super Vision">Super Vision</button>
             </div>
         </section>
 
@@ -553,7 +553,7 @@
                 const current = document.getElementById(`section-${currentSection}`);
                 const next = document.getElementById(`section-${parseInt(currentSection) + 1}`);
                 if (current && next) {
-                    current.classList.remove('active');
+                    // current.classList.remove('active');
                     current.classList.add('hidden');
                     next.classList.remove('hidden');
                     next.classList.add('active');
