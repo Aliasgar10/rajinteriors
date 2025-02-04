@@ -74,7 +74,8 @@
                 cursor: pointer;
                 text-transform: uppercase;
                 transition: all 0.3s ease;
-                width: 270px;
+                width: 270px;                
+                height:70px;
                 margin: 5px;
             }
 
@@ -263,7 +264,6 @@
                     text-transform: uppercase;
                     transition: all 0.3s ease;
                     width: 150px;
-                    height:70px;
                     margin: 1px;
                 }
                 #x1{
