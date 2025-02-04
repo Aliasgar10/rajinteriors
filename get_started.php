@@ -560,53 +560,34 @@
                     next.scrollIntoView({ behavior: 'smooth' });
                 }
             }
+            // Event Listener for Option Buttons (Update value instead of adding duplicates for sections 3-6)
+            document.body.addEventListener('click', (event) => {
+                if (event.target.matches('[data-section]')) {
+                    const section = event.target.getAttribute('data-section');
+                    const key = event.target.getAttribute('data-key');
+                    const value = event.target.getAttribute('data-value');
 
-            // Event Listener for Option Buttons (Updating existing value instead of adding duplicates)
-document.body.addEventListener('click', (event) => {
-    if (event.target.matches('[data-section]')) {
-        const section = event.target.getAttribute('data-section');
-        const key = event.target.getAttribute('data-key');
-        const value = event.target.getAttribute('data-value');
+                    // Only allow updates for sections 3 to 6 (prevent updates for section 1, 2, and 7)
+                    if (section === "1" || section === "2" || section === "7") {
+                        return; // Skip updating for these sections
+                    }
 
-        // Ensure the section exists in userSelections
-        if (!userSelections[`section_${section}`]) {
-            userSelections[`section_${section}`] = {};
-        }
+                    // Ensure the section exists in userSelections
+                    if (!userSelections[`section_${section}`]) {
+                        userSelections[`section_${section}`] = {};
+                    }
 
-        // Update the existing key-value pair instead of pushing a new one
-        userSelections[`section_${section}`][key] = value;
+                    // Update the existing key-value pair (overwrite old selection)
+                    userSelections[`section_${section}`][key] = value;
 
-        // Log the updated data
-        console.log(`Section ${section} updated:`, userSelections);
+                    // Log the updated data
+                    console.log(`Section ${section} updated:`, userSelections);
 
-        // Move to the next section
-        nextSection(section);
-    }
-});
+                    // Move to the next section
+                    nextSection(section);
+                }
+            });
 
-
-            // Event Listener for Option Buttons
-            // document.body.addEventListener('click', (event) => {
-            //     if (event.target.matches('[data-section]')) {
-            //         const section = event.target.getAttribute('data-section');
-            //         const key = event.target.getAttribute('data-key');
-            //         const value = event.target.getAttribute('data-value');
-
-            //         // Ensure the section exists in userSelections
-            //         if (!userSelections[`section_${section}`]) {
-            //             userSelections[`section_${section}`] = [];
-            //         }
-
-            //         // Add the key-value pair to the section data
-            //         userSelections[`section_${section}`].push({ [key]: value });
-
-            //         // Log the updated data
-            //         console.log(`Section ${section} updated:`, userSelections);
-
-            //         // Move to the next section
-            //         nextSection(section);
-            //     }
-            // });
 
             function handleSubmit(event) {
                 event.preventDefault(); // Prevent default form submission
@@ -623,10 +604,14 @@ document.body.addEventListener('click', (event) => {
                     }
                 });
 
-                // Add Section 7 data to userSelections
-                if (Object.keys(section7Data).length > 0) {
-                    userSelections.section_7 = section7Data;
-                }
+                // Ensure section_7 exists before updating values
+if (!userSelections.section_7) {
+    userSelections.section_7 = {};
+}
+
+// Keep section_7 data unchanged if it already exists
+Object.assign(userSelections.section_7, section7Data);
+
 
                 // Populate hidden input field with JSON data
                 document.getElementById('selections').value = JSON.stringify(userSelections);
