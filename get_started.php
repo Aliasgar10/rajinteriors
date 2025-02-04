@@ -263,6 +263,7 @@
                     text-transform: uppercase;
                     transition: all 0.3s ease;
                     width: 150px;
+                    height:70px;
                     margin: 1px;
                 }
                 #x1{
@@ -305,6 +306,9 @@
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 10px
+                }
+                .opt-3{
+                    display:flex;
                 }
 
             }
