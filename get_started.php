@@ -202,6 +202,10 @@
                 height: 60vh;
                 align-items: center;
             }
+            
+            .opt-3{
+                display:flex;
+            }
             #section-2{
                 background: radial-gradient(#05a0a3, #4caf500d);
             }
@@ -306,9 +310,6 @@
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 10px
-                }
-                .opt-3{
-                    display:flex;
                 }
 
             }
