@@ -226,9 +226,9 @@
                                                                                                     <?php if (!empty($childCategories)): ?>
                                                                                                         <div id="imageContainer">
                                                                                                             <?php foreach ($childCategories as $child): ?>
-                                                                                                                <a href="categories.php?id=<?php echo $child['id']; ?>">
+                                                                                                                
                                                                                                                 <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                                                                                    
+                                                                                                                    <a href="categories.php?id=<?php echo $child['id']; ?>">
                                                                                                                         <div class="post_wrapper" id="post">
                                                                                                                             <div class="post_img static">
                                                                                                                                 <div class="post_imgg_hover">
@@ -244,9 +244,9 @@
                                                                                                                             </div>
                                                                                                                             <!-- </a> -->
                                                                                                                         </div>
-                                                                                                                    
+                                                                                                                        </a>
                                                                                                                 </div>
-                                                                                                                </a>
+                                                                                                                
                                                                                                             <?php endforeach; ?>
                                                                                                         </div>
                                                                                                     <?php endif; ?>                                                                                            
