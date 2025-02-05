@@ -224,20 +224,21 @@
                                                                                                         <div id="imageContainer">
                                                                                                             <?php foreach ($childCategories as $child): ?>
                                                                                                                 <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                                                                                    <div class="post_wrapper" id="post">
-                                                                                                                        <div class="post_img static">
-                                                                                                                            <div class="post_imgg_hover">
-                                                                                                                                <img src="uploads/assets/categories/<?php echo htmlspecialchars($child['thumbnail']); ?>" 
-                                                                                                                                    alt="<?php echo htmlspecialchars($child['category_name']); ?>"
-                                                                                                                                    loading="lazy" 
-                                                                                                                                    class="clickable-image-12345">
-                                                                                                                                <a href="categories.php?id=<?php echo $child['id']; ?>"></a>
+                                                                                                                    <a href="categories.php?id=<?php echo $child['id']; ?>">
+                                                                                                                        <div class="post_wrapper" id="post">
+                                                                                                                            <div class="post_img static">
+                                                                                                                                <div class="post_imgg_hover">
+                                                                                                                                    <img src="uploads/assets/categories/<?php echo htmlspecialchars($child['thumbnail']); ?>" 
+                                                                                                                                        alt="<?php echo htmlspecialchars($child['category_name']); ?>"
+                                                                                                                                        loading="lazy" 
+                                                                                                                                        class="clickable-image-12345">                                                                                                                                
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                            <div class="text">
+                                                                                                                                <?php echo htmlspecialchars($child['category_name']); ?>
                                                                                                                             </div>
                                                                                                                         </div>
-                                                                                                                        <div class="text">
-                                                                                                                            <?php echo htmlspecialchars($child['category_name']); ?>
-                                                                                                                        </div>
-                                                                                                                    </div>
+                                                                                                                    </a>
                                                                                                                 </div>
                                                                                                             <?php endforeach; ?>
                                                                                                         </div>
