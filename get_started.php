@@ -564,8 +564,8 @@
                 const next = document.getElementById(`section-${parseInt(currentSection) + 1}`);
                 if (current && next) {
                     // current.classList.remove('active');
-                    current.classList.add('hidden');
-                    next.classList.remove('hidden');
+                    // current.classList.add('hidden');
+                    // next.classList.remove('hidden');
                     next.classList.add('active');
                     next.scrollIntoView({ behavior: 'smooth' });
                 }
