@@ -133,10 +133,10 @@
                                                                                 font-weight: 900;
                                                                                 font-size: medium;
                                                                             }
-                                                                            .text:hover{
+                                                                            /* .text:hover{
                                                                                 background:#fff;
                                                                                 color:#000;
-                                                                            }
+                                                                            } */
                                                                             .post_img img {
                                                                                 max-width: 100%;
                                                                                 /* height: auto !important; */
