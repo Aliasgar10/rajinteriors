@@ -53,7 +53,7 @@
             }
 
             .hidden {
-                pointer-events: none;
+                /* pointer-events: none; */
                 /* opacity: 0.5; */
             }
 
@@ -615,12 +615,12 @@
                 });
 
                 // Ensure section_7 exists before updating values
-if (!userSelections.section_7) {
-    userSelections.section_7 = {};
-}
+                if (!userSelections.section_7) {
+                    userSelections.section_7 = {};
+                }
 
-// Keep section_7 data unchanged if it already exists
-Object.assign(userSelections.section_7, section7Data);
+                // Keep section_7 data unchanged if it already exists
+                Object.assign(userSelections.section_7, section7Data);
 
 
                 // Populate hidden input field with JSON data
