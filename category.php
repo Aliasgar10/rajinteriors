@@ -165,6 +165,9 @@
                                                                             }
                                                                             .post_img {
                                                                                 margin-bottom: 10px !important;
+                                                                                display:flex;
+                                                                                justify-content:center;
+                                                                                align-items:center;
                                                                             }
                                                                         </style>
                                                                         <!-- For popup -->
