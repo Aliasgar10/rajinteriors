@@ -40,10 +40,6 @@
                     .nav li a{
                         font-size: 18px !important;
                     }
-
-                    .nav a{
-                        text-transform: uppercase;
-                    }
                 </style>
                 <!-- Desktop Menu -->
                 <div id="nav_wrapper">
@@ -79,16 +75,16 @@
                                                 echo '<li class="menu-item menu-item-has-children">';
                                                 // Check if the parent category has children
                                                 if (!empty($category['children'])) {
-                                                    echo '<a href="category.php?id='.htmlspecialchars($category['id']).'">' . htmlspecialchars($category['name']) . '</a>'; // Blank link for parent with children
+                                                    echo '<a href="category.php?id='.htmlspecialchars($category['id']).'" style="text-transform: uppercase;">' . htmlspecialchars($category['name']) . '</a>'; // Blank link for parent with children
                                                     echo '<ul class="sub-menu">';
                                                     foreach ($category['children'] as $child) {
                                                         echo '<li class="menu-item">';
-                                                        echo '<a href="categories.php?id=' . $child['id'] . '"><span class="subunder">- </span>' . htmlspecialchars($child['category_name']) . '</a>';
+                                                        echo '<a href="categories.php?id=' . $child['id'] . '" style="text-transform: uppercase;"><span class="subunder">- </span>' . htmlspecialchars($child['category_name']) . '</a>';
                                                         echo '</li>';
                                                     }
                                                     echo '</ul>';
                                                 } else {
-                                                    echo '<a href="categories.php?id=' . $category['id'] . '">' . htmlspecialchars($category['name']) . '</a>'; // Valid link for parent without children
+                                                    echo '<a href="categories.php?id=' . $category['id'] . '" style="text-transform: uppercase;">' . htmlspecialchars($category['name']) . '</a>'; // Valid link for parent without children
                                                 }
                                                 echo '</li>';
                                             }
