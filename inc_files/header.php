@@ -40,6 +40,10 @@
                     .nav li a{
                         font-size: 18px !important;
                     }
+
+                    .nav a{
+                        text-transform: uppercase;
+                    }
                 </style>
                 <!-- Desktop Menu -->
                 <div id="nav_wrapper">
