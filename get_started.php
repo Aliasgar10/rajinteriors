@@ -418,7 +418,7 @@
     <style>
         /* Custom Styling for SweetAlert */
         .swal2-popup {
-            width: 300px !important; /* Reduce box size */
+            /* width: 300px !important; Reduce box size */
             font-size: 16px !important; /* Adjust font */
         }
     </style>
