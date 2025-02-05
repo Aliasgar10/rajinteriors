@@ -425,13 +425,11 @@
     <?php if (isset($redirectToIndex) && $redirectToIndex): ?>
         <script>
             Swal.fire({
-                title: "Thank You For Submission!",
-                // text: "Thank You For Submission!",
-                icon: "success",
-                toast: true,  // Makes it a small notification-like popup
-                position: "top-right",  // Shows in the top-right
-                showConfirmButton: true,  // Shows the OK button
-                // timer: 5000  // Auto closes in 5 seconds
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            // timer: 1500
             }).then((result) => {
                 if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
                     window.location.href = "index.php"; // Redirect to index page
