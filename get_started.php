@@ -14,6 +14,7 @@
         <link rel="icon" href="upload/TG-Thumb.png">
         <link rel="icon" href="upload/TG-Thumb.png">
         <link rel="apple-touch-icon-precomposed" href="upload/TG-Thumb.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
             * {
                 margin: 0;
@@ -389,7 +390,7 @@
 
                 // Flag for triggering modal
                 $showSuccessModal = true;
-                
+
                 // Send formatted response to Google Apps Script
                 $googleScriptURL = "https://script.google.com/macros/s/AKfycbzT3PI2mWfXDVkIFjpekvI9UQ_5c1nLOzOfUj4xsjy5zC2wzEWGOhaKj71D-QTtUaha/exec";
 
