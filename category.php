@@ -155,7 +155,7 @@
                                                                             .post_imgg_hover {
                                                                                 position: relative;
                                                                                 display: inline-block;
-                                                                                /* width: 250px; */
+                                                                                width: 250px;
                                                                                 height: 220px !important;
                                                                                 min-height: 150px;
                                                                                 display: flex !important;
