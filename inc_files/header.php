@@ -144,6 +144,9 @@
                     background-color: #333;
                     color:white;
                 }  
+                #get a{
+                    border: 2px solid #333;
+                }
                 #get a:hover{
                     /* background:transparent; */
                     color:white;
