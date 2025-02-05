@@ -73,7 +73,7 @@
                                                 echo '<li class="menu-item menu-item-has-children">';
                                                 // Check if the parent category has children
                                                 if (!empty($category['children'])) {
-                                                    echo '<a href="#">' . htmlspecialchars($category['name']) . '</a>'; // Blank link for parent with children
+                                                    echo '<a href="category.php?id='.htmlspecialchars($category['id']).'">' . htmlspecialchars($category['name']) . '</a>'; // Blank link for parent with children
                                                     echo '<ul class="sub-menu">';
                                                     foreach ($category['children'] as $child) {
                                                         echo '<li class="menu-item">';
