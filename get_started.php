@@ -490,11 +490,11 @@
                 Contact me at
             </h2>
             <form method="POST" action="" onsubmit="handleSubmit(event)">            
-                <input type="text" id="name" name="name" placeholder="NAME" required data-key="name" data-section="7">
-                <input type="text" id="mobile" name="mobile" placeholder="MOBILE" required data-key="mobile" data-section="7">
-                <input type="email" id="email" name="email" placeholder="EMAIL-ID" required data-key="email" data-section="7">
-                <input type="text" id="city" name="city" placeholder="CITY" required data-key="city" data-section="7">
-                <input type="text" id="pincode" name="pincode" placeholder="PINCODE" required data-key="pincode" data-section="7">
+                <input type="text" id="name" name="name" placeholder="NAME" required data-key="name" data-section="7" required>
+                <input type="text" id="mobile" name="mobile" placeholder="MOBILE" required data-key="mobile" data-section="7" required>
+                <input type="email" id="email" name="email" placeholder="EMAIL-ID" required data-key="email" data-section="7" required>
+                <input type="text" id="city" name="city" placeholder="CITY" required data-key="city" data-section="7" required>
+                <input type="text" id="pincode" name="pincode" placeholder="PINCODE" required data-key="pincode" data-section="7" required>
                 <input type="hidden" id="selections" name="selections">
                 <button type="submit">Submit</button>
             </form>
