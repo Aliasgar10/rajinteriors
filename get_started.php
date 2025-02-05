@@ -415,25 +415,26 @@
             }
         }
     ?>
-    <style>
-        /* Custom Styling for SweetAlert */
-        .swal2-popup {
-            /* width: 300px !important; Reduce box size */
-            font-size: 16px !important; /* Adjust font */
-        }
-    </style>
+    
     <?php if (isset($redirectToIndex) && $redirectToIndex): ?>
         <script>
-            Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Your work has been saved",
-            showConfirmButton: false,
-            // timer: 1500
-            }).then((result) => {
-                if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
-                    window.location.href = "index.php"; // Redirect to index page
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,  // Auto close after 3 seconds
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
                 }
+            });
+
+            Toast.fire({
+                icon: "success",
+                title: "Thank you For Submission"
+            }).then(() => {
+                window.location.href = "index.php"; // Redirect after toast disappears
             });
         </script>
     <?php endif; ?>
