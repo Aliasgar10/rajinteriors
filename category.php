@@ -40,7 +40,7 @@
     <link type="text/css" media="all" href="css/style.css" rel="stylesheet">
     <link type="text/css" media="only screen and (max-width: 768px)" href="css/responsive.css" rel="stylesheet">
 
-    <?php echo htmlspecialchars($parentCategory['category_name'] ?? 'Categories'); ?> - Raj Interiors
+    <title><?php echo htmlspecialchars($parentCategory['category_name'] ?? 'Categories'); ?> - Raj Interiors</title>
 
 
     <meta charset="UTF-8">
@@ -64,6 +64,9 @@
         }
         .elementor-section-stretched {
             z-index: 0 !important;
+        }
+        #page_content_wrapper:not(.wide), .page_content_wrapper:not(.wide) {
+            margin-top: -26px;
         }
     </style>
 
@@ -224,7 +227,7 @@
                                                                                                         <div id="imageContainer">
                                                                                                             <?php foreach ($childCategories as $child): ?>
                                                                                                                 <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                                                                                    <a href="categories.php?id=<?php echo $child['id']; ?>">
+                                                                                                                    
                                                                                                                         <div class="post_wrapper" id="post">
                                                                                                                             <div class="post_img static">
                                                                                                                                 <div class="post_imgg_hover">
@@ -234,11 +237,13 @@
                                                                                                                                         class="clickable-image-12345">                                                                                                                                
                                                                                                                                 </div>
                                                                                                                             </div>
+                                                                                                                            <a href="categories.php?id=<?php echo $child['id']; ?>">
                                                                                                                             <div class="text">
                                                                                                                                 <?php echo htmlspecialchars($child['category_name']); ?>
                                                                                                                             </div>
+                                                                                                                            </a>
                                                                                                                         </div>
-                                                                                                                    </a>
+                                                                                                                    
                                                                                                                 </div>
                                                                                                             <?php endforeach; ?>
                                                                                                         </div>
