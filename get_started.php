@@ -387,6 +387,9 @@
                     ':format_res' => $formattedResponseJSON,
                 ]);
 
+                // Flag for triggering modal
+                $showSuccessModal = true;
+                
                 // Send formatted response to Google Apps Script
                 $googleScriptURL = "https://script.google.com/macros/s/AKfycbzT3PI2mWfXDVkIFjpekvI9UQ_5c1nLOzOfUj4xsjy5zC2wzEWGOhaKj71D-QTtUaha/exec";
 
@@ -412,6 +415,33 @@
         }
     ?>
 
+    <!-- Bootstrap Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Success</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Data submitted successfully!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS for Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <?php if (isset($showSuccessModal) && $showSuccessModal): ?>
+        <script>
+            var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+            successModal.show();
+        </script>
+    <?php endif; ?>
 
         <div id="status-bar">
             <div class="status-segment" id="status-1"></div>
