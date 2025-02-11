@@ -74,7 +74,7 @@
                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                     <p>
                                                                         <a href="https://www.facebook.com/share/1QNvHXTXCd/?mibextid=wwXIfr" target="_blank">Facebook</a>
-                                                                        <br><a href="https://www.instagram.com/the.vogue.studio?igsh=YmEzZmczZHVtOXhv&utm_source=qr">Instagram</a>
+                                                                        <br><a href="https://www.instagram.com/the.vogue.studio?igsh=YmEzZmczZHVtOXhv&utm_source=qr" target="_blank">Instagram</a>
                                                                         <!-- <br><a href="#">Houzz</a>
                                                                         <br><a href="#">Pinterest</a>
                                                                         <br><a href="#">LinkedIn</a> -->
