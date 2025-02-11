@@ -73,7 +73,7 @@
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                     <p>
-                                                                        <a href="https://www.facebook.com/share/1PSPCypdpw/?mibextid=wwXIfr">Facebook</a>
+                                                                        <a href="https://www.facebook.com/share/1PSPCypdpw/?mibextid=wwXIfr" target="_blank">Facebook</a>
                                                                         <!-- <br><a href="#">Instagram</a>
                                                                         <br><a href="#">Houzz</a>
                                                                         <br><a href="#">Pinterest</a>
