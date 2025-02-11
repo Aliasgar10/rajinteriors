@@ -18,7 +18,7 @@
                                                                     <br><a href="gallery.php" data-wplink-url-error="true">Gallery</a>
                                                                     <br><a href="our-process.php" data-wplink-url-error="true">Services</a>
                                                                     <br><a href="contact-1.php" data-wplink-url-error="true">Contact</a>
-                                                                    <br><a href="contact-3.html" data-wplink-url-error="true">Get Started</a></p>
+                                                                    <br><a href="get_started.php" data-wplink-url-error="true">Get Started</a></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -72,11 +72,13 @@
                                                     <div data-id="b7eab1f" class="elementor-element elementor-element-b7eab1f elementor-widget elementor-widget-text-editor" data-element_type="text-editor.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                                    <p><a href="#">Facebook</a>
-                                                                    <br><a href="#">Instagram</a>
-                                                                    <br><a href="#">Houzz</a>
-                                                                    <br><a href="#">Pinterest</a>
-                                                                    <br><a href="#">LinkedIn</a></p>
+                                                                    <p>
+                                                                        <a href="https://www.facebook.com/share/1PSPCypdpw/?mibextid=wwXIfr">Facebook</a>
+                                                                        <!-- <br><a href="#">Instagram</a>
+                                                                        <br><a href="#">Houzz</a>
+                                                                        <br><a href="#">Pinterest</a>
+                                                                        <br><a href="#">LinkedIn</a> -->
+                                                                    </p>
                                                             </div>
                                                         </div>
                                                     </div>
