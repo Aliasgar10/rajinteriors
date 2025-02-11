@@ -1,4 +1,4 @@
-        <div id="footer_wrapper">
+<div id="footer_wrapper">
             <div class="standard_wrapper">
 
                 <div class="elementor elementor-2282">
@@ -73,8 +73,8 @@
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                     <p>
-                                                                        <a href="https://www.facebook.com/share/1PSPCypdpw/?mibextid=wwXIfr" target="_blank">Facebook</a>
-                                                                        <br><a href="https://www.instagram.com/rajinteriors?igsh=MXJhdWlmM24yaTYybQ%3D%3D&utm_source=qr">Instagram</a>
+                                                                        <a href="https://www.facebook.com/share/1QNvHXTXCd/?mibextid=wwXIfr" target="_blank">Facebook</a>
+                                                                        <br><a href="https://www.instagram.com/the.vogue.studio?igsh=YmEzZmczZHVtOXhv&utm_source=qr">Instagram</a>
                                                                         <!-- <br><a href="#">Houzz</a>
                                                                         <br><a href="#">Pinterest</a>
                                                                         <br><a href="#">LinkedIn</a> -->

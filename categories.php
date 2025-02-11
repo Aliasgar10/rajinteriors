@@ -46,20 +46,20 @@
     <link rel="icon" href="upload/TG-Thumb.png" sizes="32x32">
     <link rel="icon" href="upload/TG-Thumb.png" sizes="192x192">
     <link rel="apple-touch-icon-precomposed" href="upload/TG-Thumb.png">
-<style>
-    .wrapper{
-        padding-top: 0px !important;
-    }
+    <style>
+        .wrapper{
+            padding-top: 0px !important;
+        }
 
-    .type-post.blog-posts-grid {
-        display:flex;
-        justify-content:center;
-        align-items: center;
-    }
-    .elementor-section-stretched {
-        z-index: 0 !important;
-    }
-</style>
+        .type-post.blog-posts-grid {
+            display:flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .elementor-section-stretched {
+            z-index: 0 !important;
+        }
+    </style>
 
 </head>
 
@@ -293,7 +293,7 @@
             </div>
 
         </div>
-        <?php include("inc_files/footer.php"); ?>
+        <?php include("inc_files/vogue_footer.php"); ?>
         <a id="toTop" href="javascript:;"><i class="fa fa-angle-up"></i></a>
         <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1">
         <input type="hidden" id="tg_sidebar_sticky" name="tg_sidebar_sticky" value="1">
