@@ -20,20 +20,20 @@
     }
 </style>
 <?php
-        error_reporting(E_ALL);
-        // Display errors on the screen
-        ini_set('display_errors', 1);
-        // Log errors to a file (optional)
-        ini_set('log_errors', 1);
-        
-        // Database connection
-        $host = "localhost";
-        $username = "rajinteriors";
-        $password = "7ku~3AksgI75Edzrp";
-        $database = "rajinteriors";
-        
-        $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    error_reporting(E_ALL);
+    // Display errors on the screen
+    ini_set('display_errors', 1);
+    // Log errors to a file (optional)
+    ini_set('log_errors', 1);
+    
+    // Database connection
+    $host = "localhost";
+    $username = "raj";
+    $password = "F33@x8f3t";
+    $database = "admin_";
+    
+    $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
 <div class="header_style_wrapper">
     <div class="top_bar hasbg" style="background: black;">
