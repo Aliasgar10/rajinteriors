@@ -7,9 +7,9 @@
     
     // Database connection
     $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "rajinteriors";
+    $username = "raj";
+    $password = "F33@x8f3t";
+    $database = "admin_";
     
     $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
