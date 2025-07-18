@@ -1,25 +1,25 @@
 <?php
-
 error_reporting(E_ALL);
-// Display errors on the screen
 ini_set('display_errors', 1);
-// Log errors to a file (optional)
 ini_set('log_errors', 1);
 
-    // Database configuration
-    $host = "localhost";
-    $username = "raj";
-    $password = "F33@x8f3t";
-    $database = "admin_";
+// Database configuration
+$host = "127.0.0.1";
+$username = "raj";
+$password = "F33@x8f3t";
+$database = "admin_"; // Change this to correct DB name
 
-    // Create a database connection
-    $conn = new mysqli($host, $username, $password, $database);
+// Create a database connection
+$conn = new mysqli($host, $username, $password, $database);
 
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+echo "Connected successfully.";
 ?>
+
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
 
