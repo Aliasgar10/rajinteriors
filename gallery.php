@@ -8,9 +8,9 @@ ini_set('log_errors', 1);
 
     // Database configuration
     $host = "localhost";
-    $username = "rajinteriors";
-    $password = "7ku~3AksgI75Edzrp";
-    $database = "rajinteriors";
+    $username = "raj";
+    $password = "F33@x8f3t";
+    $database = "admin_";
 
     // Create a database connection
     $conn = new mysqli($host, $username, $password, $database);
