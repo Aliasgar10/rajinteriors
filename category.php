@@ -8,9 +8,13 @@
 
 <?php
     // Database connection
+    // $host = "localhost";
+    // $username = "rajinteriors";
+    // $password = "7ku~3AksgI75Edzrp";
+    // $database = "rajinteriors";
     $host = "localhost";
-    $username = "rajinteriors";
-    $password = "7ku~3AksgI75Edzrp";
+    $username = "root";
+    $password = "";
     $database = "rajinteriors";
 
     $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);

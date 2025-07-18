@@ -8,11 +8,15 @@
 
 <?php
     // Database connection
+    // $host = "localhost";
+    // $username = "rajinteriors";
+    // $password = "7ku~3AksgI75Edzrp";
+    // $database = "rajinteriors";
+    
     $host = "localhost";
-    $username = "rajinteriors";
-    $password = "7ku~3AksgI75Edzrp";
+    $username = "root";
+    $password = "";
     $database = "rajinteriors";
-
     // Database connection
     $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

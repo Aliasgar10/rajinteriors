@@ -2,11 +2,15 @@
  
 <?php
 // Database configuration
-$host = "localhost";
-$username = "rajinteriors";
-$password = "7ku~3AksgI75Edzrp";
-$database = "rajinteriors";
+// $host = "localhost";
+// $username = "rajinteriors";
+// $password = "7ku~3AksgI75Edzrp";
+// $database = "rajinteriors";
 
+    $host = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "rajinteriors";
 // Database connection
 $conn = new mysqli($host, $username, $password, $database);
 
