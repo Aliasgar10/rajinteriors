@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
         <div id="wrapper" >
-        <?php include("inc_files/header2.php"); ?>
+        <?php include("header2.php"); ?>
 
 
 

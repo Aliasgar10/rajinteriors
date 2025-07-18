@@ -28,7 +28,7 @@
 
 
         <div id="wrapper" class=" ">
-            <?php include("inc_files/header2.php"); ?>
+            <?php include("header2.php"); ?>
 
 
             <div id="page_content_wrapper" class="">

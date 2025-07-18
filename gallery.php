@@ -1,27 +1,7 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('log_errors', 1);
-
-// Database configuration
-$host = "127.0.0.1";
-$username = "raj";
-$password = "F33@x8f3t";
-$database = "admin_"; // Change this to correct DB name
-
-// Create a database connection
-$conn = new mysqli($host, $username, $password, $database);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-echo "Connected successfully.";
-?>
 
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
+<?php  require_once 'connection/db_connect.php'; ?>
 
 <head>
 
@@ -50,7 +30,7 @@ echo "Connected successfully.";
 
 
         <div id="wrapper" class=" ">
-            <?php include("inc_files/header2.php"); ?>
+            <?php include("header2.php"); ?>
 
 
             <div id="page_content_wrapper" class="" style="width:100%;">
@@ -111,166 +91,166 @@ echo "Connected successfully.";
                                                 }
                                             }
                                         </style>
-                                        
-                                                <style>
-                                                    @font-face {
-                                                        font-family: 'Operetta Bold';
-                                                        src: url('inc_files/Operetta52-Bold.otf') format('opentype');
-                                                        font-weight: bold;
-                                                        font-style: normal;
-                                                        }
-                                                        .section-name h2{
-                                                            font-family: 'Operetta Bold';
-                                                            font-weight: bold;
-                                                            font-size:40px;
-                                                            text-align: center;
-                                                            color:#fff;
-                                                            margin-top: 20px;
-                                                        }
-                                                        .section-name{
-                                                            display: flex;
-                                                            justify-content: center;
-                                                            align-items: center;
-                                                            width: 100%;
-                                                        }
-                                                </style>
-                                                <style>
-                                                    .gallery{
-                                                        display:flex;
-                                                        column-gap: 10px; /* Space between columns */
-                                                        padding: 10px;
-                                                        width: 100%;
-                                                        max-width: 1200px;
-                                                        margin: auto;
-                                                    }
-                                                    .images {                                                                                                               
-                                                        column-count: 3;
-                                                        column-gap: 20px; 
-                                                        padding: 20px;
-                                                        justify-content: center;
-                                                        flex-direction: column;
-                                                        width: 100%;
-                                                        margin: auto;
-                                                    }
-                                                    .gallery-item {
-                                                        display: inline-block; /* Ensure items align correctly in columns */
-                                                        margin-bottom: 20px; /* Space between items */
-                                                        background: #fff;
-                                                        border-radius: 10px;
-                                                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                                        overflow: hidden;
-                                                        width: 100%; /* Ensure item width is adjusted for the column */
-                                                    }
+                                        <style>
+                                            @font-face {
+                                                font-family: 'Operetta Bold';
+                                                src: url('inc_files/Operetta52-Bold.otf') format('opentype');
+                                                font-weight: bold;
+                                                font-style: normal;
+                                                }
+                                                .section-name h2{
+                                                    font-family: 'Operetta Bold';
+                                                    font-weight: bold;
+                                                    font-size:40px;
+                                                    text-align: center;
+                                                    color:#fff;
+                                                    margin-top: 20px;
+                                                }
+                                                .section-name{
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    width: 100%;
+                                                }
+                                        </style>
+                                        <style>
+                                            .gallery{
+                                                display:flex;
+                                                column-gap: 10px; /* Space between columns */
+                                                padding: 10px;
+                                                width: 100%;
+                                                max-width: 1200px;
+                                                margin: auto;
+                                            }
+                                            .images {                                                                                                               
+                                                column-count: 3;
+                                                column-gap: 20px; 
+                                                padding: 20px;
+                                                justify-content: center;
+                                                flex-direction: column;
+                                                width: 100%;
+                                                margin: auto;
+                                            }
+                                            .gallery-item {
+                                                display: inline-block; /* Ensure items align correctly in columns */
+                                                margin-bottom: 20px; /* Space between items */
+                                                background: #fff;
+                                                border-radius: 10px;
+                                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                                overflow: hidden;
+                                                width: 100%; /* Ensure item width is adjusted for the column */
+                                            }
 
-                                                    .gallery-item img,
-                                                    .gallery-item video {
-                                                        width: 100%;
-                                                        height: auto; /* Preserve aspect ratio */
-                                                        display: block;
-                                                    }
+                                            .gallery-item img,
+                                            .gallery-item video {
+                                                width: 100%;
+                                                height: auto; /* Preserve aspect ratio */
+                                                display: block;
+                                            }
 
-                                                    .gallery-item video {
-                                                        border-radius: 10px;
-                                                    }
+                                            .gallery-item video {
+                                                border-radius: 10px;
+                                            }
 
-                                                    /* Responsive Design */
-                                                    @media (max-width: 768px) {
-                                                        .gallery {
-                                                            column-count: 2; /* Reduce columns on smaller screens */
-                                                        }
-                                                    }
+                                            /* Responsive Design */
+                                            @media (max-width: 768px) {
+                                                .gallery {
+                                                    column-count: 2; /* Reduce columns on smaller screens */
+                                                }
+                                            }
 
-                                                    @media (max-width: 480px) {
-                                                        .gallery {
-                                                            column-count: 1; /* Single column on very small screens */
-                                                            display: flex;
-                                                            flex-direction: column;
-                                                        }
-                                                        .images{
-                                                            display: flex;
-                                                            justify-content: center;
-                                                            flex-direction: column;
-                                                            width: 100%;
-                                                        }
-                                                        .videos{
-                                                            display: flex;
-                                                            justify-content: center;
-                                                            align-items:center;
-                                                            flex-direction: column;
-                                                            width: 100% !important;
-                                                            height:100% !important;
-                                                        }
-                                                    } 
-                                                    
-                                                    /* Modal Styles */
-                                                    .modal {
-                                                        display: none; /* Hidden by default */
-                                                        position: fixed;
-                                                        z-index: 1000;
-                                                        left: 0;
-                                                        top: 0;
-                                                        width: 100%;
-                                                        height: 100%;
-                                                        overflow: auto;
-                                                        background-color: rgba(0,0,0,0.8); /* Black with transparency */
-                                                    }
+                                            @media (max-width: 480px) {
+                                                .gallery {
+                                                    column-count: 1; /* Single column on very small screens */
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                }
+                                                .images{
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    flex-direction: column;
+                                                    width: 100%;
+                                                }
+                                                .videos{
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items:center;
+                                                    flex-direction: column;
+                                                    width: 100% !important;
+                                                    height:100% !important;
+                                                }
+                                            } 
+                                            
+                                            /* Modal Styles */
+                                            .modal {
+                                                display: none; /* Hidden by default */
+                                                position: fixed;
+                                                z-index: 1000;
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%;
+                                                height: 100%;
+                                                overflow: auto;
+                                                background-color: rgba(0,0,0,0.8); /* Black with transparency */
+                                            }
 
-                                                    .modal-content {
-                                                        margin: auto;
-                                                        display: block;
-                                                        width: 65%;
-                                                        max-width: 700px;
-                                                        position: relative;
-                                                        top: 8%;
-                                                        
-                                                    }
+                                            .modal-content {
+                                                margin: auto;
+                                                display: block;
+                                                width: 65%;
+                                                max-width: 700px;
+                                                position: relative;
+                                                top: 8%;
+                                                
+                                            }
 
-                                                    .modal-close {
-                                                        position: absolute;
-                                                        top: 10px;
-                                                        right: 25px;
-                                                        color: white;
-                                                        font-size: 35px;
-                                                        font-weight: bold;
-                                                        cursor: pointer;
-                                                    }
-                                                </style>
-                                                <div id="imageModal" class="modal">
-                                                    <span class="modal-close">&times;</span>
-                                                    <img class="modal-content" id="modalImage">
-                                                </div>
+                                            .modal-close {
+                                                position: absolute;
+                                                top: 10px;
+                                                right: 25px;
+                                                color: white;
+                                                font-size: 35px;
+                                                font-weight: bold;
+                                                cursor: pointer;
+                                            }
+                                        </style>
+                                        <div id="imageModal" class="modal">
+                                            <span class="modal-close">&times;</span>
+                                            <img class="modal-content" id="modalImage">
+                                        </div>
 
-                                                <script>
-                                                    document.addEventListener('DOMContentLoaded', function () {
-                                                        const modal = document.getElementById('imageModal');
-                                                        const modalImg = document.getElementById('modalImage');
-                                                        const modalClose = document.querySelector('.modal-close');
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function () {
+                                                const modal = document.getElementById('imageModal');
+                                                const modalImg = document.getElementById('modalImage');
+                                                const modalClose = document.querySelector('.modal-close');
 
-                                                        document.querySelectorAll('.gallery-item img').forEach(img => {
-                                                            img.addEventListener('click', function () {
-                                                                modal.style.display = 'block';
-                                                                modalImg.src = this.src;
-                                                            });
-                                                        });
-
-                                                        modalClose.addEventListener('click', function () {
-                                                            modal.style.display = 'none';
-                                                        });
-
-                                                        modal.addEventListener('click', function (e) {
-                                                            if (e.target === modal) {
-                                                                modal.style.display = 'none';
-                                                            }
-                                                        });
+                                                document.querySelectorAll('.gallery-item img').forEach(img => {
+                                                    img.addEventListener('click', function () {
+                                                        modal.style.display = 'block';
+                                                        modalImg.src = this.src;
                                                     });
-                                                </script>
+                                                });
+
+                                                modalClose.addEventListener('click', function () {
+                                                    modal.style.display = 'none';
+                                                });
+
+                                                modal.addEventListener('click', function (e) {
+                                                    if (e.target === modal) {
+                                                        modal.style.display = 'none';
+                                                    }
+                                                });
+                                            });
+                                        </script>
                                         <?php
                                             // Fetch all categories except IDs 1 and 11
                                             $categoryQuery = "SELECT id, category_name FROM categories WHERE id NOT IN (2,13,26,27,28) ORDER BY id ASC";
-                                            $categoryResult = $conn->query($categoryQuery);
+                                            $categoryResult = $pdo->query($categoryQuery);
 
-                                            if ($categoryResult->num_rows > 0) {
-                                                while ($categoryRow = $categoryResult->fetch_assoc()) {
+                                            $categories = $categoryResult->fetchAll(PDO::FETCH_ASSOC);
+                                                if (count($categories) > 0) {
+                                                    foreach ($categories as $categoryRow) {
                                                     $categoryId = $categoryRow['id'];
                                                     $categoryName = ucwords($categoryRow['category_name']);
                                         ?>
@@ -313,45 +293,43 @@ echo "Connected successfully.";
                                                         <div class="gallery">
                                                             <div class="images">
                                                                 <?php
-                                                                // Fetch files for the current category
-                                                                $query = "SELECT u.file_url, u.file_name, u.file_type, u.extension, s.section_name 
-                                                                        FROM uploads u 
-                                                                        INNER JOIN sections s ON u.section_id = s.id 
-                                                                        WHERE u.category_id = ? 
-                                                                        ORDER BY s.section_name ASC";
-                                                                $stmt = $conn->prepare($query);
-                                                                $stmt->bind_param("i", $categoryId);
-                                                                $stmt->execute();
-                                                                $result = $stmt->get_result();
+                                                                    $query = "SELECT u.file_url, u.file_name, u.file_type, u.extension, s.section_name 
+                                                                            FROM uploads u 
+                                                                            INNER JOIN sections s ON u.section_id = s.id 
+                                                                            WHERE u.category_id = :category_id 
+                                                                            ORDER BY s.section_name ASC";
 
-                                                                if ($result->num_rows > 0) {
-                                                                    while ($row = $result->fetch_assoc()) {
-                                                                        $fileType = $row['file_type'];
-                                                                        $fileUrl = htmlspecialchars($row['file_url']);
-                                                                        $fileName = htmlspecialchars($row['file_name']);
-                                                                        $extension = htmlspecialchars($row['extension']); // 'landscape' or 'portrait'
+                                                                    $stmt = $pdo->prepare($query);
+                                                                    $stmt->execute(['category_id' => $categoryId]);
+                                                                    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                                                                        if ($fileType === 'image') {
-                                                                            echo "<div class='gallery-item gallery-grid-tilt'>";
-                                                                            echo "<img src='$fileUrl' alt='$fileName'>";
-                                                                            echo "</div>";
-                                                                        } elseif ($fileType === 'video') {
-                                                                            ?>
-                                                                            <div class="video-container">
-                                                                                <iframe 
-                                                                                    class="<?php echo $extension; ?>" 
-                                                                                    src="https://www.youtube.com/embed/<?php echo $fileName; ?>?autoplay=1&loop=1&mute=1&playlist=<?php echo $fileName; ?>" 
-                                                                                    allow="autoplay; encrypted-media" 
-                                                                                    allowfullscreen>
-                                                                                </iframe>
-                                                                            </div>
-                                                                            <?php
+                                                                    if (count($result) > 0) {
+                                                                        foreach ($result as $row) {
+                                                                            $fileType = $row['file_type'];
+                                                                            $fileUrl = htmlspecialchars($row['file_url']);
+                                                                            $fileName = htmlspecialchars($row['file_name']);
+                                                                            $extension = htmlspecialchars($row['extension']); // 'landscape' or 'portrait'
+
+                                                                            if ($fileType === 'image') {
+                                                                                echo "<div class='gallery-item gallery-grid-tilt'>";
+                                                                                echo "<img src='$fileUrl' alt='$fileName'>";
+                                                                                echo "</div>";
+                                                                            } elseif ($fileType === 'video') {
+                                                                                ?>
+                                                                                <div class="video-container">
+                                                                                    <iframe 
+                                                                                        class="<?php echo $extension; ?>" 
+                                                                                        src="https://www.youtube.com/embed/<?php echo $fileName; ?>?autoplay=1&loop=1&mute=1&playlist=<?php echo $fileName; ?>" 
+                                                                                        allow="autoplay; encrypted-media" 
+                                                                                        allowfullscreen>
+                                                                                    </iframe>
+                                                                                </div>
+                                                                                <?php
+                                                                            }
                                                                         }
+                                                                    } else {
+                                                                        echo "<p>No Contents found.</p>";
                                                                     }
-                                                                } else {
-                                                                    echo "<p>No Contents found.</p>";
-                                                                }
-                                                                $stmt->close();
                                                                 ?>
                                                             </div>
                                                         </div>

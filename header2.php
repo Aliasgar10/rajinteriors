@@ -1,23 +1,7 @@
-<?php
-    error_reporting(E_ALL);
-    // Display errors on the screen
-    ini_set('display_errors', 1);
-    // Log errors to a file (optional)
-    ini_set('log_errors', 1);
-    
-    // Database connection
-    $host = "localhost";
-    $username = "raj";
-    $password = "F33@x8f3t";
-    $database = "admin_";
-    
-    $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-?>
+
 <div class="header_style_wrapper">
     <div class="top_bar hasbg">
         <div class="standard_wrapper">
-            <!-- Logo container -->
             <div id="logo_wrapper">
                 <div id="logo_normal" class="logo_container">
                     <div class="logo_align">
@@ -29,12 +13,11 @@
                 <div id="logo_transparent" class="logo_container">
                     <div class="logo_align">
                         <a id="custom_logo_transparent" class="logo_wrapper default" href="index.php">
-                            <img src="imagg/logo@2x_white.png" alt="" width="310" height="70">
+                            <img src="imagg/logo@2x.png" alt="" width="310" height="70">
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- Menu Container -->
             <div id="menu_wrapper">
                 <style>
                     .nav li a{
@@ -94,15 +77,14 @@
                                             echo '</ul>';
                                         ?>
                                     </li>
-                                    <li><a href="gallery.php">Gallery</a></li>
+                                    <li class="#"><a href="gallery.php">Gallery</a></li>
                                     <li><a href="service.php">Services</a></li>
-                                    <li><a href="contact-1.php">Contact</a></li>                                    
+                                    <li class="#"><a href="contact-1.php">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                
                 <!-- Mobile Menu (Hamburger Icon) -->
                 <div id="mobile_menu_wrapper" style="display: none; color: grey;">
                     <button id="hamburger_icon" style="color: #b8b8b8;">&#9776;</button>
@@ -144,16 +126,12 @@
                     background-color: #333;
                     color:white;
                 }  
-                #get a{
-                    border: 2px solid #333;
-                }
                 #get a:hover{
                     /* background:transparent; */
                     color:white;
                     border:2px solid #fff;
                 }
             </style>
-
         </div>
     </div>
 </div>
@@ -222,23 +200,20 @@
         }
 
         #mobile_menu li {
-            margin: 10px 5px;
+            margin: 10px 0;
             border-radius: 10px;
             padding: 5px;
         }
         #mobile_menu li:hover {
             background: #d3ced2;
         }
-       
+
         #mobile_menu a {
             text-decoration: none;
             color: #333;
             font-size: 18px;
             padding: 10px;
         }
-        /* #mobile_menu a:hover {
-            color: #fff;
-        } */
 
         /* Optional: Styling for the hamburger icon */
         #hamburger_icon {
@@ -262,7 +237,6 @@
     #get{
         display:block;
     }
-
     /* Submenu toggle button */
     .menu-item-has-children {
         position: relative;
@@ -270,8 +244,8 @@
 
     .submenu-toggle {
         position: absolute;
-        left: 65px;
-        top: 73px;
+        left: 57px;
+        top: 59px;
         background: none;
         border: none;
         font-size: x-large;

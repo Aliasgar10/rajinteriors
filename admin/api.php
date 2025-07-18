@@ -1,41 +1,36 @@
 <!-- use for categories page -->
  
 <?php
-// Database configuration
-// $host = "localhost";
-// $username = "rajinteriors";
-// $password = "7ku~3AksgI75Edzrp";
-// $database = "rajinteriors";
 
     $host = "localhost";
     $username = "root";
     $password = "";
     $database = "rajinteriors";
-// Database connection
-$conn = new mysqli($host, $username, $password, $database);
+    // Database connection
+    $conn = new mysqli($host, $username, $password, $database);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-error_reporting(E_ALL);
-// Display errors on the screen
-ini_set('display_errors', 1);
-// Log errors to a file (optional)
-ini_set('log_errors', 1);
-
-// Truncate all tables before processing
-// $conn->query("TRUNCATE TABLE categories");
-// $conn->query("TRUNCATE TABLE sections");
-// $conn->query("TRUNCATE TABLE uploads");
-
-// Utility function to extract YouTube video ID
-if (!function_exists('getYouTubeID')) {
-    function getYouTubeID($url) {
-        preg_match('/(?:youtube\\.com.*(?:\\/|v=|u\\/\\w\\/|embed\\/|shorts\\/)|youtu\\.be\\/)([^#&?\\n\\r]*)/', $url, $matches);
-        return $matches[1] ?? null;
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
-}
+
+    error_reporting(E_ALL);
+    // Display errors on the screen
+    ini_set('display_errors', 1);
+    // Log errors to a file (optional)
+    ini_set('log_errors', 1);
+
+    // Truncate all tables before processing
+    // $conn->query("TRUNCATE TABLE categories");
+    // $conn->query("TRUNCATE TABLE sections");
+    // $conn->query("TRUNCATE TABLE uploads");
+
+    // Utility function to extract YouTube video ID
+    if (!function_exists('getYouTubeID')) {
+        function getYouTubeID($url) {
+            preg_match('/(?:youtube\\.com.*(?:\\/|v=|u\\/\\w\\/|embed\\/|shorts\\/)|youtu\\.be\\/)([^#&?\\n\\r]*)/', $url, $matches);
+            return $matches[1] ?? null;
+        }
+    }
 
 // Fetch the sheet data from google_sheet table where status == 0
 $sheetQuery = "SELECT id, path FROM google_sheet WHERE status = 0 LIMIT 1";

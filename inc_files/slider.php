@@ -85,30 +85,7 @@
                                                     <img src="upload/slider_01.jpg" alt="" class="image">
                                                 </div>
                                             </div>
-                                            <!-- <div class="slide  ">
-                                                <div class="slide-content">
-                                                    <div class="caption">
-                                                        <div class="title">
-                                                            <h2>Elegant Interior</h2></div>
-                                                        <div class="text">
-                                                            Architecture, of all the arts, is the one which acts the most slowly, but the most surely, on the soul.</div>
-                                                        <a class="button" href="single-portfolio-7.html">View Project</a></div>
-                                                </div>
-                                                <div class="image-container">
-                                                    <img src="upload/alexandra-gorn-485551-unsplash.jpg" alt="" class="image"></div>
-                                            </div>
-                                            <div class="slide  ">
-                                                <div class="slide-content">
-                                                    <div class="caption">
-                                                        <div class="title">
-                                                            <h2>Cultural Center</h2></div>
-                                                        <div class="text">
-                                                            Architecture, of all the arts, is the one which acts the most slowly, but the most surely, on the soul.</div>
-                                                        <a class="button" href="single-portfolio-2.html">View Project</a></div>
-                                                </div>
-                                                <div class="image-container">
-                                                    <img src="upload/sandro-katalina-219649-unsplash.jpg" alt="" class="image"></div>
-                                            </div> -->
+                                            
                                         </div>
                                         <div class="pagination">
                                             <div class="item is-active">
