@@ -1,5 +1,8 @@
 # Ignore the uploads and unused directories
 upload/
+admin/api.php
+admin/api2.php
+connection/
 BackupAssets/
 HOMEPAGE/
 un-UsedFile/

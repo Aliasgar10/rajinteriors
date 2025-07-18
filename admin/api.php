@@ -1,23 +1,24 @@
 <!-- use for categories page -->
  
 <?php
+    error_reporting(E_ALL);
+    // Display errors on the screen
+    ini_set('display_errors', 1);
+    // Log errors to a file (optional)
+    ini_set('log_errors', 1);
 
     $host = "localhost";
     $username = "root";
     $password = "";
     $database = "rajinteriors";
     // Database connection
-    $conn = new mysqli($host, $username, $password, $database);
+    $conn = new mysqli("127.0.0.1", "raj", "F33@x8f3t", "admin_");
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    error_reporting(E_ALL);
-    // Display errors on the screen
-    ini_set('display_errors', 1);
-    // Log errors to a file (optional)
-    ini_set('log_errors', 1);
+
 
     // Truncate all tables before processing
     // $conn->query("TRUNCATE TABLE categories");

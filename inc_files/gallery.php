@@ -66,32 +66,34 @@ ini_set('log_errors', 1);
                                 <div class="blog_post_content_wrapper layout_grid">
                                     <div id="imageContainer">
                                         <?php
-                                            $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category_id=2 LIMIT 9"; // Initial limit
-                                            $result = $conn->query($query);
+                                            $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category_id = :category_id LIMIT 9";
+                                            $stmt = $pdo->prepare($query);
+                                            $stmt->execute(['category_id' => 2]);
 
-                                            if ($result->num_rows > 0) {
-                                                while ($row = $result->fetch_assoc()) {
-                                                    $fileUrl = $row['file_url'];
-                                        ?>
-                                            <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                <div class="post_wrapper">
-                                                    <div class="post_img static">
-                                                        <div class="post_img_hover">
-                                                            <img src="<?php echo $fileUrl; ?>" alt="<?php echo $row['file_name']; ?>" loading="lazy">
-                                                            <a href="#"></a>
+                                            $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                            if (!empty($images)) {
+                                                foreach ($images as $row) {
+                                                    $fileUrl = htmlspecialchars($row['file_url']);
+                                                    $fileName = htmlspecialchars($row['file_name']);
+                                            ?>
+                                                <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
+                                                    <div class="post_wrapper">
+                                                        <div class="post_img static">
+                                                            <div class="post_img_hover">
+                                                                <img src="<?php echo $fileUrl; ?>" alt="<?php echo $fileName; ?>" loading="lazy">
+                                                                <a href="#"></a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        <?php 
+                                            <?php 
                                                 }
                                             } else {
                                                 echo "No images found.";
                                             }
-                                        ?>
+                                            ?>
                                     </div>
-                                    
-
                                 </div>
                                 <br class="clear">
                                 <div class="load" style="display:flex; justify-content:center; align-items:center;">
