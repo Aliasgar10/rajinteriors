@@ -5,24 +5,36 @@ ini_set('display_errors', 1);
 // Log errors to a file (optional)
 ini_set('log_errors', 1);
 
-// Database connection
-// $host = "localhost";
-// $username = "rajinteriors";
-// $password = "7ku~3AksgI75Edzrp";
-// $database = "rajinteriors";
+    // OLD Database configuration : Server
+    // $host = "localhost";
+    // $username = "rajinteriors";
+    // $password = "7ku~3AksgI75Edzrp";
+    // $database = "rajinteriors";
 
-    $host = "localhost";
-    $username = "raj";
-    $password = "oLj91C!pntdJ6al#";
-    $database = "admin_";
-
+        // Local Database configuration : Server
     // $host = "localhost";
     // $username = "root";
     // $password = "";
     // $database = "rajinteriors";
 
-$pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // NEW Database configuration : Server
+    $host = "localhost";
+    $username = "raj";
+    $password = "F33@x8f3t";
+    $database = "admin_";
+
+
+
+
+
+
+try {
+    $pdo = new PDO("mysql:host=127.0.0.1;dbname=admin_", "raj", "F33@x8f3t");
+    echo "Connected successfully!";
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}
+// $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Fetch the file path from google_sheet table where status == 0
 $stmt = $pdo->prepare("SELECT path FROM google_sheet WHERE status = 0 LIMIT 1");

@@ -6,17 +6,17 @@
     // $database = "rajinteriors";
 
     // NEW Database configuration : Server
-    // $host = "localhost";
-    // $username = "raj";
-    // $password = "oLj91C!pntdJ6al#";
-    // $database = "admin_";
+    $host = "localhost";
+    $username = "raj";
+    $password = "F33@x8f3t";
+    $database = "admin_";
 
 
     // Local Database configuration : Server
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "rajinteriors";
+    // $host = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $database = "rajinteriors";
 
     // Create a database connection
     $conn = new mysqli($host, $username, $password, $database);
