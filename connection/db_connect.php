@@ -1,10 +1,18 @@
 <?php
-    // Database configuration : Serever
+    // OLD Database configuration : Server
     // $host = "localhost";
     // $username = "rajinteriors";
     // $password = "7ku~3AksgI75Edzrp";
     // $database = "rajinteriors";
 
+    // NEW Database configuration : Server
+    // $host = "localhost";
+    // $username = "raj";
+    // $password = "oLj91C!pntdJ6al#";
+    // $database = "admin_";
+
+
+    // Local Database configuration : Server
     $host = "localhost";
     $username = "root";
     $password = "";

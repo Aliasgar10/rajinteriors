@@ -10,10 +10,16 @@ ini_set('log_errors', 1);
 // $username = "rajinteriors";
 // $password = "7ku~3AksgI75Edzrp";
 // $database = "rajinteriors";
+
     $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "rajinteriors";
+    $username = "raj";
+    $password = "oLj91C!pntdJ6al#";
+    $database = "admin_";
+
+    // $host = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $database = "rajinteriors";
 
 $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -1,5 +1,6 @@
 # Ignore the uploads and unused directories
 upload/
+BackupAssets/
 HOMEPAGE/
 un-UsedFile/
 upload.zip
