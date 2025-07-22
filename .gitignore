@@ -1,5 +1,6 @@
 # Ignore the uploads and unused directories
 upload/
+uploads/assets/images/*
 admin/api.php
 admin/api2.php
 connection/

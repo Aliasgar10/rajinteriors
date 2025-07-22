@@ -34,6 +34,10 @@
             
         <?php include("header.php"); ?>
 
+            <!-- slider -->
+                <?php include("inc_files/slider.php"); ?>
+            <!-- end slider -->
+
             <div id="page_content_wrapper" class="">
                 <div class="inner">
                     <div class="inner_wrapper">
@@ -42,9 +46,6 @@
                                 <div class="elementor-inner">
                                     <div class="elementor-section-wrap">
 
-                                        <!-- header -->
-                                            <?php include("inc_files/slider.php"); ?>
-                                        <!-- end header -->
                                         <!-- about section -->
                                             <?php include("inc_files/about_section.php"); ?>
                                         <!-- end about section -->

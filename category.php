@@ -4,22 +4,11 @@
     ini_set('display_errors', 1);
     // Log errors to a file (optional)
     ini_set('log_errors', 1);
+
+    include("connection/db_connect.php");
 ?>
 
 <?php
-    // Database connection
-    // $host = "localhost";
-    // $username = "rajinteriors";
-    // $password = "7ku~3AksgI75Edzrp";
-    // $database = "rajinteriors";
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "rajinteriors";
-
-    $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
     // Get category ID from URL
     $parent_id = $_GET['id'] ?? 0;
 

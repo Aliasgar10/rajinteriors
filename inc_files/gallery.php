@@ -1,9 +1,9 @@
 <?php 
-error_reporting(E_ALL);
-// Display errors on the screen
-ini_set('display_errors', 1);
-// Log errors to a file (optional)
-ini_set('log_errors', 1);
+    error_reporting(E_ALL);
+    // Display errors on the screen
+    ini_set('display_errors', 1);
+    // Log errors to a file (optional)
+    ini_set('log_errors', 1);
 
 ?>
 <style>
@@ -81,7 +81,7 @@ ini_set('log_errors', 1);
                                                     <div class="post_wrapper">
                                                         <div class="post_img static">
                                                             <div class="post_img_hover">
-                                                                <img src="<?php echo $fileUrl; ?>" alt="<?php echo $fileName; ?>" loading="lazy">
+                                                                <img src="rajinteriors/<?php echo $fileUrl; ?>" alt="<?php echo $fileName; ?>" loading="lazy">
                                                                 <a href="#"></a>
                                                             </div>
                                                         </div>

@@ -4,35 +4,29 @@
     ini_set('display_errors', 1);
     // Log errors to a file (optional)
     ini_set('log_errors', 1);
-?>
-
-<?php
-    // Database connection
-    // $host = "localhost";
-    // $username = "rajinteriors";
-    // $password = "7ku~3AksgI75Edzrp";
-    // $database = "rajinteriors";
     
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "rajinteriors";
-    // Database connection
-    $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    $categoryId = $_GET['id'];
-
-    // Display products for the category
-    $stmt = $pdo->prepare("SELECT name, images FROM products WHERE category_id = ?");
-    $stmt->execute([$categoryId]);
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+    include("connection/db_connect.php");
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
+<?php
 
+// Validate and sanitize input
+$categoryId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+
+if ($categoryId > 0) {
+    // Fetch products for this category
+    $stmt = $pdo->prepare("SELECT name, images FROM products WHERE category_id = ?");
+    $stmt->execute([$categoryId]);
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} else {
+    $products = [];
+    echo "<p>Invalid category ID.</p>";
+}
+?>
 <head>
 
     <link type="text/css" media="all" href="css/style.css" rel="stylesheet">
