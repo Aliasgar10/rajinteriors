@@ -4,7 +4,7 @@
     ini_set('log_errors', 1); // Enable error logging
 
     // Include the database connection
-    include 'connection/db_connect.php'; // Adjust this path as needed
+    include '../connection/db_connect.php'; // Adjust this path as needed
 
     // Set default response
     $response = [

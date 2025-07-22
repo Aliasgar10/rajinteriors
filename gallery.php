@@ -27,11 +27,8 @@
 <body data-rsssl="1" class="page-template-default page page-id-1956 woocommerce-no-js tg_lightbox_black leftalign tg_footer_reveal elementor-default elementor-page elementor-page-1956">
     <div id="perspective" style="">
 
-
-
         <div id="wrapper" class=" ">
             <?php include("header2.php"); ?>
-
 
             <div id="page_content_wrapper" class="" style="width:100%;">
                 <div class="inner">
@@ -267,29 +264,15 @@
                                                         <h2><?php echo htmlspecialchars($cleanedCategoryName); ?></h2>
                                                     <?php endif; ?>
                                                 </div>
-                                                        <!-- <style>
-                                                                .videos{
-                                                                    width: 100%;
-                                                                    margin-top: 10px;
-                                                                    padding-top: 10px;
-                                                                }
-                                                                iframe.landscape {
-                                                                    width: 100% !important; /* Set according to video aspect ratio */
-                                                                    max-width: 480px !important; /* Adjust the maximum width for videos */
-                                                                    aspect-ratio: 16 / 9; /* Ensure proper aspect ratio */
-                                                                    border-radius: 10px;
-                                                                    border:none;
-                                                                }
-                                                            </style> -->
-                                                            <style>
-                                                                iframe.portrait {
-                                                                    width: 360px; /* Set according to video aspect ratio */
-                                                                    height: 640px; /* Set according to video aspect ratio */
-                                                                    aspect-ratio: 9 / 16; /* For portrait orientation */
-                                                                    border-radius: 10px;
-                                                                    border:none;
-                                                                }                                                            
-                                                        </style>
+                                                <style>
+                                                    iframe.portrait {
+                                                        width: 360px; /* Set according to video aspect ratio */
+                                                        height: 640px; /* Set according to video aspect ratio */
+                                                        aspect-ratio: 9 / 16; /* For portrait orientation */
+                                                        border-radius: 10px;
+                                                        border:none;
+                                                    }                                                            
+                                                </style>
                                                         <div class="gallery">
                                                             <div class="images">
                                                                 <?php

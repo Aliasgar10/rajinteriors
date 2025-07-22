@@ -1,11 +1,3 @@
-<?php 
-    error_reporting(E_ALL);
-    // Display errors on the screen
-    ini_set('display_errors', 1);
-    // Log errors to a file (optional)
-    ini_set('log_errors', 1);
-
-?>
 <style>
     #h11{
         padding-left: 5px;
@@ -50,9 +42,47 @@
         font-size: smaller;
         cursor: pointer;
     }
+
+    .fullwidth-gallery-section {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding: 50px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.fullwidth-gallery-section .elementor-container,
+.fullwidth-gallery-section .elementor-row,
+.fullwidth-gallery-section .elementor-column,
+.fullwidth-gallery-section .elementor-column-wrap,
+.fullwidth-gallery-section .elementor-widget-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* .fullwidth-gallery-section .blog-posts-grid {
+    width: 100%;
+    max-width: 30%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+} */
+
+.fullwidth-gallery-section .post_img_hover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 </style>
 
-<section id="abcc" data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
+<!-- <section id="abcc" data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section"> -->
+<section id="abcc" class="fullwidth-gallery-section">
+    
     <div class="elementor-widget-container">
         <h2 class="elementor-heading-title elementor-size-default" id="h11">Gallery</h2>
     </div>
@@ -68,20 +98,21 @@
                                         <?php
                                             $query = "SELECT file_url, file_name, file_type FROM uploads WHERE file_type = 'image' AND category_id = :category_id LIMIT 9";
                                             $stmt = $pdo->prepare($query);
-                                            $stmt->execute(['category_id' => 2]);
+                                            $stmt->execute(['category_id' => 1]);
 
                                             $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                                             if (!empty($images)) {
                                                 foreach ($images as $row) {
-                                                    $fileUrl = htmlspecialchars($row['file_url']);
+                                                    $fileUrl = str_replace('../', '', $row['file_url']); // Or use ltrim()
                                                     $fileName = htmlspecialchars($row['file_name']);
+                                                    
                                             ?>
                                                 <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
                                                     <div class="post_wrapper">
-                                                        <div class="post_img static">
-                                                            <div class="post_img_hover">
-                                                                <img src="rajinteriors/<?php echo $fileUrl; ?>" alt="<?php echo $fileName; ?>" loading="lazy">
+                                                        <div class="post_img static" >
+                                                            <div class="post_img_hover" style="background-color:red;">
+                                                                <img src="<?php echo $fileUrl; ?>" alt="<?php echo $fileName; ?>" loading="lazy">
                                                                 <a href="#"></a>
                                                             </div>
                                                         </div>
