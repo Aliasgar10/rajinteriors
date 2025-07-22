@@ -1,52 +1,34 @@
 <?php
-    // Enable error reporting
-    error_reporting(E_ALL);
-    ini_set('display_errors', 0);
+$message = ""; // To display success or error message
 
-    $message = ""; // To display success or error message
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Collect and sanitize form data
+    $user_name  = trim($_POST['user_name'] ?? '');
+    $user_email = trim($_POST['user_email'] ?? '');
+    $messages   = trim($_POST['messages'] ?? '');
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        // Collect data from POST
-        $user_name = $_POST['user_name'] ?? '';
-        $user_email = $_POST['user_email'] ?? '';
-        $messages = $_POST['messages'] ?? '';
-
-        // Validate input
-        if (empty($user_name) || empty($user_email) || empty($messages)) {
-            $message = "All fields are required.";
-        } else {
-            // Database connection
-            $conn = new mysqli('localhost', 'rajinteriors', '7ku~3AksgI75Edzrp', 'rajinteriors');
-            if ($conn->connect_error) {
-                echo "Database Connection Failed: " . $conn->connect_error;
-                exit;
-            } else {
-                // Prepare SQL query
-                $stmt = $conn->prepare("INSERT INTO user_messages (user_name, user_email, messages) VALUES (?, ?, ?)");
-                if (!$stmt) {
-                    $message = "SQL Prepare Failed: " . $conn->error;
-                } else {
-                    $stmt->bind_param("sss", $user_name, $user_email, $messages);
-
-                    if ($stmt->execute()) {
-                        $message = "success"; // Mark success
-                    } else {
-                        $message = "SQL Execution Failed: " . $stmt->error;
-                    }
-
-                    $stmt->close();
-                }
-                
-            }
-        }
-
-        // If success, refresh the page
-        if ($message === "success") {
-            header("Location: index.php");
-            exit;
+    // Validate input
+    if (empty($user_name) || empty($user_email) || empty($messages)) {
+        $message = "All fields are required.";
+    } else {
+        try {
+            // Prepare and execute query
+            $stmt = $pdo->prepare("INSERT INTO user_messages (user_name, user_email, messages) VALUES (?, ?, ?)");
+            $stmt->execute([$user_name, $user_email, $messages]);
+            $message = "success";
+        } catch (PDOException $e) {
+            $message = "Database Error: " . $e->getMessage();
         }
     }
+
+    // Redirect if success
+    if ($message === "success") {
+        header("Location: index.php");
+        exit;
+    }
+}
 ?>
+
 <section data-id="f99cfe0" class="elementor-element elementor-element-f99cfe0 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
     <div class="elementor-container elementor-column-gap-default">
         <div class="elementor-row">
