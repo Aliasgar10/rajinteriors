@@ -1,62 +1,44 @@
-<?php 
-    // Database configuration
-    $host = "localhost";
-    $username = "rajinteriors";
-    $password = "7ku~3AksgI75Edzrp";
-    $database = "rajinteriors";
 
-    // Create a database connection
-    $conn = new mysqli($host, $username, $password, $database);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    error_reporting(E_ALL);
-    // Display errors on the screen
-    ini_set('display_errors', 1);
-    // Log errors to a file (optional)
-    ini_set('log_errors', 1);
-?>
 <?php
+    // Enable error reporting for development (turn off in production)
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 
-$message = ""; // To display success or error message
+    require_once 'connection/db_connect.php'; // Make sure this connects via PDO and sets $pdo
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Collect data from POST
-    $user_name = $_POST['user_name'] ?? '';
-    $user_email = $_POST['user_email'] ?? '';
-    $messages = $_POST['messages'] ?? '';
+    $message = ""; // To display success or error message
 
-    // Validate input
-    if (empty($user_name) || empty($user_email) || empty($messages)) {
-        $message = "All fields are required.";
-    } else {
-            
-        // Prepare SQL query
-        $stmt = $conn->prepare("INSERT INTO user_messages (user_name, user_email, messages) VALUES (?, ?, ?)");
-        if (!$stmt) {
-            $message = "SQL Prepare Failed: " . $conn->error;
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Collect data from POST
+        $user_name = $_POST['user_name'] ?? '';
+        $user_email = $_POST['user_email'] ?? '';
+        $messages = $_POST['messages'] ?? '';
+
+        // Validate input
+        if (empty($user_name) || empty($user_email) || empty($messages)) {
+            $message = "All fields are required.";
         } else {
-            $stmt->bind_param("sss", $user_name, $user_email, $messages);
-
-            if ($stmt->execute()) {
-                $message = "success"; // Mark success
-            } else {
-                $message = "SQL Execution Failed: " . $stmt->error;
+            try {
+                $stmt = $pdo->prepare("INSERT INTO user_messages (user_name, user_email, messages) VALUES (:name, :email, :msg)");
+                $stmt->execute([
+                    ':name'  => $user_name,
+                    ':email' => $user_email,
+                    ':msg'   => $messages
+                ]);
+                $message = "success";
+            } catch (PDOException $e) {
+                $message = "Database Error: " . $e->getMessage();
             }
-
-            $stmt->close();
         }
-        // $conn->close();
+
+        // If success, redirect
+        if ($message === "success") {
+            header("Location: service.php");
+            exit;
+        }
     }
-    // If success, refresh the page
-    if ($message === "success") {
-        header("Location: service.php");
-        exit;
-    }
-}
 ?>
+
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
 
@@ -272,18 +254,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <div class="elementor-container elementor-column-gap-wider">
                                                                         <div class="grid-container">
                                                                         <?php
-                                                                            // Fetch images where category_id = 8
-                                                                            $query = "SELECT file_name FROM uploads WHERE category_id = 26 AND file_type = 'image'";
-                                                                            $result = $conn->query($query);
+                                                                            // Fetch images where category_id = 26 and file_type = 'image'
+                                                                            $stmt = $pdo->prepare("SELECT file_name FROM uploads WHERE category_id = :cat_id AND file_type = :file_type");
+                                                                            $stmt->execute([
+                                                                                ':cat_id' => 26,
+                                                                                ':file_type' => 'image'
+                                                                            ]);
+                                                                            $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                                                                             // Array of additional data
-                                                                            $data = ["2D Plan & Elevation", "Virtual 3D Desigining", "False Ceiling Contracts", "Carpentary Works", "Paint & Polishing Works","3D Desigining","Masonary Works","Electrical Works","Plumbing Works","Soft Furnising"];
+                                                                            $data = [
+                                                                                "2D Plan & Elevation",
+                                                                                "Virtual 3D Designing",
+                                                                                "False Ceiling Contracts",
+                                                                                "Carpentry Works",
+                                                                                "Paint & Polishing Works",
+                                                                                "3D Designing",
+                                                                                "Masonry Works",
+                                                                                "Electrical Works",
+                                                                                "Plumbing Works",
+                                                                                "Soft Furnishing"
+                                                                            ];
                                                                             $index = 0;
 
-                                                                            if ($result->num_rows > 0) {
-                                                                                while ($row = $result->fetch_assoc()) {
+                                                                            if (!empty($images)) {
+                                                                                foreach ($images as $row) {
                                                                                     $fileName = $row['file_name'];
-                                                                                    $currentData = isset($data[$index]) ? $data[$index] : "Additional Info";
+                                                                                    $currentData = $data[$index] ?? "Additional Info";
 
                                                                                     echo "<div class='grid-item'>";
                                                                                     echo "    <div class='imgg'>";
@@ -293,13 +290,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                                     echo "        " . htmlspecialchars($currentData);
                                                                                     echo "    </div>";
                                                                                     echo "</div>";
+
                                                                                     $index++;
                                                                                 }
                                                                             } else {
                                                                                 echo "<p>No images found for this category.</p>";
                                                                             }
-                                                                        ?>
-                                                                            
+                                                                        ?>    
                                                                             
                                                                         </div>
                                                                     </div>

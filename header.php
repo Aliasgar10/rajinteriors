@@ -37,30 +37,30 @@
                                     <li><a href="index.php">Home</a></li>
                                     <li class="menu-item menu-item-has-children"><a href="tvs.php">The Vogue Studio</a>
                                         <?php
-// Fetch parent categories
-$parentQuery = "SELECT id, category_name FROM category_table WHERE parent_id = 0 ORDER BY sort_order";
-$parentStmt = $pdo->prepare($parentQuery);
-$parentStmt->execute();
-$parentCategories = $parentStmt->fetchAll(PDO::FETCH_ASSOC);
+                                            // Fetch parent categories
+                                            $parentQuery = "SELECT id, category_name FROM category_table WHERE parent_id = 0 ORDER BY sort_order";
+                                            $parentStmt = $pdo->prepare($parentQuery);
+                                            $parentStmt->execute();
+                                            $parentCategories = $parentStmt->fetchAll(PDO::FETCH_ASSOC);
 
-$categories = [];
+                                            $categories = [];
 
-if (!empty($parentCategories)) {
-    // Prepare the child query once (performance optimization)
-    $childStmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = :parent_id ORDER BY sort_order");
+                                            if (!empty($parentCategories)) {
+                                                // Prepare the child query once (performance optimization)
+                                                $childStmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = :parent_id ORDER BY sort_order");
 
-    foreach ($parentCategories as $parent) {
-        $childStmt->execute(['parent_id' => $parent['id']]);
-        $children = $childStmt->fetchAll(PDO::FETCH_ASSOC);
+                                                foreach ($parentCategories as $parent) {
+                                                    $childStmt->execute(['parent_id' => $parent['id']]);
+                                                    $children = $childStmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $categories[] = [
-            'id' => $parent['id'],
-            'name' => $parent['category_name'],
-            'children' => $children
-        ];
-    }
-}
-?>
+                                                    $categories[] = [
+                                                        'id' => $parent['id'],
+                                                        'name' => $parent['category_name'],
+                                                        'children' => $children
+                                                    ];
+                                                }
+                                            }
+                                            ?>
 
                                         <?php
                                             // Generate the HTML menu

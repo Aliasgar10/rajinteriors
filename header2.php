@@ -36,24 +36,31 @@
                                     <li><a href="index.php">Home</a></li>
                                     <li class="menu-item menu-item-has-children"><a href="tvs.php">The Vogue Studio</a>
                                         <?php
-                                            // Fetch parent categories
-                                            $stmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = 0 ORDER BY sort_order");
-                                            $stmt->execute();
-                                            $parentCategories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                            try {
+                                                // Fetch parent categories
+                                                $stmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = 0 ORDER BY sort_order");
+                                                $stmt->execute();
+                                                $parentCategories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                                            // Fetch child categories for each parent
-                                            $categories = [];
-                                            foreach ($parentCategories as $parent) {
-                                                $stmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = ? ORDER BY sort_order");
-                                                $stmt->execute([$parent['id']]);
-                                                $children = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                                                $categories[] = [
-                                                    'id' => $parent['id'],
-                                                    'name' => $parent['category_name'],
-                                                    'children' => $children
-                                                ];
+                                                $categories = [];
+
+                                                foreach ($parentCategories as $parent) {
+                                                    // Fetch child categories for this parent
+                                                    $childStmt = $pdo->prepare("SELECT id, category_name FROM category_table WHERE parent_id = ? ORDER BY sort_order");
+                                                    $childStmt->execute([$parent['id']]);
+                                                    $children = $childStmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                                    $categories[] = [
+                                                        'id'       => $parent['id'],
+                                                        'name'     => $parent['category_name'],
+                                                        'children' => $children
+                                                    ];
+                                                }
+                                            } catch (PDOException $e) {
+                                                echo "Database Error: " . $e->getMessage();
                                             }
                                         ?>
+
                                         <?php
                                             // Generate the HTML menu
                                             echo '<ul class="menu">';

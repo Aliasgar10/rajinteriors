@@ -19,22 +19,7 @@
         border-bottom: 0px solid #dce0e0 !important;
     }
 </style>
-<?php
-    error_reporting(E_ALL);
-    // Display errors on the screen
-    ini_set('display_errors', 1);
-    // Log errors to a file (optional)
-    ini_set('log_errors', 1);
-    
-    // Database connection
-    $host = "localhost";
-    $username = "raj";
-    $password = "F33@x8f3t";
-    $database = "admin_";
-    
-    $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-?>
+
 <div class="header_style_wrapper">
     <div class="top_bar hasbg" style="background: black;">
         <div class="standard_wrapper" style="margin-top: 10px;">
@@ -129,28 +114,7 @@
                             <li><a href="index.php">Home</a></li>
                             <li><a href="tvs.php">TVS</a>
                                 <!-- <button class="submenu-toggle">+</button> -->
-                                    <!-- <?php
-                                        // Generate the HTML menu
-                                        echo '<ul class="menu">';
-                                        foreach ($categories as $category) {
-                                            echo '<li class="menu-item menu-item-has-children">';
-                                            // Check if the parent category has children
-                                            if (!empty($category['children'])) {
-                                                echo '<a href="#">' . htmlspecialchars($category['name']) . '</a>'; // Blank link for parent with children
-                                                echo '<ul class="sub-menu">';
-                                                foreach ($category['children'] as $child) {
-                                                    echo '<li class="menu-item">';
-                                                    echo '<a href="categories.php?id=' . $child['id'] . '"><span class="subunder">- </span>' . htmlspecialchars($child['category_name']) . '</a>';
-                                                    echo '</li>';
-                                                }
-                                                echo '</ul>';
-                                            } else {
-                                                echo '<a href="categories.php?id=' . $category['id'] . '">' . htmlspecialchars($category['name']) . '</a>'; // Valid link for parent without children
-                                            }
-                                            echo '</li>';
-                                        }
-                                        echo '</ul>';
-                                    ?> -->
+                                    
                             </li>
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="service.php">Services</a></li>
@@ -284,26 +248,7 @@
     }
 
 </style>
-<style>
-    /* @media screen and (min-width: 769px) and (max-width: 1024px) {
-        .top_bar {
-            height: 14vh !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-    
-    @media screen and (min-width: 1025px) {
-        .top_bar {
-            height: 18vh !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    } */
-    
-</style>
+
 
 <!-- Submenus style -->
 <style>

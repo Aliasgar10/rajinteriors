@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
-
+<?php 
+    error_reporting(E_ALL);
+    // Display errors on the screen
+    ini_set('display_errors', 1);
+    // Log errors to a file (optional)
+    ini_set('log_errors', 1);
+?>
+<?php 
+    include("connection/db_connect.php");
+?>
 <head>
 
     <link type="text/css" media="all" href="css/style.css" rel="stylesheet">
