@@ -41,6 +41,7 @@
   font-family: 'Operetta Bold';
   font-weight: bold;
   font-size: 50px !important;
+  color:#fff;
 }
 
 #abbc {
