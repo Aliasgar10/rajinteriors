@@ -1,5 +1,5 @@
 <section class="slider_parallax_wrapper">
-        <div class="image-c" style="background-image: url('slider_01.jpg');">
+        <div class="image-c" style="background-image: url('upload/slider_01.jpg');">
           <div class="slide-content">
             <div class="caption">
               <div class="title">
