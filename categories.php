@@ -218,7 +218,7 @@ if ($categoryId > 0) {
                                                                                                                 <div class="post_wrapper" id="post">
                                                                                                                     <div class="post_img static">
                                                                                                                         <div class="post_imgg_hover">
-                                                                                                                            <img src="uploads/assets/categories/<?php echo htmlspecialchars($product['images']); ?>" 
+                                                                                                                            <img src="uploads/assets/images/<?php echo htmlspecialchars($product['images']); ?>" 
                                                                                                                                 alt="<?php echo htmlspecialchars($product['images']); ?>" 
                                                                                                                                 loading="lazy" 
                                                                                                                                 class="clickable-image-12345">

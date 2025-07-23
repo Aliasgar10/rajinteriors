@@ -39,8 +39,6 @@
 <body data-rsssl="1" class="page-template-default page page-id-1956 woocommerce-no-js tg_lightbox_black leftalign tg_footer_reveal elementor-default elementor-page elementor-page-1956">
     <div id="perspective" >
 
-
-
         <div id="wrapper">
             <?php include("header3.php"); ?>
 
@@ -80,53 +78,48 @@
                                                                                 $stmt->execute();
                                                                                 $parentCategories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+                                                                                // Output parent categories as HTML
                                                                                 foreach ($parentCategories as $category) {
-                                                                                    // Fetch child categories
-                                                                                    $childStmt = $pdo->prepare("SELECT id, category_name, thumbnail FROM category_table WHERE parent_id = :parent_id ORDER BY sort_order ASC");
+                                                                                    // Check if the category has child categories
+                                                                                    $childStmt = $pdo->prepare("SELECT id, category_name, thumbnail FROM category_table WHERE parent_id = :parent_id");
                                                                                     $childStmt->bindParam(':parent_id', $category['id'], PDO::PARAM_INT);
                                                                                     $childStmt->execute();
                                                                                     $childCategories = $childStmt->fetchAll(PDO::FETCH_ASSOC);
 
                                                                                     echo '<div class="portfolio_masonry_grid_wrapper gallery_grid_item tg_two_cols portfolio-1 tile scale-anm all no_filter">';
                                                                                     echo '  <div class="portfolio_masonry_img">';
-                                                                                    echo '      <img src="uploads/assets/images/' . htmlspecialchars($category['thumbnail'] ?? '') . '" alt="' . htmlspecialchars($category['category_name'] ?? '') . '">';
+                                                                                    echo '      <img src="assets/CATEGORY/' . htmlspecialchars($category['thumbnail'] ?? '') . '" alt="' . htmlspecialchars($category['thumbnail'] ?? '') . '">';
                                                                                     echo '  </div>';
                                                                                     echo '  <figure><figcaption>';
                                                                                     echo '      <div class="border one"><div></div></div>';
                                                                                     echo '      <div class="border two"><div></div></div>';
                                                                                     echo '      <div class="portfolio_masonry_content">';
-                                                                                    echo '          <h3>' . htmlspecialchars($category['category_name'] ?? '') . '</h3>';
+                                                                                    echo '          <h3>' . htmlspecialchars($category['category_name']) . '</h3>';
                                                                                     echo '      </div>';
                                                                                     echo '  </figcaption></figure>';
 
+                                                                                    // Add a button to open popup if child categories exist
                                                                                     if (!empty($childCategories)) {
-                                                                                        // Popup trigger
-                                                                                        echo '  <a class="open-popup-btn" data-category="' . htmlspecialchars($category['id']) . '"></a>';
-
-                                                                                        // Popup content
-                                                                                        echo '  <div class="popup-overlay" id="popup-' . htmlspecialchars($category['id']) . '">';
+                                                                                        echo '  <a class="open-popup-btn" data-category="' . $category['id'] . '"></a>';
+                                                                                        echo '  <div class="popup-overlay" id="popup-' . $category['id'] . '">';
                                                                                         echo '      <div class="popup-content">';
                                                                                         echo '          <h2>' . htmlspecialchars($category['category_name']) . '</h2>';
                                                                                         echo '          <div class="child-category-grid">';
-
                                                                                         foreach ($childCategories as $child) {
-                                                                                            echo '              <div class="child-category-item">';
-                                                                                            echo '                  <a href="categories.php?id=' . htmlspecialchars($child['id']) . '" class="child-category-link">';
-                                                                                            echo '                      <div class="child-category-img">';
-                                                                                            echo '                          <img src="assets/category/' . htmlspecialchars($child['thumbnail']) . '" alt="' . htmlspecialchars($child['category_name']) . '">';
-                                                                                            echo '                      </div>';
-                                                                                            echo '                      ' . htmlspecialchars($child['category_name']);
-                                                                                            echo '                  </a>';
+                                                                                            echo '          <div class="child-category-item">';
+                                                                                            echo '              <a href="categories.php?id=' . $child['id'] . '" class="child-category-link">';
+                                                                                            echo '              <div class="child-category-img">';
+                                                                                            echo '                  <img src="uploads/assets/images/' . htmlspecialchars($child['thumbnail'] ?? '') . '" alt="">';
                                                                                             echo '              </div>';
+                                                                                            echo '              ' . htmlspecialchars($child['category_name']) . '</a>';
+                                                                                            echo '          </div>';
                                                                                         }
-
                                                                                         echo '          </div>';
                                                                                         echo '          <button class="close-popup-btn">Close</button>';
                                                                                         echo '      </div>';
                                                                                         echo '  </div>';
                                                                                     } else {
-                                                                                        // No child categories, direct link
-                                                                                        echo '  <a href="categories.php?id=' . htmlspecialchars($category['id']) . '" class="parent-category-link"></a>';
+                                                                                        echo '  <a href="categories.php?id=' . $category['id'] . '" class="parent-category-link"></a>';
                                                                                     }
 
                                                                                     echo '</div>';
