@@ -113,7 +113,7 @@
                                                                                             echo '              <div class="child-category-item">';
                                                                                             echo '                  <a href="categories.php?id=' . htmlspecialchars($child['id']) . '" class="child-category-link">';
                                                                                             echo '                      <div class="child-category-img">';
-                                                                                            echo '                          <img src="uploads/assets/categories/' . htmlspecialchars($child['thumbnail']) . '" alt="' . htmlspecialchars($child['category_name']) . '">';
+                                                                                            echo '                          <img src="assets/category/' . htmlspecialchars($child['thumbnail']) . '" alt="' . htmlspecialchars($child['category_name']) . '">';
                                                                                             echo '                      </div>';
                                                                                             echo '                      ' . htmlspecialchars($child['category_name']);
                                                                                             echo '                  </a>';

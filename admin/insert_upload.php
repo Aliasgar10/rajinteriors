@@ -5,7 +5,7 @@
 // $password = "7ku~3AksgI75Edzrp";
 // $database = "rajinteriors";
 
-    $host = "localhost";
+    $host = "127.0.0.1";
     $username = "root";
     $password = "";
     $database = "rajinteriors";
@@ -20,10 +20,10 @@ if ($conn->connect_error) {
 
 // Handle file upload
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
-    if (isset($_POST['file_name'], $_POST['section'], $_POST['category'])) {
+    if (isset($_POST['file_name'], $_POST['section_id'], $_POST['category_id'])) {
         $file_name = $_POST['file_name'];
-        $section = $_POST['section'];
-        $category = $_POST['category'];
+        $section = $_POST['section_id'];
+        $category = $_POST['category_id'];
         $fileType = strtolower(pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION));
 
         if (in_array($fileType, ["jpg", "jpeg", "png", "gif"])) {
@@ -51,14 +51,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
 }
 
 // Fetch images and PDFs
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['type'])) {
-    $type = $_GET['type'];
-    $query = ($type === "images") ? "file_url LIKE '../uploads/assets/images/%'" : "file_url LIKE '../uploads/assets/pdf/%'";
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['file_type'])) {
+    $type = $_GET['file_type'];
+    $query = ($type === "image") ? "file_url LIKE '../uploads/assets/images/%'" : "file_url LIKE '../uploads/assets/pdf/%'";
     $result = $conn->query("SELECT * FROM uploads WHERE $query");
 
     while ($row = $result->fetch_assoc()) {
         echo '<div class="file-item">';
-        if ($type === "images") {
+        if ($type === "image") {
             echo '<div class="img-item" style="width: 150px; height: 150px;"><img src="' . $row['file_url'] . '" alt="Image"></div>';
         } else {
             echo '<p>' . basename($row['file_url']) . '</p>';

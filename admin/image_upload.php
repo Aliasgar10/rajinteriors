@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Manager</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -399,8 +399,8 @@
 
         // Load files on page load
         $(document).ready(function() {
-            loadFiles('images');
-            loadFiles('pdfs');
+            loadFiles('image');
+            loadFiles('pdf');
         });
     </script>
 </body>

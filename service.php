@@ -257,7 +257,7 @@
                                                                             // Fetch images where category_id = 26 and file_type = 'image'
                                                                             $stmt = $pdo->prepare("SELECT file_name FROM uploads WHERE category_id = :cat_id AND file_type = :file_type");
                                                                             $stmt->execute([
-                                                                                ':cat_id' => 26,
+                                                                                ':cat_id' => 25,
                                                                                 ':file_type' => 'image'
                                                                             ]);
                                                                             $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
