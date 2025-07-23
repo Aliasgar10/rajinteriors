@@ -2,7 +2,7 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 0);
 ?>
-
+<?php  require_once 'connection/db_connect.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -322,14 +322,14 @@
         ini_set('display_errors', 1); // Set to 0 in production
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $host = "localhost";
-            $user = "rajinteriors";
-            $pass = "7ku~3AksgI75Edzrp";
-            $db = "rajinteriors";
+            // $host = "localhost";
+            // $user = "rajinteriors";
+            // $pass = "7ku~3AksgI75Edzrp";
+            // $db = "rajinteriors";
 
             try {
-                $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                // $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
+                // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 // Get data from POST
                 $selections = $_POST['selections'] ?? null;
@@ -365,7 +365,7 @@
                 if (isset($data['section_2'])) {
                     foreach ($data['section_2'] as $image) {
                         foreach ($image as $fileName => $feedback) {
-                            $imageUrl = "https://rajinteriors.in/uploads/assets/get_a_quote/".$fileName;
+                            $imageUrl = "https://rajinteriors.in/uploads/get_quote/".$fileName;
                             if (strtolower($feedback) === 'like') {
                                 $likedImages[] = $imageUrl;
                             } else {
@@ -533,14 +533,14 @@
             // Function to fetch images from the server
             async function fetchImages() {
                 try {
-                    const response = await fetch('/get_images.php'); // Replace with your endpoint
+                    const response = await fetch('get_images.php'); // Replace with your endpoint
                     if (!response.ok) throw new Error('Failed to fetch images');
                     const data = await response.json();
 
                     // Map the image data to include file name and URL
                     images = data.map(image => ({
                         file_name: image.file_name,
-                        url: `uploads/assets/get_a_quote/${image.file_name}`
+                        url: `uploads/assets/images/${image.file_name}`
                     }));
 
                     // Display the first image

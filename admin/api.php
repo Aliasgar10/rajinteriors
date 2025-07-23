@@ -13,6 +13,7 @@
     $database = "rajinteriors";
     // Database connection
     $conn = new mysqli("127.0.0.1", "raj", "F33@x8f3t", "admin_");
+    // $conn = new mysqli("127.0.0.1", "root", "", "rajinteriors");
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);

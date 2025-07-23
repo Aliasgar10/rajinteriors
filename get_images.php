@@ -6,7 +6,7 @@
     include 'connection/db_connect.php'; // Adjust this path as needed
 
     // Set category ID (hardcoded or dynamically via GET if needed)
-    $categoryId = 28;
+    $categoryId = 27;
 
     // Prepare and execute query using PDO
     try {
